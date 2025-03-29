@@ -408,6 +408,21 @@ a {
   color: var(--brand-400);
 }
 
+/* Style for the currently active navigation link */
+.active-link {
+  color: var(--brand-400) !important; /* Use !important to override potential specificity issues */
+  font-weight: 600; /* Make it slightly bolder */
+}
+
+/* Ensure hover effect doesn't override active color, but keep underline */
+.active-link:hover {
+    color: var(--brand-400) !important;
+}
+
+.dark .active-link {
+    color: var(--brand-400) !important; /* brand-400 should be visible in dark mode too */
+}
+
 .nav-link::after {
   content: '';
   position: absolute;

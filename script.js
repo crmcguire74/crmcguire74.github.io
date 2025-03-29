@@ -104,6 +104,30 @@ const setupScrollAnimation = () => {
   });
 };
 
+// Function to highlight the active navigation link
+const highlightActiveLink = () => {
+  const currentPage = window.location.pathname.split('/').pop(); // Get the current filename (e.g., "index.html")
+  // Handle the case where the path is just "/" (root) - treat it as index.html
+  const targetPage = currentPage === '' ? 'index.html' : currentPage;
+
+  // Select all navigation links (desktop, mobile, footer)
+  const navLinks = document.querySelectorAll('.desktop-nav .nav-link, .mobile-nav .nav-link, .footer-links a');
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    // Special case for the root/index page
+    const linkTargetPage = linkPage === '' ? 'index.html' : linkPage;
+
+    // Check if the link's target page matches the current page
+    if (linkTargetPage === targetPage) {
+      link.classList.add('active-link');
+    } else {
+      link.classList.remove('active-link'); // Ensure others are not active
+    }
+  });
+};
+
+
 // Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
@@ -134,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Setup animations
   // Removed call to initResumeSticky()
   setupScrollAnimation();
+
+  // Highlight the active navigation link
+  highlightActiveLink();
 
   // Initial scroll check
   handleScroll();
