@@ -175,10 +175,11 @@
   right: 0;
   padding: 1.5rem;
   z-index: 10;
+  height: 100%;
 }
 
 .project-title {
-  color: white;
+  color: var(--brand-300);
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -201,7 +202,7 @@
   right: 1rem;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--brand-500);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
@@ -209,6 +210,9 @@
   align-items: center;
   justify-content: center;
   color: white;
+  font-weight: 700;
+  font-size:0.8rem;
+  text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
