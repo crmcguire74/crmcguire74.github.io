@@ -1,0 +1,61 @@
+/* Story page specific styles */
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.8;
+  color: var(--dark-700);
+}
+
+.dark .story-content {
+  color: var(--dark-300);
+}
+
+.story-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+
+.story-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 3rem 0 1.5rem;
+  color: #00C2FF;
+}
+
+.story-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.story-content ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.story-content li {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .story-content {
+    padding: 1.5rem;
+  }
+
+  .story-content h1 {
+    font-size: 2rem;
+  }
+
+  .story-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .story-content p,
+  .story-content li {
+    font-size: 1rem;
+  }
+}

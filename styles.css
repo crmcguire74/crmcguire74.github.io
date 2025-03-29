@@ -1011,3 +1011,13 @@ a {
   /* Note: --dark-600 is not defined, using --dark-700 as fallback */
   background-color: rgba(var(--dark-700-rgb), 1); /* dark:bg-dark-600 approximation */
 }
+
+/* Styles for the hidden MyStory link in the footer */
+.footer-story-link {
+  color: #f0f9ff !important; /* Match light theme background */
+  transition: color 0.3s ease; /* Smooth transition if needed */
+}
+
+.dark .footer-story-link {
+  color: #000000 !important; /* Black color for dark theme */
+}
