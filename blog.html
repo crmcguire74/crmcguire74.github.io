@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christopher R McGuire - Blog | Insights & Ideas</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the blog of Christopher R McGuire for insights and ideas on UX/UI design, software engineering, career development, and industry trends." />
+    <meta name="keywords" content="Christopher McGuire blog, Paguire blog, UX/UI design blog, software engineering blog, frontend development blog, career advice, technology insights" />
+    <link rel="canonical" href="https://www.paguire.com/blog.html" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.paguire.com/blog.html" />
+    <meta property="og:title" content="Christopher R McGuire - Blog | Insights & Ideas" />
+    <meta property="og:description" content="Thoughts, ideas, and insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire." />
+    <meta property="og:image" content="https://www.paguire.com/images/paguireLogo.png" /> 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://www.paguire.com/blog.html" />
+    <meta property="twitter:title" content="Christopher R McGuire - Blog | Insights & Ideas" />
+    <meta property="twitter:description" content="Thoughts, ideas, and insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire." />
+    <meta property="twitter:image" content="https://www.paguire.com/images/paguireLogo.png" />
+
+    <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles-additional.css" />
+    <link rel="stylesheet" href="./pages-styles.css" />
+    <link rel="stylesheet" href="./dark-mode-fix.css" />
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+    <!-- Import fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide icons (similar to lucide-react) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <!-- <a href="index.html" class="logo">Christopher R McGuire</a> -->
+        <a href="index.html" class="logo"
+          ><img src="./images/paguireLogo.png" alt="Paguire Logo" height="50"
+        /></a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="resume.html" class="nav-link">Resume</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="blog.html" class="nav-link text-gradient">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Social Icons and Theme Toggle - Desktop -->
+        <div class="desktop-actions">
+          <!-- Theme Toggle -->
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i id="theme-icon" data-lucide="moon"></i>
+          </button>
+
+          <a
+            href="https://linkedin.com/in/christopher-mcguire/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="social-icon"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a
+            href="https://twitter.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="social-icon"
+          >
+            <i data-lucide="twitter"></i>
+          </a>
+          <a
+            href="mailto:Christopher.R.McGuire@gmail.com"
+            aria-label="Email"
+            class="social-icon"
+          >
+            <i data-lucide="mail"></i>
+          </a>
+          <a
+            href="https://github.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="social-icon"
+          >
+            <i data-lucide="github"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="mobile-actions">
+          <!-- Theme Toggle - Mobile -->
+          <button
+            id="mobile-theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i id="mobile-theme-icon" data-lucide="moon"></i>
+          </button>
+
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <i id="menu-icon" data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Social Icons - Mobile -->
+      <div class="mobile-social">
+        <a
+          href="https://linkedin.com/in/christopher-mcguire/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a
+          href="https://twitter.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="social-icon"
+        >
+          <i data-lucide="twitter"></i>
+        </a>
+        <a
+          href="mailto:Christopher.R.McGuire@gmail.com"
+          aria-label="Email"
+          class="social-icon"
+        >
+          <i data-lucide="mail"></i>
+        </a>
+        <a
+          href="https://github.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="social-icon"
+        >
+          <i data-lucide="github"></i>
+        </a>
+      </div>
+    </div>
+
+    <main class="bg-gradient">
+      <div class="container pt-28 pb-20">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h4
+            class="text-brand-600 dark:text-brand-400 text-lg font-medium mb-3 animate-fade-in"
+          >
+            Insights & Ideas
+          </h4>
+          <h1
+            class="text-3xl md:text-5xl font-bold mb-6 animate-fade-in"
+            style="animation-delay: 0.1s"
+          >
+            The <span class="text-gradient">Blog</span>
+          </h1>
+          <p
+            class="text-dark-700 dark:text-dark-300 text-lg animate-fade-in"
+            style="animation-delay: 0.2s"
+          >
+            Thoughts, ideas, and insights on UX/UI design, software engineering,
+            and industry trends.
+          </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto mb-12">
+          <div
+            class="glass-card rounded-xl p-6 animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <!-- Removed grid column classes to stack elements -->
+            <div class="flex flex-col gap-6">
+              <!-- Added mb-4 for spacing below search -->
+              <!-- Search and Filter Section -->
+              <section class="blog-filters">
+                <!-- Search Form -->
+                <div class="search-section" role="search">
+                  <form class="mb-4">
+                    <div class="search-group">
+                      <label for="search-input" class="text-sm font-medium mb-2 block text-dark-700 dark:text-dark-300">
+                        Search blog articles
+                      </label>
+                      <div class="relative">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-400" aria-hidden="true" style="padding-top:0.7rem;"></i>
+                        <input
+                          type="search"
+                      id="search-input"
+                      name="search"
+                      class="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-dark-800 border border-dark-200 dark:border-dark-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-dark-900 dark:text-white"
+                      placeholder="Search..."
+                      aria-controls="blog-posts-container"
+                      aria-label="Search blog articles"
+                      autocomplete="off"
+                      tabindex="1" style="padding-left: 2.0rem;"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-section" role="group" aria-label="Filter blog posts by category">
+                  <div class="flex justify-center gap-4 overflow-x-auto">
+                    <button
+                      id="category-all"
+                      class="filter-btn bg-brand-600 text-white" 
+                      data-category="All"
+                      aria-pressed="true"
+                      aria-label="Show all categories"
+                      tabindex="2"
+                    >
+                      All
+                    </button>
+                    <button
+                      id="category-design"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="Design"
+                      aria-pressed="false"
+                      aria-label="Filter by Design category"
+                      tabindex="3"
+                    >
+                      Design
+                    </button>
+                    <button
+                      id="category-development"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="Development"
+                      aria-pressed="false"
+                      aria-label="Filter by Development category"
+                      tabindex="4"
+                    >
+                      Development
+                    </button>
+                    <button
+                      id="category-career"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="Career"
+                      aria-pressed="false"
+                      aria-label="Filter by Career category"
+                      tabindex="5"
+                    >
+                      Career
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div
+          id="blog-posts-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Blog posts will be dynamically inserted here by JavaScript -->
+        </div>
+
+        <!-- No Results Message (hidden by default) -->
+        <div id="no-results" class="text-center py-16 animate-fade-in hidden">
+          <h3 class="text-2xl font-semibold text-dark-900 dark:text-white mb-2">
+            No articles found
+          </h3>
+          <p class="text-dark-700 dark:text-dark-300">
+            Try adjusting your search or filter to find what you're looking for.
+          </p>
+        </div>
+
+        <div
+          class="mt-24 mx-auto glass-card rounded-3xl p-12 text-center animate-fade-in"
+        >
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">
+            Subscribe to My Newsletter
+          </h2>
+          <p
+            class="text-dark-700 dark:text-dark-300 text-lg mb-8 max-w-2xl mx-auto"
+          >
+            Stay updated with my latest articles, projects, and insights
+            delivered straight to your inbox.
+          </p>
+
+          <div class="newsletter-container">
+            <form 
+              id="newsletter-form" 
+              class="max-w-md mx-auto" 
+              action="javascript:void(0);"
+              aria-labelledby="newsletter-heading"
+            >
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <div class="flex-grow relative">
+                    <label for="newsletter-email" class="block text-sm font-medium mb-2 text-dark-700 dark:text-dark-300">
+                      Email address for newsletter
+                    </label>
+                    <input
+                      type="email"
+                      id="newsletter-email"
+                      name="email"
+                      required
+                      aria-required="true"
+                      placeholder="Enter your email address"
+                      title="Enter your email address to subscribe to the newsletter"
+                      class="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark-800 border border-dark-200 dark:border-dark-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-dark-900 dark:text-white"
+                      tabindex="6"
+                    />
+                  </div>
+                  <div class="flex items-end" style="flex-direction: row-reverse;">
+                    <button
+                      type="submit"
+                      id="newsletter-subscribe-btn"
+                      class="h-[46px] px-6 rounded-lg bg-brand-600 text-white font-medium transition-all hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-500/20"
+                      aria-label="Subscribe to newsletter"
+                      tabindex="7"
+                      style="padding-top:0.5rem;padding-bottom:0.5rem;"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+                <div 
+                  id="newsletter-message" 
+                  class="mt-2 text-sm" 
+                  role="status" 
+                  aria-live="polite"
+                ></div>
+                <p class="text-sm text-dark-500 dark:text-dark-400">
+                  I respect your privacy. Unsubscribe at any time.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="gradient-text logo">Christopher R McGuire</span>
+            <p class="footer-tagline">
+              SVP of Software Engineering, UX/UI Design and Development with 20+
+              years of experience bridging the gap between users, designers, and
+              developers.
+            </p>
+          </div>
+
+          <div class="footer-nav">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a href="index.html">Home</a>
+              <a href="resume.html">Resume</a>
+              <a href="projects.html">Projects</a>
+              <a href="blog.html">Blog</a>
+              <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-connect">
+              <h4>Connect</h4>
+              <a href="mailto:Christopher.R.McGuire@gmail.com"
+                >Christopher.R.McGuire@gmail.com</a
+              >
+              Chicago, IL
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            © 2025 Christopher R McGuire. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/christopher-mcguire/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="https://twitter.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <i data-lucide="twitter"></i>
+            </a>
+            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a
+              href="https://github.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="./script.js"></script>
+    <script>
+      // Blog Posts Data
+      const blogPosts = [
+        {
+          id: 1,
+          title: "Frontend Development: Not Just About a 'Pretty' Website",
+          excerpt:
+            "Frontend development is often misunderstood as either web development or the process of making an application look 'pretty.' But it is so much more than that. There is also often a perception in businesses that frontend developers are not as strong as developers on the backend of the application stack.",
+          date: "Dec 28, 2022",
+          image: "./images/0e649042-5f57-4983-bd24-db739ebf3baf.png",
+          slug: "frontend-development",
+          category: "Development",
+          url: "https://medium.com/the-hatchery-house/frontend-development-a60f0df41161",
+        },
+        {
+          id: 2,
+          title: "The Mythical 'Full Stack' Developer",
+          excerpt:
+            "The frontend unicorn created by complacent managers and recruiters. As a manager in the frontend development space, I understand the difficulty in recruiting for key roles. On one hand, candidates may lack any knowledge of graphic design and the tools associated with designing engaging experiences.",
+          date: "Feb 22, 2023",
+          image: "./images/fe527293-fb5f-44d4-acd6-85ea49da05e8.png",
+          slug: "mythical-full-stack-developer",
+          category: "Career",
+          url: "https://medium.com/the-hatchery-house/thefullstackunicorn-7b661508c226",
+        },
+        {
+          id: 3,
+          title:
+            "The Impact of Job Titles in Software Engineering: Pitfalls and Solutions",
+          excerpt:
+            "How the focus to normalize titles benefits employees and firms. Job titles have a long and important history in engineering, but this has become ever more crucial in modern software engineering. With the range of engineering titles available, people can be easily identified for their skills and experience when it comes to recruiting.",
+          date: "Apr 12, 2023",
+          image: "./images/f6b0b24f-ece0-4b89-866a-b6c47054e4db.png",
+          slug: "job-titles-software-engineering",
+          category: "Career",
+          url: "https://medium.com/the-hatchery-house/the-impact-of-job-titles-in-software-engineering-pitfalls-and-solutions-807d8e928370",
+        },
+        {
+          id: 4,
+          title: "User Interface Design for Web Applications | Best Practices",
+          excerpt:
+            "Discover essential best practices for User Interface Design for Web Applications to create intuitive, user-friendly experiences that boost engagement and conversion rates.",
+          date: "Nov 8, 2024",
+          image: "./images/6ab4ee6d-009d-4605-847d-2cf10248b46b.png",
+          slug: "user-interface-design-for-web-applications",
+          category: "Design",
+          url: "https://iconforge.net/blog/articles/user_interface_design_for_web_applications",
+        },
+        {
+          id: 5,
+          title: "Custom Icons and User Interface Design Tips and Methods",
+          excerpt:
+            "Elevate your digital product with expert tips on Custom Icons and User Interface Design for a polished, user-friendly experience.",
+          date: "Nov 9, 2024",
+          image: "./images/bc955065-4a43-42c5-a5c3-2bbf1ae0e4ef.png",
+          slug: "custom-icons-and-user-interface-design-tips",
+          category: "Design",
+          url: "https://iconforge.net/blog/articles/custom_icons_and_user_interface_design_tips",
+        },
+        {
+          id: 6,
+          title:
+            "The Hidden ROI of UX/UI Design in Internal Business Applications",
+          excerpt:
+            "Discover how thoughtful design and branding in internal business applications can transform employee experience, boost productivity, and drive organizational success.",
+          date: "Nov 13, 2024",
+          image: "./images/5117e834-44d0-4d00-81cf-1808a606e100.png",
+          slug: "hidden-roi-of-uxui-design-in-internal-business-applications",
+          category: "Design",
+          url: "https://iconforge.net/blog/articles/hidden_roi_of_uxui_design_in_internal_business_applications",
+        },
+        {
+          id: 7,
+          title: "Mastering UI/UX Design in Modern Application Development",
+          excerpt:
+            "A data-driven guide to creating exceptional digital experiences that drive user engagement and business growth.",
+          date: "Nov 13, 2024",
+          image: "./images/2b6d95c7-78d6-421a-a7b3-94e580f93546.png",
+          slug: "mastering-uiux-design-in-modern-application-development",
+          category: "Design",
+          url: "https://iconforge.net/blog/articles/mastering_uiux_design_in_modern_application_development.html",
+        },
+        {
+          id: 8,
+          title: "Designing Application Icons: Tips and Tricks for Success",
+          excerpt:
+            "Explore expert tips and practical strategies for designing application icons that stand out. Learn about the design process, types of icons, and tools to create polished, functional, and visually appealing icons for your apps.",
+          date: "Nov 15, 2024",
+          image: "./images/bcb1c597-5a84-40c4-ac3f-77d8f0e3ca58.png",
+          slug: "designing-application-icons",
+          category: "Design",
+          url: "https://iconforge.net/blog/articles/designing_application_icons",
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // DOM Elements
+        const blogPostsContainer = document.getElementById("blog-posts-container");
+        const searchInput = document.getElementById("search-input");
+        const noResults = document.getElementById("no-results");
+        const categoryButtons = document.querySelectorAll(".filter-btn");
+
+        let activeCategory = "All";
+        let searchTerm = "";
+
+        // Create Blog Card element
+        function createBlogCard(post, index) {
+          const card = document.createElement("article");
+          card.className = "blog-card animate-fade-in";
+          card.style.animationDelay = `${0.1 * index}s`;
+          card.setAttribute('aria-labelledby', `article-title-${post.id}`);
+
+          const linkHref = post.url || `#${post.slug}`;
+          
+          // Parse and format the date
+          const dateObj = new Date(post.date.replace(/(\w+)\s(\d+),\s(\d+)/, "$2 $1 $3"));
+          const formattedDate = dateObj.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+
+          card.innerHTML = `
+            <div class="blog-image">
+              <img src="${post.image}" alt="" aria-hidden="true" />
+              <time datetime="${dateObj.toISOString()}" class="blog-date">
+                ${formattedDate}
+              </time>
+            </div>
+            <div class="blog-content">
+              <h3 id="article-title-${post.id}" class="blog-title">
+                ${post.title}
+              </h3>
+              <p class="blog-excerpt">
+                ${post.excerpt}
+              </p>
+              <a 
+                href="${linkHref}"
+                class="blog-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="article-title-${post.id}"
+              >
+                Read full article
+                <span class="sr-only">: ${post.title}</span>
+              </a>
+            </div>
+          `;
+
+          return card;
+        }
+
+        // Handle ARIA announcements
+        function announceResults(filteredPosts) {
+          const message = filteredPosts.length === 0 
+            ? "No articles found. Try adjusting your search or filter."
+            : `Found ${filteredPosts.length} articles.`;
+
+          const liveRegion = document.createElement('div');
+          liveRegion.setAttribute('role', 'status');
+          liveRegion.setAttribute('aria-live', 'polite');
+          liveRegion.className = 'sr-only';
+          liveRegion.textContent = message;
+          document.body.appendChild(liveRegion);
+
+          setTimeout(() => document.body.removeChild(liveRegion), 1000);
+        }
+
+        // Update UI elements
+        function updateUI(filteredPosts) {
+          const hasResults = filteredPosts.length > 0;
+          
+          noResults.classList.toggle('hidden', hasResults);
+          blogPostsContainer.classList.toggle('hidden', !hasResults);
+          
+          searchInput.setAttribute('aria-label', 
+            `Search blog articles. ${filteredPosts.length} articles shown.`
+          );
+
+          if (hasResults) {
+            blogPostsContainer.innerHTML = '';
+            filteredPosts.forEach((post, index) => {
+              blogPostsContainer.appendChild(createBlogCard(post, index));
+            });
+          }
+
+          announceResults(filteredPosts);
+        }
+
+        // Filter and render blog posts
+        function renderBlogPosts() {
+          const filteredPosts = blogPosts.filter((post) => {
+            const matchesSearch =
+              post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+
+            const matchesCategory =
+              activeCategory === "All" || post.category === activeCategory;
+
+            return matchesSearch && matchesCategory;
+          });
+
+          updateUI(filteredPosts);
+        }
+
+        // Parse date safely
+        function parseDate(dateStr) {
+          try {
+            const parsed = new Date(dateStr.replace(/(\w+)\s(\d+),\s(\d+)/, "$2 $1 $3"));
+            return isNaN(parsed.getTime()) ? new Date() : parsed;
+          } catch (e) {
+            console.warn(`Error parsing date: ${dateStr}`);
+            return new Date();
+          }
+        }
+
+        // Handle category button selection
+        function selectCategory(category) {
+          activeCategory = category;
+
+          categoryButtons.forEach((btn) => {
+            const isActive = btn.dataset.category === activeCategory;
+            btn.setAttribute('aria-pressed', isActive);
+            
+            btn.classList.toggle("bg-brand-600", isActive);
+            btn.classList.toggle("text-white", isActive);
+            btn.classList.toggle("bg-white", !isActive);
+            btn.classList.toggle("dark:bg-dark-800", !isActive);
+            btn.classList.toggle("text-dark-700", !isActive);
+            btn.classList.toggle("dark:text-dark-300", !isActive);
+            btn.classList.toggle("hover:bg-dark-100", !isActive);
+            btn.classList.toggle("dark:hover:bg-dark-700", !isActive);
+          });
+
+          renderBlogPosts();
+        }
+
+        // Event Handlers
+        searchInput.addEventListener("input", (e) => {
+          searchTerm = e.target.value;
+          renderBlogPosts();
+        });
+
+        // Add keyboard navigation for category buttons
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", () => selectCategory(button.dataset.category));
+          
+          button.addEventListener("keydown", (e) => {
+            // Handle keyboard navigation
+            switch(e.key) {
+              case 'ArrowRight':
+              case 'ArrowDown':
+                e.preventDefault();
+                const next = button.nextElementSibling || categoryButtons[0];
+                next.focus();
+                break;
+              case 'ArrowLeft':
+              case 'ArrowUp':
+                e.preventDefault();
+                const prev = button.previousElementSibling || categoryButtons[categoryButtons.length - 1];
+                prev.focus();
+                break;
+              case ' ':
+              case 'Enter':
+                e.preventDefault();
+                selectCategory(button.dataset.category);
+                break;
+            }
+          });
+        });
+
+        // Initialize
+        renderBlogPosts();
+      });
+
+      // Newsletter subscription functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('newsletter-form');
+        const emailInput = document.getElementById('newsletter-email');
+        const messageDiv = document.getElementById('newsletter-message');
+        const subscribeButton = document.getElementById('newsletter-subscribe-btn');
+
+        // Initialize Supabase client
+        const { createClient } = supabase;
+        const supabaseClient = createClient(
+          'https://qearvuhyixzivublbiyu.supabase.co',
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXJ2dWh5aXh6aXZ1YmxiaXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMyMDAzNzIsImV4cCI6MjA1ODc3NjM3Mn0.TkzyQEIakL43DTedLXET0lr6mK5lp_wom_FqsXUzV-8'
+        );
+
+        // Show message function
+        function showMessage(message, isError = false) {
+          messageDiv.textContent = message;
+          messageDiv.className = `mt-4 text-sm ${isError ? 'text-red-500' : 'text-green-500'}`;
+        }
+
+        // Validate email format
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        // Handle form submission
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const email = emailInput.value.trim();
+          
+          // Validate email format
+          if (!isValidEmail(email)) {
+            showMessage('Please enter a valid email address.', true);
+            return;
+          }
+
+          // Disable form while processing
+          emailInput.disabled = true;
+          subscribeButton.disabled = true;
+          subscribeButton.textContent = 'Subscribing...';
+          
+          try {
+            // Insert email into Supabase
+            const { error } = await supabaseClient
+              .from('subscribers')
+              .insert([{ email }]);
+
+            if (error) {
+              if (error.code === '23505') { // Unique violation
+                showMessage(`The email address "${email}" is already subscribed to the newsletter.`, true);
+              } else if (error.code === '23502') { // Not null violation
+                showMessage('Please provide a valid email address.', true);
+              } else if (error.code === '23514') { // Check violation
+                showMessage('Invalid email format.', true);
+              } else {
+                showMessage(`Subscription failed: ${error.message || 'Unknown error'}`, true);
+                console.error('Supabase error:', error);
+              }
+            } else {
+              showMessage('Thank you for subscribing to the newsletter!');
+              form.reset();
+            }
+          } catch (err) {
+            showMessage(`Subscription failed: ${err.message || 'Unknown error'}`, true);
+            console.error('Subscription error:', err);
+          } finally {
+            // Re-enable form
+            emailInput.disabled = false;
+            subscribeButton.disabled = false;
+            subscribeButton.textContent = 'Subscribe';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

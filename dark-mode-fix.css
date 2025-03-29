@@ -1,0 +1,93 @@
+/* CRITICAL DARK MODE FIX */
+
+/* 
+THIS IS A HIGHER SPECIFICITY FIX FOR DARK MODE THAT OVERRIDES ALL OTHER STYLES 
+Selectors are made extremely specific to ensure they take precedence
+*/
+
+/* Force dark mode styles for ALL cards */
+html.dark body div.container div.glass-card,
+html.dark body div.container section.glass-card,
+html.dark body div.container main div.glass-card,
+html.dark body main div.container div.glass-card,
+html.dark body main div.container section.glass-card,
+html.dark body main section.glass-card,
+html.dark body div.modern-card,
+html.dark body main div.profile-card,
+html.dark body div.blog-card,
+html.dark body div.skills-card,
+html.dark body div.container div.profile-card.modern-card,
+html.dark body main div.mt-8.glass-card {
+  background-color: rgb(27 40 69 / 40%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Critical text color fixes for ALL important text elements */
+html.dark body h1,
+html.dark body h2, 
+html.dark body h3,
+html.dark body h4,
+html.dark body h5,
+html.dark body .section-title,
+html.dark body .text-dark-900,
+html.dark body h2.text-dark-900,
+html.dark body h3.text-dark-900,
+html.dark body h4.text-dark-900,
+html.dark body .work-experience-title,
+html.dark body .work-title,
+html.dark body blockquote p,
+html.dark body blockquote footer,
+html.dark body .blog-title,
+html.dark body .profile-name,
+html.dark body div.card-text p {
+  color: white !important;
+}
+
+/* Fix for blog cards in dark mode */
+html.dark body .blog-card {
+  background-color: rgba(17, 24, 39, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix for profile card in dark mode */
+html.dark body .profile-card,
+html.dark body .profile-card .profile-card-top {
+  background-color: rgba(17, 24, 39, 0.4) !important;
+}
+
+html.dark body .profile-card .profile-card-bottom {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+/* Make sure paragraph text is visible */
+html.dark body p.text-dark-700,
+html.dark body .text-dark-700,
+html.dark body div.blog-content p.blog-excerpt,
+html.dark body .skill-text {
+  color: #d1d5db !important; /* light gray for better contrast */
+}
+
+/* Fix for floating cards and buttons in dark mode */
+html.dark body .card-content,
+html.dark body .glass-card.rounded-xl,
+html.dark body button.category-btn {
+  background-color: rgba(17, 24, 39, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix for work experience timeline */
+html.dark body .work-experience-item {
+  border-left-color: rgba(3, 105, 161, 0.5) !important;
+}
+
+/* Fix for all sections */
+html.dark body section {
+  background-color: transparent !important;
+}
+
+/* Fix any light mode specific styles that might be causing issues */
+html.dark body * {
+  --glass-card-bg: rgba(17, 24, 39, 0.4) !important;
+  --glass-card-border: rgba(255, 255, 255, 0.05) !important;
+}
