@@ -22,7 +22,7 @@ const getTheme = () => {
 const applyTheme = (theme) => {
   document.documentElement.classList.toggle('dark', theme === 'dark');
   localStorage.setItem('theme', theme);
-  
+
   // Update icons
   const isDark = theme === 'dark';
   themeIcon.setAttribute('name', isDark ? 'sun' : 'moon');
@@ -55,7 +55,7 @@ const handleScroll = () => {
   } else {
     navbar.classList.remove('scrolled');
   }
-  
+
   // Show/hide scroll to top button
   if (window.scrollY > 300) {
     scrollToTopBtn.classList.add('show');
@@ -87,7 +87,7 @@ const setupScrollAnimation = () => {
     rootMargin: '0px',
     threshold: 0.1
   };
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -96,7 +96,7 @@ const setupScrollAnimation = () => {
       }
     });
   }, observerOptions);
-  
+
   // Animate cards and sections
   document.querySelectorAll('.skill-card, .experience-card, .project-card, .blog-card, .section-header').forEach(element => {
     element.classList.add('animate-on-scroll');
@@ -108,28 +108,33 @@ const setupScrollAnimation = () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
   createIcons();
-  
+
   // Apply saved theme
   applyTheme(getTheme());
-  
+
   // Event listeners
-  themeToggle.addEventListener('click', toggleTheme);
-  mobileThemeToggle.addEventListener('click', toggleTheme);
-  menuToggle.addEventListener('click', toggleMobileMenu);
-  scrollToTopBtn.addEventListener('click', scrollToTop);
+  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+  if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+  if (menuToggle) menuToggle.addEventListener('click', toggleMobileMenu);
+  if (scrollToTopBtn) scrollToTopBtn.addEventListener('click', scrollToTop);
   window.addEventListener('scroll', handleScroll);
-  
-  // Close mobile menu when clicking on a link
-  document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      toggleMobileMenu();
+
+  // Close mobile menu when clicking on a link (only if mobile menu exists)
+  if (mobileMenu) {
+    document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        // Ensure toggleMobileMenu is only called if menuToggle exists
+        if (menuToggle) {
+          toggleMobileMenu();
+        }
+      });
     });
-  });
-  
+  }
+
   // Setup animations
   // Removed call to initResumeSticky()
   setupScrollAnimation();
-  
+
   // Initial scroll check
   handleScroll();
 });
