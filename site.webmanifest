@@ -1,0 +1,21 @@
+{
+  "name": "paguire.com",
+  "short_name": "paguire.com",
+  "description": "Christopher R McGuire's Personal Site",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#008fcc",
+  "theme_color": "#008fcc",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
