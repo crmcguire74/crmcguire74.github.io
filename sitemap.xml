@@ -30,4 +30,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+    <url>
+    <loc>https://www.paguire.com/myStory.html</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
