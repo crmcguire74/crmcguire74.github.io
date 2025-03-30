@@ -1,13 +1,80 @@
-// Register Service Worker
+// Service Worker Registration and Management
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('ServiceWorker registration successful');
-      })
-      .catch(err => {
-        console.log('ServiceWorker registration failed: ', err);
+  window.addEventListener('load', async () => {
+    try {
+      // Unregister any existing service workers first
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      for (let registration of registrations) {
+        await registration.unregister();
+      }
+
+      // Register the new service worker
+      const registration = await navigator.serviceWorker.register('./sw.js', {
+        scope: './'
       });
+      
+      console.log('ServiceWorker registered successfully. Scope:', registration.scope);
+
+      // Handle updates
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed') {
+            if (navigator.serviceWorker.controller) {
+              const notification = document.createElement('div');
+              notification.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--brand-500);
+                color: white;
+                padding: 16px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+              `;
+              notification.innerHTML = `
+                New content is available! 
+                <button style="background: white; color: var(--brand-500); border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                  Refresh
+                </button>
+              `;
+              
+              document.body.appendChild(notification);
+              
+              notification.querySelector('button').addEventListener('click', () => {
+                newWorker.postMessage({ type: 'skipWaiting' });
+                notification.remove();
+              });
+            }
+          }
+        });
+      });
+
+      // Handle controller change (when skipWaiting is called)
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
+
+    } catch (error) {
+      console.error('ServiceWorker registration failed:', error);
+    }
+  });
+
+  // Handle service worker messages
+  navigator.serviceWorker.addEventListener('message', event => {
+    if (event.data && event.data.type === 'reload') {
+      window.location.reload();
+    }
   });
 }
 
