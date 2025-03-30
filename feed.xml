@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Christopher R McGuire's Blog</title>
+    <description>Thoughts, ideas, and insights on UX/UI design, software engineering, and industry trends</description>
+    <link>https://www.paguire.com</link>
+    <atom:link href="https://www.paguire.com/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Mar 2025 21:12:00 -0500</lastBuildDate>
+    <item>
+      <title>User Interface Design for Web Applications | Best Practices</title>
+      <description>Discover essential best practices for User Interface Design for Web Applications to create intuitive, user-friendly experiences that boost engagement and conversion rates.</description>
+      <link>https://iconforge.net/blog/articles/user_interface_design_for_web_applications</link>
+      <guid>https://iconforge.net/blog/articles/user_interface_design_for_web_applications</guid>
+      <pubDate>Fri, 8 Nov 2024 00:00:00 -0500</pubDate>
+    </item>
+    <item>
+      <title>Custom Icons and User Interface Design Tips and Methods</title>
+      <description>Elevate your digital product with expert tips on Custom Icons and User Interface Design for a polished, user-friendly experience.</description>
+      <link>https://iconforge.net/blog/articles/custom_icons_and_user_interface_design_tips</link>
+      <guid>https://iconforge.net/blog/articles/custom_icons_and_user_interface_design_tips</guid>
+      <pubDate>Sat, 9 Nov 2024 00:00:00 -0500</pubDate>
+    </item>
+    <item>
+      <title>The Hidden ROI of UX/UI Design in Internal Business Applications</title>
+      <description>Discover how thoughtful design and branding in internal business applications can transform employee experience, boost productivity, and drive organizational success.</description>
+      <link>https://iconforge.net/blog/articles/hidden_roi_of_uxui_design_in_internal_business_applications</link>
+      <guid>https://iconforge.net/blog/articles/hidden_roi_of_uxui_design_in_internal_business_applications</guid>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 -0500</pubDate>
+    </item>
+  </channel>
+</rss>
