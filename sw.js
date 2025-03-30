@@ -24,7 +24,7 @@ self.addEventListener('install', event => {
       .then(cache => {
         // Cache core assets but don't fail if some fail
         return Promise.allSettled(
-          urlsToCache.map(url => 
+          urlsToCache.map(url =>
             cache.add(url).catch(err => {
               console.warn(`Failed to cache: ${url}`, err);
               return Promise.resolve(); // Continue despite failure
@@ -40,45 +40,43 @@ self.addEventListener('fetch', event => {
   // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
+  // Skip non-HTTP(S) requests
+  if (!event.request.url.startsWith('http')) return;
+
   event.respondWith(
-    caches.match(event.request)
-      .then(cachedResponse => {
-        if (cachedResponse) {
-          // Return cached response
-          return cachedResponse;
+    fetch(event.request)
+      .then(response => {
+        // Don't cache if not a valid response
+        if (!response || response.status !== 200) {
+          return response;
         }
 
-        return fetch(event.request)
-          .then(response => {
-            // Don't cache if not a valid response
-            if (!response || response.status !== 200) {
-              return response;
+        // Clone the response before caching
+        const responseToCache = response.clone();
+
+        // Cache the fetched response
+        caches.open(CACHE_NAME)
+          .then(cache => {
+            // Only cache same-origin requests
+            if (event.request.url.startsWith(self.location.origin)) {
+              cache.put(event.request, responseToCache)
+                .catch(err => console.warn('Cache put error:', err));
             }
-
-            // Clone the response before caching
-            const responseToCache = response.clone();
-
-            // Cache the fetched response
-            caches.open(CACHE_NAME)
-              .then(cache => {
-                // Only cache same-origin requests
-                if (event.request.url.startsWith(self.location.origin)) {
-                  cache.put(event.request, responseToCache)
-                    .catch(err => console.warn('Cache put error:', err));
-                }
-              })
-              .catch(err => console.warn('Cache open error:', err));
-
-            return response;
           })
-          .catch(error => {
-            console.warn('Fetch failed:', error);
-            
-            // For navigation requests, return the offline page
-            if (event.request.mode === 'navigate') {
-              return caches.match('./index.html');
+          .catch(err => console.warn('Cache open error:', err));
+
+        return response;
+      })
+      .catch(error => {
+        console.warn('Fetch failed:', error);
+
+        // Try to get from cache
+        return caches.match(event.request)
+          .then(cachedResponse => {
+            if (cachedResponse) {
+              return cachedResponse;
             }
-            
+
             // Return error response
             return new Response('Network error happened', {
               status: 408,
@@ -103,10 +101,6 @@ self.addEventListener('activate', event => {
             }
           })
         );
-      })
-      .then(() => {
-        // Ensure the new service worker takes control immediately
-        return self.clients.claim();
       })
   );
 });

@@ -2,23 +2,17 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
-      // Unregister any existing service workers first
-      const registrations = await navigator.serviceWorker.getRegistrations();
-      for (let registration of registrations) {
-        await registration.unregister();
-      }
-
-      // Register the new service worker
+      // Register the service worker
       const registration = await navigator.serviceWorker.register('./sw.js', {
         scope: './'
       });
-      
+
       console.log('ServiceWorker registered successfully. Scope:', registration.scope);
 
       // Handle updates
       registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
-        
+
         newWorker.addEventListener('statechange', () => {
           if (newWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
@@ -44,9 +38,9 @@ if ('serviceWorker' in navigator) {
                   Refresh
                 </button>
               `;
-              
+
               document.body.appendChild(notification);
-              
+
               notification.querySelector('button').addEventListener('click', () => {
                 newWorker.postMessage({ type: 'skipWaiting' });
                 notification.remove();
@@ -59,7 +53,7 @@ if ('serviceWorker' in navigator) {
       // Handle controller change (when skipWaiting is called)
       let refreshing = false;
       navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (!refreshing) {
+        if (!refreshing && !navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
           refreshing = true;
           window.location.reload();
         }
