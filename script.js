@@ -99,8 +99,20 @@ const applyTheme = (theme) => {
 
   // Update icons
   const isDark = theme === 'dark';
-  themeIcon.setAttribute('name', isDark ? 'sun' : 'moon');
-  mobileThemeIcon.setAttribute('name', isDark ? 'sun' : 'moon');
+  // Set moon icon for dark mode, sun icon for light mode
+  themeIcon.setAttribute('name', isDark ? 'moon' : 'sun');
+  mobileThemeIcon.setAttribute('name', isDark ? 'moon' : 'sun');
+  // Re-render icons after changing the name attribute
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons({
+      nodes: [themeIcon.parentElement, mobileThemeIcon.parentElement], // Target the parent elements containing the icons
+      attrs: { // Ensure attributes like size and stroke-width are preserved
+        'stroke-width': themeIcon.getAttribute('stroke-width') || 1.5, // Use existing or default
+      }
+    });
+  }
+  lucide.createIcons();
+  createIcons();
 };
 
 // Toggle theme
