@@ -3,8 +3,8 @@
   <channel>
     <title>Christopher R McGuire's Blog</title>
     <description>Thoughts, ideas, and insights on UX/UI design, software engineering, and industry trends</description>
-    <link>https://www.paguire.com</link>
-    <atom:link href="https://www.paguire.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://paguire.com</link>
+    <atom:link href="https://paguire.com/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Fri, 29 Mar 2025 21:12:00 -0500</lastBuildDate>
     <item>
       <title>User Interface Design for Web Applications | Best Practices</title>
