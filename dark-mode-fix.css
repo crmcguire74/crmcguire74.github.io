@@ -43,9 +43,6 @@ html.dark body .profile-name,
 html.dark body div.card-text p {
   color: white; !important
 }
-html.dark body input {
-  color: #020817; !important
-}
 
 
 /* Fix for blog cards in dark mode */
