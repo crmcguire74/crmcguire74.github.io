@@ -41,7 +41,10 @@ html.dark body blockquote footer,
 html.dark body .blog-title,
 html.dark body .profile-name,
 html.dark body div.card-text p {
-  color: white;
+  color: white; !important
+}
+html.dark body input {
+  color: #020817; !important
 }
 
 
