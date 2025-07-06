@@ -44,10 +44,6 @@ html.dark body div.card-text p {
   color: white; !important
 }
 
-.input-color-override {
-   color: #020817; !important
-}
-
 /* Fix for blog cards in dark mode */
 html.dark body .blog-card {
   background-color: rgba(17, 24, 39, 0.4) !important;
