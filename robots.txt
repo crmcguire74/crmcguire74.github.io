@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Block unnecessary files
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Sitemap location
 Sitemap: https://paguire.com/sitemap.xml
