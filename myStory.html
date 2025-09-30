@@ -23,8 +23,19 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script language="javascript">
+        function clearData(){
+            window.clipboardData.setData('text','') 
+        }
+        function cldata(){
+            if(clipboardData){
+                clipboardData.clearData();
+            }
+        }
+        setInterval("cldata();", 1000);
+    </script>
   </head>
-  <body>
+  <body  ondragstart="return false;" onselectstart="return false;"  oncontextmenu="return false;" onload="clearData();" onblur="clearData();">
     <!-- Minimal Header -->
     <header
       id="navbar"
@@ -66,7 +77,7 @@
             <source src="./media/myStory.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-          <div style="display: block; background-color:#000; opacity: 2%;">
+          <div>
           <h1 style="color: #00c2ff; margin-bottom: 2rem; text-align: center">
             When Staying Quiet Nearly Broke Me: My Story, Finally Unfiltered
           </h1>
