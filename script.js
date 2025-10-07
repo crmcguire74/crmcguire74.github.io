@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   createIcons();
 
   // Apply saved theme
-  applyTheme(getTheme());
+  // applyTheme(getTheme()); // This is now handled by theme-loader.js
 
   // Event listeners
   if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
