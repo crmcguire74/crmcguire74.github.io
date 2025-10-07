@@ -89,7 +89,7 @@ const getTheme = () => {
   if (savedTheme) {
     return savedTheme;
   }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'dark'; // Default to dark theme for new visitors
 };
 
 // Apply theme
@@ -117,7 +117,7 @@ const applyTheme = (theme) => {
 
 // Toggle theme
 const toggleTheme = () => {
-  const currentTheme = localStorage.getItem('theme') || 'light';
+  const currentTheme = localStorage.getItem('theme') || 'dark';
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   applyTheme(newTheme);
 };
