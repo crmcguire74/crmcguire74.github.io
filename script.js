@@ -1,7 +1,3 @@
-// Apply initial theme immediately to prevent flash
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-
 // Service Worker Registration and Management
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
@@ -93,7 +89,7 @@ const getTheme = () => {
   if (savedTheme) {
     return savedTheme;
   }
-  return 'dark'; // Default to dark theme for new visitors
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
 // Apply theme
@@ -121,7 +117,7 @@ const applyTheme = (theme) => {
 
 // Toggle theme
 const toggleTheme = () => {
-  const currentTheme = localStorage.getItem('theme') || 'dark';
+  const currentTheme = localStorage.getItem('theme') || 'light';
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   applyTheme(newTheme);
 };
@@ -223,19 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
   createIcons();
 
-  // Update theme icons (theme was already applied)
-  const currentTheme = getTheme();
-  const isDark = currentTheme === 'dark';
-  if (themeIcon) themeIcon.setAttribute('name', isDark ? 'moon' : 'sun');
-  if (mobileThemeIcon) mobileThemeIcon.setAttribute('name', isDark ? 'moon' : 'sun');
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons({
-      nodes: [themeIcon?.parentElement, mobileThemeIcon?.parentElement].filter(Boolean),
-      attrs: {
-        'stroke-width': themeIcon?.getAttribute('stroke-width') || 1.5,
-      }
-    });
-  }
+  // Apply saved theme
+  applyTheme(getTheme());
 
   // Event listeners
   if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
