@@ -1,3 +1,7 @@
+// Apply initial theme immediately to prevent flash
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+
 // Service Worker Registration and Management
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
@@ -219,8 +223,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
   createIcons();
 
-  // Apply saved theme
-  applyTheme(getTheme());
+  // Update theme icons (theme was already applied)
+  const currentTheme = getTheme();
+  const isDark = currentTheme === 'dark';
+  if (themeIcon) themeIcon.setAttribute('name', isDark ? 'moon' : 'sun');
+  if (mobileThemeIcon) mobileThemeIcon.setAttribute('name', isDark ? 'moon' : 'sun');
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons({
+      nodes: [themeIcon?.parentElement, mobileThemeIcon?.parentElement].filter(Boolean),
+      attrs: {
+        'stroke-width': themeIcon?.getAttribute('stroke-width') || 1.5,
+      }
+    });
+  }
 
   // Event listeners
   if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
