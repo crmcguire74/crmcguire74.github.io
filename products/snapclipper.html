@@ -13,11 +13,11 @@
       name="keywords"
       content="SnapClipper, Chrome extension, web clipping tool, AI organization, research productivity, save web content, privacy-first extension"
     />
-    <link rel="canonical" href="https://paguire.com/snapclipper" />
+    <link rel="canonical" href="https://paguire.com/products/snapclipper" />
     <meta name="author" content="Christopher R McGuire" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://paguire.com/snapclipper" />
+    <meta property="og:url" content="https://paguire.com/products/snapclipper" />
     <meta property="og:title" content="SnapClipper - Save & Organize Web Content" />
     <meta
       property="og:description"
@@ -26,7 +26,7 @@
     <meta property="og:image" content="https://paguire.com/images/SnapClipper.png" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://paguire.com/snapclipper" />
+    <meta property="twitter:url" content="https://paguire.com/products/snapclipper" />
     <meta property="twitter:title" content="SnapClipper - Save & Organize Web Content" />
     <meta
       property="twitter:description"
@@ -50,17 +50,17 @@
     <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196x196.png" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./styles-additional.css" />
-    <link rel="stylesheet" href="./pages-styles.css" />
-    <link rel="stylesheet" href="./dark-mode-fix.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles-additional.css" />
+    <link rel="stylesheet" href="../pages-styles.css" />
+    <link rel="stylesheet" href="../dark-mode-fix.css" />
     <!-- Import fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <!-- Lucide icons -->
-    <script src="theme-loader.js"></script>
+    <script src="../theme-loader.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script type="application/ld+json">
@@ -70,7 +70,7 @@
       "name": "SnapClipper",
       "operatingSystem": "Chrome",
       "applicationCategory": "ProductivityApplication",
-      "url": "https://paguire.com/snapclipper",
+      "url": "https://paguire.com/products/snapclipper",
       "description": "Chrome extension for one-click web clipping with AI organization and private, on-device storage.",
       "creator": {
         "@type": "Person",
@@ -94,13 +94,263 @@
       }
     }
     </script>
+
+    <style>
+      .product-page .product-section {
+        margin-bottom: clamp(3rem, 6vw, 6rem);
+        padding-bottom: clamp(2rem, 4vw, 3.5rem);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      .dark .product-page .product-section {
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .product-page .product-section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .product-hero .hero-media {
+        position: relative;
+      }
+
+      .product-hero .hero-media img {
+        border-radius: 1.5rem;
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+      }
+
+      .product-hero .hero-panel {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        width: min(320px, 80%);
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.45);
+      }
+
+      @media (max-width: 1023px) {
+        .product-hero .hero-panel {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          margin-top: 1rem;
+        }
+      }
+
+      .hero-panel .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      .hero-panel .panel-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-panel .panel-tab {
+        border-radius: 9999px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        padding: 0.35rem 0.9rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .hero-panel .panel-tab.active {
+        background: linear-gradient(120deg, var(--brand-300), var(--brand-500));
+        color: white;
+        border-color: transparent;
+      }
+
+      .hero-panel .panel-input {
+        width: 100%;
+        border-radius: 9999px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        padding: 0.45rem 0.9rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .hero-panel .panel-clips {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-panel .panel-clip {
+        padding: 0.75rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+
+      .dark .hero-panel .panel-clip {
+        background-color: rgba(var(--dark-900-rgb), 0.4);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .hero-panel .panel-actions button {
+        width: 100%;
+        border-radius: 9999px;
+        padding: 0.6rem 1rem;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        font-weight: 600;
+      }
+
+      .hero-panel .panel-actions button.primary {
+        margin-top: 0.65rem;
+        background: var(--brand-600);
+        color: white;
+        border-color: transparent;
+      }
+
+      .product-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .gallery-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 20px 35px -22px rgba(15, 23, 42, 0.5);
+      }
+
+      .gallery-img--clip {
+        object-position: 10% 45%;
+      }
+
+      .gallery-img--dashboard {
+        object-position: 50% 50%;
+      }
+
+      .gallery-img--settings {
+        object-position: 85% 40%;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .feature-tile {
+        border-radius: 1rem;
+        padding: 1.25rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background-color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .dark .feature-tile {
+        background-color: rgba(var(--dark-900-rgb), 0.5);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .feature-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 0.75rem;
+        background-color: rgba(var(--brand-100-rgb), 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--brand-600);
+      }
+
+      .stepper {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .step-card {
+        display: flex;
+        gap: 1rem;
+        border-radius: 1.2rem;
+        padding: 1rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      .dark .step-card {
+        background-color: rgba(var(--dark-900-rgb), 0.5);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .step-number {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        background-color: var(--brand-100);
+        color: var(--brand-600);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+
+      .step-content h3 {
+        margin-bottom: 0.25rem;
+      }
+
+      .shot-card {
+        position: relative;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 30px 50px -28px rgba(15, 23, 42, 0.6);
+        background-color: rgba(255, 255, 255, 0.85);
+      }
+
+      .shot-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .shot-badge {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        border-radius: 1rem;
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
     <header id="navbar" class="navbar">
       <div class="container">
         <a href="/" class="logo"
-          ><img src="./images/paguireLogo.png" alt="Paguire Logo" height="50"
+          ><img src="../images/paguireLogo.png" alt="Paguire Logo" height="50"
         /></a>
 
         <!-- Desktop Navigation -->
@@ -205,10 +455,9 @@
       </div>
     </div>
 
-    <main class="bg-gradient">
-      <div class="container pt-28 pb-20 space-y-20">
-        <!-- Hero Section -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <main class="bg-gradient product-page">
+      <div class="container pt-28 pb-24">
+        <section class="product-section product-hero grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="order-2 lg:order-1">
             <h4 class="text-brand-600 dark:text-brand-400 text-lg font-medium mb-3">
               Chrome Extension · Productivity
@@ -220,10 +469,9 @@
               Capture web content in one click. Never lose a great idea again.
             </p>
             <p class="text-dark-700 dark:text-dark-300 mb-6">
-              Stop losing research, quotes, and code snippets to endless browser tabs.
-              SnapClipper lets you highlight anything, right-click to save, and instantly
-              find it again thanks to AI-powered tagging, full-text search, and a beautiful dashboard
-              that works across desktop, tablet, and mobile sized views.
+              Highlight anything, right-click to save, and instantly find it again thanks to AI-powered tagging,
+              full-text search, and a beautiful dashboard that adapts to desktop, tablet, and mobile views while
+              keeping your data on-device.
             </p>
             <div class="glass-card rounded-xl px-5 py-4 mb-6 inline-flex items-center gap-3">
               <i data-lucide="sparkles" class="text-brand-500"></i>
@@ -271,42 +519,53 @@
               </div>
             </div>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="relative">
-              <div class="rounded-xl overflow-hidden shadow-2xl" style="height:25rem;">
-                <img
-                  src="./images/SnapClipper.png"
-                  alt="SnapClipper dashboard preview"
-                  class="w-auto"
-                  style="height:100%;"
-                />
-              </div>
-              <div class="absolute -bottom-6 -right-6 animate-float">
-                <div class="glass-card rounded-xl px-4 py-3 shadow-lg">
-                  <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-dark-800 flex items-center justify-center">
-                      <span class="text-brand-600 dark:text-brand-400 font-bold">AI</span>
-                    </div>
-                    <div class="ml-3">
-                      <p class="text-dark-900 dark:text-white font-medium">Context-aware tags</p>
-                      <p class="text-dark-600 dark:text-dark-300 text-sm m-0">Powered by on-device models</p>
-                    </div>
-                  </div>
+          <div class="order-1 lg:order-2 hero-media">
+            <img
+              src="../images/SnapClipper.png"
+              alt="SnapClipper dashboard preview"
+            />
+            <div class="hero-panel glass-card">
+              <div class="panel-header">
+                <div>
+                  <p class="text-sm text-dark-500 dark:text-dark-300 m-0">SnapClipper</p>
+                  <p class="text-dark-900 dark:text-white font-semibold m-0">2 clips • 2.73&nbsp;MB</p>
                 </div>
+                <i data-lucide="camera" class="text-brand-500"></i>
+              </div>
+              <input class="panel-input" type="text" value="Search clips, URLs, tags" readonly />
+              <div class="panel-tabs">
+                <span class="panel-tab active text-center">All</span>
+                <span class="panel-tab text-center">Favorites</span>
+              </div>
+              <div class="panel-clips">
+                <div class="panel-clip">
+                  <p class="font-semibold text-dark-900 dark:text-white m-0">
+                    “Elizabeth Warren: Larry Summers Should...”
+                  </p>
+                  <p class="text-sm text-dark-500 dark:text-dark-300 m-0">msn.com</p>
+                </div>
+                <div class="panel-clip">
+                  <p class="font-semibold text-dark-900 dark:text-white m-0">
+                    “As a manager in the frontend developme...”
+                  </p>
+                  <p class="text-sm text-dark-500 dark:text-dark-300 m-0">Medium</p>
+                </div>
+              </div>
+              <div class="panel-actions">
+                <button>Clip current selection</button>
+                <button class="primary">Open dashboard</button>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Why SnapClipper -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <section class="product-section grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 class="text-2xl md:text-3xl font-bold mb-4">SnapClipper: Capture. Organize. Remember.</h2>
             <p class="text-dark-700 dark:text-dark-300 mb-6">
-              SnapClipper removes the friction from knowledge capture. Everything you save is
-              automatically categorized, searchable in seconds, and stored privately on your device.
-              Whether you're studying, designing, coding, or researching, you get a calm dashboard that
-              keeps ideas at your fingertips.
+              SnapClipper removes the friction from knowledge capture. Everything you save is automatically
+              categorized, searchable in seconds, and stored privately on your device. Whether you're studying,
+              designing, coding, or researching, you get a calm dashboard that keeps ideas at your fingertips.
             </p>
             <div class="space-y-4">
               <div class="flex items-start">
@@ -327,7 +586,7 @@
                 <span class="w-2 h-2 rounded-full bg-brand-500 mr-3 mt-2"></span>
                 <p class="text-dark-700 dark:text-dark-300">
                   <strong>Beautiful Dashboard:</strong> A responsive workspace with dark mode, filters, and saved
-                  views for desktop, tablet, and mobile.
+                  views for every device size.
                 </p>
               </div>
               <div class="flex items-start">
@@ -343,114 +602,176 @@
             <h3 class="text-xl font-semibold mb-4">Perfect For</h3>
             <ul class="space-y-3 text-dark-700 dark:text-dark-300">
               <li>Students capturing research for essays and collaborative projects.</li>
-              <li>Designers saving inspiration, references, and mood board snippets.</li>
+              <li>Designers saving inspiration, references, and mood-board snippets.</li>
               <li>Developers bookmarking code snippets, tutorials, and API responses.</li>
               <li>Content creators collecting ideas, quotes, and emerging trends.</li>
               <li>Researchers organizing primary sources, PDFs, and data points.</li>
-              <li>Anyone reading online who wants to remember what actually matters.</li>
+              <li>Anyone who reads online and wants to remember what matters.</li>
             </ul>
           </div>
         </section>
 
-        <!-- Feature Grid -->
-        <section>
-          <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Everything You Need to Remember the Web</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">One-click web clipping</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+        <section class="product-section">
+          <div class="section-header text-left">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Interface Highlights</h2>
+            <p class="text-dark-700 dark:text-dark-300">
+              A quick peek at the primary surfaces people see every day inside SnapClipper. These visuals are derived
+              from the provided reference screenshots so the layout stays faithful to the actual extension.
+            </p>
+          </div>
+          <div class="product-gallery">
+            <figure class="gallery-card">
+              <img src="../images/SnapClipper.png" alt="SnapClipper mini clipper" class="gallery-img gallery-img--clip" />
+              <figcaption class="text-dark-700 dark:text-dark-300 text-sm">
+                Quick-clip widget with search, tag filters, and context buttons for instant saves.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="../images/SnapClipper.png" alt="SnapClipper dashboard" class="gallery-img gallery-img--dashboard" />
+              <figcaption class="text-dark-700 dark:text-dark-300 text-sm">
+                Dashboard grid showcasing saved clips organized by tag and date, optimized for readability.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="../images/SnapClipper.png" alt="SnapClipper settings" class="gallery-img gallery-img--settings" />
+              <figcaption class="text-dark-700 dark:text-dark-300 text-sm">
+                Settings drawer with theme controls, auto-tag toggles, and snapshot backup reminders.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="product-section">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3 text-center">
+            Everything You Need to Remember the Web
+          </h2>
+          <p class="text-center text-dark-700 dark:text-dark-300 mb-10">
+            Features are grouped into compact tiles so teams can quickly scan what matters without endless scrolling.
+          </p>
+          <div class="feature-grid">
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="mouse-pointer"></i></div>
+              <h3 class="text-lg font-semibold">One-click clipping</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Save highlighted content via context menu or keyboard shortcuts without breaking focus.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">AI auto-tagging</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="sparkles"></i></div>
+              <h3 class="text-lg font-semibold">AI auto-tagging</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Smart models categorize every clip with labels such as Research, Inspiration, Code, Quote, Tutorial,
                 News, Idea, and Note.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Beautiful, searchable dashboard</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="layout"></i></div>
+              <h3 class="text-lg font-semibold">Beautiful dashboard</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Browse recents, favorites, or tag groups in a calm interface with light and dark themes.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Full-text search</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="search"></i></div>
+              <h3 class="text-lg font-semibold">Full-text search</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Instantly search across clip titles, body text, URLs, and tags—even with thousands of entries.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Filter by tag or date</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="filter"></i></div>
+              <h3 class="text-lg font-semibold">Filter by tag or date</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Slice your knowledge base by categories, saved filters, or chronological snapshots.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Export to Markdown or JSON</h3>
-              <p class="text-dark-700 dark:text-dark-300">
-                Move research into docs, wikis, or data pipelines with a single export click.
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="download"></i></div>
+              <h3 class="text-lg font-semibold">Export freedom</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
+                Move research into docs, wikis, or data pipelines with Markdown or JSON exports.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Dark mode & accessibility</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="moon"></i></div>
+              <h3 class="text-lg font-semibold">Dark mode &amp; accessibility</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Toggle light/dark themes and rely on keyboard navigation that feels native to Chrome.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Keyboard shortcuts</h3>
-              <p class="text-dark-700 dark:text-dark-300">
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="keyboard"></i></div>
+              <h3 class="text-lg font-semibold">Keyboard shortcuts</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
                 Command+Shift+Y (customizable) lets power users capture ideas without touching the mouse.
               </p>
-            </div>
-            <div class="glass-card rounded-2xl p-6">
-              <h3 class="text-xl font-semibold mb-2">Completely free</h3>
-              <p class="text-dark-700 dark:text-dark-300">
-                No ads, no upsells, no tracking. Own your content with local-first storage.
+            </article>
+            <article class="feature-tile">
+              <div class="feature-icon"><i data-lucide="shield"></i></div>
+              <h3 class="text-lg font-semibold">Completely free</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">
+                No ads, no upsells, no tracking. Own your content with local-first privacy.
               </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="product-section glass-card rounded-2xl p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Started in Seconds</h2>
+              <p class="text-dark-700 dark:text-dark-300 mb-6">
+                A redesigned stepper makes onboarding clearer than ever.
+              </p>
+              <ol class="stepper">
+                <li class="step-card">
+                  <span class="step-number">1</span>
+                  <div class="step-content">
+                    <h3 class="text-lg font-semibold">Install SnapClipper</h3>
+                    <p class="text-dark-700 dark:text-dark-300 text-sm">
+                      Add the Chrome extension, pin it to your toolbar, and grant clipping permissions.
+                    </p>
+                  </div>
+                </li>
+                <li class="step-card">
+                  <span class="step-number">2</span>
+                  <div class="step-content">
+                    <h3 class="text-lg font-semibold">Highlight anything</h3>
+                    <p class="text-dark-700 dark:text-dark-300 text-sm">
+                      Select text on any website. SnapClipper preserves the surrounding context automatically.
+                    </p>
+                  </div>
+                </li>
+                <li class="step-card">
+                  <span class="step-number">3</span>
+                  <div class="step-content">
+                    <h3 class="text-lg font-semibold">Right-click &amp; clip</h3>
+                    <p class="text-dark-700 dark:text-dark-300 text-sm">
+                      Choose “Clip with Context,” or tap the keyboard shortcut to save without lifting your hands.
+                    </p>
+                  </div>
+                </li>
+                <li class="step-card">
+                  <span class="step-number">4</span>
+                  <div class="step-content">
+                    <h3 class="text-lg font-semibold">Search instantly</h3>
+                    <p class="text-dark-700 dark:text-dark-300 text-sm">
+                      Open the dashboard, filter by tag or date, and keep moving with confidence.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="shot-card">
+              <img src="../images/SnapClipper.png" alt="SnapClipper dashboard" />
+              <div class="shot-badge glass-card">
+                Local storage reminder: export backups from Settings → Data &amp; Storage for peace of mind.
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- How it Works -->
-        <section class="glass-card rounded-2xl p-8">
-          <h2 class="text-2xl md:text-3xl font-bold mb-6">Get Started in Seconds</h2>
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-              <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-dark-800 flex items-center justify-center text-brand-600 font-semibold mb-3">
-                1
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Install SnapClipper</h3>
-              <p class="text-dark-700 dark:text-dark-300">Add the Chrome extension and pin it to your toolbar.</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-dark-800 flex items-center justify-center text-brand-600 font-semibold mb-3">
-                2
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Highlight anything</h3>
-              <p class="text-dark-700 dark:text-dark-300">Select text on any website. Context is preserved automatically.</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-dark-800 flex items-center justify-center text-brand-600 font-semibold mb-3">
-                3
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Right-click &amp; clip</h3>
-              <p class="text-dark-700 dark:text-dark-300">Choose “Clip with Context” or hit the keyboard shortcut.</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-dark-800 flex items-center justify-center text-brand-600 font-semibold mb-3">
-                4
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Search instantly</h3>
-              <p class="text-dark-700 dark:text-dark-300">Open the dashboard, filter by tag or date, and keep moving.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section>
+        <section class="product-section">
           <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">What Users Love</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="glass-card rounded-2xl p-6">
@@ -474,8 +795,7 @@
           </div>
         </section>
 
-        <!-- Coming Soon & Privacy -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <section class="product-section grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div class="glass-card rounded-2xl p-8">
             <h2 class="text-2xl font-bold mb-4">Coming Soon</h2>
             <ul class="space-y-3 text-dark-700 dark:text-dark-300">
@@ -488,19 +808,17 @@
           <div class="glass-card rounded-2xl p-8">
             <h2 class="text-2xl font-bold mb-4">Privacy &amp; Security</h2>
             <p class="text-dark-700 dark:text-dark-300 mb-4">
-              Your clips live only inside this device’s browser storage. Export backups anytime from
-              Settings → Data &amp; Storage, and rest easy knowing there are no trackers, no ads, and no
-              hidden sync processes. SnapClipper is pure, private productivity.
+              Your clips live only inside this device’s browser storage. Export backups anytime from Settings →
+              Data &amp; Storage, and rest easy knowing there are no trackers, no ads, and no hidden sync processes.
             </p>
             <p class="text-dark-700 dark:text-dark-300">
-              Need screenshots with every clip? Enable Screenshot Capture and keep visual context without
-              sending data to external servers.
+              Need screenshots with every clip? Enable Screenshot Capture and keep visual context without sending
+              data to external servers.
             </p>
           </div>
         </section>
 
-        <!-- CTA -->
-        <section class="text-center">
+        <section class="product-section text-center">
           <div class="glass-card rounded-2xl p-10 inline-block">
             <h2 class="text-3xl font-bold mb-4">Ready to Capture Smarter?</h2>
             <p class="text-dark-700 dark:text-dark-300 mb-6">
@@ -561,40 +879,5 @@
           <div class="social-links">
             <a
               href="https://linkedin.com/in/christopher-mcguire/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i data-lucide="linkedin"></i>
-            </a>
-            <a
-              href="https://twitter.com/crmcguire74"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <i data-lucide="twitter"></i>
-            </a>
-            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email">
-              <i data-lucide="mail"></i>
-            </a>
-            <a
-              href="https://github.com/crmcguire74"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <i data-lucide="github"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
-      <i data-lucide="arrow-up"></i>
-    </button>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
+              target="_
+*** End of File
