@@ -114,7 +114,7 @@
 
       .product-hero .hero-media {
         position: relative;
-        top: -150px;
+        align-self: start;
       }
 
       @media (max-width: 768px) {
@@ -303,13 +303,10 @@
         gap: 1rem;
         border-radius: 1.2rem;
         padding: 1rem;
-        border: 1px solid rgba(15, 23, 42, 0.08);
-        background-color: rgba(255, 255, 255, 0.9);
       }
 
       .dark .step-card {
-        background-color: rgba(var(--dark-900-rgb), 0.5);
-        border-color: rgba(255, 255, 255, 0.08);
+        
       }
 
       .step-number {
@@ -475,17 +472,17 @@
             <p class="text-xl text-dark-900 dark:text-white mb-4">
               Capture web content in one click. Never lose a great idea again.
             </p>
-            <p class="text-dark-700 dark:text-dark-300 mb-6">
-              Highlight anything, right-click to save, and instantly find it again thanks to AI-powered tagging,
-              full-text search, and a beautiful dashboard that adapts to desktop, tablet, and mobile views while
-              keeping your data on-device.
-            </p>
-            <div class="glass-card rounded-xl px-5 py-4 mb-6 inline-flex items-center gap-3">
+            <div class="px-5 py-4 mb-6 inline-flex items-center gap-3" style="margin-top:65px;">
               <i data-lucide="sparkles" class="text-brand-500"></i>
               <p class="text-dark-700 dark:text-dark-300 m-0">
                 One-click web clipping with AI organization. Save, search, remember everything.
               </p>
             </div>
+            <p class="text-dark-700 dark:text-dark-300 mb-6">
+              Highlight anything, right-click to save, and instantly find it again thanks to AI-powered tagging,
+              full-text search, and a beautiful dashboard that adapts to desktop, tablet, and mobile views while
+              keeping your data on-device.
+            </p>
             <div class="flex flex-wrap gap-4 mb-8">
               <a href="/contact" class="btn-primary">
                 Access Now
@@ -496,39 +493,11 @@
                 <i data-lucide="mail" class="ml-2"></i>
               </a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div class="glass-card rounded-xl px-4 py-4">
-                <p class="text-sm uppercase tracking-wide text-dark-500 dark:text-dark-300 mb-1">
-                  Capture
-                </p>
-                <p class="text-dark-900 dark:text-white font-semibold">One-click saves</p>
-                <p class="text-dark-600 dark:text-dark-300 text-sm">
-                  Highlight text, right-click, and keep reading without popups.
-                </p>
-              </div>
-              <div class="glass-card rounded-xl px-4 py-4">
-                <p class="text-sm uppercase tracking-wide text-dark-500 dark:text-dark-300 mb-1">
-                  Organize
-                </p>
-                <p class="text-dark-900 dark:text-white font-semibold">AI auto-tagging</p>
-                <p class="text-dark-600 dark:text-dark-300 text-sm">
-                  Research, Inspiration, Code, Quote, Tutorial, News, Idea, Note.
-                </p>
-              </div>
-              <div class="glass-card rounded-xl px-4 py-4">
-                <p class="text-sm uppercase tracking-wide text-dark-500 dark:text-dark-300 mb-1">
-                  Remember
-                </p>
-                <p class="text-dark-900 dark:text-white font-semibold">Private search</p>
-                <p class="text-dark-600 dark:text-dark-300 text-sm">
-                  Local storage, dark mode dashboard, instant recall.
-                </p>
-              </div>
-            </div>
+    
           </div>
           <div class="order-1 lg:order-2 hero-media">
             <img
-              src="../images/products/snapclipper/SnapClipperLogo.png"
+              src="../images/products/snapclipper/SnapClipperBanner.png"
               alt="SnapClipper dashboard preview"
             />
            <!-- <div class="hero-panel glass-card">
@@ -619,7 +588,7 @@
         </section>
 
         <section class="product-section">
-          <div class="section-header text-left">
+          <div class="section-header text-left" style="margin-bottom:45px;">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">Interface Highlights</h2>
             <p class="text-dark-700 dark:text-dark-300">
               A quick peek at the primary surfaces people see every day inside SnapClipper. These visuals are derived
@@ -652,7 +621,7 @@
           <h2 class="text-2xl md:text-3xl font-bold mb-3 text-center">
             Everything You Need to Remember the Web
           </h2>
-          <p class="text-center text-dark-700 dark:text-dark-300 mb-10">
+          <p class="text-center text-dark-700 dark:text-dark-300 mb-10" style="margin-bottom:45px;">
             Features are grouped into compact tiles so teams can quickly scan what matters without endless scrolling.
           </p>
           <div class="feature-grid">
