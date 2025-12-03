@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaGuire | Page Not Found</title>
+  <meta name="description" content="The page you’re looking for isn’t here. Watch the PaGuire 404 clip and head back home." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://paguire.com/404.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PaGuire | Page Not Found" />
+  <meta property="og:description" content="This path doesn’t exist. Watch the PaGuire 404 clip and jump back to the homepage." />
+  <meta property="og:url" content="https://paguire.com/404.html" />
+  <meta property="og:image" content="https://paguire.com/images/paguireLogo.png" />
+  <meta property="og:site_name" content="PaGuire" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="PaGuire | Page Not Found" />
+  <meta property="twitter:description" content="We couldn’t find that page. Watch the PaGuire 404 clip and head home." />
+  <meta property="twitter:image" content="https://paguire.com/images/paguireLogo.png" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles-additional.css" />
+  <link rel="stylesheet" href="/pages-styles.css" />
+  <link rel="stylesheet" href="/dark-mode-fix.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.12), transparent 35%), radial-gradient(circle at 80% 30%, rgba(14, 165, 233, 0.12), transparent 30%), #060911;
+      padding: clamp(12px, 3vw, 28px);
+    }
+
+    .not-found-wrap {
+      width: min(98vw, 1400px);
+      display: grid;
+      gap: 1.25rem;
+      justify-items: center;
+    }
+
+    .video-shell {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(14, 165, 233, 0.06));
+      border-radius: 1.25rem;
+      padding: clamp(0.4rem, 1.5vw, 0.85rem);
+      box-shadow: 0 26px 80px rgba(0, 0, 0, 0.48);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .video-frame {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      border-radius: 1.1rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      background: radial-gradient(circle at 40% 30%, rgba(99, 102, 241, 0.18), transparent 32%), #02040a;
+    }
+
+    #paguire-404-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #paguire-404-video.video-ended {
+      filter: saturate(1.05) contrast(1.02);
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .cta .btn-primary {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        align-items: flex-start;
+        padding: 12px 10px 20px;
+      }
+
+      .not-found-wrap {
+        width: 100%;
+        gap: 0.75rem;
+        margin-top: 8px;
+      }
+
+      .video-shell {
+        padding: 0.35rem;
+        border-radius: 1rem;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.46);
+      }
+
+      .video-frame {
+        border-radius: 0.85rem;
+      }
+
+      .cta .btn-primary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="not-found-wrap" aria-label="Page not found">
+    <div class="video-shell">
+      <div class="video-frame">
+        <video
+          id="paguire-404-video"
+          src="/media/Paguire404.mp4"
+          autoplay
+          muted
+          playsinline
+          controls
+          aria-label="PaGuire 404 video"
+        ></video>
+      </div>
+    </div>
+    <div class="cta">
+      <a href="/" class="btn-primary">Return to PaGuire</a>
+    </div>
+  </main>
+
+  <script>
+    const paguire404Video = document.getElementById('paguire-404-video');
+
+    const freezeLastFrame = () => {
+      if (!paguire404Video) return;
+      paguire404Video.pause();
+      if (isFinite(paguire404Video.duration)) {
+        paguire404Video.currentTime = Math.max(paguire404Video.duration - 0.05, 0);
+      }
+      paguire404Video.classList.add('video-ended');
+    };
+
+    const ensurePlayback = () => {
+      if (!paguire404Video) return;
+      paguire404Video.autoplay = true;
+      paguire404Video.setAttribute('autoplay', 'autoplay');
+      paguire404Video.muted = true; // allow autoplay on mobile
+      paguire404Video.play().then(() => {
+        // Once playing, lift mute so audio comes through
+        const liftMute = () => {
+          paguire404Video.muted = false;
+          paguire404Video.volume = 1;
+          paguire404Video.removeEventListener('playing', liftMute);
+        };
+        paguire404Video.addEventListener('playing', liftMute);
+        // Backup unmute in case 'playing' fires before listener attaches
+        setTimeout(liftMute, 150);
+      }).catch(() => {
+        // If this still fails, user controls remain available.
+      });
+    };
+
+    if (paguire404Video) {
+      paguire404Video.addEventListener('ended', freezeLastFrame);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) ensurePlayback();
+      });
+      ensurePlayback();
+    }
+  </script>
+</body>
+</html>
