@@ -150,7 +150,7 @@
       paguire404Video.classList.add('video-ended');
     };
 
-    const ensurePlayback = () => {
+    /* const ensurePlayback = () => {
       if (!paguire404Video) return;
       paguire404Video.autoplay = true;
       paguire404Video.setAttribute('autoplay', 'autoplay');
@@ -169,13 +169,13 @@
         // If this still fails, user controls remain available.
       });
     };
-
+*/
     if (paguire404Video) {
       paguire404Video.addEventListener('ended', freezeLastFrame);
-      document.addEventListener('visibilitychange', () => {
+    /*  document.addEventListener('visibilitychange', () => {
         if (!document.hidden) ensurePlayback();
       });
-      ensurePlayback();
+      ensurePlayback();*/
     }
   </script>
 </body>
