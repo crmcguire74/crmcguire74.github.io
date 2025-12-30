@@ -231,6 +231,83 @@
         background-color: rgba(var(--dark-900-rgb), 0.5);
         border-color: rgba(255, 255, 255, 0.08);
       }
+
+      /* Carousel Styling */
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        aspect-ratio: 4 / 3;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        height: 100%;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: background 0.3s;
+      }
+
+      .carousel-button:hover {
+        background: white;
+      }
+
+      .carousel-button.prev { left: 1rem; }
+      .carousel-button.next { right: 1rem; }
+
+      .carousel-dots {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5rem;
+        z-index: 10;
+      }
+
+      .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+      }
+
+      .carousel-dot.active {
+        background: white;
+        width: 20px;
+        border-radius: 4px;
+      }
     </style>
   </head>
   <body>
@@ -423,11 +500,18 @@
                 </li>
               </ol>
             </div>
-            <div class="grid grid-cols-2 gap-4" id="samples">
-              <img src="/images/products/roomcraft/1.png" alt="Sample 1" class="rounded-xl shadow-lg" />
-              <img src="/images/products/roomcraft/2.png" alt="Sample 2" class="rounded-xl shadow-lg" />
-              <img src="/images/products/roomcraft/3.png" alt="Sample 3" class="rounded-xl shadow-lg" />
-              <img src="/images/products/roomcraft/4.png" alt="Sample 4" class="rounded-xl shadow-lg" />
+            <div class="carousel-container" id="samples">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="/images/products/roomcraft/1.png" alt="Sample 1"></div>
+                <div class="carousel-slide"><img src="/images/products/roomcraft/2.png" alt="Sample 2"></div>
+                <div class="carousel-slide"><img src="/images/products/roomcraft/3.png" alt="Sample 3"></div>
+                <div class="carousel-slide"><img src="/images/products/roomcraft/4.png" alt="Sample 4"></div>
+                <div class="carousel-slide"><img src="/images/products/roomcraft/5.png" alt="Sample 5"></div>
+                <div class="carousel-slide"><img src="/images/products/roomcraft/6.png" alt="Sample 6"></div>
+              </div>
+              <button class="carousel-button prev" aria-label="Previous slide"><i data-lucide="chevron-left"></i></button>
+              <button class="carousel-button next" aria-label="Next slide"><i data-lucide="chevron-right"></i></button>
+              <div class="carousel-dots"></div>
             </div>
           </div>
         </section>
@@ -542,5 +626,50 @@
     </button>
 
     <script src="/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button.next');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const dotsNav = document.querySelector('.carousel-dots');
+        
+        let currentIndex = 0;
+
+        // Create dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.classList.add('carousel-dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => updateCarousel(index));
+          dotsNav.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsNav.children);
+
+        const updateCarousel = (index) => {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots[currentIndex].classList.remove('active');
+          dots[index].classList.add('active');
+          currentIndex = index;
+        };
+
+        nextButton.addEventListener('click', () => {
+          let nextIndex = (currentIndex + 1) % slides.length;
+          updateCarousel(nextIndex);
+        });
+
+        prevButton.addEventListener('click', () => {
+          let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateCarousel(prevIndex);
+        });
+
+        // Auto-play
+        setInterval(() => {
+          let nextIndex = (currentIndex + 1) % slides.length;
+          updateCarousel(nextIndex);
+        }, 5000);
+      });
+    </script>
   </body>
 </html>
