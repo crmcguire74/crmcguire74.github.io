@@ -349,6 +349,20 @@
         border-radius: 1rem;
         font-size: 0.9rem;
       }
+
+      /* Light/Dark mode banner images */
+      .light-mode-img {
+        display: block;
+      }
+      .dark-mode-img {
+        display: none;
+      }
+      .dark .light-mode-img {
+        display: none;
+      }
+      .dark .dark-mode-img {
+        display: block;
+      }
     </style>
     
      <!-- Google Tag Manager -->
@@ -551,8 +565,14 @@
           </div>
           <div class="order-1 lg:order-2 hero-media">
             <img
+              src="/images/products/snapclipper/SnapClipperBannerLight.png"
+              alt="SnapClipper dashboard preview"
+              class="light-mode-img"
+            />
+            <img
               src="/images/products/snapclipper/SnapClipperBanner.png"
               alt="SnapClipper dashboard preview"
+              class="dark-mode-img"
             />
            <!-- <div class="hero-panel glass-card">
               <div class="panel-header">
