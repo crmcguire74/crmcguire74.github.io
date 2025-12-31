@@ -124,6 +124,18 @@
         padding-bottom: 0;
       }
 
+      .faq-item {
+        margin-bottom: clamp(3rem, 6vw, 6rem);
+        padding-bottom: clamp(2rem, 4vw, 3.5rem);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      .dark .faq-item {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
       .product-hero .hero-media {
         position: relative;
         align-self: start;
@@ -648,14 +660,14 @@
         </section>
 
         <!-- Frequently Asked Questions -->
-        <section style="margin-top:4rem; padding-top:2rem; border-top:1px solid #e5e5e5;">
+        <section style="margin-top:4rem; padding-top:2rem;">
           <h2 style="font-size:2rem; font-weight:600; margin-bottom:1.5rem;">
             Frequently Asked Questions
           </h2>
         
           <div style="display:flex; flex-direction:column; gap:1.75rem;">
         
-            <details style="padding:1rem 0; border-bottom:1px solid #f0f0f0; cursor:pointer;">
+            <details class="faq-item" style="padding:1rem 0; cursor:pointer;">
               <summary style="font-size:1.125rem; font-weight:500; list-style:none;">
                 What can RoomCraft AI redesign?
               </summary>
