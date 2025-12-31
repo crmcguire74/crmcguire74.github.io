@@ -7,18 +7,19 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="SnapClipper is a privacy-first Chrome extension that captures web content in one click, auto-tags it with AI, and keeps every clip on your device."
+      content="SnapClipper is a privacy-first Chrome extension for one-click web clipping, AI auto-tagging, and on-device storage."
     />
     <meta
       name="keywords"
       content="SnapClipper, Chrome extension, web clipping tool, AI organization, research productivity, save web content, privacy-first extension, local first"
     />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-    <link rel="canonical" href="https://paguire.com/products/SnapClipper/snapclipper.html" />
+    <link rel="canonical" href="https://paguire.com/products/snapclipper/snapclipper" />
     <meta name="author" content="Christopher R McGuire" />
+    <meta name="theme-color" content="#0f172a" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://paguire.com/products/SnapClipper/snapclipper.html" />
+    <meta property="og:url" content="https://paguire.com/products/snapclipper/snapclipper" />
     <meta property="og:title" content="SnapClipper - Save & Organize Web Content" />
     <meta
       property="og:description"
@@ -28,7 +29,7 @@
     <meta property="og:site_name" content="PaGuire" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://paguire.com/products/SnapClipper/snapclipper.html" />
+    <meta property="twitter:url" content="https://paguire.com/products/snapclipper/snapclipper" />
     <meta property="twitter:title" content="SnapClipper - Save & Organize Web Content" />
     <meta
       property="twitter:description"
@@ -72,7 +73,7 @@
       "name": "SnapClipper",
       "operatingSystem": "Chrome",
       "applicationCategory": "ProductivityApplication",
-      "url": "https://paguire.com/products/SnapClipper/snapclipper.html",
+      "url": "https://paguire.com/products/snapclipper/snapclipper",
       "description": "Chrome extension for one-click web clipping with AI organization and private, on-device storage.",
       "creator": {
         "@type": "Person",
@@ -386,7 +387,7 @@
     <header id="navbar" class="navbar">
       <div class="container">
         <a href="/" class="logo"
-          ><img src="/images/paguireLogo.png" alt="Paguire Logo" height="50"
+          ><img src="/images/paguireLogo.png" alt="Paguire Logo" title="Paguire Logo" height="50" loading="eager" decoding="async"
         /></a>
 
         <!-- Desktop Navigation -->
@@ -567,12 +568,20 @@
             <img
               src="/images/products/snapclipper/SnapClipperBannerLight.png"
               alt="SnapClipper dashboard preview"
+              title="SnapClipper dashboard preview"
               class="light-mode-img"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
             />
             <img
               src="/images/products/snapclipper/SnapClipperBanner.png"
               alt="SnapClipper dashboard preview"
+              title="SnapClipper dashboard preview"
               class="dark-mode-img"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
             />
            <!-- <div class="hero-panel glass-card">
               <div class="panel-header">
@@ -671,19 +680,19 @@
           </div>
           <div class="product-gallery">
             <figure class="gallery-card">
-              <img src="/images/products/snapclipper/Screenshot1.png" alt="SnapClipper mini clipper" class="gallery-img gallery-img--clip" />
+              <img src="/images/products/snapclipper/Screenshot1.png" alt="SnapClipper mini clipper" title="SnapClipper mini clipper" class="gallery-img gallery-img--clip" loading="lazy" decoding="async" />
               <figcaption class="text-dark-700 dark:text-dark-300 text-sm">
                 Quick-clip widget with search, tag filters, and context buttons for instant saves.
               </figcaption>
             </figure>
             <figure class="gallery-card">
-              <img src="/images/products/snapclipper/Screenshot2.png" alt="SnapClipper dashboard" class="gallery-img gallery-img--dashboard" />
+              <img src="/images/products/snapclipper/Screenshot2.png" alt="SnapClipper dashboard" title="SnapClipper dashboard" class="gallery-img gallery-img--dashboard" loading="lazy" decoding="async" />
               <figcaption class="text-dark-700 dark:text-dark-300 text-sm">
                 Dashboard grid showcasing saved clips organized by tag and date, optimized for readability.
               </figcaption>
             </figure>
             <figure class="gallery-card">
-              <img src="/images/products/snapclipper/Screenshot3.png" alt="SnapClipper settings" class="gallery-img gallery-img--settings" />
+              <img src="/images/products/snapclipper/Screenshot3.png" alt="SnapClipper settings" title="SnapClipper settings" class="gallery-img gallery-img--settings" loading="lazy" decoding="async" />
               <figcaption class="text-dark-700 dark:text-dark-300 text-sm">
                 Settings drawer with theme controls, auto-tag toggles, and snapshot backup reminders.
               </figcaption>
@@ -813,7 +822,7 @@
               </ol>
             </div>
             <div class="shot-card">
-              <img src="/images/SnapClipper.png" alt="SnapClipper dashboard" />
+              <img src="/images/SnapClipper.png" alt="SnapClipper dashboard" title="SnapClipper dashboard" loading="lazy" decoding="async" />
               <div class="shot-badge glass-card">
                 Local storage reminder: export backups from Settings → Data &amp; Storage for peace of mind.
               </div>
