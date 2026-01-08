@@ -46,35 +46,35 @@
   <!-- Products -->
 
   <url>
-    <loc>https://paguire.com/products/snapclipper/snapclipper</loc>
+    <loc>https://paguire.com/products/SnapClipper/snapclipper</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://paguire.com/products/snapclipper/privacy</loc>
+    <loc>https://paguire.com/products/SnapClipper/privacy</loc>
     <lastmod>2025-12-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://paguire.com/products/roomcraftai/roomcraft-ai</loc>
+    <loc>https://paguire.com/products/ModusAI/modus-ai</loc>
     <lastmod>2025-12-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://paguire.com/products/roomcraftai/privacy</loc>
+    <loc>https://paguire.com/products/ModusAI/privacy</loc>
     <lastmod>2025-12-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://paguire.com/products/1-hour-content-creator-blueprint</loc>
+    <loc>https://paguire.com/products/1-Hour-Content-Creator-Blueprint</loc>
     <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
