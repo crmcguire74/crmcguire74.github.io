@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Modus AI: Interior & Exterior Design App (No Sub)</title>
 
     <meta name="description" content="Download the best AI interior design app for iOS. Visualize room makeovers & paint colors while keeping your furniture. Pay-as-you-go, no monthly fees.">
@@ -14,16 +15,20 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
     <link rel="canonical" href="https://paguire.com/products/modus-ai/modus-ai" />
+
     <meta name="author" content="Christopher R McGuire" />
+
     <meta name="theme-color" content="#0f172a" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://paguire.com/products/modus-ai/modus-ai" />
     <meta property="og:title" content="Modus AI: Interior & Exterior Design App" />
+    
     <meta
       property="og:description"
       content="Redesign rooms & exteriors with AI. No subscription required."
     />
+    
     <meta property="og:image" content="https://paguire.com/images/products/modus/ModusAI.webp" />
     <meta property="og:site_name" content="PaGuire" />
 
@@ -91,7 +96,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MobileApplication",
+      "@type": "SoftwareApplication",
       "name": "Modus AI",
       "operatingSystem": "iOS",
       "applicationCategory": "DesignApplication",
@@ -178,20 +183,19 @@
     </script>
 
     <style>
-      /* ✅ Extracted inline styles to CSS class */
-      .logo-overlay {
+      /* ✅ ADDED: Classes to replace inline styles */
+      .logo-watermark {
         height: 20vh;
         position: absolute;
         top: 0;
         z-index: 0;
-        opacity: 0.1;
+        opacity: 0.1; /* Converted 10% to 0.1 for standard CSS */
       }
-      .section-heading-spacing {
-        margin-bottom: 3rem;
-      }
-      /* Main padding fix */
-      .main-product-container {
+      .page-bottom-padding {
         padding-bottom: 100px;
+      }
+      .mb-large {
+        margin-bottom: 3rem;
       }
 
       .product-page .product-section {
@@ -430,7 +434,7 @@
             title="PaGuire Home"
             loading="eager"
             decoding="async"
-            class="logo-overlay"
+            class="logo-watermark" 
         /></a>
 
         <nav class="desktop-nav">
@@ -518,7 +522,7 @@
       </nav>
     </div>
 
-    <main class="bg-gradient product-page main-product-container">
+    <main class="bg-gradient product-page page-bottom-padding">
       <div class="container pt-28 pb-24">
         <section class="product-section product-hero grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="order-2 lg:order-1">
@@ -532,36 +536,22 @@
               Modus AI is the most accurate AI room designer for interior and exterior spaces — built to redesign your real home, not hallucinate fake furniture or impossible layouts. Create interior designs, exterior makeovers, paint visualizations, and optimized room layouts using your actual space and your real furniture. No subscription required — pay only for the credits you use.
             </p>
             <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Why Modus AI?</h3>
-            <div class="grid grid-cols-2 gap-4 mb-16 items-stretch" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-items:stretch;">
-
+            
+            <div class="grid grid-cols-2 gap-4 mb-16 items-stretch">
               <div class="flex flex-col justify-center items-center text-center gap-2 glass-card rounded-2xl border-2 border-brand-400/70 bg-gradient-to-br from-brand-500/18 via-brand-500/10 to-dark-900/60 shadow-xl shadow-brand-500/25 backdrop-blur">
-
                 <p class="text-xs font-semibold text-white uppercase tracking-wide inline-flex items-center gap-2 px-2 py-1 rounded-full bg-brand-500/80">
-
                   <span class="h-2 w-2 rounded-full bg-white"></span>
-
                   Best value
-
                 </p>
-
                 <p class="text-sm text-brand-400 uppercase tracking-wide mt-1">Modus AI</p>
-
                 <p class="text-3xl font-extrabold text-green-400 my-1">$0/mo</p>
-
                 <p class="text-xs text-gray-200">(Pay only for designs you use)</p>
-
               </div>
-
               <div class="flex flex-col justify-center items-center text-center gap-2 p-6 glass-card rounded-2xl border border-dark-700/40 bg-gradient-to-br from-dark-800/85 via-dark-900/65 to-dark-900/75 text-gray-400 shadow-md shadow-black/20">
-
                 <p class="text-sm uppercase tracking-wide text-gray-500">Competitors</p>
-
                 <p class="text-2xl font-bold text-gray-500 line-through my-1">$29.99/mo</p>
-
                 <p class="text-xs text-gray-500">($360 / year)</p>
-
               </div>
-
             </div>
 
             <div class="flex flex-wrap gap-4 mb-8">
@@ -630,7 +620,7 @@
         </section>
         
         <section class="product-section">
-          <h2 class="text-2xl md:text-3xl font-bold text-center section-heading-spacing">Core Engineering Features</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-center mb-large">Core Engineering Features</h2>
           <div class="feature-grid">
             <article class="feature-tile">
               <div class="feature-icon"><i data-lucide="lock"></i></div>
@@ -732,17 +722,189 @@
             </div>
           </div>
         </section>
+
+        <section class="product-section">
+          <h2 class="text-2xl md:text-3xl font-bold text-center mb-large">Designed for Every Stakeholder</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-6 text-center">
+              <i data-lucide="home" class="w-12 h-12 text-brand-600 mx-auto mb-4"></i>
+              <h3 class="font-bold mb-2">For Homeowners</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">End the "what if" anxiety before buying a single gallon of paint.</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <i data-lucide="building" class="w-12 h-12 text-brand-600 mx-auto mb-4"></i>
+              <h3 class="font-bold mb-2">For Real Estate Agents</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">Virtually stage listings in seconds without the $500/room professional cost.</p>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <i data-lucide="wrench" class="w-12 h-12 text-brand-600 mx-auto mb-4"></i>
+              <h3 class="font-bold mb-2">For DIY Enthusiasts</h3>
+              <p class="text-sm text-dark-700 dark:text-dark-300">Get out-of-the-box storage solutions for apartments and condos.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="product-section">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Credit-Based Pricing (No Subscription Required)</h2>
+          <p class="text-center text-dark-700 dark:text-dark-300 mb-large">Modus AI uses a simple credit-based system. There are no subscriptions, no monthly fees, and no commitments. Pay only for the designs you generate — perfect for homeowners, renters, designers, and real estate professionals.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div class="pricing-card">
+              <h3 class="text-xl font-bold mb-2">The Single Room Pass</h3>
+              <p class="text-3xl font-bold text-brand-600 mb-4">10 ReCraft Design Credits</p>
+              <p class="text-sm text-dark-700 dark:text-dark-300 mb-6">Perfect for a quick weekend project</p>
+            </div>
+            <div class="pricing-card">
+              <h3 class="text-xl font-bold mb-2">The Project Pack</h3>
+              <p class="text-3xl font-bold text-brand-600 mb-4">50 ReCraft Design Credits</p>
+              <p class="text-sm text-dark-700 dark:text-dark-300 mb-6">Best for a multi-room renovation</p>
+            </div>
+          </div>
+        </section>
+
+       <section id="faq" class="py-20 bg-white product-section">
+          <div class="glass-card p-8 bg-brand-50 dark:bg-dark-800 border-brand-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-8">
+              <div class="border-b border-slate-100 pb-6 faq-item">
+                <h3 class="text-xl font-bold text-slate-900 mb-3 mt-3">Is there a free AI interior design app?</h3>
+                <p class="text-slate-600 leading-relaxed">Modus AI is free to download and works on a credit system. Unlike competitors that charge $20-$40/month, Modus AI uses a pay-as-you-go model, so you never pay for a subscription you aren't using.</p>
+              </div>
+              <div class="border-b border-slate-100 pb-6 faq-item">
+                <h3 class="text-xl font-bold text-slate-900 mb-3 mt-3">Can AI design my room but keep my furniture?</h3>
+                <p class="text-slate-600 leading-relaxed">Yes. Modus AI features a specific "Refresh & Elevate" mode that identifies your existing sofas, tables, and cabinets and redesigns the room around them, updating only the decor, paint, and lighting.</p>
+              </div>
+              <div class="border-b border-slate-100 pb-6 faq-item">
+                <h3 class="text-xl font-bold text-slate-900 mb-3 mt-3">How can I visualize paint colors in my room?</h3>
+                <p class="text-slate-600 leading-relaxed">Use the "Paint Only" mode in Modus AI. It uses texture mapping to apply new colors to your walls while preserving shadows and lighting conditions for a realistic preview.</p>
+              </div>
+              <div class="border-b border-slate-100 pb-6 faq-item">
+                <h3 class="text-xl font-bold text-slate-900 mb-3 mt-3">Does this work for exterior home design?</h3>
+                <p class="text-slate-600 leading-relaxed">Absolutely. Modus AI includes specialized models for Exterior Facades, Garden Landscapes, and Patios. It respects architectural boundaries to ensure generated ideas are structurally possible.</p>
+              </div>
+            </div>
+          </div>
+       </section>
+        
+        <section class="product-section grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="glass-card p-8">
+            <h2 class="text-2xl font-bold mb-4">Technical Specifications</h2>
+            <ul class="space-y-3 text-dark-700 dark:text-dark-300">
+              <li><strong>Engine:</strong> Powered by Gemini 1.5 Pro (Nano Banana) with spatial reasoning.</li>
+              <li><strong>Privacy:</strong> On-device pre-processing. Your home photos are your business.</li>
+              <li><strong>Display:</strong> Optimized for iOS 18+ with full landscape support.</li>
+            </ul>
+          </div>
+          <div class="glass-card p-8">
+            <h2 class="text-2xl font-bold mb-4">Privacy Commitment</h2>
+            <p class="text-dark-700 dark:text-dark-300 mb-6">
+              Modus AI processes your photos on-device whenever possible. We value your privacy and ensure your data remains your own.
+            </p>
+            <a href="privacy.html" class="text-brand-600 dark:text-brand-400 hover:underline">Read our Privacy Policy</a>
+          </div>
+        </section>
+
+        <section class="product-section">
+          <div class="glass-card p-8 bg-brand-50 dark:bg-dark-800 border-brand-200">
+            <h2 class="text-2xl font-bold mb-4">About the Developer</h2>
+            <p class="text-dark-700 dark:text-dark-300">
+              Modus AI was developed by <a href="https://paguire.com" class="font-bold text-brand-600">Christopher R McGuire</a>, a Senior VP of Software Engineering and UX with over 25 years of experience building complex, data-driven systems. It combines deep technical architecture with an empathetic understanding of how we interact with our most personal spaces.
+            </p>
+          </div>
+        </section>
       </div>
     </main>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="gradient-text logo">Christopher R McGuire</span>
+            <p class="footer-tagline">SVP of Software Engineering, UX/UI Design and Development.</p>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/projects" class="text-gradient active-link">Projects</a>
+              <a href="/ai-explorations">AI Explorations</a>
+              <a href="/blog">Blog</a>
+              <a href="/contact">Contact</a>
+            </div>
+            <div class="footer-connect">
+              <h4>Connect</h4>
+              <a href="mailto:Christopher.R.McGuire@gmail.com">Christopher.R.McGuire@gmail.com</a>
+              <p>Chicago, IL</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p class="copyright">
+            © 2025 Christopher R McGuire. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/christopher-mcguire/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="https://twitter.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <i data-lucide="twitter"></i>
+            </a>
+            <a
+              href="https://github.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@crmcguire1974"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <i data-lucide="youtube"></i>
+            </a>
+            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="/script.js"></script>
     <script>
-      // Carousel Logic
       document.addEventListener('DOMContentLoaded', () => {
         const track = document.querySelector('.carousel-track');
         const slides = Array.from(track.children);
         const nextButton = document.querySelector('.carousel-button.next');
         const prevButton = document.querySelector('.carousel-button.prev');
-        const dotsContainer = document.querySelector('.carousel-dots');
+        const dotsNav = document.querySelector('.carousel-dots');
         let currentIndex = 0;
 
         // Create dots
@@ -750,35 +912,33 @@
           const dot = document.createElement('div');
           dot.classList.add('carousel-dot');
           if (index === 0) dot.classList.add('active');
-          dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateCarousel();
-          });
-          dotsContainer.appendChild(dot);
+          dot.addEventListener('click', () => updateCarousel(index));
+          dotsNav.appendChild(dot);
         });
 
-        const dots = Array.from(dotsContainer.children);
+        const dots = Array.from(dotsNav.children);
 
-        function updateCarousel() {
-          track.style.transform = `translateX(-${currentIndex * 100}%)`;
-          dots.forEach(dot => dot.classList.remove('active'));
-          dots[currentIndex].classList.add('active');
-        }
+        const updateCarousel = (index) => {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach(dot => dot.classList.remove('active')); // Ensure all dots are reset
+          dots[index].classList.add('active');
+          currentIndex = index;
+        };
 
         nextButton.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % slides.length;
-          updateCarousel();
+          let nextIndex = (currentIndex + 1) % slides.length;
+          updateCarousel(nextIndex);
         });
 
         prevButton.addEventListener('click', () => {
-          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-          updateCarousel();
+          let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateCarousel(prevIndex);
         });
 
-        // Auto advance
+        // Auto-play
         setInterval(() => {
-          currentIndex = (currentIndex + 1) % slides.length;
-          updateCarousel();
+          let nextIndex = (currentIndex + 1) % slides.length;
+          updateCarousel(nextIndex);
         }, 5000);
       });
     </script>
