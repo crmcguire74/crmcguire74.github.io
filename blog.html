@@ -3,12 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christopher R McGuire - Blog | Insights & Ideas</title>
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Explore the blog of Christopher R McGuire for insights and ideas on UX/UI design, software engineering, career development, and industry trends."
-    />
+    <title>Christopher R McGuire | Tech & Design Blog</title>
+    <meta name="description" content="Insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire.">
+    
     <meta
       name="keywords"
       content="Christopher McGuire blog, Paguire blog, UX/UI design blog, software engineering blog, frontend development blog, career advice, technology insights"
@@ -17,33 +14,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://paguire.com/blog" />
-    <meta
-      property="og:title"
-      content="Christopher R McGuire - Blog | Insights & Ideas"
-    />
-    <meta
-      property="og:description"
-      content="Thoughts, ideas, and insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire."
-    />
-    <meta
-      property="og:image"
-      content="https://paguire.com/images/paguireLogo.png"
-    />
+    <meta property="og:title" content="Christopher R McGuire Blog" />
+    <meta property="og:description" content="Thoughts and insights on UX/UI design and software engineering." />
+    <meta property="og:image" content="https://paguire.com/images/paguireLogo.png" />
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:url" content="https://paguire.com/blog" />
-    <meta
-      property="twitter:title"
-      content="Christopher R McGuire - Blog | Insights & Ideas"
-    />
-    <meta
-      property="twitter:description"
-      content="Thoughts, ideas, and insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire."
-    />
-    <meta
-      property="twitter:image"
-      content="https://paguire.com/images/paguireLogo.png"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@crmcguire74" />
+    <meta name="twitter:title" content="Christopher R McGuire Blog | Insights & Ideas" />
+    <meta name="twitter:description" content="Explore insights on UX/UI design, software engineering, and career development." />
+    <meta name="twitter:image" content="https://paguire.com/images/paguireLogo.png" />
 
    <!-- Favicon -->
       <link
@@ -130,18 +109,26 @@
       <!-- Supabase JS Client -->
       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
       <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Christopher McGuire Blog",
-    "description": "Insights on UX/UI design, software engineering, and industry trends",
-    "url": "https://paguire.com/blog",
-    "author": {
-      "@type": "Person",
-      "name": "Christopher McGuire"
-    }
-  }
-  </script>
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Christopher McGuire Blog",
+        "description": "Insights on UX/UI design and software engineering",
+        "url": "https://paguire.com/blog",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://paguire.com/blog"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        }
+      }
+      </script>
     
      <!-- Google Tag Manager -->
     <script>
@@ -342,7 +329,7 @@
             class="text-3xl md:text-5xl font-bold mb-6 animate-fade-in"
             style="animation-delay: 0.1s"
           >
-            The <span class="text-gradient">Blog</span>
+            Christopher R McGuire: The Engineering & Design  <span class="text-gradient">Blog</span>
           </h1>
           <p
             class="text-dark-700 dark:text-dark-300 text-lg animate-fade-in"
@@ -473,7 +460,7 @@
           class="mt-24 mx-auto glass-card rounded-3xl p-12 text-center animate-fade-in"
         >
           <h2 class="text-2xl md:text-3xl font-bold mb-6">
-            Subscribe to My Newsletter
+            Join My Professional Newsletter Community
           </h2>
           <p
             class="text-dark-700 dark:text-dark-300 text-lg mb-8 max-w-2xl mx-auto"
@@ -653,7 +640,7 @@
           id: 2,
           title: "The Mythical 'Full Stack' Developer",
           excerpt:
-            "The frontend unicorn created by complacent managers and recruiters. As a manager in the frontend development space, I understand the difficulty in recruiting for key roles. On one hand, candidates may lack any knowledge of graphic design and the tools associated with designing engaging experiences.",
+            "The frontend unicorn created by complacent managers and recruiters. As a manager in the frontend development space, I understand the difficulty in <a href="/resume" class="nav-link text-gradient">recruiting</a> for key roles. On one hand, candidates may lack any knowledge of graphic design and the tools associated with designing engaging experiences.",
           date: "Feb 22, 2023",
           image: "./images/fe527293-fb5f-44d4-acd6-85ea49da05e8.png",
           slug: "mythical-full-stack-developer",
