@@ -36,10 +36,7 @@
     <meta name="twitter:site" content="@crmcguire74" />
     <meta name="twitter:url" content="https://paguire.com/products/modus-ai/modus-ai" />
     <meta name="twitter:title" content="Modus AI - Room Redesign & Paint Visualizer" />
-    <meta
-      name="twitter:description"
-      content="AI-powered interior & exterior design app. Redesign rooms in any style, visualize paint, organize spaces, keep your furniture."
-    />
+    <meta name="twitter:description" content="AI-powered interior & exterior design. Redesign rooms while keeping your furniture. No subscriptions." />
     <meta name="twitter:image" content="https://paguire.com/images/products/modus/ModusAI.webp" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
@@ -73,63 +70,57 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://paguire.com/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Projects",
-        "item": "https://paguire.com/projects"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Modus AI",
-        "item": "https://paguire.com/products/modus-ai/modus-ai"
-      }]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Modus AI",
-      "operatingSystem": "iOS",
-      "applicationCategory": "DesignApplication",
-      "url": "https://paguire.com/products/modus-ai/modus-ai",
-      "description": "AI-powered interior and exterior design app that helps redesign indoor and outdoor spaces in different styles, visualize paint colors, organize rooms, and redesign while keeping existing furniture. No subscription required—clip-based pricing model.",
-      "creator": {
-        "@type": "Person",
-        "name": "Christopher R McGuire"
-      },
-      "keywords": "room redesign app, interior design app, exterior design app, paint visualizer, room organizer, space organizer, furniture lock, AI room designer, patio design, outdoor space design, no subscription",
-      "featureList": [
-        "Redesign indoor and outdoor spaces in multiple design styles",
-        "Paint Color Visualizer - see paint on your actual walls",
-        "AI Room Organizer and Space Optimizer",
-        "Furniture Lock System - keep existing furniture in redesigns",
-        "Exterior Design - patios, decks, gardens, facades",
-        "Structural Integrity Toggles - from surface changes to full remodels",
-        "Intelligent Organization Mode - maximize storage and layout",
-        "Contractor Brief Export with paint codes and layout notes",
-        "On-device pre-processing for privacy",
-        "Multiple architectural styles - modern, traditional, minimalist, and more"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "4.99",
-        "priceCurrency": "USD",
-        "description": "Clip-based pricing model - no subscription required, pay only for designs you create"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "127"
-      }
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://paguire.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://paguire.com/projects" },
+            { "@type": "ListItem", "position": 3, "name": "Modus AI", "item": "https://paguire.com/products/modus-ai/modus-ai" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Modus AI",
+          "operatingSystem": "iOS",
+          "applicationCategory": "DesignApplication",
+          "url": "https://paguire.com/products/modus-ai/modus-ai",
+          "description": "AI-powered interior and exterior design app. Redesign spaces while keeping existing furniture with our Furniture Lock system.",
+          "creator": {
+            "@type": "Person",
+            "name": "Christopher R McGuire",
+            "url": "https://paguire.com/resume"
+          },
+          "featureList": [
+            "Redesign indoor and outdoor spaces in multiple design styles",
+            "Paint Color Visualizer - see paint on your actual walls",
+            "AI Room Organizer and Space Optimizer",
+            "Furniture Lock System - keep existing furniture in redesigns",
+            "Exterior Design - patios, decks, gardens, facades",
+            "Structural Integrity Toggles - from surface changes to full remodels",
+            "Intelligent Organization Mode - maximize storage and layout",
+            "Contractor Brief Export with paint codes and layout notes",
+            "On-device pre-processing for privacy"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "4.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "127"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "PaGuire Engineering",
+          "url": "https://paguire.com",
+          "logo": "https://paguire.com/images/products/modus/logo.webp"
+        }
+      ]
     }
     </script>
 
@@ -796,7 +787,7 @@
             </ul>
           </div>
           <div class="glass-card p-8">
-            <h2 class="text-2xl font-bold mb-4">Privacy Commitment</h2>
+            <h2 class="text-2xl font-bold mb-4">Our Data Security and User Privacy Commitment</h2>
             <p class="text-dark-700 dark:text-dark-300 mb-6">
               Modus AI processes your photos on-device whenever possible. We value your privacy and ensure your data remains your own.
             </p>
@@ -806,9 +797,9 @@
 
         <section class="product-section">
           <div class="glass-card p-8 bg-brand-50 dark:bg-dark-800 border-brand-200">
-            <h2 class="text-2xl font-bold mb-4">About the Developer</h2>
+            <h2 class="text-2xl font-bold mb-4">About the Lead Architect and Developer</h2>
             <p class="text-dark-700 dark:text-dark-300">
-              Modus AI was developed by <a href="https://paguire.com" class="font-bold text-brand-600">Christopher R McGuire</a>, a Senior VP of Software Engineering and UX with over 25 years of experience building complex, data-driven systems. It combines deep technical architecture with an empathetic understanding of how we interact with our most personal spaces.
+              Modus AI was developed by <a href="/resume" class="font-bold text-brand-600">Christopher R McGuire</a>, a Senior VP of Software Engineering and UX with over 25 years of experience building complex, data-driven systems. It combines deep technical architecture with an empathetic understanding of how we interact with our most personal spaces.
             </p>
           </div>
         </section>
