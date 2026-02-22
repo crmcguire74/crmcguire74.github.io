@@ -25,7 +25,7 @@ html.dark body main div.mt-8.glass-card {
 
 /* Critical text color fixes for ALL important text elements */
 html.dark body h1,
-html.dark body h2, 
+html.dark body h2,
 html.dark body h3,
 html.dark body h4,
 html.dark body h5,
@@ -41,7 +41,7 @@ html.dark body blockquote footer,
 html.dark body .blog-title,
 html.dark body .profile-name,
 html.dark body div.card-text p {
-  color: white; !important
+  color: white !important;
 }
 
 /* Fix for blog cards in dark mode */
@@ -65,7 +65,8 @@ html.dark body p.text-dark-700,
 html.dark body .text-dark-700,
 html.dark body div.blog-content p.blog-excerpt,
 html.dark body .skill-text {
-  color: #d1d5db !important; /* light gray for better contrast */
+  color: #d1d5db !important;
+  /* light gray for better contrast */
 }
 
 /* Fix for floating cards and buttons in dark mode */
@@ -90,4 +91,34 @@ html.dark body section {
 html.dark body * {
   --glass-card-bg: rgba(17, 24, 39, 0.4) !important;
   --glass-card-border: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix for blog search and filter buttons */
+html.dark body #search-input {
+  color: #f3f4f6 !important;
+  background-color: rgba(31, 41, 55, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark body #search-input::placeholder {
+  color: #9ca3af !important;
+}
+
+html.dark body .filter-btn {
+  color: #d1d5db !important;
+  background-color: rgba(31, 41, 55, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark body .filter-btn:hover {
+  background-color: rgba(55, 65, 81, 0.8) !important;
+  color: #ffffff !important;
+}
+
+html.dark body .filter-btn[aria-pressed="true"],
+html.dark body .filter-btn.active,
+html.dark body .filter-btn.bg-brand-600 {
+  background-color: var(--brand-600) !important;
+  color: #ffffff !important;
+  border-color: var(--brand-500) !important;
 }
