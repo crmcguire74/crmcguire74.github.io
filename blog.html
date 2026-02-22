@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christopher R McGuire | Tech & Design Blog</title>
-    <meta name="description" content="Insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire.">
-    
+    <meta
+      name="description"
+      content="Insights on UX/UI design, software engineering, and industry trends from Christopher R McGuire."
+    />
+
     <meta
       name="keywords"
       content="Christopher McGuire blog, Paguire blog, UX/UI design blog, software engineering blog, frontend development blog, career advice, technology insights"
@@ -15,72 +18,87 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://paguire.com/blog" />
     <meta property="og:title" content="Christopher R McGuire Blog" />
-    <meta property="og:description" content="Thoughts and insights on UX/UI design and software engineering." />
-    <meta property="og:image" content="https://paguire.com/images/paguireLogo.png" />
+    <meta
+      property="og:description"
+      content="Thoughts and insights on UX/UI design and software engineering."
+    />
+    <meta
+      property="og:image"
+      content="https://paguire.com/images/paguireLogo.png"
+    />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@crmcguire74" />
-    <meta name="twitter:title" content="Christopher R McGuire Blog | Insights & Ideas" />
-    <meta name="twitter:description" content="Explore insights on UX/UI design, software engineering, and career development." />
-    <meta name="twitter:image" content="https://paguire.com/images/paguireLogo.png" />
+    <meta
+      name="twitter:title"
+      content="Christopher R McGuire Blog | Insights & Ideas"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore insights on UX/UI design, software engineering, and career development."
+    />
+    <meta
+      name="twitter:image"
+      content="https://paguire.com/images/paguireLogo.png"
+    />
 
-   <!-- Favicon -->
-      <link
-        rel="apple-touch-icon"
-        sizes="57x57"
-        href="/apple-touch-icon-57x57.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="72x72"
-        href="/apple-touch-icon-72x72.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="76x76"
-        href="/apple-touch-icon-76x76.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="114x114"
-        href="/apple-touch-icon-114x114.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="120x120"
-        href="/apple-touch-icon-120x120.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="144x144"
-        href="/apple-touch-icon-144x144.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="152x152"
-        href="/apple-touch-icon-152x152.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon-180x180.png"
-      />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="128x128"
-        href="/favicon-128x128.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="196x196"
-        href="/favicon-196x196.png"
-      />
-      
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon-180x180.png"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="/favicon-128x128.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="196x196"
+      href="/favicon-196x196.png"
+    />
+
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./styles-additional.css" />
     <link rel="stylesheet" href="./pages-styles.css" />
@@ -97,6 +115,437 @@
         white-space: nowrap;
         border: 0;
       }
+
+      .books-showcase {
+        position: relative;
+        padding: 1.25rem;
+        border-radius: 1.25rem;
+        background:
+          radial-gradient(
+            circle at 12% 8%,
+            rgba(var(--brand-300-rgb), 0.18),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 14%,
+            rgba(var(--brand-200-rgb), 0.14),
+            transparent 42%
+          ),
+          rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        box-shadow:
+          0 20px 40px -28px rgba(2, 132, 199, 0.45),
+          0 16px 40px -34px rgba(15, 23, 42, 0.35);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        overflow: hidden;
+      }
+
+      .books-showcase::after {
+        content: "";
+        position: absolute;
+        inset: auto -15% -35% auto;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 9999px;
+        background: radial-gradient(
+          circle,
+          rgba(var(--brand-400-rgb), 0.14),
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+
+      .dark .books-showcase {
+        background:
+          radial-gradient(
+            circle at 12% 8%,
+            rgba(var(--brand-500-rgb), 0.14),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 14%,
+            rgba(var(--brand-300-rgb), 0.08),
+            transparent 42%
+          ),
+          rgba(var(--dark-900-rgb), 0.45);
+        border-color: rgba(255, 255, 255, 0.08);
+        box-shadow:
+          0 20px 50px -34px rgba(0, 0, 0, 0.7),
+          0 10px 25px -18px rgba(var(--brand-500-rgb), 0.3);
+      }
+
+      .books-showcase-header {
+        display: grid;
+        gap: 0.85rem;
+        align-items: start;
+      }
+
+      .books-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--brand-700);
+      }
+
+      .books-kicker::before {
+        content: "";
+        width: 1.5rem;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          rgba(var(--brand-500-rgb), 0.9),
+          rgba(var(--brand-300-rgb), 0.35)
+        );
+      }
+
+      .dark .books-kicker {
+        color: var(--brand-300);
+      }
+
+      .books-subtext {
+        color: var(--dark-700);
+        max-width: 42rem;
+        line-height: 1.6;
+      }
+
+      .dark .books-subtext {
+        color: var(--dark-300);
+      }
+
+      .books-support-copy {
+        color: var(--dark-700);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        padding: 0.85rem 1rem;
+        border-radius: 0.875rem;
+        background: rgba(var(--brand-50-rgb), 0.75);
+        border: 1px solid rgba(var(--brand-200-rgb), 0.45);
+      }
+
+      .dark .books-support-copy {
+        color: var(--dark-300);
+        background: rgba(var(--brand-900-rgb), 0.18);
+        border-color: rgba(var(--brand-700-rgb), 0.35);
+      }
+
+      .books-divider {
+        height: 1px;
+        margin: 1rem 0 1.15rem;
+        background: linear-gradient(
+          to right,
+          rgba(var(--brand-500-rgb), 0.35),
+          rgba(var(--dark-300-rgb), 0.15),
+          transparent
+        );
+      }
+
+      .books-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .publication-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.95rem;
+        position: relative;
+        padding: 0.95rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        box-shadow:
+          0 10px 20px -18px rgba(15, 23, 42, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .publication-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(var(--brand-300-rgb), 0.55);
+        box-shadow:
+          0 20px 35px -24px rgba(var(--brand-600-rgb), 0.35),
+          0 10px 20px -18px rgba(15, 23, 42, 0.25);
+      }
+
+      .dark .publication-card {
+        background: rgba(var(--dark-900-rgb), 0.55);
+        border-color: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 12px 28px -22px rgba(0, 0, 0, 0.7);
+      }
+
+      .dark .publication-card:hover {
+        border-color: rgba(var(--brand-500-rgb), 0.35);
+        box-shadow:
+          0 18px 30px -22px rgba(0, 0, 0, 0.7),
+          0 10px 24px -22px rgba(var(--brand-500-rgb), 0.28);
+      }
+
+      .publication-cover {
+        position: relative;
+        border-radius: 0.9rem;
+        overflow: hidden;
+        background: linear-gradient(
+          180deg,
+          rgba(var(--dark-100-rgb), 0.9),
+          rgba(var(--dark-200-rgb), 0.9)
+        );
+        box-shadow:
+          0 14px 28px -18px rgba(15, 23, 42, 0.35),
+          0 6px 12px -10px rgba(15, 23, 42, 0.2);
+      }
+
+      .dark .publication-cover {
+        background: linear-gradient(
+          180deg,
+          rgba(var(--dark-800-rgb), 0.9),
+          rgba(var(--dark-900-rgb), 0.95)
+        );
+      }
+
+      .publication-cover-frame {
+        position: relative;
+        padding-top: 136%;
+      }
+
+      .publication-cover-frame img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+      }
+
+      .publication-card:hover .publication-cover-frame img {
+        transform: scale(1.035);
+      }
+
+      .publication-cover-glow {
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 38%;
+        background: linear-gradient(
+          to top,
+          rgba(5, 11, 24, 0.42),
+          rgba(5, 11, 24, 0)
+        );
+        pointer-events: none;
+      }
+
+      .publication-index {
+        position: absolute;
+        top: 0.65rem;
+        left: 0.65rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 9999px;
+        display: grid;
+        place-items: center;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: white;
+        background: rgba(5, 11, 24, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+      }
+
+      .publication-badge {
+        position: absolute;
+        top: 0.65rem;
+        right: 0.65rem;
+        padding: 0.3rem 0.65rem;
+        border-radius: 9999px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--brand-700);
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(var(--brand-200-rgb), 0.6);
+      }
+
+      .dark .publication-badge {
+        color: var(--brand-300);
+        background: rgba(var(--dark-900-rgb), 0.72);
+        border-color: rgba(var(--brand-600-rgb), 0.35);
+      }
+
+      .publication-content {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .publication-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .publication-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        border-radius: 9999px;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--dark-700);
+        background: rgba(var(--dark-100-rgb), 0.9);
+        border: 1px solid rgba(var(--dark-300-rgb), 0.35);
+      }
+
+      .publication-chip::before {
+        content: "";
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 9999px;
+        background: var(--brand-500);
+      }
+
+      .dark .publication-chip {
+        color: var(--dark-300);
+        background: rgba(var(--dark-800-rgb), 0.65);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .publication-title {
+        margin: 0 0 0.35rem;
+        color: var(--dark-900);
+        font-size: 1.05rem;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+      }
+
+      .dark .publication-title {
+        color: white;
+      }
+
+      .publication-subtitle {
+        margin: 0 0 0.6rem;
+        font-size: 0.8rem;
+        line-height: 1.45;
+        color: var(--brand-700);
+        font-weight: 600;
+      }
+
+      .dark .publication-subtitle {
+        color: var(--brand-300);
+      }
+
+      .publication-description {
+        margin: 0;
+        color: var(--dark-700);
+        font-size: 0.86rem;
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .dark .publication-description {
+        color: var(--dark-300);
+      }
+
+      .publication-footer {
+        margin-top: 0.9rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid rgba(var(--dark-300-rgb), 0.14);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .dark .publication-footer {
+        border-top-color: rgba(255, 255, 255, 0.06);
+      }
+
+      .publication-footnote {
+        font-size: 0.75rem;
+        color: var(--dark-700);
+        line-height: 1.35;
+      }
+
+      .dark .publication-footnote {
+        color: var(--dark-300);
+      }
+
+      .publication-link {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        border-radius: 9999px;
+        padding: 0.55rem 0.9rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        background: linear-gradient(135deg, var(--brand-700), var(--brand-500));
+        box-shadow: 0 10px 18px -14px rgba(var(--brand-600-rgb), 0.8);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      .publication-link:hover {
+        transform: translateY(-1px);
+        filter: saturate(1.05);
+        box-shadow: 0 14px 24px -16px rgba(var(--brand-600-rgb), 0.95);
+      }
+
+      .publication-link-icon {
+        width: 0.95rem;
+        height: 0.95rem;
+      }
+
+      @media (min-width: 768px) {
+        .books-showcase {
+          padding: 1.45rem;
+        }
+
+        .books-showcase-header {
+          grid-template-columns: 1fr auto;
+          gap: 1rem;
+        }
+
+        .books-support-copy {
+          max-width: 18rem;
+        }
+
+        .books-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1rem;
+        }
+
+        .publication-card {
+          grid-template-columns: minmax(110px, 32%) 1fr;
+          align-items: start;
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .publication-footer {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .publication-link {
+          justify-content: center;
+        }
+      }
     </style>
     <!-- Import fonts -->
     <link
@@ -106,9 +555,9 @@
     <!-- Lucide icons (similar to lucide-react) -->
     <script src="theme-loader.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-      <!-- Supabase JS Client -->
-      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-      <script type="application/ld+json">
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Blog",
@@ -128,23 +577,36 @@
           "name": "Christopher R McGuire"
         }
       }
-      </script>
-    
-     <!-- Google Tag Manager -->
+    </script>
+
+    <!-- Google Tag Manager -->
     <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-N2JC2XRG');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N2JC2XRG");
     </script>
     <!-- End Google Tag Manager -->
   </head>
+
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2JC2XRG"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N2JC2XRG"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
@@ -160,11 +622,12 @@
           <a href="/" class="nav-link">Home</a>
           <a href="/resume" class="nav-link">Resume</a>
           <a href="/projects" class="nav-link">Projects</a>
-          <a href="/ai-explorations" class="nav-link whitespace-nowrap">AI Explorations</a>
-          <a href="/blog" class="nav-link text-gradient">Blog</a>
+          <a href="/ai-explorations" class="nav-link whitespace-nowrap"
+            >AI Explorations</a
+          >
+          <a href="/blog" class="nav-link text-gradient">Library</a>
           <a href="/contact" class="nav-link">Contact</a>
         </nav>
-        
 
         <!-- Social Icons and Theme Toggle - Desktop -->
         <div class="desktop-actions">
@@ -211,7 +674,19 @@
             aria-label="TikTok"
             class="social-icon"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
           </a>
           <a
             href="https://www.youtube.com/@crmcguire1974"
@@ -255,8 +730,10 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/resume" class="nav-link">Resume</a>
         <a href="/projects" class="nav-link">Projects</a>
-        <a href="/ai-explorations" class="nav-link whitespace-nowrap">AI Explorations</a>
-        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/ai-explorations" class="nav-link whitespace-nowrap"
+          >AI Explorations</a
+        >
+        <a href="/blog" class="nav-link">Library</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
 
@@ -296,7 +773,19 @@
           aria-label="TikTok"
           class="social-icon"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg>
         </a>
         <a
           href="https://www.youtube.com/@crmcguire1974"
@@ -323,27 +812,80 @@
           <h4
             class="text-brand-600 dark:text-brand-400 text-lg font-medium mb-3 animate-fade-in"
           >
-            Insights & Ideas
+            Published Works & Articles
           </h4>
           <h1
             class="text-3xl md:text-5xl font-bold mb-6 animate-fade-in"
             style="animation-delay: 0.1s"
           >
-            Christopher R McGuire: The Engineering & Design  <span class="text-gradient">Blog</span>
+            Christopher R McGuire: Books, Insights &
+            <span class="text-gradient">Ideas</span>
           </h1>
           <p
             class="text-dark-700 dark:text-dark-300 text-lg animate-fade-in"
             style="animation-delay: 0.2s"
           >
-            Thoughts, ideas, and insights on UX/UI design, software engineering,
-            and industry trends.
+            Playbooks, guides, and thoughts on technology, design, business, and
+            wealth building.
           </p>
+        </div>
+
+        <!-- Books Section -->
+        <div
+          class="max-w-5xl mx-auto mb-16 px-2 md:px-0 animate-fade-in"
+          style="animation-delay: 0.25s"
+        >
+          <section class="books-showcase" aria-labelledby="books-heading">
+            <div class="books-showcase-header">
+              <div>
+                <p class="books-kicker">Featured Publications</p>
+                <h2
+                  id="books-heading"
+                  class="text-2xl md:text-3xl font-bold text-dark-900 dark:text-white mt-2"
+                >
+                  Books & Playbooks
+                </h2>
+                <p class="books-subtext mt-2">
+                  Actionable frameworks and guided prompt systems designed to
+                  complement the articles below with deeper, step-by-step
+                  implementation.
+                </p>
+              </div>
+              <p class="books-support-copy">
+                Four Amazon titles spanning real estate, small business,
+                personal strategy, and beginner investing.
+              </p>
+            </div>
+
+            <div class="books-divider" aria-hidden="true"></div>
+
+            <div id="books-container" class="books-grid">
+              <!-- Books will be inserted here by JavaScript -->
+            </div>
+          </section>
+        </div>
+
+        <!-- Articles Section Header -->
+        <div
+          class="max-w-5xl mx-auto mb-6 px-2 md:px-0 flex items-center justify-between animate-fade-in"
+          style="animation-delay: 0.3s"
+        >
+          <div>
+            <h2
+              class="text-2xl md:text-3xl font-bold text-dark-900 dark:text-white"
+            >
+              Articles & Insights
+            </h2>
+            <p class="text-dark-700 dark:text-dark-300 mt-2">
+              Latest posts on engineering, design, and more.
+            </p>
+          </div>
         </div>
 
         <div class="max-w-5xl mx-auto mb-12">
           <div
             class="glass-card rounded-xl p-6 animate-fade-in"
-            style="animation-delay: 0.3s"
+            style="animation-delay: 0.4s"
           >
             <!-- Removed grid column classes to stack elements -->
             <div class="flex flex-col gap-6">
@@ -548,7 +1090,9 @@
               <a href="/">Home</a>
               <a href="/resume">Resume</a>
               <a href="/projects">Projects</a>
-              <a href="/ai-explorations" class="whitespace-nowrap">AI Explorations</a>
+              <a href="/ai-explorations" class="whitespace-nowrap"
+                >AI Explorations</a
+              >
               <a href="/blog">Blog</a>
               <a href="/contact">Contact</a>
             </div>
@@ -598,7 +1142,19 @@
               rel="noopener noreferrer"
               aria-label="TikTok"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
             </a>
             <a
               href="https://www.youtube.com/@crmcguire1974"
@@ -623,6 +1179,52 @@
 
     <script src="./script.js"></script>
     <script>
+      // Books Data
+      const booksData = [
+        {
+          id: 1,
+          title: "The AI Shortcut: The Real Estate Playbook",
+          subtitle:
+            "200+ Expert Prompts to Help You Navigate the Real Estate Market",
+          description:
+            "Designed by a tech executive and creative strategist, these shortcuts turn AI into your personal marketing agency and transaction coordinator.",
+          amazonLink: "https://www.amazon.com/dp/B0GPN7FKYW",
+          image: "./images/book_real_estate.jpg",
+          badge: "Real Estate",
+        },
+        {
+          id: 2,
+          title: "The AI Shortcut: Small Business Playbook",
+          subtitle:
+            "200+ Ready-to-Use Prompts That Save Owners 10 Hours a Week",
+          description:
+            "7 categories covering every function in your business from Marketing and Sales to Operations and HR.",
+          amazonLink: "https://www.amazon.com/gp/product/B0GN94KGNT",
+          image: "./images/book_small_business.jpg",
+          badge: "Business",
+        },
+        {
+          id: 3,
+          title: "The AI Shortcut: The Divorce Playbook",
+          subtitle: "200+ AI Prompts to Protect Yourself, Finances, and Kids",
+          description:
+            "Turn AI into your personal legal analyst—saving you thousands in billable hours while you navigate complex financial hurdles.",
+          amazonLink: "https://www.amazon.com/gp/product/B0GNZ63Z1T",
+          image: "./images/book_divorce.jpg",
+          badge: "Legal/Personal",
+        },
+        {
+          id: 4,
+          title: "Investing for the Rest of Us",
+          subtitle: "From Piggy Bank to Portfolio",
+          description:
+            "Your beginner-friendly guide to building wealth. Learn the magic of compound interest and how to build a balanced portfolio.",
+          amazonLink: "https://www.amazon.com/dp/B0DSVRCLKL",
+          image: "./images/book_investing.jpg",
+          badge: "Finance",
+        },
+      ];
+
       // Blog Posts Data
       const blogPosts = [
         {
@@ -720,7 +1322,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         // DOM Elements
         const blogPostsContainer = document.getElementById(
-          "blog-posts-container"
+          "blog-posts-container",
         );
         const searchInput = document.getElementById("search-input");
         const noResults = document.getElementById("no-results");
@@ -728,6 +1330,44 @@
 
         let activeCategory = "All";
         let searchTerm = "";
+
+        // Render Books
+        const booksContainer = document.getElementById("books-container");
+        if (booksContainer) {
+          booksData.forEach((book, index) => {
+            const card = document.createElement("article");
+            card.className = "publication-card animate-fade-in";
+            card.style.animationDelay = `${0.05 * index + 0.15}s`;
+            card.setAttribute("aria-labelledby", `book-title-${book.id}`);
+            card.innerHTML = `
+              <div class="publication-cover">
+                <div class="publication-cover-frame">
+                  <img src="${book.image}" alt="${book.title} cover" onerror="this.src='./images/paguireLogo.png'; this.style.opacity='0.2'; this.style.objectFit='contain'; this.style.padding='1.5rem';" />
+                </div>
+                <div class="publication-cover-glow" aria-hidden="true"></div>
+                <div class="publication-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</div>
+                ${book.badge ? `<div class="publication-badge">${book.badge}</div>` : ""}
+              </div>
+              <div class="publication-content">
+                <div class="publication-meta" aria-hidden="true">
+                  <span class="publication-chip">Amazon</span>
+                  <span class="publication-chip">Book / Playbook</span>
+                </div>
+                <h3 id="book-title-${book.id}" class="publication-title">${book.title}</h3>
+                <p class="publication-subtitle">${book.subtitle}</p>
+                <p class="publication-description">${book.description}</p>
+                <div class="publication-footer">
+                 
+                  <a href="${book.amazonLink}" target="_blank" rel="noopener noreferrer" class="publication-link" aria-describedby="book-title-${book.id}">
+                    View on Amazon
+                    <svg class="publication-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+                  </a>
+                </div>
+              </div>
+            `;
+            booksContainer.appendChild(card);
+          });
+        }
 
         // Create Blog Card element
         function createBlogCard(post, index) {
@@ -740,7 +1380,7 @@
 
           // Parse and format the date
           const dateObj = new Date(
-            post.date.replace(/(\w+)\s(\d+),\s(\d+)/, "$2 $1 $3")
+            post.date.replace(/(\w+)\s(\d+),\s(\d+)/, "$2 $1 $3"),
           );
           const formattedDate = dateObj.toLocaleDateString("en-US", {
             year: "numeric",
@@ -804,7 +1444,7 @@
 
           searchInput.setAttribute(
             "aria-label",
-            `Search blog articles. ${filteredPosts.length} articles shown.`
+            `Search blog articles. ${filteredPosts.length} articles shown.`,
           );
 
           if (hasResults) {
@@ -837,7 +1477,7 @@
         function parseDate(dateStr) {
           try {
             const parsed = new Date(
-              dateStr.replace(/(\w+)\s(\d+),\s(\d+)/, "$2 $1 $3")
+              dateStr.replace(/(\w+)\s(\d+),\s(\d+)/, "$2 $1 $3"),
             );
             return isNaN(parsed.getTime()) ? new Date() : parsed;
           } catch (e) {
@@ -876,7 +1516,7 @@
         // Add keyboard navigation for category buttons
         categoryButtons.forEach((button) => {
           button.addEventListener("click", () =>
-            selectCategory(button.dataset.category)
+            selectCategory(button.dataset.category),
           );
 
           button.addEventListener("keydown", (e) => {
@@ -915,14 +1555,14 @@
         const emailInput = document.getElementById("newsletter-email");
         const messageDiv = document.getElementById("newsletter-message");
         const subscribeButton = document.getElementById(
-          "newsletter-subscribe-btn"
+          "newsletter-subscribe-btn",
         );
 
         // Initialize Supabase client
         const { createClient } = supabase;
         const supabaseClient = createClient(
           "https://qearvuhyixzivublbiyu.supabase.co",
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXJ2dWh5aXh6aXZ1YmxiaXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMyMDAzNzIsImV4cCI6MjA1ODc3NjM3Mn0.TkzyQEIakL43DTedLXET0lr6mK5lp_wom_FqsXUzV-8"
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlYXJ2dWh5aXh6aXZ1YmxiaXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMyMDAzNzIsImV4cCI6MjA1ODc3NjM3Mn0.TkzyQEIakL43DTedLXET0lr6mK5lp_wom_FqsXUzV-8",
         );
 
         // Show message function
@@ -967,7 +1607,7 @@
                 // Unique violation
                 showMessage(
                   `The email address "${email}" is already subscribed to the newsletter.`,
-                  true
+                  true,
                 );
               } else if (error.code === "23502") {
                 // Not null violation
@@ -978,7 +1618,7 @@
               } else {
                 showMessage(
                   `Subscription failed: ${error.message || "Unknown error"}`,
-                  true
+                  true,
                 );
                 console.error("Supabase error:", error);
               }
@@ -989,7 +1629,7 @@
           } catch (err) {
             showMessage(
               `Subscription failed: ${err.message || "Unknown error"}`,
-              true
+              true,
             );
             console.error("Subscription error:", err);
           } finally {
