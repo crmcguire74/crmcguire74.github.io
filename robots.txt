@@ -21,11 +21,8 @@ User-agent: CCBot
 Allow: /
 
 # Block unnecessary files
-Disallow: /wp-admin/
-Disallow: /admin/
 Disallow: /temp/
 Disallow: /private/
-Disallow: /*.pdf$
 Disallow: /mystory
 
 # Sitemap location
