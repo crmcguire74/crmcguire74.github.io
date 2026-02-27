@@ -248,6 +248,12 @@
         gap: 1rem;
       }
 
+      .content-wide {
+        max-width: 84rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .publication-card {
         display: grid;
         grid-template-columns: 1fr;
@@ -507,6 +513,54 @@
       .publication-link-icon {
         width: 0.95rem;
         height: 0.95rem;
+      }
+
+      .filter-row {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.55rem;
+        overflow-x: auto;
+        padding-bottom: 0.15rem;
+      }
+
+      .pagination {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.45rem;
+      }
+
+      .pagination-btn {
+        min-width: 2rem;
+        height: 2rem;
+        border: 1px solid rgba(var(--dark-300-rgb), 0.2);
+        border-radius: 0.6rem;
+        background: rgba(var(--dark-800-rgb), 0.45);
+        color: var(--dark-300);
+        font-size: 0.875rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .pagination-btn:hover:not(:disabled) {
+        border-color: rgba(var(--brand-500-rgb), 0.5);
+        color: white;
+      }
+
+      .pagination-btn.active {
+        background: var(--brand-500);
+        color: white;
+        border-color: var(--brand-500);
+      }
+
+      .pagination-btn:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
       }
 
       @media (min-width: 768px) {
@@ -829,7 +883,7 @@
 
         <!-- Books Section -->
         <div
-          class="max-w-5xl mx-auto mb-16 px-2 md:px-0 animate-fade-in"
+          class="content-wide mb-16 px-2 md:px-0 animate-fade-in"
           style="animation-delay: 0.25s"
         >
           <section class="books-showcase" aria-labelledby="books-heading">
@@ -864,7 +918,7 @@
 
         <!-- Articles Section Header -->
         <div
-          class="max-w-5xl mx-auto mb-6 px-2 md:px-0 flex items-center justify-between animate-fade-in"
+          class="content-wide mb-6 px-2 md:px-0 flex items-center justify-between animate-fade-in"
           style="animation-delay: 0.3s"
         >
           <div>
@@ -879,7 +933,7 @@
           </div>
         </div>
 
-        <div class="max-w-5xl mx-auto mb-12">
+        <div class="content-wide mb-12 px-2 md:px-0">
           <div
             class="glass-card rounded-xl p-6 animate-fade-in"
             style="animation-delay: 0.4s"
@@ -895,7 +949,7 @@
                     <div class="search-group">
                       <label
                         for="search-input"
-                        class="text-sm font-medium mb-2 block text-dark-700 dark:text-dark-300"
+                        class="sr-only"
                       >
                         Search library articles
                       </label>
@@ -911,7 +965,7 @@
                           id="search-input"
                           name="search"
                           class="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-dark-800 border border-dark-200 dark:border-dark-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-dark-900 dark:text-white"
-                          placeholder="Search..."
+                          placeholder="Search articles..."
                           aria-controls="blog-posts-container"
                           aria-label="Search blog articles"
                           autocomplete="off"
@@ -929,7 +983,7 @@
                   role="group"
                   aria-label="Filter blog posts by category"
                 >
-                  <div class="flex justify-center gap-4 overflow-x-auto">
+                  <div class="filter-row">
                     <button
                       id="category-all"
                       class="filter-btn bg-brand-600 text-white"
@@ -970,6 +1024,26 @@
                     >
                       Career
                     </button>
+                    <button
+                      id="category-ai"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="AI"
+                      aria-pressed="false"
+                      aria-label="Filter by AI category"
+                      tabindex="6"
+                    >
+                      AI
+                    </button>
+                    <button
+                      id="category-business"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="Business"
+                      aria-pressed="false"
+                      aria-label="Filter by Business category"
+                      tabindex="7"
+                    >
+                      Business
+                    </button>
                   </div>
                 </div>
               </section>
@@ -979,10 +1053,14 @@
 
         <!-- Blog Posts Grid -->
         <div
+          class="content-wide px-2 md:px-0"
+        >
+        <div
           id="blog-posts-container"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <!-- Blog posts will be dynamically inserted here by JavaScript -->
+        </div>
         </div>
 
         <!-- No Results Message (hidden by default) -->
@@ -994,6 +1072,8 @@
             Try adjusting your search or filter to find what you're looking for.
           </p>
         </div>
+
+        <div id="blog-pagination" class="pagination content-wide px-2 md:px-0" aria-label="Blog article pages"></div>
 
         <div
           class="mt-24 mx-auto glass-card rounded-3xl p-12 text-center animate-fade-in"
@@ -1324,9 +1404,12 @@
         const searchInput = document.getElementById("search-input");
         const noResults = document.getElementById("no-results");
         const categoryButtons = document.querySelectorAll(".filter-btn");
+        const paginationContainer = document.getElementById("blog-pagination");
+        const POSTS_PER_PAGE = 6;
 
         let activeCategory = "All";
         let searchTerm = "";
+        let currentPage = 1;
 
         // Render Books
         const booksContainer = document.getElementById("books-container");
@@ -1416,11 +1499,11 @@
         }
 
         // Handle ARIA announcements
-        function announceResults(filteredPosts) {
+        function announceResults(resultCount) {
           const message =
-            filteredPosts.length === 0
+            resultCount === 0
               ? "No articles found. Try adjusting your search or filter."
-              : `Found ${filteredPosts.length} articles.`;
+              : `Found ${resultCount} articles.`;
 
           const liveRegion = document.createElement("div");
           liveRegion.setAttribute("role", "status");
@@ -1433,30 +1516,85 @@
         }
 
         // Update UI elements
-        function updateUI(filteredPosts) {
-          const hasResults = filteredPosts.length > 0;
+        function updateUI(pagedPosts, totalResults) {
+          const hasResults = totalResults > 0;
 
           noResults.classList.toggle("hidden", hasResults);
           blogPostsContainer.classList.toggle("hidden", !hasResults);
 
           searchInput.setAttribute(
             "aria-label",
-            `Search blog articles. ${filteredPosts.length} articles shown.`,
+            `Search blog articles. ${totalResults} articles match.`,
           );
 
           if (hasResults) {
             blogPostsContainer.innerHTML = "";
-            filteredPosts.forEach((post, index) => {
+            pagedPosts.forEach((post, index) => {
               blogPostsContainer.appendChild(createBlogCard(post, index));
             });
           }
 
-          announceResults(filteredPosts);
+          announceResults(totalResults);
         }
 
-        // Filter and render blog posts
+        function renderPagination(totalPages, totalResults) {
+          if (!paginationContainer) return;
+          paginationContainer.innerHTML = "";
+
+          const shouldShow = totalResults > POSTS_PER_PAGE;
+          paginationContainer.classList.toggle("hidden", !shouldShow);
+          if (!shouldShow) return;
+
+          const prevBtn = document.createElement("button");
+          prevBtn.type = "button";
+          prevBtn.className = "pagination-btn";
+          prevBtn.textContent = "‹";
+          prevBtn.setAttribute("aria-label", "Previous page");
+          prevBtn.disabled = currentPage === 1;
+          prevBtn.addEventListener("click", () => {
+            if (currentPage > 1) {
+              currentPage -= 1;
+              renderBlogPosts();
+            }
+          });
+          paginationContainer.appendChild(prevBtn);
+
+          for (let page = 1; page <= totalPages; page += 1) {
+            const pageBtn = document.createElement("button");
+            pageBtn.type = "button";
+            pageBtn.className = `pagination-btn ${page === currentPage ? "active" : ""}`;
+            pageBtn.textContent = String(page);
+            pageBtn.setAttribute("aria-label", `Go to page ${page}`);
+            pageBtn.setAttribute("aria-current", page === currentPage ? "page" : "false");
+            pageBtn.addEventListener("click", () => {
+              currentPage = page;
+              renderBlogPosts();
+            });
+            paginationContainer.appendChild(pageBtn);
+          }
+
+          const nextBtn = document.createElement("button");
+          nextBtn.type = "button";
+          nextBtn.className = "pagination-btn";
+          nextBtn.textContent = "›";
+          nextBtn.setAttribute("aria-label", "Next page");
+          nextBtn.disabled = currentPage === totalPages;
+          nextBtn.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+              currentPage += 1;
+              renderBlogPosts();
+            }
+          });
+          paginationContainer.appendChild(nextBtn);
+        }
+
+        // Filter, sort, paginate, and render blog posts
         function renderBlogPosts() {
-          const filteredPosts = blogPosts.filter((post) => {
+          const sortedPosts = [...blogPosts].sort(
+            (a, b) => parseDate(b.date) - parseDate(a.date),
+          );
+
+          const filteredPosts = sortedPosts.filter((post) => {
             const matchesSearch =
               post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
               post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
@@ -1467,7 +1605,17 @@
             return matchesSearch && matchesCategory;
           });
 
-          updateUI(filteredPosts);
+          const totalPages = Math.max(
+            1,
+            Math.ceil(filteredPosts.length / POSTS_PER_PAGE),
+          );
+          if (currentPage > totalPages) currentPage = 1;
+
+          const start = (currentPage - 1) * POSTS_PER_PAGE;
+          const pagedPosts = filteredPosts.slice(start, start + POSTS_PER_PAGE);
+
+          updateUI(pagedPosts, filteredPosts.length);
+          renderPagination(totalPages, filteredPosts.length);
         }
 
         // Parse date safely
@@ -1486,6 +1634,7 @@
         // Handle category button selection
         function selectCategory(category) {
           activeCategory = category;
+          currentPage = 1;
 
           categoryButtons.forEach((btn) => {
             const isActive = btn.dataset.category === activeCategory;
@@ -1507,6 +1656,7 @@
         // Event Handlers
         searchInput.addEventListener("input", (e) => {
           searchTerm = e.target.value;
+          currentPage = 1;
           renderBlogPosts();
         });
 
