@@ -221,6 +221,209 @@
   opacity: 1;
 }
 
+.project-card-hit {
+  display: block;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card-hit:focus-visible {
+  outline: 2px solid var(--brand-400);
+  outline-offset: 4px;
+  border-radius: 0.75rem;
+}
+
+.project-card-hit .project-link {
+  display: none !important;
+}
+
+.project-carousel {
+  position: relative;
+  --project-gap: 2rem;
+  --slides-per-view: 1;
+  --project-offset: 0px;
+}
+
+@media (min-width: 768px) {
+  .project-carousel {
+    --slides-per-view: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-carousel {
+    --slides-per-view: 3;
+  }
+}
+
+.project-carousel-viewport {
+  overflow: hidden;
+}
+
+.project-track {
+  display: flex;
+  gap: var(--project-gap);
+  transform: translateX(var(--project-offset));
+  transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.project-slide {
+  flex: 0 0 calc((100% - (var(--project-gap) * (var(--slides-per-view) - 1))) / var(--slides-per-view));
+  min-width: 0;
+  --center-proximity: 0;
+  opacity: calc(0.5 + (var(--center-proximity) * 0.5));
+  transform: scale(calc(0.88 + (var(--center-proximity) * 0.22)));
+  transition: transform 0.45s ease-out, opacity 0.45s ease-out;
+}
+
+.project-slide .project-card {
+  height: 100%;
+  transition: box-shadow 0.45s ease, filter 0.45s ease;
+}
+
+.project-slide .project-image img {
+  filter: brightness(calc(0.36 + (var(--center-proximity) * 0.58)));
+  transition: transform 0.5s ease, filter 0.45s ease;
+}
+
+.project-slide.is-featured {
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+.project-slide.is-featured .project-image img {
+  filter: brightness(0.92);
+}
+
+.project-slide.is-featured .project-image::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.24) 50%, transparent);
+}
+
+.project-content {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 0.9rem;
+  z-index: 10;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 30, 48, 0.56),
+    rgba(30, 45, 64, 0.38)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.dark .project-content {
+  background: linear-gradient(
+    135deg,
+    rgba(7, 13, 22, 0.66),
+    rgba(15, 23, 36, 0.5)
+  );
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.project-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(var(--dark-300-rgb), 0.4);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--dark-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark .project-carousel-control {
+  background-color: rgba(var(--dark-800-rgb), 0.85);
+  color: var(--dark-100);
+  border-color: rgba(var(--dark-300-rgb), 0.2);
+}
+
+.project-carousel-control:hover {
+  background-color: var(--brand-500);
+  border-color: var(--brand-500);
+  color: #04293a;
+}
+
+.project-carousel-control.prev {
+  left: -1rem;
+}
+
+.project-carousel-control.next {
+  right: -1rem;
+}
+
+.project-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.project-carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: rgba(var(--dark-400-rgb), 0.45);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.project-carousel-dot.active {
+  width: 1.25rem;
+  background-color: var(--brand-500);
+}
+
+@media (max-width: 1023px) {
+  .project-carousel-control.prev {
+    left: -0.5rem;
+  }
+
+  .project-carousel-control.next {
+    right: -0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-carousel {
+    padding: 0 0.5rem;
+  }
+
+  .project-carousel-control {
+    top: calc(50% - 1.5rem);
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .project-carousel-control.prev {
+    left: 0;
+  }
+
+  .project-carousel-control.next {
+    right: 0;
+  }
+
+  .project-link {
+    opacity: 1;
+  }
+}
+
 /* Blog Cards */
 .blog-grid {
   display: grid;

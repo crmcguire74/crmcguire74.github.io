@@ -190,6 +190,241 @@ const setupScrollAnimation = () => {
   });
 };
 
+const setupProjectsCarousel = () => {
+  const carousels = document.querySelectorAll('[data-project-carousel]');
+  if (!carousels.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector('[data-project-track]');
+    const viewport = carousel.querySelector('.project-carousel-viewport');
+    const prevButton = carousel.querySelector('[data-project-prev]');
+    const nextButton = carousel.querySelector('[data-project-next]');
+    const dotsContainer = carousel.querySelector('[data-project-dots]');
+    const baseSlides = Array.from(carousel.querySelectorAll('.project-slide')).map((slide) => slide.cloneNode(true));
+    const autoplayDelay = Number(carousel.dataset.autoplayDelay || 3600);
+    const transitionMs = Number(carousel.dataset.transitionMs || 1100);
+
+    if (!track || !viewport || baseSlides.length < 2) return;
+
+    let currentIndex = 0;
+    let logicalIndex = 0;
+    let slidesPerView = 1;
+    let cloneCount = 1;
+    let autoplayTimer = null;
+    let kickoffTimer = null;
+    let resizeTimer = null;
+
+    const getSlidesPerView = () => {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    };
+
+    const getGap = () => {
+      const styles = window.getComputedStyle(track);
+      return parseFloat(styles.gap || styles.columnGap || '0') || 0;
+    };
+
+    const getStep = () => {
+      const firstSlide = track.querySelector('.project-slide');
+      if (!firstSlide) return 0;
+      return firstSlide.offsetWidth + getGap();
+    };
+
+    const applyVisualState = () => {
+      const allSlides = Array.from(track.querySelectorAll('.project-slide'));
+      if (!allSlides.length) return;
+
+      allSlides.forEach((slide, idx) => {
+        const distance = Math.abs(idx - currentIndex);
+        let proximity = 0;
+
+        if (distance === 0) proximity = 1;
+        else if (distance === 1) proximity = 0.58;
+        else if (distance === 2) proximity = 0.24;
+
+        slide.style.setProperty('--center-proximity', String(proximity));
+        slide.classList.toggle('is-featured', distance === 0);
+      });
+    };
+
+    const updateDots = () => {
+      const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('.project-carousel-dot')) : [];
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === logicalIndex);
+        dot.setAttribute('aria-current', index === logicalIndex ? 'true' : 'false');
+      });
+    };
+
+    const applyOffset = (animated = true) => {
+      const allSlides = Array.from(track.querySelectorAll('.project-slide'));
+      const targetSlide = allSlides[currentIndex];
+      if (!targetSlide) return;
+
+      const step = getStep();
+      if (!step) return;
+
+      const viewportWidth = viewport.clientWidth;
+      const slideWidth = targetSlide.offsetWidth;
+      const centeredOffset = (viewportWidth / 2) - (slideWidth / 2) - (step * currentIndex);
+
+      track.style.transition = animated ? `transform ${transitionMs}ms cubic-bezier(0.22, 1, 0.36, 1)` : 'none';
+      carousel.style.setProperty('--project-offset', `${centeredOffset}px`);
+      updateDots();
+      applyVisualState();
+    };
+
+    const normalizeAfterLoop = () => {
+      const total = baseSlides.length;
+      let normalized = false;
+
+      if (currentIndex >= total + cloneCount) {
+        currentIndex = cloneCount;
+        logicalIndex = 0;
+        normalized = true;
+      } else if (currentIndex < cloneCount) {
+        currentIndex = total + cloneCount - 1;
+        logicalIndex = total - 1;
+        normalized = true;
+      }
+
+      if (normalized) {
+        // Jump from cloned boundary slide to matching real slide with transitions disabled.
+        applyOffset(false);
+        // Force paint so the jump commits before transition is re-enabled.
+        track.getBoundingClientRect();
+        requestAnimationFrame(() => {
+          track.style.transition = 'none';
+          requestAnimationFrame(() => {
+            track.style.transition = `transform ${transitionMs}ms cubic-bezier(0.22, 1, 0.36, 1)`;
+          });
+        });
+      }
+    };
+
+    const goToLogical = (nextLogicalIndex) => {
+      const total = baseSlides.length;
+      logicalIndex = ((nextLogicalIndex % total) + total) % total;
+      currentIndex = logicalIndex + cloneCount;
+      applyOffset(true);
+    };
+
+    const goNext = () => {
+      const total = baseSlides.length;
+      logicalIndex = (logicalIndex + 1) % total;
+      currentIndex += 1;
+      applyOffset(true);
+    };
+
+    const goPrev = () => {
+      const total = baseSlides.length;
+      logicalIndex = (logicalIndex - 1 + total) % total;
+      currentIndex -= 1;
+      applyOffset(true);
+    };
+
+    const renderTrack = () => {
+      slidesPerView = getSlidesPerView();
+      cloneCount = Math.max(slidesPerView, 2);
+      track.innerHTML = '';
+
+      const total = baseSlides.length;
+      const prependClones = baseSlides
+        .slice(total - cloneCount)
+        .map((slide) => slide.cloneNode(true));
+      const realSlides = baseSlides.map((slide) => slide.cloneNode(true));
+      const appendClones = baseSlides
+        .slice(0, cloneCount)
+        .map((slide) => slide.cloneNode(true));
+
+      [...prependClones, ...realSlides, ...appendClones].forEach((slide) => {
+        track.appendChild(slide);
+      });
+
+      currentIndex = logicalIndex + cloneCount;
+      applyOffset(false);
+      applyVisualState();
+    };
+
+    const buildDots = () => {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      const pageCount = baseSlides.length;
+
+      for (let i = 0; i < pageCount; i += 1) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'project-carousel-dot';
+        dot.setAttribute('aria-label', `Go to project slide ${i + 1}`);
+        dot.addEventListener('click', () => goToLogical(i));
+        dotsContainer.appendChild(dot);
+      }
+
+      updateDots();
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer) {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+      if (kickoffTimer) {
+        window.clearTimeout(kickoffTimer);
+        kickoffTimer = null;
+      }
+    };
+
+    const startAutoplay = () => {
+      if (prefersReducedMotion) return;
+      stopAutoplay();
+      kickoffTimer = window.setTimeout(() => {
+        goNext();
+      }, 800);
+      autoplayTimer = window.setInterval(goNext, autoplayDelay);
+    };
+
+    track.addEventListener('transitionend', (event) => {
+      if (event.propertyName !== 'transform') return;
+      normalizeAfterLoop();
+      applyVisualState();
+    });
+
+    if (prevButton) {
+      prevButton.addEventListener('click', goPrev);
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', goNext);
+    }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        renderTrack();
+      }, 120);
+    });
+
+    buildDots();
+    renderTrack();
+    startAutoplay();
+  });
+};
+
 // Function to highlight the active navigation link
 const highlightActiveLink = () => {
   const currentPage = window.location.pathname.split('/').pop(); // Get the current filename (e.g., "index.html")
@@ -243,6 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup animations
   // Removed call to initResumeSticky()
+  setupProjectsCarousel();
   setupScrollAnimation();
 
   // Highlight the active navigation link
