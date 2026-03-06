@@ -1044,6 +1044,26 @@
                     >
                       Business
                     </button>
+                    <button
+                      id="category-ux"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="UX"
+                      aria-pressed="false"
+                      aria-label="Filter by UX tag"
+                      tabindex="8"
+                    >
+                      UX
+                    </button>
+                    <button
+                      id="category-fintech"
+                      class="filter-btn bg-white dark:bg-dark-800 text-dark-700 dark:text-dark-300 hover:bg-dark-100 dark:hover:bg-dark-700"
+                      data-category="Fintech"
+                      aria-pressed="false"
+                      aria-label="Filter by Fintech category"
+                      tabindex="9"
+                    >
+                      Fintech
+                    </button>
                   </div>
                 </div>
               </section>
@@ -1305,6 +1325,29 @@
       // Blog Posts Data
       const blogPosts = [
         {
+          id: 10,
+          title:
+            "Why fintech companies need dedicated UX teams (not 'a designer when we have time')",
+          excerpt:
+            "Fintech UX drives revenue, retention, and regulatory compliance. A 20-year industry perspective on why dedicated UX teams outperform ad hoc design support.",
+          date: "Mar 6, 2026",
+          image: "./blog/images/lockedMetalSafe.jpg",
+          slug: "why-fintech-companies-need-dedicated-ux-teams",
+          tags: ["Design", "Business", "UX", "Fintech"],
+          url: "/blog/posts/why-fintech-companies-need-dedicated-ux-teams",
+        },
+    /*    {
+          id: 9,
+          title: "Building AI Products With UX Rigor",
+          excerpt:
+            "A practical framework for shipping AI features with strong UX foundations, measurable outcomes, and clear operational guardrails.",
+          date: "Feb 28, 2026",
+          image: "./images/vibecodingprocess.png",
+          slug: "building-ai-products-with-ux-rigor",
+          tags: ["Development", "AI", "UX"],
+          url: "/blog/posts/building-ai-products-with-ux-rigor",
+        }, */
+        {
           id: 1,
           title: "Frontend Development: Not Just About a 'Pretty' Website",
           excerpt:
@@ -1312,7 +1355,7 @@
           date: "Dec 28, 2022",
           image: "./images/0e649042-5f57-4983-bd24-db739ebf3baf.png",
           slug: "frontend-development",
-          category: "Development",
+          tags: ["Development"],
           url: "https://medium.com/@crmcguire74/frontend-development-a60f0df41161",
         },
         {
@@ -1323,7 +1366,7 @@
           date: "Feb 22, 2023",
           image: "./images/fe527293-fb5f-44d4-acd6-85ea49da05e8.png",
           slug: "mythical-full-stack-developer",
-          category: "Career",
+          tags: ["Career"],
           url: "https://medium.com/@crmcguire74/thefullstackunicorn-7b661508c226",
         },
         {
@@ -1335,7 +1378,7 @@
           date: "Apr 12, 2023",
           image: "./images/f6b0b24f-ece0-4b89-866a-b6c47054e4db.png",
           slug: "job-titles-software-engineering",
-          category: "Career",
+          tags: ["Career"],
           url: "https://medium.com/@crmcguire74/the-impact-of-job-titles-in-software-engineering-pitfalls-and-solutions-807d8e928370",
         },
         {
@@ -1346,7 +1389,7 @@
           date: "Nov 8, 2024",
           image: "./images/6ab4ee6d-009d-4605-847d-2cf10248b46b.jpg",
           slug: "user-interface-design-for-web-applications",
-          category: "Design",
+          tags: ["Design", "UX"],
           url: "https://iconforge.net/blog/articles/user_interface_design_for_web_applications",
         },
         {
@@ -1357,7 +1400,7 @@
           date: "Nov 9, 2024",
           image: "./images/bc955065-4a43-42c5-a5c3-2bbf1ae0e4ef.png",
           slug: "custom-icons-and-user-interface-design-tips",
-          category: "Design",
+          tags: ["Design", "UX"],
           url: "https://iconforge.net/blog/articles/custom_icons_and_user_interface_design_tips",
         },
         {
@@ -1369,7 +1412,7 @@
           date: "Nov 13, 2024",
           image: "./images/5117e834-44d0-4d00-81cf-1808a606e100.png",
           slug: "hidden-roi-of-uxui-design-in-internal-business-applications",
-          category: "Design",
+          tags: ["Design", "Business", "UX"],
           url: "https://iconforge.net/blog/articles/hidden_roi_of_uxui_design_in_internal_business_applications",
         },
         {
@@ -1380,7 +1423,7 @@
           date: "Nov 13, 2024",
           image: "./images/2b6d95c7-78d6-421a-a7b3-94e580f93546.png",
           slug: "mastering-uiux-design-in-modern-application-development",
-          category: "Design",
+          tags: ["Design", "Development", "UX"],
           url: "https://iconforge.net/blog/articles/mastering_uiux_design_in_modern_application_development.html",
         },
         {
@@ -1391,7 +1434,7 @@
           date: "Nov 15, 2024",
           image: "./images/bcb1c597-5a84-40c4-ac3f-77d8f0e3ca58.png",
           slug: "designing-application-icons",
-          category: "Design",
+          tags: ["Design"],
           url: "https://iconforge.net/blog/articles/designing_application_icons",
         },
       ];
@@ -1449,6 +1492,16 @@
           });
         }
 
+        function getPostTags(post) {
+          if (Array.isArray(post.tags) && post.tags.length) {
+            return post.tags;
+          }
+          if (typeof post.category === "string" && post.category.trim().length) {
+            return [post.category];
+          }
+          return [];
+        }
+
         // Create Blog Card element
         function createBlogCard(post, index) {
           const card = document.createElement("article");
@@ -1457,6 +1510,9 @@
           card.setAttribute("aria-labelledby", `article-title-${post.id}`);
 
           const linkHref = post.url || `#${post.slug}`;
+          const isExternal = /^https?:\/\//i.test(linkHref);
+          const targetAttr = isExternal ? 'target="_blank"' : "";
+          const relAttr = isExternal ? 'rel="noopener noreferrer"' : "";
 
           // Parse and format the date
           const dateObj = new Date(
@@ -1485,8 +1541,8 @@
               <a 
                 href="${linkHref}"
                 class="blog-link"
-                target="_blank"
-                rel="noopener noreferrer"
+                ${targetAttr}
+                ${relAttr}
                 aria-describedby="article-title-${post.id}"
               >
                 Read full article
@@ -1595,12 +1651,17 @@
           );
 
           const filteredPosts = sortedPosts.filter((post) => {
+            const postTags = getPostTags(post).map((tag) =>
+              String(tag).toLowerCase(),
+            );
             const matchesSearch =
               post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+              post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              postTags.some((tag) => tag.includes(searchTerm.toLowerCase()));
 
             const matchesCategory =
-              activeCategory === "All" || post.category === activeCategory;
+              activeCategory === "All" ||
+              postTags.includes(activeCategory.toLowerCase());
 
             return matchesSearch && matchesCategory;
           });
