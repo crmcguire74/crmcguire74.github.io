@@ -425,6 +425,109 @@ const setupProjectsCarousel = () => {
   });
 };
 
+const setupPostImageLightbox = () => {
+  const postContent = document.querySelector('.post-prose');
+  if (!postContent) return;
+
+  const images = Array.from(postContent.querySelectorAll('img.hero-image'));
+  if (!images.length) return;
+
+  images.forEach((image) => {
+    if (!image.hasAttribute('tabindex')) image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', image.alt ? `Open image: ${image.alt}` : 'Open image');
+  });
+
+  const overlay = document.createElement('div');
+  overlay.className = 'image-lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Image preview');
+  overlay.hidden = true;
+  overlay.innerHTML = `
+    <button type="button" class="image-lightbox__close" aria-label="Close image preview">&times;</button>
+    <div class="image-lightbox__panel">
+      <img class="image-lightbox__image" alt="" />
+    </div>
+  `;
+
+  const lightboxImage = overlay.querySelector('.image-lightbox__image');
+  const closeButton = overlay.querySelector('.image-lightbox__close');
+  let previousOverflow = '';
+  let activeImage = null;
+  let hasRetriedSvgLoad = false;
+
+  const resolveImageSource = (image) => {
+    const rawSrc = image.getAttribute('src');
+    if (rawSrc) return new URL(rawSrc, window.location.href).href;
+    return image.currentSrc || image.src;
+  };
+
+  const closeLightbox = () => {
+    overlay.hidden = true;
+    document.body.style.overflow = previousOverflow;
+    lightboxImage.src = '';
+    lightboxImage.alt = '';
+    if (activeImage) activeImage.focus();
+    activeImage = null;
+  };
+
+  const openLightbox = (image) => {
+    activeImage = image;
+    previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    hasRetriedSvgLoad = false;
+    lightboxImage.src = resolveImageSource(image);
+    lightboxImage.alt = image.alt || '';
+    overlay.hidden = false;
+    closeButton.focus();
+  };
+
+  lightboxImage.addEventListener('error', () => {
+    const src = lightboxImage.src || '';
+    if (hasRetriedSvgLoad || !src) return;
+
+    if (src.endsWith('.svgz')) {
+      hasRetriedSvgLoad = true;
+      lightboxImage.src = src.replace(/\.svgz$/, '.svg');
+      return;
+    }
+
+    if (src.endsWith('.svg')) {
+      hasRetriedSvgLoad = true;
+      lightboxImage.src = `${src}z`;
+    }
+  });
+
+  postContent.addEventListener('click', (event) => {
+    const image = event.target.closest('img.hero-image');
+    if (!image) return;
+    openLightbox(image);
+  });
+
+  postContent.addEventListener('keydown', (event) => {
+    const image = event.target.closest('img.hero-image');
+    if (!image) return;
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    openLightbox(image);
+  });
+
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay || event.target === closeButton) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (!overlay.hidden && event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+
+  document.body.appendChild(overlay);
+};
+
 // Function to highlight the active navigation link
 const highlightActiveLink = () => {
   const currentPage = window.location.pathname.split('/').pop(); // Get the current filename (e.g., "index.html")
@@ -480,6 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Removed call to initResumeSticky()
   setupProjectsCarousel();
   setupScrollAnimation();
+  setupPostImageLightbox();
 
   // Highlight the active navigation link
   highlightActiveLink();

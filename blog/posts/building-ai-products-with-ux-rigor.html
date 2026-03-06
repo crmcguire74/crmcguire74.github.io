@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building AI Products With UX Rigor | Paguire Library</title>
+    <meta
+      name="description"
+      content="A practical framework for shipping AI features with strong UX foundations, measurable outcomes, and clear operational guardrails."
+    />
+    <link rel="canonical" href="https://paguire.com/blog/posts/building-ai-products-with-ux-rigor" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Building AI Products With UX Rigor" />
+    <meta
+      property="og:description"
+      content="A practical framework for shipping AI features with strong UX foundations, measurable outcomes, and clear operational guardrails."
+    />
+    <meta property="og:url" content="https://paguire.com/blog/posts/building-ai-products-with-ux-rigor" />
+    <meta property="og:image" content="https://paguire.com/images/vibecodingprocess.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Building AI Products With UX Rigor" />
+    <meta
+      name="twitter:description"
+      content="A practical framework for shipping AI features with strong UX foundations, measurable outcomes, and clear operational guardrails."
+    />
+    <meta name="twitter:image" content="https://paguire.com/images/vibecodingprocess.png" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles-additional.css" />
+    <link rel="stylesheet" href="/pages-styles.css" />
+    <link rel="stylesheet" href="/dark-mode-fix.css" />
+    <link rel="stylesheet" href="/blog/assets/blog-post-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/theme-loader.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building AI Products With UX Rigor",
+        "description": "A practical framework for shipping AI features with strong UX foundations, measurable outcomes, and clear operational guardrails.",
+        "datePublished": "2026-02-28",
+        "dateModified": "2026-02-28",
+        "author": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "image": ["https://paguire.com/images/vibecodingprocess.png"],
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://paguire.com/blog/posts/building-ai-products-with-ux-rigor"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <a href="/" class="logo"><img src="/images/paguireLogo.png" alt="Paguire Logo" height="50" /></a>
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/resume" class="nav-link">Resume</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/ai-explorations" class="nav-link whitespace-nowrap">AI Explorations</a>
+          <a href="/blog" class="nav-link text-gradient">Library</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="desktop-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i id="theme-icon" data-lucide="moon"></i>
+          </button>
+          <a
+            href="https://linkedin.com/in/christopher-mcguire/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="social-icon"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a
+            href="https://twitter.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="social-icon"
+          >
+            <i data-lucide="twitter"></i>
+          </a>
+          <a
+            href="https://github.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="social-icon"
+          >
+            <i data-lucide="github"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="social-icon"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@crmcguire1974"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="social-icon"
+          >
+            <i data-lucide="youtube"></i>
+          </a>
+          <a
+            href="mailto:Christopher.R.McGuire@gmail.com"
+            aria-label="Email"
+            class="social-icon"
+          >
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+
+        <div class="mobile-actions">
+          <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i id="mobile-theme-icon" data-lucide="moon"></i>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <i id="menu-icon" data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/resume" class="nav-link">Resume</a>
+        <a href="/projects" class="nav-link">Projects</a>
+        <a href="/ai-explorations" class="nav-link whitespace-nowrap">AI Explorations</a>
+        <a href="/blog" class="nav-link">Library</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="mobile-social">
+        <a
+          href="https://linkedin.com/in/christopher-mcguire/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a
+          href="https://twitter.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="social-icon"
+        >
+          <i data-lucide="twitter"></i>
+        </a>
+        <a
+          href="https://github.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="social-icon"
+        >
+          <i data-lucide="github"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/@crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="social-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@crmcguire1974"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="social-icon"
+        >
+          <i data-lucide="youtube"></i>
+        </a>
+        <a
+          href="mailto:Christopher.R.McGuire@gmail.com"
+          aria-label="Email"
+          class="social-icon"
+        >
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+
+    <main class="bg-gradient post-shell">
+      <div class="container">
+        <article class="post-container">
+          <header class="post-hero">
+            <p class="post-kicker">AI Product Development</p>
+            <h1 class="post-title">Building AI Products With UX Rigor</h1>
+            <p class="post-dek">
+              AI products fail less from model quality and more from weak product framing. This framework keeps
+              intent, UX, and engineering quality aligned from day one.
+            </p>
+            <div class="post-meta">
+              <span class="post-chip">February 28, 2026</span>
+              <span class="post-chip">7 min read</span>
+              <span class="post-chip">By Christopher R McGuire</span>
+            </div>
+          </header>
+
+          <section class="post-article glass-card" aria-label="Article content">
+            <div class="post-prose">
+              <p>
+                AI capability alone does not create a great product. The teams that ship reliable AI experiences
+                define a user outcome first, then design around confidence, feedback, and recovery paths.
+              </p>
+
+              <h2>1. Scope the job before the model</h2>
+              <p>
+                Start with a narrow, high-value use case. Write down the decision a user needs to make and where
+                AI should accelerate that decision. If the outcome is unclear, model quality will not save the
+                experience.
+              </p>
+
+              <h2>2. Design for uncertainty up front</h2>
+              <p>
+                Every AI output has a confidence envelope. Product UX should communicate confidence through
+                labeling, optional explanations, and clear user controls to revise or reject output.
+              </p>
+
+              <h2>3. Treat observability as a product feature</h2>
+              <p>
+                Track prompt quality, response acceptance rates, override frequency, and time to task completion.
+                These signals are what allow teams to improve both model behavior and interaction design.
+              </p>
+
+              <blockquote>
+                The fastest path to trustworthy AI is not maximum automation. It is controlled assistance plus
+                visible product accountability.
+              </blockquote>
+
+              <h2>Execution checklist</h2>
+              <ul>
+                <li>Define one measurable user outcome per AI feature.</li>
+                <li>Ship human override controls in v1.</li>
+                <li>Instrument acceptance and correction events.</li>
+                <li>Review failures weekly with product, design, and engineering together.</li>
+              </ul>
+            </div>
+          </section>
+
+          <a class="post-backlink" href="/blog" aria-label="Back to the blog library">
+            <i data-lucide="arrow-left" aria-hidden="true"></i>
+            Back to Library
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="gradient-text logo">Christopher R McGuire</span>
+            <p class="footer-tagline">
+              SVP of Software Engineering, UX/UI Design and Development with 20+
+              years of experience bridging the gap between users, designers, and
+              developers.
+            </p>
+          </div>
+
+          <div class="footer-nav">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/projects">Projects</a>
+              <a href="/ai-explorations" class="whitespace-nowrap">AI Explorations</a>
+              <a href="/blog">Library</a>
+              <a href="/contact">Contact</a>
+            </div>
+
+            <div class="footer-connect">
+              <h4>Connect</h4>
+              <a href="mailto:Christopher.R.McGuire@gmail.com">Christopher.R.McGuire@gmail.com</a>
+              Chicago, IL
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 Christopher R McGuire. All rights reserved.</p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/christopher-mcguire/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="https://twitter.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <i data-lucide="twitter"></i>
+            </a>
+            <a
+              href="https://github.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@crmcguire1974"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <i data-lucide="youtube"></i>
+            </a>
+            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

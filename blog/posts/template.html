@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{POST_TITLE}} | Paguire Library</title>
+    <meta name="description" content="{{POST_DESCRIPTION}}" />
+    <link rel="canonical" href="https://paguire.com/blog/posts/{{POST_SLUG}}" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{POST_TITLE}}" />
+    <meta property="og:description" content="{{POST_DESCRIPTION}}" />
+    <meta property="og:url" content="https://paguire.com/blog/posts/{{POST_SLUG}}" />
+    <meta property="og:image" content="https://paguire.com{{POST_IMAGE}}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{POST_TITLE}}" />
+    <meta name="twitter:description" content="{{POST_DESCRIPTION}}" />
+    <meta name="twitter:image" content="https://paguire.com{{POST_IMAGE}}" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles-additional.css" />
+    <link rel="stylesheet" href="/pages-styles.css" />
+    <link rel="stylesheet" href="/dark-mode-fix.css" />
+    <link rel="stylesheet" href="/blog/assets/blog-post-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/theme-loader.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{POST_TITLE}}",
+        "description": "{{POST_DESCRIPTION}}",
+        "datePublished": "{{POST_DATE_ISO}}",
+        "dateModified": "{{POST_UPDATED_ISO}}",
+        "author": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "image": ["https://paguire.com{{POST_IMAGE}}"],
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://paguire.com/blog/posts/{{POST_SLUG}}"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <a href="/" class="logo"><img src="/images/paguireLogo.png" alt="Paguire Logo" height="50" /></a>
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/resume" class="nav-link">Resume</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/ai-explorations" class="nav-link whitespace-nowrap">AI Explorations</a>
+          <a href="/blog" class="nav-link text-gradient">Library</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="desktop-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i id="theme-icon" data-lucide="moon"></i>
+          </button>
+          <a
+            href="https://linkedin.com/in/christopher-mcguire/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="social-icon"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a
+            href="https://twitter.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="social-icon"
+          >
+            <i data-lucide="twitter"></i>
+          </a>
+          <a
+            href="https://github.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="social-icon"
+          >
+            <i data-lucide="github"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="social-icon"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@crmcguire1974"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="social-icon"
+          >
+            <i data-lucide="youtube"></i>
+          </a>
+          <a
+            href="mailto:Christopher.R.McGuire@gmail.com"
+            aria-label="Email"
+            class="social-icon"
+          >
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+
+        <div class="mobile-actions">
+          <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i id="mobile-theme-icon" data-lucide="moon"></i>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <i id="menu-icon" data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/resume" class="nav-link">Resume</a>
+        <a href="/projects" class="nav-link">Projects</a>
+        <a href="/ai-explorations" class="nav-link whitespace-nowrap">AI Explorations</a>
+        <a href="/blog" class="nav-link">Library</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="mobile-social">
+        <a
+          href="https://linkedin.com/in/christopher-mcguire/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+        >
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a
+          href="https://twitter.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="social-icon"
+        >
+          <i data-lucide="twitter"></i>
+        </a>
+        <a
+          href="https://github.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="social-icon"
+        >
+          <i data-lucide="github"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/@crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="social-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@crmcguire1974"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="social-icon"
+        >
+          <i data-lucide="youtube"></i>
+        </a>
+        <a
+          href="mailto:Christopher.R.McGuire@gmail.com"
+          aria-label="Email"
+          class="social-icon"
+        >
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+
+    <main class="bg-gradient post-shell">
+      <div class="container">
+        <article class="post-container">
+          <header class="post-hero">
+            <p class="post-kicker">{{POST_CATEGORY}}</p>
+            <h1 class="post-title">{{POST_TITLE}}</h1>
+            <p class="post-dek">{{POST_DESCRIPTION}}</p>
+            <div class="post-meta">
+              <span class="post-chip">{{POST_DATE_HUMAN}}</span>
+              <span class="post-chip">{{POST_READ_TIME}}</span>
+              <span class="post-chip">By Christopher R McGuire</span>
+            </div>
+          </header>
+
+          <section class="post-article glass-card" aria-label="Article content">
+            <div class="post-prose">
+              <p>
+                Replace this section with the full post body. Keep one idea per section and use clear
+                headings for scanability.
+              </p>
+
+              <h2>Section Heading</h2>
+              <p>
+                Start with context, then explain the decision or insight. Tie recommendations back to
+                measurable outcomes, whether that is usability, velocity, or product quality.
+              </p>
+
+              <h3>Practical checklist</h3>
+              <ul>
+                <li>Define the user problem and success metric.</li>
+                <li>Document tradeoffs and constraints.</li>
+                <li>Capture implementation details and follow-up actions.</li>
+              </ul>
+
+              <blockquote>
+                Strong product execution is the result of clear scope, quality design, and disciplined delivery.
+              </blockquote>
+
+              <p>
+                You can add inline code for technical details such as <code>featureFlags.enable("new-flow")</code>.
+              </p>
+            </div>
+          </section>
+
+          <a class="post-backlink" href="/blog" aria-label="Back to the blog library">
+            <i data-lucide="arrow-left" aria-hidden="true"></i>
+            Back to Library
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="gradient-text logo">Christopher R McGuire</span>
+            <p class="footer-tagline">
+              SVP of Software Engineering, UX/UI Design and Development with 20+
+              years of experience bridging the gap between users, designers, and
+              developers.
+            </p>
+          </div>
+
+          <div class="footer-nav">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/projects">Projects</a>
+              <a href="/ai-explorations" class="whitespace-nowrap">AI Explorations</a>
+              <a href="/blog">Library</a>
+              <a href="/contact">Contact</a>
+            </div>
+
+            <div class="footer-connect">
+              <h4>Connect</h4>
+              <a href="mailto:Christopher.R.McGuire@gmail.com">Christopher.R.McGuire@gmail.com</a>
+              Chicago, IL
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 Christopher R McGuire. All rights reserved.</p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/christopher-mcguire/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="https://twitter.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <i data-lucide="twitter"></i>
+            </a>
+            <a
+              href="https://github.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@crmcguire1974"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <i data-lucide="youtube"></i>
+            </a>
+            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
