@@ -1,74 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  <!-- Homepage -->
   <url>
     <loc>https://paguire.com/</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Core Pages -->
   <url>
     <loc>https://paguire.com/resume</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://paguire.com/Christopher_R_McGuire-SVP_of_Software_Engineering_UX_UI.pdf</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <url>
     <loc>https://paguire.com/projects</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://paguire.com/ai-explorations</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://paguire.com/blog</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://paguire.com/ai-explorations</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://paguire.com/contact</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
+  <!-- Blog Index -->
   <url>
-    <loc>https://paguire.com/products/snapclipper/snapclipper</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://paguire.com/blog</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Posts (hosted on paguire.com) -->
   <url>
-    <loc>https://paguire.com/products/modus-ai/modus-ai</loc>
-    <lastmod>2025-12-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://paguire.com/products/1-hour-content-creator-blueprint</loc>
-    <lastmod>2025-12-23</lastmod>
+    <loc>https://paguire.com/blog/posts/why-fintech-companies-need-dedicated-ux-teams</loc>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Product Pages -->
+  <url>
+    <loc>https://paguire.com/products/snapclipper/snapclipper</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paguire.com/products/modus-ai/modus-ai</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paguire.com/products/1-hour-content-creator-blueprint</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
