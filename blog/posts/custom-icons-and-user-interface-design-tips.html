@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Custom Icons and User Interface Design: Tips and Methods | Christopher
+      McGuire
+    </title>
+    <meta
+      name="description"
+      content="Learn how custom icons strengthen brand identity and improve UI design. Covers design principles, consistency rules, tools like Figma and Illustrator, and when to go bespoke vs pre-made."
+    />
+    <link
+      rel="canonical"
+      href="https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Custom Icons and User Interface Design Tips"
+    />
+    <meta
+      property="og:description"
+      content="Learn how custom icons strengthen brand identity and improve UI design. Covers design principles, consistency rules, tools like Figma and Illustrator, and when to go bespoke vs pre-made."
+    />
+    <meta
+      property="og:url"
+      content="https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips"
+    />
+    <meta
+      property="og:image"
+      content="https://paguire.com/images/bc955065-4a43-42c5-a5c3-2bbf1ae0e4ef.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Custom Icons and User Interface Design Tips"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn how custom icons strengthen brand identity and improve UI design. Covers design principles, consistency rules, too"
+    />
+    <meta
+      name="twitter:image"
+      content="https://paguire.com/images/bc955065-4a43-42c5-a5c3-2bbf1ae0e4ef.png"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles-additional.css" />
+    <link rel="stylesheet" href="/pages-styles.css" />
+    <link rel="stylesheet" href="/dark-mode-fix.css" />
+    <link rel="stylesheet" href="/blog/assets/blog-post-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/theme-loader.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Custom Icons and User Interface Design: Tips and Methods",
+        "description": "Learn how custom icons strengthen brand identity and improve UI design. Covers design principles, consistency rules, tools like Figma and Illustrator, and when to go bespoke vs pre-made.",
+        "datePublished": "2024-11-09",
+        "dateModified": "2026-03-06",
+        "author": {
+          "@type": "Person",
+          "name": "Christopher R McGuire",
+          "sameAs": [
+            "https://www.linkedin.com/in/christopher-mcguire/",
+            "https://paguire.com"
+          ]
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips"
+        },
+        "keywords": [
+          "custom icons",
+          "icon design",
+          "UI design tips",
+          "iconography",
+          "brand identity icons",
+          "Figma icons",
+          "SVG icons",
+          "icon design principles",
+          "interface design",
+          "visual design"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <a href="/" class="logo"
+          ><img src="/images/paguireLogo.png" alt="Paguire Logo" height="50"
+        /></a>
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/resume" class="nav-link">Resume</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/ai-explorations" class="nav-link whitespace-nowrap"
+            >AI Explorations</a
+          >
+          <a href="/blog" class="nav-link text-gradient">Library</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="desktop-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i id="theme-icon" data-lucide="moon"></i>
+          </button>
+          <a
+            href="https://linkedin.com/in/christopher-mcguire/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="social-icon"
+            ><i data-lucide="linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="social-icon"
+            ><i data-lucide="twitter"></i
+          ></a>
+          <a
+            href="https://github.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="social-icon"
+            ><i data-lucide="github"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="social-icon"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@crmcguire1974"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="social-icon"
+            ><i data-lucide="youtube"></i
+          ></a>
+          <a
+            href="mailto:Christopher.R.McGuire@gmail.com"
+            aria-label="Email"
+            class="social-icon"
+            ><i data-lucide="mail"></i
+          ></a>
+        </div>
+
+        <div class="mobile-actions">
+          <button
+            id="mobile-theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i id="mobile-theme-icon" data-lucide="moon"></i>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <i id="menu-icon" data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/resume" class="nav-link">Resume</a>
+        <a href="/projects" class="nav-link">Projects</a>
+        <a href="/ai-explorations" class="nav-link whitespace-nowrap"
+          >AI Explorations</a
+        >
+        <a href="/blog" class="nav-link">Library</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="mobile-social">
+        <a
+          href="https://linkedin.com/in/christopher-mcguire/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+          ><i data-lucide="linkedin"></i
+        ></a>
+        <a
+          href="https://twitter.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="social-icon"
+          ><i data-lucide="twitter"></i
+        ></a>
+        <a
+          href="https://github.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="social-icon"
+          ><i data-lucide="github"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="social-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@crmcguire1974"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="social-icon"
+          ><i data-lucide="youtube"></i
+        ></a>
+        <a
+          href="mailto:Christopher.R.McGuire@gmail.com"
+          aria-label="Email"
+          class="social-icon"
+          ><i data-lucide="mail"></i
+        ></a>
+      </div>
+    </div>
+
+    <main class="bg-gradient post-shell">
+      <div class="container">
+        <article class="post-container">
+          <header class="post-hero">
+            <p class="post-kicker">UX/UI Design · Iconography</p>
+            <h1 class="post-title">
+              Custom Icons and User Interface Design: Tips and Methods
+            </h1>
+            <p class="post-dek">
+              Custom icons reinforce brand identity, improve usability, and
+              create visual consistency across your product. Here is how to
+              design icons that work at every scale and context.
+            </p>
+            <div class="post-meta">
+              <span class="post-chip">November 9, 2024</span>
+              <span class="post-chip">10 min read</span>
+              <span class="post-chip">By Christopher McGuire</span>
+            </div>
+          </header>
+
+          <section class="post-article glass-card" aria-label="Article content">
+            <div class="post-prose">
+              <figure>
+                <img
+                  class="hero-image"
+                  src="/images/bc955065-4a43-42c5-a5c3-2bbf1ae0e4ef.png"
+                  alt="Collection of custom-designed interface icons showing various styles and applications"
+                />
+              </figure>
+
+              <p>
+                Icons are one of the smallest elements in a user interface and
+                one of the most powerful. A well-designed icon communicates
+                function instantly, reinforces brand identity, and reduces the
+                need for text labels. A poorly designed icon confuses users and
+                clutters the interface.
+              </p>
+
+              <h2>Why custom icons matter for brand identity</h2>
+              <p>
+                Generic icon libraries like Font Awesome and Material Icons
+                solve a lot of problems quickly. They are standardized,
+                well-tested, and free. But they also look like every other
+                product that uses them. When every competitor uses the same
+                icons, the visual language becomes invisible.
+              </p>
+
+              <p>
+                Custom icons give your product a distinct visual voice. They
+                align with your brand's weight, style, and personality in ways
+                that off-the-shelf libraries cannot. A fintech application might
+                use precise, geometric icons with thin strokes. A creative tool
+                might use rounder, more playful forms. That visual consistency
+                across every icon in your product builds subconscious
+                recognition and trust.
+              </p>
+
+              <h2>Core design principles for icons</h2>
+              <p>
+                Effective icons follow a few consistent principles. Clarity
+                means the icon communicates its purpose without ambiguity. A
+                magnifying glass means search. A gear means settings. Novelty
+                for its own sake creates confusion. Simplicity means removing
+                detail until only the essential shape remains. Icons render at
+                16px, 24px, and 32px. Fine detail disappears at small sizes.
+              </p>
+
+              <p>
+                Consistency means every icon in a set shares the same stroke
+                width, corner radius, padding, and visual weight. Mixing styles
+                (outlined and filled, thick and thin) within a single interface
+                creates visual noise. Grid systems help enforce this. Most icon
+                sets use a base grid of 24x24 or 32x32 pixels with consistent
+                padding zones.
+              </p>
+
+              <h2>Building a consistent icon system</h2>
+              <p>
+                A good icon system starts with a design token layer: stroke
+                width, corner radius, padding, and optical sizing rules. These
+                tokens ensure that every new icon fits seamlessly with existing
+                ones. They also make it easier to maintain the system as the
+                product grows.
+              </p>
+
+              <p>
+                Naming conventions matter too. Icons should use clear,
+                descriptive names that match their function rather than their
+                visual form. "arrow-right" is better than "chevron-caret-v2."
+                Consistent naming reduces confusion for both designers and
+                developers.
+              </p>
+
+              <h2>Tools for icon design</h2>
+              <p>
+                Figma has become the standard for icon design in product teams.
+                Its component and variant system lets designers build scalable
+                icon libraries with multiple sizes, states, and themes. Adobe
+                Illustrator remains strong for complex vector work and SVG
+                export. Sketch is still used in some teams. Specialized tools
+                like IconJar help manage large icon libraries.
+              </p>
+
+              <p>
+                For production delivery, SVG is the format that matters. SVGs
+                are resolution-independent, style-able with CSS, animatable, and
+                small in file size when optimized. Tools like SVGO strip
+                unnecessary metadata and reduce file size. Icon fonts (like Font
+                Awesome) are falling out of favor because SVGs offer more
+                flexibility and better accessibility.
+              </p>
+
+              <h2>Bespoke vs pre-made: making the right call</h2>
+              <p>
+                The decision between custom and off-the-shelf icons depends on
+                context. For internal tools, admin panels, and early-stage
+                prototypes, pre-made libraries are the right call. They save
+                time and they work. For consumer-facing products where brand
+                differentiation matters, custom icons are worth the investment.
+              </p>
+
+              <p>
+                A hybrid approach works well for most teams. Use a base library
+                (Lucide, Heroicons, or Phosphor) for standard UI metaphors like
+                search, settings, and navigation. Create custom icons for
+                product-specific concepts, brand moments, and marketing
+                surfaces. This gives you speed where it matters and personality
+                where it counts.
+              </p>
+
+              <h2>Testing icons with real users</h2>
+              <p>
+                Icons that make sense to designers do not always make sense to
+                users. The five-second test is a simple validation method: show
+                users an icon for five seconds, then ask them what it
+                represents. If more than 80% of testers identify the correct
+                meaning, the icon works. If not, iterate.
+              </p>
+
+              <p>
+                Pair icons with text labels whenever possible, especially for
+                navigation and primary actions. Text labels eliminate ambiguity
+                and improve accessibility. Icon-only interfaces look clean but
+                perform worse in usability testing across almost every study.
+              </p>
+
+              <p>
+                Chris McGuire is a product, UX, and engineering leader with 20+
+                years of experience building systems that bridge user needs,
+                design rigor, and software delivery. He writes about frontend
+                engineering, UX design, and product execution at
+                <a
+                  href="https://paguire.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >paguire.com</a
+                >.
+              </p>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid var(--border-color);
+              "
+            >
+              <a href="/" class="logo">
+                <img
+                  src="/images/paguireLogo.png"
+                  alt="Paguire Logo"
+                  height="60"
+                  style="opacity: 0.8"
+                />
+              </a>
+            </div>
+          </section>
+
+          <a
+            class="post-backlink"
+            href="/blog"
+            aria-label="Back to the blog library"
+          >
+            <i data-lucide="arrow-left" aria-hidden="true"></i>
+            Back to Library
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="gradient-text logo">Christopher R McGuire</span>
+            <p class="footer-tagline">
+              SVP of Software Engineering, UX/UI Design and Development with 20+
+              years of experience bridging the gap between users, designers, and
+              developers.
+            </p>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/projects">Projects</a>
+              <a href="/ai-explorations" class="whitespace-nowrap"
+                >AI Explorations</a
+              >
+              <a href="/blog">Library</a>
+              <a href="/contact">Contact</a>
+            </div>
+            <div class="footer-connect">
+              <h4>Connect</h4>
+              <a href="mailto:Christopher.R.McGuire@gmail.com"
+                >Christopher.R.McGuire@gmail.com</a
+              >
+              Chicago, IL
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Christopher R McGuire. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/christopher-mcguire/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i data-lucide="linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              ><i data-lucide="twitter"></i
+            ></a>
+            <a
+              href="https://github.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i data-lucide="github"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@crmcguire1974"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              ><i data-lucide="youtube"></i
+            ></a>
+            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email"
+              ><i data-lucide="mail"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

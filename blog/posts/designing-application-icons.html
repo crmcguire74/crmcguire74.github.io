@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Designing Application Icons: Tips and Tricks for Success | Christopher
+      McGuire
+    </title>
+    <meta
+      name="description"
+      content="Expert tips for designing application icons that stand out. Covers icon types, visual language, sketching workflows, design tools, shape construction, testing, and production-ready delivery."
+    />
+    <link
+      rel="canonical"
+      href="https://paguire.com/blog/posts/designing-application-icons"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Designing Application Icons: Tips and Tricks for Success"
+    />
+    <meta
+      property="og:description"
+      content="Expert tips for designing application icons that stand out. Covers icon types, visual language, sketching workflows, design tools, shape construction, testing, and production-ready delivery."
+    />
+    <meta
+      property="og:url"
+      content="https://paguire.com/blog/posts/designing-application-icons"
+    />
+    <meta
+      property="og:image"
+      content="https://paguire.com/images/UnderstandingAppIconTypes.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Designing Application Icons: Tips and Tricks for Success"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert tips for designing application icons that stand out. Covers icon types, visual language, sketching workflows, des"
+    />
+    <meta
+      name="twitter:image"
+      content="https://paguire.com/images/UnderstandingAppIconTypes.png"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles-additional.css" />
+    <link rel="stylesheet" href="/pages-styles.css" />
+    <link rel="stylesheet" href="/dark-mode-fix.css" />
+    <link rel="stylesheet" href="/blog/assets/blog-post-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/theme-loader.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Designing Application Icons: Tips and Tricks for Success",
+        "description": "Expert tips for designing application icons that stand out. Covers icon types, visual language, sketching workflows, design tools, shape construction, testing, and production-ready delivery.",
+        "datePublished": "2024-11-15",
+        "dateModified": "2026-03-06",
+        "author": {
+          "@type": "Person",
+          "name": "Christopher R McGuire",
+          "sameAs": [
+            "https://www.linkedin.com/in/christopher-mcguire/",
+            "https://paguire.com"
+          ]
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Christopher R McGuire"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://paguire.com/blog/posts/designing-application-icons"
+        },
+        "keywords": [
+          "application icons",
+          "icon design tips",
+          "app icon design",
+          "icon types",
+          "visual design",
+          "icon grid system",
+          "SVG icons",
+          "icon production",
+          "mobile app icons",
+          "icon design process"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <a href="/" class="logo"
+          ><img src="/images/paguireLogo.png" alt="Paguire Logo" height="50"
+        /></a>
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/resume" class="nav-link">Resume</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/ai-explorations" class="nav-link whitespace-nowrap"
+            >AI Explorations</a
+          >
+          <a href="/blog" class="nav-link text-gradient">Library</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="desktop-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i id="theme-icon" data-lucide="moon"></i>
+          </button>
+          <a
+            href="https://linkedin.com/in/christopher-mcguire/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="social-icon"
+            ><i data-lucide="linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="social-icon"
+            ><i data-lucide="twitter"></i
+          ></a>
+          <a
+            href="https://github.com/crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="social-icon"
+            ><i data-lucide="github"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@crmcguire74"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="social-icon"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@crmcguire1974"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="social-icon"
+            ><i data-lucide="youtube"></i
+          ></a>
+          <a
+            href="mailto:Christopher.R.McGuire@gmail.com"
+            aria-label="Email"
+            class="social-icon"
+            ><i data-lucide="mail"></i
+          ></a>
+        </div>
+
+        <div class="mobile-actions">
+          <button
+            id="mobile-theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i id="mobile-theme-icon" data-lucide="moon"></i>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <i id="menu-icon" data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/resume" class="nav-link">Resume</a>
+        <a href="/projects" class="nav-link">Projects</a>
+        <a href="/ai-explorations" class="nav-link whitespace-nowrap"
+          >AI Explorations</a
+        >
+        <a href="/blog" class="nav-link">Library</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="mobile-social">
+        <a
+          href="https://linkedin.com/in/christopher-mcguire/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="social-icon"
+          ><i data-lucide="linkedin"></i
+        ></a>
+        <a
+          href="https://twitter.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="social-icon"
+          ><i data-lucide="twitter"></i
+        ></a>
+        <a
+          href="https://github.com/crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="social-icon"
+          ><i data-lucide="github"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@crmcguire74"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="social-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg>
+        </a>
+        <a
+          href="https://www.youtube.com/@crmcguire1974"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="social-icon"
+          ><i data-lucide="youtube"></i
+        ></a>
+        <a
+          href="mailto:Christopher.R.McGuire@gmail.com"
+          aria-label="Email"
+          class="social-icon"
+          ><i data-lucide="mail"></i
+        ></a>
+      </div>
+    </div>
+
+    <main class="bg-gradient post-shell">
+      <div class="container">
+        <article class="post-container">
+          <header class="post-hero">
+            <p class="post-kicker">UX/UI Design · Visual Design</p>
+            <h1 class="post-title">
+              Designing Application Icons: Tips and Tricks for Success
+            </h1>
+            <p class="post-dek">
+              Application icons are often the first visual touchpoint users have
+              with your product. Getting them right requires understanding icon
+              types, visual language, grid systems, and production delivery
+              standards.
+            </p>
+            <div class="post-meta">
+              <span class="post-chip">November 15, 2024</span>
+              <span class="post-chip">10 min read</span>
+              <span class="post-chip">By Christopher McGuire</span>
+            </div>
+          </header>
+
+          <section class="post-article glass-card" aria-label="Article content">
+            <div class="post-prose">
+              <figure>
+                <img
+                  class="hero-image"
+                  src="/images/UnderstandingAppIconTypes.png"
+                  alt="Various application icon designs showing different styles from flat to skeuomorphic"
+                />
+              </figure>
+
+              <p>
+                Application icons are often the first visual element users
+                encounter. On a home screen, in an app store, or in a dock, the
+                icon represents your entire product in a single small image.
+                Getting it right requires understanding the different types of
+                icons, the constraints they operate under, and the design
+                process that produces clear, memorable results.
+              </p>
+
+              <h2>Types of icons and when to use them</h2>
+              <p>
+                Icons fall into several categories based on their visual
+                treatment. Outlined icons use strokes to define shapes. They
+                feel light and modern and work well in navigation bars and
+                toolbars. Filled icons use solid shapes. They feel bolder and
+                more prominent, making them effective for selected states and
+                primary actions. Flat icons use minimal detail and solid colors.
+                Skeuomorphic icons mimic real-world objects with shadows,
+                textures, and depth.
+              </p>
+
+              <p>
+                The choice between styles depends on context. Most modern
+                product design favors outlined or flat icons for UI elements and
+                more detailed, branded icons for app icons and marketing
+                surfaces. The important thing is consistency within a product.
+                Mixing outlined and filled icons randomly creates visual noise.
+              </p>
+
+              <h2>Establishing a visual language</h2>
+              <p>
+                A visual language for icons starts with defining constraints.
+                What stroke width will you use? What corner radius? What grid
+                size? What padding zone? These decisions create a framework that
+                ensures every icon in your set feels cohesive. The Lucide icon
+                set, for example, uses a consistent 24x24 grid with 2px strokes
+                and 1px corner radii. Material Design icons use a 24dp grid with
+                specific keyline shapes for different icon types.
+              </p>
+
+              <p>
+                Metaphor selection is the other half of visual language. Icons
+                work because they reference familiar objects or concepts. A
+                trash can means delete. An envelope means email. A pencil means
+                edit. Choosing the right metaphor requires knowing your
+                audience. What is obvious to a designer may be obscure to an
+                accountant using enterprise software.
+              </p>
+
+              <h2>The sketching process</h2>
+              <p>
+                Good icon design starts with rough sketches. Draw multiple
+                variations of the same concept quickly, exploring different
+                metaphors, perspectives, and levels of detail. Paper sketches
+                are faster than digital tools for this phase because they remove
+                the temptation to refine too early.
+              </p>
+
+              <p>
+                After sketching, select the strongest concepts and move to
+                digital. Start with basic geometric shapes: circles, squares,
+                rectangles, and triangles. Build the icon using Boolean
+                operations (union, subtract, intersect) to combine and cut
+                shapes. This produces clean, mathematically precise paths that
+                export well as SVGs.
+              </p>
+
+              <h2>Design tools for icon creation</h2>
+              <p>
+                Figma is the most common tool for icon design in product teams.
+                Its vector editing tools, component system, and export
+                capabilities handle the full workflow from creation to handoff.
+                Figma's auto-layout and variant features make it easy to manage
+                icons across multiple sizes and states.
+              </p>
+
+              <p>
+                Adobe Illustrator remains the gold standard for complex vector
+                illustration. Its pen tool, pathfinder operations, and SVG
+                export options are more powerful than Figma's for detailed work.
+                Some designers sketch in Illustrator and then import to Figma
+                for systematic organization and handoff.
+              </p>
+
+              <p>
+                For app icon design specifically, tools like
+                RealFaviconGenerator handle the multi-size export requirements
+                for iOS, Android, and web favicons. Generating icons at every
+                required size (from 16x16 favicon to 1024x1024 App Store icon)
+                from a single source file ensures consistency.
+              </p>
+
+              <h2>From concept to polished icon</h2>
+              <p>
+                The refinement process involves cleaning paths (removing
+                unnecessary anchor points), aligning to the pixel grid (to
+                prevent blurry rendering at small sizes), and testing at
+                multiple sizes. An icon that looks great at 64px might be
+                unreadable at 16px. Design for the smallest target size first,
+                then add detail for larger sizes.
+              </p>
+
+              <p>
+                Optical adjustments matter. Circles and triangles appear smaller
+                than squares at the same pixel dimensions, so they need to
+                extend slightly beyond the grid boundary to look optically
+                balanced. Horizontal and vertical strokes appear different
+                thicknesses at the same pixel width, so some manual adjustment
+                is necessary.
+              </p>
+
+              <h2>Testing and feedback</h2>
+              <p>
+                Test icons in context, not in isolation. Place them in the
+                actual interface at the actual size. View them on different
+                backgrounds, in different themes (light and dark), and alongside
+                other icons in the set. Test with real users using the
+                five-second identification test: show the icon briefly and ask
+                what it represents.
+              </p>
+
+              <p>
+                Accessibility testing includes verifying sufficient contrast
+                against backgrounds, providing appropriate alt text for screen
+                readers, and ensuring touch targets are at least 44x44 pixels on
+                mobile. Icons used as buttons must have accessible names, either
+                through visible labels or ARIA attributes.
+              </p>
+
+              <h2>Production delivery</h2>
+              <p>
+                SVG is the standard format for web and application icons.
+                Optimize SVGs with SVGO to remove metadata, simplify paths, and
+                reduce file size. Provide icons as individual SVG files and as a
+                sprite sheet or icon font for projects that prefer bundled
+                delivery.
+              </p>
+
+              <p>
+                Document your icon library with a searchable catalog that shows
+                each icon with its name, usage guidelines, and available
+                variants. Figma libraries and tools like Storybook make this
+                straightforward. A well-documented icon system reduces the
+                chance of teams creating duplicate or inconsistent icons.
+              </p>
+
+              <p>
+                Chris McGuire is a product, UX, and engineering leader with 20+
+                years of experience building systems that bridge user needs,
+                design rigor, and software delivery. He writes about frontend
+                engineering, UX design, and product execution at
+                <a
+                  href="https://paguire.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >paguire.com</a
+                >.
+              </p>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid var(--border-color);
+              "
+            >
+              <a href="/" class="logo">
+                <img
+                  src="/images/paguireLogo.png"
+                  alt="Paguire Logo"
+                  height="60"
+                  style="opacity: 0.8"
+                />
+              </a>
+            </div>
+          </section>
+
+          <a
+            class="post-backlink"
+            href="/blog"
+            aria-label="Back to the blog library"
+          >
+            <i data-lucide="arrow-left" aria-hidden="true"></i>
+            Back to Library
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="gradient-text logo">Christopher R McGuire</span>
+            <p class="footer-tagline">
+              SVP of Software Engineering, UX/UI Design and Development with 20+
+              years of experience bridging the gap between users, designers, and
+              developers.
+            </p>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/projects">Projects</a>
+              <a href="/ai-explorations" class="whitespace-nowrap"
+                >AI Explorations</a
+              >
+              <a href="/blog">Library</a>
+              <a href="/contact">Contact</a>
+            </div>
+            <div class="footer-connect">
+              <h4>Connect</h4>
+              <a href="mailto:Christopher.R.McGuire@gmail.com"
+                >Christopher.R.McGuire@gmail.com</a
+              >
+              Chicago, IL
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Christopher R McGuire. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/christopher-mcguire/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i data-lucide="linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              ><i data-lucide="twitter"></i
+            ></a>
+            <a
+              href="https://github.com/crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i data-lucide="github"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@crmcguire74"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@crmcguire1974"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              ><i data-lucide="youtube"></i
+            ></a>
+            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email"
+              ><i data-lucide="mail"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
