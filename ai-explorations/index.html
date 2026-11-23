@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Christopher R McGuire" />
+    <title>AI Explorations &amp; R&amp;D Lab | Christopher R McGuire — Paguire</title>
+    <meta name="description" content="Hands-on generative AI experiments across ElevenLabs voice cloning, GPT Image, Nano Banana, Google Veo, NotebookLM, and shipped vibe-coded apps including Thrive Financial, Modus AI, and Tron Engaged." />
+    <meta name="keywords" content="AI Explorations, Vibe Coding, ElevenLabs Voice Clone, Google Veo, NotebookLM, GPT Image, Nano Banana, Claude Code, Codex, Christopher R McGuire" />
+    <link rel="canonical" href="https://paguire.com/ai-explorations" />
+    <link rel="alternate" type="application/rss+xml" title="Christopher R McGuire's Blog" href="/feed.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Christopher R McGuire — Paguire" />
+    <meta property="og:url" content="https://paguire.com/ai-explorations" />
+    <meta property="og:title" content="AI Explorations &amp; R&amp;D Lab | Christopher R McGuire — Paguire" />
+    <meta property="og:description" content="Hands-on generative AI experiments across ElevenLabs voice cloning, GPT Image, Nano Banana, Google Veo, NotebookLM, and shipped vibe-coded apps including Thrive Financial, Modus AI, and Tron Engaged." />
+    <meta property="og:image" content="https://paguire.com/assets/aistudio/FuturisticAILabHeroSection_9403f7f4.webp" />
+    <meta property="og:image:alt" content="AI Explorations &amp; R&amp;D Lab | Christopher R McGuire — Paguire" />
+    
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@crmcguire74" />
+    <meta name="twitter:creator" content="@crmcguire74" />
+    <meta name="twitter:url" content="https://paguire.com/ai-explorations" />
+    <meta name="twitter:title" content="AI Explorations &amp; R&amp;D Lab | Christopher R McGuire — Paguire" />
+    <meta name="twitter:description" content="Hands-on generative AI experiments across ElevenLabs voice cloning, GPT Image, Nano Banana, Google Veo, NotebookLM, and shipped vibe-coded apps including Thrive Financial, Modus AI, and Tron Engaged." />
+    <meta name="twitter:image" content="https://paguire.com/assets/aistudio/FuturisticAILabHeroSection_9403f7f4.webp" />
+    <meta name="twitter:image:alt" content="AI Explorations &amp; R&amp;D Lab | Christopher R McGuire — Paguire" />
+
+    <!-- Icons & Web Manifest -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png" />
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196x196.png" />
+    <link rel="icon" type="image/webp" href="/images/paguireLogo.webp" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon-192x192.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#030508" />
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://paguire.com/"},{"@type":"ListItem","position":2,"name":"AI Explorations","item":"https://paguire.com/ai-explorations"}]}</script>
+  </head>
+  <body data-page="ai-explorations" class="bg-[#030508] text-[#F1F5F9] antialiased selection:bg-[#00A6FF]/30 selection:text-white">
+    <div class="min-h-screen flex flex-col bg-[#030508] text-[#F1F5F9]">
+      <header class="sticky top-0 z-50 bg-[#030508]/88 backdrop-blur-xl border-b border-[#38BDF8]/15">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 md:h-[72px] flex items-center justify-between gap-8">
+          <a href="/" aria-label="Christopher R McGuire Home" class="group flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded-lg p-1">
+            <img
+              src="/images/paguireLogo.webp"
+              alt="CRM — Christopher R McGuire"
+              referrerpolicy="no-referrer"
+              class="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.04] [filter:drop-shadow(0_0_1px_rgba(241,245,249,0.9))_drop-shadow(0_0_10px_rgba(0,166,255,0.4))]"
+            />
+            <span class="md:hidden ml-2.5 pl-2.5 border-l border-white/25 text-[10px] font-semibold tracking-[0.14em] uppercase text-slate-100 whitespace-nowrap">
+              Christopher R McGuire
+            </span>
+          </a>
+
+          <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-7">
+            <a href="/" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Home</span>
+      
+    </a>
+<a href="/biography" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Biography</span>
+      
+    </a>
+<a href="/resume" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Resume</span>
+      
+    </a>
+<a href="/projects" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Projects</span>
+      
+    </a>
+<a href="/ai-explorations" aria-current="page" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-[#38BDF8]">
+      <span>AI Labs</span>
+      <span aria-hidden="true" class="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-[#00A6FF] rounded-full shadow-[0_0_10px_#00A6FF]"></span>
+    </a>
+<a href="/blog" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Library</span>
+      
+    </a>
+          </nav>
+
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/contact"
+              class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold tracking-wide text-[#030508] bg-[#00A6FF] hover:bg-[#38BDF8] rounded-lg whitespace-nowrap shrink-0 transition-all duration-150 hover:shadow-[0_0_20px_rgba(0,166,255,0.45)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              <span>Let's Connect</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              aria-expanded="false"
+              aria-controls="mobile-nav-drawer"
+              aria-label="Open navigation menu"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-[#38BDF8]/20 bg-[#090E18] text-slate-200 hover:text-white hover:border-[#00A6FF]/50 transition-colors cursor-pointer"
+            >
+              <span id="mobile-menu-icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span>
+              <span id="mobile-menu-icon-close" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="nav-scroll-progress"
+          style="transform: scaleX(0); transform-origin: 0% 50%;"
+          class="h-[2px] w-full bg-gradient-to-r from-[#00A6FF] via-[#38BDF8] to-[#00A6FF]"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          id="mobile-nav-drawer"
+          class="hidden md:hidden border-t border-[#38BDF8]/15 bg-[#030508]/98 px-5 py-4 space-y-1"
+        >
+          <a href="/" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Home</a>
+<a href="/biography" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Biography</a>
+<a href="/resume" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Resume</a>
+<a href="/projects" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Projects</a>
+<a href="/ai-explorations" aria-current="page" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors bg-[#00A6FF]/12 text-[#38BDF8]">AI Labs</a>
+<a href="/blog" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Library</a>
+          <a
+            href="/contact"
+            class="w-full mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-[#030508] bg-[#00A6FF] hover:bg-[#38BDF8] transition-colors"
+          >
+            <span>Let's Connect</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <div class="overflow-x-clip">
+    <!-- Layered AI Labs Hero -->
+    <section class="relative overflow-hidden bg-[#030712] border-b border-white/[0.08] lg:min-h-[490px] xl:min-h-[545px] lg:flex lg:items-center">
+      <div class="lg:hidden relative h-[320px] sm:h-[380px] md:h-[420px] overflow-hidden bg-[#030816]">
+        <div data-parallax="ai-labs-mobile-bg" aria-hidden="true" class="pointer-events-none absolute -top-24 inset-x-0 bottom-0 origin-center will-change-transform">
+          <img src="/assets/aistudio/CyanAILabWorkstation_ff8c4774.webp" alt="" referrerpolicy="no-referrer" class="w-full h-full object-cover object-[70%_center]" />
+        </div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030712]/70 via-transparent to-[#030712]/20"></div>
+        <div data-parallax="ai-labs-mobile-portrait" class="relative z-10 h-full w-full flex items-end justify-end pointer-events-none origin-bottom-right will-change-transform">
+          <img src="/assets/aistudio/FuturisticAILabHeroSection_9403f7f4.webp" alt="Christopher R McGuire — AI Labs &amp; R&amp;D Executive" referrerpolicy="no-referrer" class="h-[132%] sm:h-[126%] w-auto max-w-none object-contain object-bottom translate-y-[21%] sm:translate-y-[18%] translate-x-[10%] sm:translate-x-[7%] drop-shadow-[0_18px_42px_rgba(0,0,0,0.72)]" />
+        </div>
+      </div>
+
+      <div aria-hidden="true" class="hidden lg:block pointer-events-none absolute inset-0 overflow-hidden">
+        <div data-parallax="ai-labs-desktop-bg" class="absolute -top-28 inset-x-0 bottom-0 origin-center will-change-transform">
+          <img src="/assets/aistudio/CyanAILabWorkstation_ff8c4774.webp" alt="" referrerpolicy="no-referrer" class="w-full h-full object-cover object-[76%_center]" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#030712] via-[#030712]/78 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/88 via-transparent to-[#030712]/38"></div>
+        <div data-parallax="ai-labs-desktop-portrait" class="relative z-10 max-w-7xl mx-auto h-full flex items-end justify-end px-4 xl:px-8 origin-bottom-right will-change-transform">
+          <img src="/assets/aistudio/FuturisticAILabHeroSection_9403f7f4.webp" alt="Christopher R McGuire — AI Explorations &amp; R&amp;D Lab" referrerpolicy="no-referrer" class="h-[120%] xl:h-[128%] w-auto max-w-none object-contain object-bottom translate-y-[17%] xl:translate-y-[17%] translate-x-14 xl:translate-x-14 drop-shadow-[0_22px_48px_rgba(0,0,0,0.78)]" />
+        </div>
+      </div>
+
+      <div class="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-6 pb-11 lg:py-20 xl:py-24">
+        <div data-parallax="ai-labs-copy" class="max-w-md lg:max-w-lg xl:max-w-xl space-y-3.5 sm:space-y-4 will-change-transform hero-enter">
+          <p class="text-sm font-medium text-[#38BDF8]">AI Explorations · R&amp;D Lab</p>
+          <h1 class="text-[30px] sm:text-4xl lg:text-[44px] xl:text-5xl font-semibold tracking-tight text-white leading-[1.08]">
+            Generative AI for Code, Voice, Image &amp; Video
+          </h1>
+          <p class="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-md xl:max-w-lg">
+            Hands-on experimentation across multimodal LLMs, voice cloning, spatial reasoning, and
+            AI-augmented software engineering workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 lg:py-20 space-y-20 lg:space-y-24">
+      <!-- 1. Core AI Exploration Workbench -->
+      <section data-reveal aria-labelledby="ai-workbench-heading" class="p-6 sm:p-10 rounded-2xl bg-[#090E18] blueprint-hairline">
+        <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-5 pb-6 mb-8 border-b border-white/[0.08]">
+          <div class="space-y-1 max-w-md">
+            <div class="flex items-center gap-2.5">
+              <span id="ai-workbench-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF]" aria-hidden="true"><path d="M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2"/></svg></span>
+              <h2 id="ai-workbench-heading" class="text-lg sm:text-xl font-semibold text-white">
+                Core AI Areas Explored &amp; Applied
+              </h2>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400">
+              Inspect each modality to see models used, workflows tested, and real shipped examples.
+            </p>
+          </div>
+
+          <div role="group" aria-label="Select AI modality to explore" class="flex flex-wrap gap-1.5 p-1 rounded-xl bg-[#090E18] border border-white/[0.08]">
+            <button
+      type="button"
+      data-ai-tab="voice"
+      aria-pressed="true"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors bg-[#00A6FF] text-[#030508] font-semibold"
+    >Voice Models</button>
+<button
+      type="button"
+      data-ai-tab="images"
+      aria-pressed="false"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+    >AI Images</button>
+<button
+      type="button"
+      data-ai-tab="video"
+      aria-pressed="false"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+    >AI Video</button>
+<button
+      type="button"
+      data-ai-tab="notebooklm"
+      aria-pressed="false"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+    >NotebookLM</button>
+<button
+      type="button"
+      data-ai-tab="coding"
+      aria-pressed="false"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+    >Vibe Coding</button>
+          </div>
+        </div>
+
+        <div id="ai-workbench-panel" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <p class="text-xs font-medium text-[#38BDF8] mb-2">
+                <span id="ai-wb-kicker">01. Voice Models</span>
+                <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+                <span id="ai-wb-modelline" class="text-slate-300 font-normal">ElevenLabs · Neural Voice Synthesis · Custom Cadence Calibration</span>
+              </p>
+              <h3 id="ai-wb-title" class="text-2xl sm:text-3xl font-semibold text-white leading-tight">ElevenLabs Neural Voice Cloning &amp; Audio Production</h3>
+            </div>
+
+            <p id="ai-wb-summary" class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">Exploring high-fidelity voice synthesis for accessible digital narration, personalized educational audio, and interactive product prototypes—extending the live voice-cloning experiment originally launched on paguire.com.</p>
+
+            <ul id="ai-wb-bullets" class="space-y-2 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                    <span class="text-[#00A6FF] font-bold shrink-0" aria-hidden="true">·</span>
+                    <span>Published an interactive custom voice clone trained on natural speech cadence so visitors and product builders can audition personalized voiceovers.</span>
+                  </li>
+<li class="flex items-start gap-2.5">
+                    <span class="text-[#00A6FF] font-bold shrink-0" aria-hidden="true">·</span>
+                    <span>Applied synthetic voice pipelines for accessibility audio, product walkthroughs, and multi-language explainer narration.</span>
+                  </li>
+<li class="flex items-start gap-2.5">
+                    <span class="text-[#00A6FF] font-bold shrink-0" aria-hidden="true">·</span>
+                    <span>Chained ElevenLabs vocal tracks directly with generative seed portraits and video models into cohesive narrative reels.</span>
+                  </li>
+            </ul>
+
+            <div class="pt-2">
+              <p class="text-xs font-medium text-slate-400 mb-3">Representative Examples &amp; Applied Work</p>
+              <div id="ai-wb-examples" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="p-3.5 rounded-xl bg-[#050810] border border-white/[0.07]">
+                      <div class="text-xs font-semibold text-white mb-1">Public ElevenLabs Voice Clone</div>
+                      <p class="text-[11px] text-slate-400 leading-relaxed">Interactive custom voice profile calibrated for clear executive and product narration.</p>
+                    </div>
+<div class="p-3.5 rounded-xl bg-[#050810] border border-white/[0.07]">
+                      <div class="text-xs font-semibold text-white mb-1">Multimodal Seed-to-Video Narration</div>
+                      <p class="text-[11px] text-slate-400 leading-relaxed">Paired synthetic vocal tracks with generative frames and motion prompts in early R&amp;D tests.</p>
+                    </div>
+<div class="p-3.5 rounded-xl bg-[#050810] border border-white/[0.07]">
+                      <div class="text-xs font-semibold text-white mb-1">Accessibility &amp; Onboarding Audio</div>
+                      <p class="text-[11px] text-slate-400 leading-relaxed">Prototype voiceover pipelines for educational walkthroughs and assistive UI narration.</p>
+                    </div>
+              </div>
+            </div>
+
+            <div id="ai-wb-actions" class="flex flex-wrap gap-3 pt-2">
+              <a href="https://elevenlabs.io/app/voice-library?voiceId=RPEIZnKMqlQiZyZd1Dae" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-sm font-semibold transition-colors whitespace-nowrap shrink-0">
+                      <span>Try My Voice Clone</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+              <a href="https://try.elevenlabs.io/u8xfskjfa43y" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-white/15 hover:border-[#00A6FF]/50 text-white text-sm font-medium transition-colors whitespace-nowrap shrink-0">
+                      <span>Explore ElevenLabs</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-4">
+            <div class="relative aspect-video rounded-xl overflow-hidden border border-white/10 bg-[#050810]">
+              <img id="ai-wb-image" src="/assets/aistudio/FocusedPodcastRecordinginModernStudio_855339d5.webp" alt="Christopher R McGuire recording voice synthesis audio in a dark modern broadcast studio" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center" />
+              <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050810]/60 via-transparent to-transparent"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          <button
+      type="button"
+      data-ai-quick="voice"
+      class="text-left p-3.5 rounded-xl border transition-colors cursor-pointer bg-[#0C1526] border-[#00A6FF]/60"
+    >
+      <div class="text-[11px] font-medium text-[#38BDF8] mb-0.5">01. Voice Models</div>
+      <div class="text-xs text-slate-300 line-clamp-2">Public ElevenLabs Voice Clone · Multimodal Seed-to-Video Narration · Accessibility &amp; Onboarding Audio</div>
+    </button>
+<button
+      type="button"
+      data-ai-quick="images"
+      class="text-left p-3.5 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.06] hover:border-white/20"
+    >
+      <div class="text-[11px] font-medium text-[#38BDF8] mb-0.5">02. AI Images</div>
+      <div class="text-xs text-slate-300 line-clamp-2">Marketing Creative &amp; Studio Headshots · Early App Concepting &amp; UI Mockups · Spatial Interior Redesign Engine (Modus AI)</div>
+    </button>
+<button
+      type="button"
+      data-ai-quick="video"
+      class="text-left p-3.5 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.06] hover:border-white/20"
+    >
+      <div class="text-[11px] font-medium text-[#38BDF8] mb-0.5">03. AI Video</div>
+      <div class="text-xs text-slate-300 line-clamp-2">Thrive Financial Product Commercials · FuzzTown the Series Trailer · Founder Story &amp; Product Reels</div>
+    </button>
+<button
+      type="button"
+      data-ai-quick="notebooklm"
+      class="text-left p-3.5 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.06] hover:border-white/20"
+    >
+      <div class="text-[11px] font-medium text-[#38BDF8] mb-0.5">04. NotebookLM</div>
+      <div class="text-xs text-slate-300 line-clamp-2">Thrive Financial First-Time User &amp; Red-Flag Guides · Qualitative User Data Synthesis · Domain Briefs to PRDs</div>
+    </button>
+<button
+      type="button"
+      data-ai-quick="coding"
+      class="text-left p-3.5 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.06] hover:border-white/20"
+    >
+      <div class="text-[11px] font-medium text-[#38BDF8] mb-0.5">05. Vibe Coding</div>
+      <div class="text-xs text-slate-300 line-clamp-2">Consumer &amp; Enterprise App Shipping · 3D &amp; Spatial WebXR Gaming · Enterprise AI Architecture &amp; Governance</div>
+    </button>
+        </div>
+      </section>
+
+      <!-- 2. Live Video & NotebookLM Production Theater -->
+      <section data-reveal aria-labelledby="video-theater-heading" class="p-6 sm:p-10 rounded-2xl bg-[#090E18] blueprint-hairline">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 mb-8 border-b border-white/[0.08]">
+          <div class="max-w-2xl space-y-2">
+            <p class="text-sm font-medium text-[#38BDF8]">Google Omni, Veo &amp; NotebookLM in Production</p>
+            <h2 id="video-theater-heading" class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              Marketing Campaigns &amp; Creative Storytelling
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Select any production below to watch live YouTube deliverables from Thrive Financial
+              and personal creative projects crafted with Veo, Google Omni, and NotebookLM.
+            </p>
+          </div>
+
+          <div role="group" aria-label="Filter YouTube AI video productions" class="flex flex-wrap gap-1.5 p-1 rounded-xl bg-[#090E18] border border-white/[0.08]">
+            <button
+        type="button"
+        data-video-channel="all"
+        aria-pressed="true"
+        class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors bg-[#00A6FF] text-[#030508] font-semibold"
+      >All Productions</button>
+<button
+        type="button"
+        data-video-channel="thrive"
+        aria-pressed="false"
+        class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+      >Thrive Financial</button>
+<button
+        type="button"
+        data-video-channel="personal"
+        aria-pressed="false"
+        class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+      >Personal &amp; Hobby</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="rounded-xl overflow-hidden border border-white/10 bg-[#030508]">
+              <div class="aspect-video w-full">
+                <iframe
+                  id="ai-video-iframe"
+                  src="https://www.youtube.com/embed/ARhSeig74Q8?rel=0&amp;modestbranding=1"
+                  title="Thrive Financial — Take Control of Your Finances During Divorce"
+                  class="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
+              <div>
+                <p id="ai-video-focus" class="text-xs font-medium text-[#38BDF8] mb-1">Product Marketing · Google Omni &amp; Veo</p>
+                <h3 id="ai-video-title" class="text-lg font-semibold text-white">Thrive Financial — Take Control of Your Finances During Divorce</h3>
+                <p id="ai-video-meta" class="text-xs text-slate-400 mt-0.5">
+                  Thrive Financial (@ThriveFinancialLLC) · Google Veo &amp; NotebookLM Production
+                </p>
+              </div>
+              <a
+                id="ai-video-watch-link"
+                href="https://www.youtube.com/watch?v=ARhSeig74Q8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-white/15 hover:border-[#00A6FF]/50 text-xs font-semibold text-white whitespace-nowrap shrink-0 transition-colors"
+              >
+                <span>Watch on YouTube</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <a href="https://www.youtube.com/@ThriveFinancialLLC" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-[#050810] border border-white/[0.08] hover:border-[#00A6FF]/50 transition-colors">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <div class="min-w-0">
+                    <div class="text-xs font-semibold text-white truncate">Thrive Financial Channel</div>
+                    <div class="text-[11px] text-slate-400 truncate">@ThriveFinancialLLC</div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-slate-400 shrink-0" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+
+              <a href="https://www.youtube.com/@crmcguire1974" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-[#050810] border border-white/[0.08] hover:border-[#00A6FF]/50 transition-colors">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <div class="min-w-0">
+                    <div class="text-xs font-semibold text-white truncate">Christopher R McGuire</div>
+                    <div class="text-[11px] text-slate-400 truncate">@crmcguire1974</div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-slate-400 shrink-0" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div id="ai-video-queue" class="lg:col-span-5 space-y-2.5 max-h-[520px] overflow-y-auto pr-1">
+            <button
+      type="button"
+      data-video-id="ARhSeig74Q8"
+      data-video-channel-key="thrive"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#0C1526] border-[#00A6FF]/60"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            Thrive Financial
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">Google Veo &amp; NotebookLM Production</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Thrive Financial — Take Control of Your Finances During Divorce</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-[#00A6FF] text-[#030508]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="klptl3vAbS8"
+      data-video-channel-key="thrive"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            Thrive Financial
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">NotebookLM Explainer &amp; Product Walkthrough</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Thrive Financial First-Time User Guide — From Records to Clarity</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="EhW2aDRKPEw"
+      data-video-channel-key="thrive"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            Thrive Financial
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">Google Omni &amp; NotebookLM Storytelling</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Forensic Guidance in Thrive Financial — Finding Financial Red Flags</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="3-dcxXtaLX0"
+      data-video-channel-key="thrive"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            Thrive Financial
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">Google Veo Motion Synthesis</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Divorce Financial Analysis Software — Hidden Assets &amp; Settlement</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="UL3WBuHkAjU"
+      data-video-channel-key="personal"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            @crmcguire1974
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">Narrative Character &amp; Scene Generation</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Official Trailer — FuzzTown the Series</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="tBkEzWZsmx4"
+      data-video-channel-key="personal"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            @crmcguire1974
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">AI Video &amp; Narrative Production</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Founder Story — Christopher R McGuire</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="liaJMyXh7SU"
+      data-video-channel-key="personal"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            @crmcguire1974
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">Multimodal Product Video</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">SnapClipper — Capture. Organize. Remember.</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+<button
+      type="button"
+      data-video-id="1tkdcFvymOM"
+      data-video-channel-key="personal"
+      class="w-full text-left p-4 rounded-xl border transition-colors cursor-pointer bg-[#050810] border-white/[0.07] hover:border-white/20"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <div class="space-y-1 min-w-0">
+          <p class="text-[11px] font-medium text-[#38BDF8] truncate">
+            @crmcguire1974
+            <span class="text-slate-500 mx-1.5" aria-hidden="true">·</span>
+            <span class="text-slate-400 font-normal">Personal Brand Video Production</span>
+          </p>
+          <h4 class="text-sm font-semibold text-white leading-snug">Christopher R McGuire — Leader of UX and UI Design &amp; Development</h4>
+        </div>
+        <span data-video-play-badge class="mt-1 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-white/[0.06] text-slate-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </span>
+      </div>
+    </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Vibe Coding Applications -->
+      <section id="vibe-coding-apps" aria-labelledby="vibe-coding-heading">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div class="max-w-2xl">
+            <p class="text-sm font-medium text-[#38BDF8] mb-2">Vibe Coding · From Prompt to Production</p>
+            <h2 id="vibe-coding-heading" class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              Shipped Mobile, SaaS, Browser &amp; WebXR Applications
+            </h2>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 max-w-md">
+            Built end-to-end with <span class="text-slate-200 font-medium">Claude Code · OpenAI Codex · Google AI Studio · Gemini · ChatGPT · Cline</span>.
+          </p>
+        </div>
+
+        <div data-reveal data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 mb-6 group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <div class="lg:col-span-6 aspect-[16/10] lg:aspect-auto overflow-hidden bg-[#050810] border-b lg:border-b-0 lg:border-r border-white/[0.06]">
+              <img src="/assets/aistudio/ThriveFinancial_694601f5.webp" alt="Thrive Financial" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+            </div>
+            <div class="lg:col-span-6 p-7 sm:p-9 flex flex-col justify-between">
+              <div class="space-y-3">
+                <p class="text-xs font-medium text-[#38BDF8]">Web SaaS · Gemini 2.5 Flash · React &amp; Firebase</p>
+                <h3 class="text-2xl sm:text-3xl font-semibold text-white">Thrive Financial</h3>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed">AI-powered forensic accounting and settlement modeling platform parsing multi-year bank and credit statements into structured property divisions and discrepancy alerts.</p>
+                <p class="text-xs text-slate-400 pt-1">Backed by NotebookLM user-research synthesis and Google Omni/Veo launch videos.</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-4 pt-6 mt-6 border-t border-white/[0.06]">
+                <a href="https://thrivefinancial.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-xs font-semibold transition-colors whitespace-nowrap shrink-0">
+                  <span>Visit Thrive Financial</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div data-reveal style="transition-delay: 0ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/Modus_AI_e260817c.webp" alt="Modus AI" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-6 pb-3 space-y-2">
+                <p class="text-xs font-medium text-[#38BDF8]">iOS App · React Native / Expo · Spatial Vision</p>
+                <h3 class="text-xl font-semibold text-white">Modus AI</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">Production iOS interior and exterior redesign app engineered with spatial constraints that lock existing room geometry, lighting, and furniture while transforming paint, finishes, or structural layouts.</p>
+                <p class="text-xs text-slate-400 pt-1">Shipped end-to-end to the Apple App Store using AI-assisted mobile workflows.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-6 pb-6 pt-3 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+              <a href="/projects/modus-ai" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap shrink-0">
+                      <span>Explore Case Study</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+              <a href="https://apps.apple.com/us/app/modus-ai-interior-design-app/id6757023994" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-slate-300 hover:text-white transition-colors whitespace-nowrap shrink-0">
+                      <span>Live Product</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<div data-reveal style="transition-delay: 50ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/TronEngaged_a8a21c6c.webp" alt="Tron Engaged" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-6 pb-3 space-y-2">
+                <p class="text-xs font-medium text-[#38BDF8]">WebXR · 3D &amp; First-Person VR Arena Game</p>
+                <h3 class="text-xl font-semibold text-white">Tron Engaged</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">Modernized 3D disc combat and light-cycle arena playable seamlessly in standard desktop browsers or first-person inside VR headsets via WebXR.</p>
+                <p class="text-xs text-slate-400 pt-1">Vibe-coded spatial shaders, trail collision physics, and headset locomotion.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-6 pb-6 pt-3 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+              <a href="https://tronengaged.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap shrink-0">
+                      <span>Launch VR &amp; Web Game</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+<div data-reveal style="transition-delay: 100ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/SnapClipper_dc1f331f.webp" alt="SnapClipper" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-6 pb-3 space-y-2">
+                <p class="text-xs font-medium text-[#38BDF8]">Chrome Extension · Local-First AI Tagging</p>
+                <h3 class="text-xl font-semibold text-white">SnapClipper</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">One-click browser web clipper that captures highlights, code snippets, prompts, and research quotes with automatic local AI categorization and Markdown/JSON export.</p>
+                <p class="text-xs text-slate-400 pt-1">Live on the Chrome Web Store with full local browser persistence.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-6 pb-6 pt-3 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+              <a href="/projects/snapclipper" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap shrink-0">
+                      <span>View Architecture</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+              <a href="https://chromewebstore.google.com/detail/snapclipper/eboikfkhaojmcbmpdcdbcblflncledmc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-slate-300 hover:text-white transition-colors whitespace-nowrap shrink-0">
+                      <span>Live Product</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<div data-reveal style="transition-delay: 150ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/Email_to_PDF_Converter_Flow-1_3dd31a89.webp" alt="Email to PDF Converter" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-6 pb-3 space-y-2">
+                <p class="text-xs font-medium text-[#38BDF8]">Web Utility · Bulk .eml Forensic Parser</p>
+                <h3 class="text-xl font-semibold text-white">Email to PDF Converter</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">Rapid-built document utility converting bulk .eml email threads into clean, chronologically sorted, print-ready PDF archives for legal and business discovery.</p>
+                <p class="text-xs text-slate-400 pt-1">Eliminates manual email compilation with instant browser-side sorting.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-6 pb-6 pt-3 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+              <a href="https://mailmergepdf.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap shrink-0">
+                      <span>Open Converter</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </section>
+
+      <!-- 4. Open Experiments & Workflow Utilities -->
+      <section aria-labelledby="rd-utilities-heading" class="space-y-8">
+        <div class="max-w-2xl">
+          <p class="text-sm font-medium text-[#38BDF8] mb-2">Open Experiments &amp; Workflow Utilities</p>
+          <h2 id="rd-utilities-heading" class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+            Productivity Utilities, Playbooks &amp; Internal Tooling
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <div data-reveal style="transition-delay: 0ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/Mobile_Vibe_Coding_Tutorial-2_53ea1d1c.webp" alt="Mobile Vibe Coding Tutorial" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-5 pb-2 space-y-1.5">
+                <p class="text-xs font-medium text-[#38BDF8]">iOS Workflow</p>
+                <h3 class="text-base font-semibold text-white">Mobile Vibe Coding Tutorial</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Community guide walking builders step-by-step through shipping a full iOS application using AI-assisted workflows.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-5 pb-5 pt-3 border-t border-white/[0.06]">
+              <a href="https://www.reddit.com/r/buildinpublic/comments/1qfhfqh/how_i_built_and_shipped_an_ios_app_using/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap">
+                      <span>Open App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<div data-reveal style="transition-delay: 50ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/Microsoft_License_Selector_Dashboard-3_7a34688f.webp" alt="Microsoft License Feature Selector" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-5 pb-2 space-y-1.5">
+                <p class="text-xs font-medium text-[#38BDF8]">Enterprise Utility</p>
+                <h3 class="text-base font-semibold text-white">Microsoft License Feature Selector</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">AI-powered decision utility helping organizations select optimal Microsoft licensing tiers at minimum cost.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-5 pb-5 pt-3 border-t border-white/[0.06]">
+              <a href="https://mslicensemanager.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap">
+                      <span>Open App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<div data-reveal style="transition-delay: 100ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/markflow_app.webp" alt="MarkFlow" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-5 pb-2 space-y-1.5">
+                <p class="text-xs font-medium text-[#38BDF8]">Markdown Studio</p>
+                <h3 class="text-base font-semibold text-white">MarkFlow</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Clean split-pane Markdown studio for creating, editing, and viewing documents with instant code (Markup), Split, and Formatted views plus local .md persistence.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-5 pb-5 pt-3 border-t border-white/[0.06]">
+              <a href="https://markflowapp.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] hover:text-[#38BDF8] transition-colors whitespace-nowrap">
+                      <span>Open App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<div data-reveal style="transition-delay: 150ms" class="h-full">
+        <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 h-full group">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/CreativeAI_Synthesis_b14b7b57.webp" alt="Creative AI Synthesis &amp; Art" referrerpolicy="no-referrer" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="p-5 pb-2 space-y-1.5">
+                <p class="text-xs font-medium text-[#38BDF8]">Multimodal AI</p>
+                <h3 class="text-base font-semibold text-white">Creative AI Synthesis &amp; Art</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Explorations across Replicate, Leonardo.ai, ElevenLabs, GPT Image, Nano Banana, and Veo models.</p>
+              </div>
+            </div>
+            <div class="mt-auto px-5 pb-5 pt-3 border-t border-white/[0.06]">
+              <span class="text-xs text-slate-400">Studio Multimodal Research</span>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <div data-reveal class="p-6 sm:p-8 rounded-2xl bg-[#090E18] blueprint-hairline grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-8 space-y-2">
+            <div class="flex items-center gap-2 text-xs font-medium text-[#38BDF8]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Private Enterprise &amp; Advisory Engineering</span>
+            </div>
+            <h3 class="text-lg sm:text-xl font-semibold text-white">
+              Internal Productivity, Legal Aid &amp; Architecture Analysis Systems
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Beyond public launches, I build private AI-driven enterprise tooling—automating
+              system impact matrices, architectural diagramming, documentation pipelines, and
+              structured legal research workflows across <span class="text-white font-medium">Claude Code, OpenAI Codex, Google AI Studio, Gemini, ChatGPT, Cline, Lovable, Websim, Manus.ai</span>.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex lg:justify-end">
+            <div class="inline-flex items-center gap-2.5 text-xs text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              <span>Due to internal confidentiality, proprietary enterprise tools are private.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div data-reveal class="p-8 rounded-2xl bg-[#090E18] blueprint-hairline flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-1">Have Questions About Applied AI?</h2>
+          <p class="text-sm text-slate-400">
+            Let's discuss AI SDLC transformation, custom multimodal workflows, or product strategy.
+          </p>
+        </div>
+        <a href="/contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-xs font-semibold transition-colors shrink-0 whitespace-nowrap">
+          <span>Get in Touch</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+      </main>
+
+      <footer class="relative overflow-hidden bg-[#030508] text-slate-300 border-t border-white/[0.06]">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#00A6FF]/75 to-transparent"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute left-1/2 -top-28 -translate-x-1/2 w-[820px] h-[240px] rounded-full bg-[#00A6FF]/[0.08] blur-3xl"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 architectural-grid opacity-30 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.85),transparent_85%)]"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-12 sm:pt-14 lg:pt-16 pb-10 lg:pb-12">
+          <!-- Executive CTA Card -->
+          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#08101E]/95 via-[#050A14]/95 to-[#03060C] border border-[#38BDF8]/16 p-5 sm:p-7 lg:p-9 mb-10 sm:mb-12 lg:mb-14 shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
+            <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 w-72 h-72 rounded-full bg-[#00A6FF]/[0.1] blur-3xl"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6 lg:gap-8">
+              <div class="max-w-2xl space-y-2">
+                <p class="text-[11px] sm:text-xs font-medium tracking-[0.14em] uppercase text-[#38BDF8]">
+                  Executive Advisory · Product Architecture · Leadership
+                </p>
+                <h2 class="font-serif-editorial text-xl sm:text-3xl lg:text-[34px] font-semibold tracking-tight text-white leading-snug">
+                  Bridging Users, Design Systems &amp; AI-Accelerated Engineering.
+                </h2>
+              </div>
+
+              <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-3 shrink-0 w-full sm:w-auto">
+                <a
+                  href="/resume"
+                  class="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-lg border border-white/15 bg-[#070D1A]/85 hover:border-[#00A6FF]/55 hover:bg-[#0B1528] text-white text-xs sm:text-sm font-medium transition-colors whitespace-nowrap"
+                >
+                  <span>View Resume</span>
+                </a>
+                <a
+                  href="/contact"
+                  class="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-6 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-xs sm:text-sm font-semibold transition-all duration-150 shadow-[0_0_24px_rgba(0,166,255,0.28)] hover:shadow-[0_0_32px_rgba(0,166,255,0.5)] whitespace-nowrap"
+                >
+                  <span>Start a Conversation</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Balanced Footer Architecture: Mobile (1+2+1), iPad (full brand -> 2-col links -> full connect), Desktop (4-2-2-4 aligned baseline) -->
+          <div class="grid grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-9 sm:gap-x-8 lg:gap-10 pb-10 lg:pb-12 border-b border-white/[0.08]">
+            <!-- Brand Block -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col justify-between gap-5 pb-8 lg:pb-0 border-b border-white/[0.07] lg:border-b-0">
+              <div class="space-y-3.5">
+                <a href="/" class="group inline-flex items-center gap-3.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded-lg">
+                  <div class="relative p-1.5 rounded-xl bg-[#070D1A] border border-white/[0.08] group-hover:border-[#00A6FF]/45 transition-colors shrink-0">
+                    <img
+                      src="/images/paguireLogo.webp"
+                      alt="CRM — Christopher R McGuire"
+                      referrerpolicy="no-referrer"
+                      class="h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.04] [filter:drop-shadow(0_0_1px_rgba(241,245,249,0.9))_drop-shadow(0_0_10px_rgba(0,166,255,0.38))]"
+                    />
+                  </div>
+                  <div class="min-w-0">
+                    <span class="font-display font-semibold text-white text-base sm:text-lg block leading-tight group-hover:text-[#38BDF8] transition-colors">
+                      Christopher R McGuire
+                    </span>
+                    <span class="text-xs text-slate-400 block mt-0.5">
+                      SVP of Application Design and Development
+                    </span>
+                  </div>
+                </a>
+
+                <p class="text-sm text-slate-400 leading-[1.68] max-w-xl lg:max-w-sm">
+                  20+ years steering front-end architecture, institutional design systems, and applied
+                  AI platforms across Savant Wealth, Mesirow, Akuna Capital, SpiderRock, and Citadel.
+                </p>
+              </div>
+
+              <div class="lg:pt-3 lg:border-t lg:border-white/[0.06] flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-slate-400">
+                <span class="text-slate-200 font-medium">Purdue University</span>
+                <span aria-hidden="true" class="text-[#00A6FF]">·</span>
+                <span>B.S. Computer and Electrical Engineering</span>
+              </div>
+            </div>
+
+            <!-- Featured Links -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Featured</h3>
+              <ul class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-0 lg:flex-1 lg:flex lg:flex-col lg:justify-between text-[13px] sm:text-sm">
+                <li>
+        <a href="https://thrivefinancial.app" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 text-slate-300 hover:text-[#38BDF8] transition-colors">
+          <span>Thrive Financial</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </li>
+<li>
+      <a href="/projects/modus-ai" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Modus AI</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+        <a href="https://wilsmartinilounge.com" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 text-slate-300 hover:text-[#38BDF8] transition-colors">
+          <span>Wils Martini Lounge</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </li>
+<li>
+      <a href="/projects/snapclipper" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>SnapClipper</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/projects/blueprint" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>1-Hour Blueprint</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/blog" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Executive Essays</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+              </ul>
+            </div>
+
+            <!-- Site Navigation -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Navigation</h3>
+              <ul class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-0 lg:flex-1 lg:flex lg:flex-col lg:justify-between text-[13px] sm:text-sm">
+                <li>
+      <a href="/" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Home</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/biography" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Biography</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/resume" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Resume</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/projects" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Projects</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/ai-explorations" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>AI Explorations</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/blog" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Library</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/contact" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Contact</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+              </ul>
+            </div>
+
+            <!-- Direct Contact & Social Grid -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col pt-6 lg:pt-0 border-t border-white/[0.07] lg:border-t-0">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Connect</h3>
+              <div class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-1.5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-1.5 text-sm">
+                  <a
+                    href="mailto:Christopher.R.McGuire@gmail.com"
+                    class="group flex items-center justify-between gap-2.5 min-h-[44px] lg:min-h-[36px] px-3.5 py-2 lg:py-1.5 rounded-xl bg-[#070C17] border border-white/[0.08] hover:border-[#00A6FF]/45 text-slate-200 hover:text-white transition-colors"
+                  >
+                    <span class="flex items-center gap-2.5 min-w-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      <span class="text-xs sm:text-[13px] font-medium truncate">Christopher.R.McGuire@gmail.com</span>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] shrink-0 transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </a>
+                  <div class="flex items-center gap-2.5 min-h-[44px] lg:min-h-[36px] px-3.5 py-2 lg:py-1.5 rounded-xl bg-[#050912] border border-white/[0.05] text-xs sm:text-[13px] text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Chicago, IL</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2 lg:gap-1.5 text-xs font-medium">
+                  <a href="https://linkedin.com/in/christopher-r-mcguire/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>LinkedIn</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://twitter.com/crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>X / Twitter</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://github.com/crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>GitHub</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://www.tiktok.com/@crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>TikTok</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://www.youtube.com/@crmcguire1974" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors col-span-2 sm:col-span-1 lg:col-span-2">
+        <span>YouTube</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+              <p>© 2026 Christopher R McGuire. All rights reserved.</p>
+              <span aria-hidden="true" class="hidden sm:inline text-slate-700">·</span>
+              <span class="hidden sm:inline text-slate-500">Engineering, UX/UI &amp; AI Leadership</span>
+            </div>
+            <button
+              type="button"
+              id="back-to-top-btn"
+              aria-label="Back to top"
+              class="group inline-flex items-center justify-center gap-2 min-h-[40px] w-full sm:w-auto px-4 py-2 rounded-lg bg-[#080D18] border border-white/[0.08] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors cursor-pointer"
+            >
+              <span>Back to top</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-150 group-hover:-translate-y-0.5" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/client/main.ts"></script>
+  </body>
+</html>

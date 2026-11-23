@@ -1,0 +1,12 @@
+# Legacy public site product URL redirects -> New canonical static routes
+/products/modus-ai/modus-ai /projects/modus-ai 301
+/products/modus-ai/modus-ai.html /projects/modus-ai 301
+/products/modus-ai/privacy /projects/modus-ai/privacy 301
+/products/modus-ai/privacy.html /projects/modus-ai/privacy 301
+/products/snapclipper /projects/snapclipper 301
+/products/snapclipper.html /projects/snapclipper 301
+/products/snapclipper/snapclipper /projects/snapclipper 301
+/products/snapclipper/snapclipper.html /projects/snapclipper 301
+/products/1-Hour-Content-Creator-Blueprint /projects/blueprint 301
+/products/1-Hour-Content-Creator-Blueprint.html /projects/blueprint 301
+/products/1-hour-content-creator-blueprint /projects/blueprint 301

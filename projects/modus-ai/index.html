@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Christopher R McGuire" />
+    <title>Modus AI — Spatial Interior &amp; Exterior Design App (iOS) | Paguire</title>
+    <meta name="description" content="Modus AI is an iOS AI room designer with spatial constraints that transforms interiors, exterior facades, and paint colors while locking your real furniture—zero subscription." />
+    <meta name="keywords" content="Modus AI, AI Interior Design App, iOS Room Designer, Spatial AI, Furniture Preservation, Paint Visualizer, Christopher R McGuire" />
+    <link rel="canonical" href="https://paguire.com/projects/modus-ai" />
+    <link rel="alternate" type="application/rss+xml" title="Christopher R McGuire's Blog" href="/feed.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Christopher R McGuire — Paguire" />
+    <meta property="og:url" content="https://paguire.com/projects/modus-ai" />
+    <meta property="og:title" content="Modus AI — Spatial Interior &amp; Exterior Design App (iOS) | Paguire" />
+    <meta property="og:description" content="Modus AI is an iOS AI room designer with spatial constraints that transforms interiors, exterior facades, and paint colors while locking your real furniture—zero subscription." />
+    <meta property="og:image" content="https://paguire.com/assets/aistudio/Modus_AI_e260817c.webp" />
+    <meta property="og:image:alt" content="Modus AI — Spatial Interior &amp; Exterior Design App (iOS) | Paguire" />
+    
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@crmcguire74" />
+    <meta name="twitter:creator" content="@crmcguire74" />
+    <meta name="twitter:url" content="https://paguire.com/projects/modus-ai" />
+    <meta name="twitter:title" content="Modus AI — Spatial Interior &amp; Exterior Design App (iOS) | Paguire" />
+    <meta name="twitter:description" content="Modus AI is an iOS AI room designer with spatial constraints that transforms interiors, exterior facades, and paint colors while locking your real furniture—zero subscription." />
+    <meta name="twitter:image" content="https://paguire.com/assets/aistudio/Modus_AI_e260817c.webp" />
+    <meta name="twitter:image:alt" content="Modus AI — Spatial Interior &amp; Exterior Design App (iOS) | Paguire" />
+
+    <!-- Icons & Web Manifest -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png" />
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196x196.png" />
+    <link rel="icon" type="image/webp" href="/images/paguireLogo.webp" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon-192x192.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#030508" />
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Modus AI","operatingSystem":"iOS","applicationCategory":"DesignApplication","description":"AI interior and exterior design iOS application with spatial constraints preserving real furniture and architectural footprints.","url":"https://paguire.com/projects/modus-ai","downloadUrl":"https://apps.apple.com/us/app/modus-ai-interior-design-app/id6757023994","author":{"@type":"Person","name":"Christopher R McGuire"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there a free AI interior design app without a subscription?","acceptedAnswer":{"@type":"Answer","text":"Modus AI is free to download and uses a simple credit-based model. Instead of locking you into $20–$40/month subscriptions, you pay only for the designs you generate."}},{"@type":"Question","name":"Can AI design my room while keeping my real furniture?","acceptedAnswer":{"@type":"Answer","text":"Yes. Refresh & Elevate mode identifies your existing sofas, tables, and cabinets and redesigns the surrounding finishes, decor, and lighting around them."}},{"@type":"Question","name":"How can I visualize paint colors on my actual walls?","acceptedAnswer":{"@type":"Answer","text":"Paint-Only mode applies texture mapping directly to your walls while preserving shadows, reflections, and architectural depth."}},{"@type":"Question","name":"Does Modus AI work for exterior facades and landscaping?","acceptedAnswer":{"@type":"Answer","text":"Yes—specialized models support Exterior Facades, Garden Landscapes, and Patios while respecting structural boundaries."}}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://paguire.com/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://paguire.com/projects"},{"@type":"ListItem","position":3,"name":"Modus AI","item":"https://paguire.com/projects/modus-ai"}]}</script>
+  </head>
+  <body data-page="modus-ai" class="bg-[#030508] text-[#F1F5F9] antialiased selection:bg-[#00A6FF]/30 selection:text-white">
+    <div class="min-h-screen flex flex-col bg-[#030508] text-[#F1F5F9]">
+      <header class="sticky top-0 z-50 bg-[#030508]/88 backdrop-blur-xl border-b border-[#38BDF8]/15">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 md:h-[72px] flex items-center justify-between gap-8">
+          <a href="/" aria-label="Christopher R McGuire Home" class="group flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded-lg p-1">
+            <img
+              src="/images/paguireLogo.webp"
+              alt="CRM — Christopher R McGuire"
+              referrerpolicy="no-referrer"
+              class="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.04] [filter:drop-shadow(0_0_1px_rgba(241,245,249,0.9))_drop-shadow(0_0_10px_rgba(0,166,255,0.4))]"
+            />
+            <span class="md:hidden ml-2.5 pl-2.5 border-l border-white/25 text-[10px] font-semibold tracking-[0.14em] uppercase text-slate-100 whitespace-nowrap">
+              Christopher R McGuire
+            </span>
+          </a>
+
+          <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-7">
+            <a href="/" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Home</span>
+      
+    </a>
+<a href="/biography" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Biography</span>
+      
+    </a>
+<a href="/resume" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Resume</span>
+      
+    </a>
+<a href="/projects" aria-current="page" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-[#38BDF8]">
+      <span>Projects</span>
+      <span aria-hidden="true" class="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-[#00A6FF] rounded-full shadow-[0_0_10px_#00A6FF]"></span>
+    </a>
+<a href="/ai-explorations" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>AI Labs</span>
+      
+    </a>
+<a href="/blog" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Library</span>
+      
+    </a>
+          </nav>
+
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/contact"
+              class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold tracking-wide text-[#030508] bg-[#00A6FF] hover:bg-[#38BDF8] rounded-lg whitespace-nowrap shrink-0 transition-all duration-150 hover:shadow-[0_0_20px_rgba(0,166,255,0.45)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              <span>Let's Connect</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              aria-expanded="false"
+              aria-controls="mobile-nav-drawer"
+              aria-label="Open navigation menu"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-[#38BDF8]/20 bg-[#090E18] text-slate-200 hover:text-white hover:border-[#00A6FF]/50 transition-colors cursor-pointer"
+            >
+              <span id="mobile-menu-icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span>
+              <span id="mobile-menu-icon-close" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="nav-scroll-progress"
+          style="transform: scaleX(0); transform-origin: 0% 50%;"
+          class="h-[2px] w-full bg-gradient-to-r from-[#00A6FF] via-[#38BDF8] to-[#00A6FF]"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          id="mobile-nav-drawer"
+          class="hidden md:hidden border-t border-[#38BDF8]/15 bg-[#030508]/98 px-5 py-4 space-y-1"
+        >
+          <a href="/" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Home</a>
+<a href="/biography" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Biography</a>
+<a href="/resume" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Resume</a>
+<a href="/projects" aria-current="page" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors bg-[#00A6FF]/12 text-[#38BDF8]">Projects</a>
+<a href="/ai-explorations" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">AI Labs</a>
+<a href="/blog" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Library</a>
+          <a
+            href="/contact"
+            class="w-full mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-[#030508] bg-[#00A6FF] hover:bg-[#38BDF8] transition-colors"
+          >
+            <span>Let's Connect</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-24 space-y-20">
+    <div>
+      <a href="/projects" class="inline-flex items-center gap-2 text-sm text-[#38BDF8] hover:text-white mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        <span>Back to Projects</span>
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-5 hero-enter">
+          <p class="text-sm font-medium text-[#38BDF8]">
+            Interior &amp; Exterior Design · Spatial AI (iOS)
+          </p>
+          <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
+            Modus AI — Accurate Room Design Without Subscriptions
+          </h1>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+            Built to redesign your real home—not hallucinate impossible layouts. Transform
+            interiors, exterior facades, and paint colors while locking your actual furniture and
+            architectural footprint.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a
+              href="https://apps.apple.com/us/app/modus-ai-interior-design-app/id6757023994"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-sm font-semibold transition-colors"
+            >
+              <span>Download for iOS</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+            <a
+              href="/projects/modus-ai/privacy"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/15 hover:border-[#00A6FF]/50 text-white text-sm font-medium transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF]" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Privacy Policy</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="aspect-video rounded-2xl overflow-hidden blueprint-hairline bg-[#050810]">
+            <img
+              src="/assets/aistudio/Modus_AI_e260817c.webp"
+              alt="Modus AI app interface — room redesign, paint visualizer, and space organizer"
+              referrerpolicy="no-referrer"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll-Driven Spatial Story -->
+    <section id="modus-spatial-story" aria-label="Modus AI Spatial Transformation Story" class="relative py-16 lg:py-24 border-y border-white/[0.08] bg-[#050810] -mx-5 sm:-mx-8 px-5 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl mb-12">
+          <p class="text-sm font-medium text-[#38BDF8] mb-2">Scroll-Driven Spatial Story</p>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-3">
+            From Real Room Photo to Architecturally Locked Redesign
+          </h2>
+          <p class="text-sm sm:text-base text-slate-400">
+            Scroll or select each stage to watch how Modus AI transitions across interior locking,
+            true-light paint calibration, storage layout, and exterior architecture.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-5 space-y-4">
+            <button
+      type="button"
+      data-modus-stage="0"
+      aria-pressed="true"
+      class="w-full text-left p-5 rounded-2xl transition-all duration-200 cursor-pointer bg-[#0C1526] border border-[#00A6FF]/55 shadow-[0_0_28px_rgba(0,166,255,0.14)]"
+    >
+      <div class="flex items-center justify-between text-xs mb-1.5">
+        <span class="font-mono-tabular text-[#00A6FF]">Stage 01</span>
+        <span class="text-slate-400">Furniture Lock · Living Space</span>
+      </div>
+      <h3 class="text-lg font-semibold text-white mb-1">Precision Furniture Locking</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">Redesigns room atmosphere and finishes while preserving your real sofa, rug footprint, and window geometry.</p>
+    </button>
+<button
+      type="button"
+      data-modus-stage="1"
+      aria-pressed="false"
+      class="w-full text-left p-5 rounded-2xl transition-all duration-200 cursor-pointer bg-[#080C15] border border-white/[0.06] opacity-70 hover:opacity-100"
+    >
+      <div class="flex items-center justify-between text-xs mb-1.5">
+        <span class="font-mono-tabular text-[#00A6FF]">Stage 02</span>
+        <span class="text-slate-400">Paint-Only Mode · Texture Mapping</span>
+      </div>
+      <h3 class="text-lg font-semibold text-white mb-1">True-Light Paint Calibration</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">Applies real paint hues directly onto existing wall textures while retaining natural shadows and ambient bounce light.</p>
+    </button>
+<button
+      type="button"
+      data-modus-stage="2"
+      aria-pressed="false"
+      class="w-full text-left p-5 rounded-2xl transition-all duration-200 cursor-pointer bg-[#080C15] border border-white/[0.06] opacity-70 hover:opacity-100"
+    >
+      <div class="flex items-center justify-between text-xs mb-1.5">
+        <span class="font-mono-tabular text-[#00A6FF]">Stage 03</span>
+        <span class="text-slate-400">Organization Logic · Compact Layouts</span>
+      </div>
+      <h3 class="text-lg font-semibold text-white mb-1">Functional Storage Organization</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">Re-architects tight apartments and condos to maximize usable storage without structural demolition.</p>
+    </button>
+<button
+      type="button"
+      data-modus-stage="3"
+      aria-pressed="false"
+      class="w-full text-left p-5 rounded-2xl transition-all duration-200 cursor-pointer bg-[#080C15] border border-white/[0.06] opacity-70 hover:opacity-100"
+    >
+      <div class="flex items-center justify-between text-xs mb-1.5">
+        <span class="font-mono-tabular text-[#00A6FF]">Stage 04</span>
+        <span class="text-slate-400">Exterior Model · Landscape &amp; Patio</span>
+      </div>
+      <h3 class="text-lg font-semibold text-white mb-1">Exterior Facade &amp; Patio Modeling</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">Generates structurally viable backyard, garden, and exterior architecture refreshes.</p>
+    </button>
+<button
+      type="button"
+      data-modus-stage="4"
+      aria-pressed="false"
+      class="w-full text-left p-5 rounded-2xl transition-all duration-200 cursor-pointer bg-[#080C15] border border-white/[0.06] opacity-70 hover:opacity-100"
+    >
+      <div class="flex items-center justify-between text-xs mb-1.5">
+        <span class="font-mono-tabular text-[#00A6FF]">Stage 05</span>
+        <span class="text-slate-400">Structural Mode · Contractor Brief</span>
+      </div>
+      <h3 class="text-lg font-semibold text-white mb-1">Guided Kitchen &amp; Structural Remodel</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">Explores cabinetry, islands, and lighting upgrades while respecting existing plumbing and wall boundaries.</p>
+    </button>
+<button
+      type="button"
+      data-modus-stage="5"
+      aria-pressed="false"
+      class="w-full text-left p-5 rounded-2xl transition-all duration-200 cursor-pointer bg-[#080C15] border border-white/[0.06] opacity-70 hover:opacity-100"
+    >
+      <div class="flex items-center justify-between text-xs mb-1.5">
+        <span class="font-mono-tabular text-[#00A6FF]">Stage 06</span>
+        <span class="text-slate-400">Multi-Style Iteration · Draft Engine</span>
+      </div>
+      <h3 class="text-lg font-semibold text-white mb-1">Curated Architectural Styles</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">Compare multiple interior design directions side-by-side before spending a dollar on contractors.</p>
+    </button>
+          </div>
+
+          <div class="lg:col-span-7 lg:sticky lg:top-28">
+            <div class="relative rounded-2xl overflow-hidden bg-[#090E18] blueprint-hairline p-4 sm:p-6">
+              <div aria-hidden="true" class="pointer-events-none absolute inset-0 architectural-grid opacity-55"></div>
+              <div class="relative z-10 flex items-center justify-between gap-4 pb-4 mb-4 border-b border-white/[0.08]">
+                <span id="modus-stage-counter" class="font-mono-tabular text-xs text-[#38BDF8]">
+                  MODUS SPATIAL STAGE 01 / 06
+                </span>
+                <div class="flex items-center gap-1.5" aria-hidden="true">
+                  <span data-modus-dot="0" class="h-1.5 rounded-full transition-all duration-200 w-6 bg-[#00A6FF]"></span><span data-modus-dot="1" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span><span data-modus-dot="2" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span><span data-modus-dot="3" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span><span data-modus-dot="4" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span><span data-modus-dot="5" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+                </div>
+              </div>
+
+              <div class="relative z-10 aspect-[4/3] w-full rounded-xl overflow-hidden bg-[#030508] border border-[#38BDF8]/20">
+                <img id="modus-stage-img" src="/images/modus-1.webp" alt="Precision Furniture Locking" referrerpolicy="no-referrer" class="w-full h-full object-cover transition-opacity duration-200" />
+                <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030508]/90 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#030508]/88 backdrop-blur-md border border-[#00A6FF]/35">
+                  <div id="modus-stage-spec" class="text-xs font-medium text-[#38BDF8] mb-0.5">Furniture Lock · Living Space</div>
+                  <div id="modus-stage-title" class="text-base font-semibold text-white">Precision Furniture Locking</div>
+                  <p id="modus-stage-caption" class="text-xs text-slate-300 mt-1">Redesigns room atmosphere and finishes while preserving your real sofa, rug footprint, and window geometry.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Spatial Constraints Switcher -->
+    <section data-reveal class="p-8 sm:p-10 rounded-2xl bg-[#090E18] blueprint-hairline">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 pb-6 border-b border-white/[0.08]">
+        <div>
+          <h2 class="text-2xl font-semibold text-white">Interactive Spatial Constraint Modes</h2>
+          <p class="text-sm text-slate-400 mt-1">
+            Switch modes to inspect how Modus AI locks architecture and furniture.
+          </p>
+        </div>
+        <div role="group" aria-label="Modus AI spatial constraint modes" class="flex flex-wrap gap-1.5 p-1 rounded-xl bg-[#090E18] border border-white/[0.08]">
+          <button
+      type="button"
+      data-modus-mode="paint"
+      aria-pressed="true"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors bg-[#00A6FF] text-[#030508] font-semibold"
+    >Paint-Only Mode</button>
+<button
+      type="button"
+      data-modus-mode="refresh"
+      aria-pressed="false"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+    >Refresh &amp; Elevate</button>
+<button
+      type="button"
+      data-modus-mode="remodel"
+      aria-pressed="false"
+      class="relative px-3.5 py-2 rounded-lg text-xs font-medium whitespace-nowrap cursor-pointer transition-colors text-slate-300 hover:text-white"
+    >Structural Remodel</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7 space-y-4">
+          <h3 id="modus-mode-headline" class="text-xl sm:text-2xl font-semibold text-[#38BDF8]">Texture-mapped wall color previews preserving natural room shadows.</h3>
+          <p id="modus-mode-detail" class="text-base text-slate-300 leading-relaxed">Preview exact architectural paint tones across your walls while keeping every piece of furniture, flooring, and ambient light reflection intact.</p>
+          <div id="modus-mode-spec" class="inline-block px-4 py-2.5 rounded-xl bg-[#050810] border border-[#00A6FF]/25 text-xs text-slate-300">
+            Zero structural drift · Real lighting calibration
+          </div>
+        </div>
+        <div class="md:col-span-5">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden border border-white/10">
+            <img id="modus-mode-img" src="/images/modus-2.webp" alt="Paint-Only Mode" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Comparison -->
+    <section data-reveal class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-6 p-8 rounded-2xl bg-[#090E18] blueprint-hairline flex flex-col justify-between space-y-6">
+        <div>
+          <h2 class="text-2xl font-semibold text-white mb-2">Credit-Based Value ($0/mo)</h2>
+          <p class="text-sm text-slate-400 mb-6">
+            No $29.99/mo ($360/yr) subscriptions. Pay only for the credits you use.
+          </p>
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-[#050810] border border-white/[0.08]">
+              <div class="font-semibold text-white">The Single Room Pass</div>
+              <div class="text-xs text-[#38BDF8] mt-1">10 ReCraft Design Credits · Ideal for weekend projects</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#050810] border border-[#00A6FF]/40">
+              <div class="font-semibold text-white">The Project Pack</div>
+              <div class="text-xs text-[#38BDF8] mt-1">50 ReCraft Design Credits · Built for multi-room renovations</div>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400">
+          Engine: Powered by Gemini with on-device spatial pre-processing.
+        </p>
+      </div>
+
+      <div class="lg:col-span-6 rounded-2xl overflow-hidden blueprint-hairline">
+        <img src="/assets/images/modus_spatial_render_1794774703750.webp" alt="Modus AI architectural wireframe transition" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
+      <div data-reveal style="transition-delay: 0ms" class="rounded-2xl bg-[#090E18] blueprint-hairline overflow-hidden" data-faq-item>
+      <button
+        type="button"
+        data-faq-toggle="0"
+        aria-expanded="true"
+        class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-white font-medium cursor-pointer"
+      >
+        <span>Is there a free AI interior design app without a subscription?</span>
+        <span data-faq-chevron class="transition-transform duration-200 rotate-180">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+      </button>
+      <div data-faq-panel class="">
+        <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/[0.06] pt-4">
+          Modus AI is free to download and uses a simple credit-based model. Instead of locking you into $20–$40/month subscriptions, you pay only for the designs you generate.
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 55ms" class="rounded-2xl bg-[#090E18] blueprint-hairline overflow-hidden" data-faq-item>
+      <button
+        type="button"
+        data-faq-toggle="1"
+        aria-expanded="false"
+        class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-white font-medium cursor-pointer"
+      >
+        <span>Can AI design my room while keeping my real furniture?</span>
+        <span data-faq-chevron class="transition-transform duration-200 ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+      </button>
+      <div data-faq-panel class="hidden">
+        <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/[0.06] pt-4">
+          Yes. Refresh &amp; Elevate mode identifies your existing sofas, tables, and cabinets and redesigns the surrounding finishes, decor, and lighting around them.
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 110ms" class="rounded-2xl bg-[#090E18] blueprint-hairline overflow-hidden" data-faq-item>
+      <button
+        type="button"
+        data-faq-toggle="2"
+        aria-expanded="false"
+        class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-white font-medium cursor-pointer"
+      >
+        <span>How can I visualize paint colors on my actual walls?</span>
+        <span data-faq-chevron class="transition-transform duration-200 ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+      </button>
+      <div data-faq-panel class="hidden">
+        <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/[0.06] pt-4">
+          Paint-Only mode applies texture mapping directly to your walls while preserving shadows, reflections, and architectural depth.
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 165ms" class="rounded-2xl bg-[#090E18] blueprint-hairline overflow-hidden" data-faq-item>
+      <button
+        type="button"
+        data-faq-toggle="3"
+        aria-expanded="false"
+        class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-white font-medium cursor-pointer"
+      >
+        <span>Does Modus AI work for exterior facades and landscaping?</span>
+        <span data-faq-chevron class="transition-transform duration-200 ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+      </button>
+      <div data-faq-panel class="hidden">
+        <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/[0.06] pt-4">
+          Yes—specialized models support Exterior Facades, Garden Landscapes, and Patios while respecting structural boundaries.
+        </div>
+      </div>
+    </div>
+    </section>
+  </div>
+      </main>
+
+      <footer class="relative overflow-hidden bg-[#030508] text-slate-300 border-t border-white/[0.06]">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#00A6FF]/75 to-transparent"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute left-1/2 -top-28 -translate-x-1/2 w-[820px] h-[240px] rounded-full bg-[#00A6FF]/[0.08] blur-3xl"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 architectural-grid opacity-30 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.85),transparent_85%)]"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-12 sm:pt-14 lg:pt-16 pb-10 lg:pb-12">
+          <!-- Executive CTA Card -->
+          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#08101E]/95 via-[#050A14]/95 to-[#03060C] border border-[#38BDF8]/16 p-5 sm:p-7 lg:p-9 mb-10 sm:mb-12 lg:mb-14 shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
+            <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 w-72 h-72 rounded-full bg-[#00A6FF]/[0.1] blur-3xl"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6 lg:gap-8">
+              <div class="max-w-2xl space-y-2">
+                <p class="text-[11px] sm:text-xs font-medium tracking-[0.14em] uppercase text-[#38BDF8]">
+                  Executive Advisory · Product Architecture · Leadership
+                </p>
+                <h2 class="font-serif-editorial text-xl sm:text-3xl lg:text-[34px] font-semibold tracking-tight text-white leading-snug">
+                  Bridging Users, Design Systems &amp; AI-Accelerated Engineering.
+                </h2>
+              </div>
+
+              <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-3 shrink-0 w-full sm:w-auto">
+                <a
+                  href="/resume"
+                  class="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-lg border border-white/15 bg-[#070D1A]/85 hover:border-[#00A6FF]/55 hover:bg-[#0B1528] text-white text-xs sm:text-sm font-medium transition-colors whitespace-nowrap"
+                >
+                  <span>View Resume</span>
+                </a>
+                <a
+                  href="/contact"
+                  class="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-6 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-xs sm:text-sm font-semibold transition-all duration-150 shadow-[0_0_24px_rgba(0,166,255,0.28)] hover:shadow-[0_0_32px_rgba(0,166,255,0.5)] whitespace-nowrap"
+                >
+                  <span>Start a Conversation</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Balanced Footer Architecture: Mobile (1+2+1), iPad (full brand -> 2-col links -> full connect), Desktop (4-2-2-4 aligned baseline) -->
+          <div class="grid grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-9 sm:gap-x-8 lg:gap-10 pb-10 lg:pb-12 border-b border-white/[0.08]">
+            <!-- Brand Block -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col justify-between gap-5 pb-8 lg:pb-0 border-b border-white/[0.07] lg:border-b-0">
+              <div class="space-y-3.5">
+                <a href="/" class="group inline-flex items-center gap-3.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded-lg">
+                  <div class="relative p-1.5 rounded-xl bg-[#070D1A] border border-white/[0.08] group-hover:border-[#00A6FF]/45 transition-colors shrink-0">
+                    <img
+                      src="/images/paguireLogo.webp"
+                      alt="CRM — Christopher R McGuire"
+                      referrerpolicy="no-referrer"
+                      class="h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.04] [filter:drop-shadow(0_0_1px_rgba(241,245,249,0.9))_drop-shadow(0_0_10px_rgba(0,166,255,0.38))]"
+                    />
+                  </div>
+                  <div class="min-w-0">
+                    <span class="font-display font-semibold text-white text-base sm:text-lg block leading-tight group-hover:text-[#38BDF8] transition-colors">
+                      Christopher R McGuire
+                    </span>
+                    <span class="text-xs text-slate-400 block mt-0.5">
+                      SVP of Application Design and Development
+                    </span>
+                  </div>
+                </a>
+
+                <p class="text-sm text-slate-400 leading-[1.68] max-w-xl lg:max-w-sm">
+                  20+ years steering front-end architecture, institutional design systems, and applied
+                  AI platforms across Savant Wealth, Mesirow, Akuna Capital, SpiderRock, and Citadel.
+                </p>
+              </div>
+
+              <div class="lg:pt-3 lg:border-t lg:border-white/[0.06] flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-slate-400">
+                <span class="text-slate-200 font-medium">Purdue University</span>
+                <span aria-hidden="true" class="text-[#00A6FF]">·</span>
+                <span>B.S. Computer and Electrical Engineering</span>
+              </div>
+            </div>
+
+            <!-- Featured Links -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Featured</h3>
+              <ul class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-0 lg:flex-1 lg:flex lg:flex-col lg:justify-between text-[13px] sm:text-sm">
+                <li>
+        <a href="https://thrivefinancial.app" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 text-slate-300 hover:text-[#38BDF8] transition-colors">
+          <span>Thrive Financial</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </li>
+<li>
+      <a href="/projects/modus-ai" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Modus AI</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+        <a href="https://wilsmartinilounge.com" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 text-slate-300 hover:text-[#38BDF8] transition-colors">
+          <span>Wils Martini Lounge</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </li>
+<li>
+      <a href="/projects/snapclipper" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>SnapClipper</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/projects/blueprint" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>1-Hour Blueprint</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/blog" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Executive Essays</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+              </ul>
+            </div>
+
+            <!-- Site Navigation -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Navigation</h3>
+              <ul class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-0 lg:flex-1 lg:flex lg:flex-col lg:justify-between text-[13px] sm:text-sm">
+                <li>
+      <a href="/" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Home</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/biography" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Biography</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/resume" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Resume</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/projects" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Projects</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/ai-explorations" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>AI Explorations</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/blog" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Library</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/contact" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Contact</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+              </ul>
+            </div>
+
+            <!-- Direct Contact & Social Grid -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col pt-6 lg:pt-0 border-t border-white/[0.07] lg:border-t-0">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Connect</h3>
+              <div class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-1.5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-1.5 text-sm">
+                  <a
+                    href="mailto:Christopher.R.McGuire@gmail.com"
+                    class="group flex items-center justify-between gap-2.5 min-h-[44px] lg:min-h-[36px] px-3.5 py-2 lg:py-1.5 rounded-xl bg-[#070C17] border border-white/[0.08] hover:border-[#00A6FF]/45 text-slate-200 hover:text-white transition-colors"
+                  >
+                    <span class="flex items-center gap-2.5 min-w-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      <span class="text-xs sm:text-[13px] font-medium truncate">Christopher.R.McGuire@gmail.com</span>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] shrink-0 transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </a>
+                  <div class="flex items-center gap-2.5 min-h-[44px] lg:min-h-[36px] px-3.5 py-2 lg:py-1.5 rounded-xl bg-[#050912] border border-white/[0.05] text-xs sm:text-[13px] text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Chicago, IL</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2 lg:gap-1.5 text-xs font-medium">
+                  <a href="https://linkedin.com/in/christopher-r-mcguire/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>LinkedIn</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://twitter.com/crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>X / Twitter</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://github.com/crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>GitHub</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://www.tiktok.com/@crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>TikTok</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://www.youtube.com/@crmcguire1974" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors col-span-2 sm:col-span-1 lg:col-span-2">
+        <span>YouTube</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+              <p>© 2026 Christopher R McGuire. All rights reserved.</p>
+              <span aria-hidden="true" class="hidden sm:inline text-slate-700">·</span>
+              <span class="hidden sm:inline text-slate-500">Engineering, UX/UI &amp; AI Leadership</span>
+            </div>
+            <button
+              type="button"
+              id="back-to-top-btn"
+              aria-label="Back to top"
+              class="group inline-flex items-center justify-center gap-2 min-h-[40px] w-full sm:w-auto px-4 py-2 rounded-lg bg-[#080D18] border border-white/[0.08] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors cursor-pointer"
+            >
+              <span>Back to top</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-150 group-hover:-translate-y-0.5" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/client/main.ts"></script>
+  </body>
+</html>

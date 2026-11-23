@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Allow AI & LLM indexing crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Disallow: /temp/
+Disallow: /private/
+
+Sitemap: https://paguire.com/sitemap.xml
