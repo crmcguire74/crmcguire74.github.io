@@ -459,9 +459,9 @@ function renderChapterSection(chapter: BiographyChapter, idx: number, nextChapte
     data-bio-chapter="${idx}"
     data-bio-align="${esc(chapter.align)}"
     aria-label="Chapter ${esc(chapter.index)}: ${esc(chapter.headline)}"
-    class="relative min-h-[92vh] lg:h-[145vh] border-t border-white/[0.06] scroll-mt-16"
+    class="relative min-h-[92vh] lg:min-h-[calc(100vh-72px)] border-t border-white/[0.06] scroll-mt-16"
   >
-    <div class="relative min-h-[92vh] lg:sticky lg:top-[72px] lg:h-[calc(100vh-72px)] flex items-center py-16 sm:py-24 lg:py-0 overflow-hidden">
+    <div class="relative min-h-[92vh] lg:min-h-[calc(100vh-72px)] flex items-center py-16 sm:py-24 overflow-hidden">
       <div data-bio-progress aria-hidden="true" class="pointer-events-none absolute top-0 inset-x-0 z-30 h-[2px] origin-left bg-gradient-to-r from-[#00A6FF] via-[#38BDF8] to-[#BAE6FD] shadow-[0_0_10px_rgba(0,166,255,0.6)]" style="transform: scaleX(0)"></div>
 
       <div data-bio-bg aria-hidden="true" class="pointer-events-none absolute ${

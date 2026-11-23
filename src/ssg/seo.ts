@@ -3,6 +3,7 @@ import { PROFILE } from '../data/siteData';
 
 export const SITE_URL = 'https://paguire.com';
 export const SITE_NAME = 'Christopher R McGuire | Paguire';
+export const PROFILE_PORTRAIT_IMAGE = `${SITE_URL}/assets/aistudio/Professional_Executive_Portrait_9d49b2b1.webp`;
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/aistudio/Christopher_R_McGuire_Portfolio_Hero_69ead63a.webp`;
 
 export interface SeoConfig {
@@ -49,7 +50,14 @@ export function personSchema(): Record<string, unknown> {
       name: 'Savant Wealth',
     },
     url: SITE_URL,
-    image: `${SITE_URL}/assets/aistudio/Professional_Executive_Portrait_9d49b2b1.webp`,
+    image: {
+      '@type': 'ImageObject',
+      url: PROFILE_PORTRAIT_IMAGE,
+      contentUrl: PROFILE_PORTRAIT_IMAGE,
+      width: 1122,
+      height: 1402,
+      caption: `${PROFILE.name} — professional headshot`,
+    },
     email: PROFILE.email,
     description:
       'Director of WiseOS Platform and SVP of Application Design & Development with 20+ years leading software engineering, UX/UI design systems, and applied AI platforms at Savant Wealth, Mesirow, Akuna Capital, SpiderRock, and Citadel.',

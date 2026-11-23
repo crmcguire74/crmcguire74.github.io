@@ -11,6 +11,7 @@ import { icon, type IconName } from '../icons';
 import {
   esc,
   personSchema,
+  PROFILE_PORTRAIT_IMAGE,
   professionalServiceSchema,
   websiteSchema,
   type SeoConfig,
@@ -40,6 +41,7 @@ export const HOME_SEO: SeoConfig = {
   keywords:
     'Christopher R McGuire, Christopher McGuire, Paguire, SVP Software Engineering, UX/UI Design, Design Systems, Applied AI, Savant Wealth, Mesirow, Citadel, Akuna Capital, SpiderRock, Chicago, Modus AI, Thrive Financial, SnapClipper',
   ogType: 'website',
+  ogImage: PROFILE_PORTRAIT_IMAGE,
   ogTitle: 'Christopher R McGuire | SVP of Engineering, UX/UI & AI Architecture',
   ogDescription:
     '20+ years bridging UX/UI design, software engineering, and applied AI systems. Explore executive experience, flagship AI products, and published essays.',
