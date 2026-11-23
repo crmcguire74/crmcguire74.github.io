@@ -10,6 +10,7 @@ import { ARTICLES } from '../../data/articles';
 import { icon, type IconName } from '../icons';
 import {
   esc,
+  organizationSchema,
   personSchema,
   PROFILE_PORTRAIT_IMAGE,
   professionalServiceSchema,
@@ -35,7 +36,7 @@ const MARQUEE_ITEMS = [
 
 export const HOME_SEO: SeoConfig = {
   path: '/',
-  title: 'Christopher R McGuire | SVP of Engineering, UX/UI & AI Architecture',
+  title: 'Christopher R McGuire | SVP of Engineering, UX/UI & AI',
   description:
     '20+ years leading software engineering, UX/UI design systems, and applied AI at Savant Wealth, Mesirow, Akuna Capital, and Citadel. Based in Chicago.',
   keywords:
@@ -45,7 +46,7 @@ export const HOME_SEO: SeoConfig = {
   ogTitle: 'Christopher R McGuire | SVP of Engineering, UX/UI & AI Architecture',
   ogDescription:
     '20+ years bridging UX/UI design, software engineering, and applied AI systems. Explore executive experience, flagship AI products, and published essays.',
-  jsonLd: [personSchema(), websiteSchema(), professionalServiceSchema()],
+  jsonLd: [personSchema(), organizationSchema(), websiteSchema(), professionalServiceSchema()],
 };
 
 export function renderHomePage(): string {

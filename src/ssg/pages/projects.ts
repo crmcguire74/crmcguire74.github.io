@@ -16,7 +16,7 @@ export const PROJECTS_SEO: SeoConfig = {
   path: '/projects',
   title: 'Projects & Products | Christopher R McGuire',
   description:
-    'Explore shipped AI products, iOS apps, Chrome extensions, WebXR games, FinTech tools, and published playbooks including Thrive Financial, Modus AI, SnapClipper, and Tron Engaged.',
+    'Shipped AI products, iOS apps, Chrome extensions, WebXR games and FinTech tools, including Thrive Financial, Modus AI, SnapClipper and Tron Engaged.',
   keywords:
     'Christopher R McGuire Projects, Thrive Financial, Modus AI, SnapClipper, Tron Engaged, Wils Martini Lounge, Fiscal Compass, Icon Forge, MarkFlow',
   ogImage: `${SITE_URL}${ASSETS.projectsHeroPortrait}`,

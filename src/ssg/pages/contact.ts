@@ -1,12 +1,12 @@
 import { ASSETS, PROFILE } from '../../data/siteData';
 import { icon } from '../icons';
-import { breadcrumbSchema, esc, personSchema, toAbsoluteUrl, type SeoConfig } from '../seo';
+import { breadcrumbSchema, esc, personEntity, toAbsoluteUrl, type SeoConfig } from '../seo';
 
 export const CONTACT_SEO: SeoConfig = {
   path: '/contact',
   title: "Contact & Collaboration | Christopher R McGuire — Paguire",
   description:
-    'Connect with Christopher R McGuire for executive engineering leadership, UX/UI architecture consulting, applied AI transformation, speaking engagements, or advisory roles in Chicago.',
+    'Contact Christopher R McGuire for engineering leadership, UX/UI architecture, applied AI transformation, speaking or advisory roles in Chicago.',
   keywords:
     'Contact Christopher R McGuire, Hire SVP Engineering, UX/UI Consulting, Fractional CTO Chicago, AI Advisory',
   jsonLd: [
@@ -15,7 +15,7 @@ export const CONTACT_SEO: SeoConfig = {
       '@type': 'ContactPage',
       name: 'Contact Christopher R McGuire',
       url: toAbsoluteUrl('/contact'),
-      mainEntity: personSchema(),
+      mainEntity: personEntity(),
     },
     breadcrumbSchema([
       { name: 'Home', path: '/' },

@@ -6,7 +6,7 @@ import {
   SKILLS_MATRIX,
 } from '../../data/siteData';
 import { icon, type IconName } from '../icons';
-import { breadcrumbSchema, esc, personSchema, SITE_URL, type SeoConfig } from '../seo';
+import { breadcrumbSchema, esc, personEntity, SITE_URL, type SeoConfig } from '../seo';
 
 const RESUME_HIGHLIGHT_PILLARS: {
   icon: IconName;
@@ -24,7 +24,7 @@ export const RESUME_SEO: SeoConfig = {
   path: '/resume',
   title: 'Resume & Career Dossier | Christopher R McGuire',
   description:
-    'Executive resume of Christopher R McGuire: Savant Wealth, Mesirow, Akuna Capital, SpiderRock, Citadel, GE Medical, and Motorola. Download PDF resume and portfolio.',
+    'Executive resume of Christopher R McGuire: Savant Wealth, Mesirow, Akuna Capital, SpiderRock, Citadel, GE Medical and Motorola. Download the PDF.',
   keywords:
     'Christopher R McGuire Resume, SVP Software Engineering, UX/UI Director, Savant Wealth, Mesirow, Citadel, Akuna Capital, SpiderRock, Purdue Engineering',
   ogType: 'profile',
@@ -33,7 +33,7 @@ export const RESUME_SEO: SeoConfig = {
     {
       '@context': 'https://schema.org',
       '@type': 'ProfilePage',
-      mainEntity: personSchema(),
+      mainEntity: personEntity(),
     },
     breadcrumbSchema([
       { name: 'Home', path: '/' },

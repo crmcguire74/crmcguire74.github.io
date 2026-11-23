@@ -5,7 +5,16 @@ import test from 'node:test';
 import { getAllStaticRoutes } from './generate';
 import { renderPageDocument } from './layout';
 import { NOT_FOUND_SEO, renderNotFoundPage } from './pages/notFound';
-import { buildFeedXml, buildRobotsTxt, buildSitemapXml, buildWebManifest, SITE_URL } from './seo';
+import { HOME_SEO } from './pages/home';
+import {
+  buildFeedXml,
+  buildRobotsTxt,
+  buildSitemapXml,
+  buildWebManifest,
+  normalizeInternalPageLinks,
+  SITE_URL,
+  withTrailingSlash,
+} from './seo';
 
 const ROOT_DIR = path.resolve(import.meta.dirname, '..', '..');
 
@@ -45,7 +54,7 @@ test('every static route renders valid SEO metadata and zero React references', 
     assert.doesNotMatch(html, /react-dom/i);
 
     const expectedCanonical =
-      route.routePath === '/' ? `${SITE_URL}/` : `${SITE_URL}${route.routePath}`;
+      route.routePath === '/' ? `${SITE_URL}/` : `${SITE_URL}${route.routePath}/`;
     assert.ok(
       html.includes(`<link rel="canonical" href="${expectedCanonical}"`),
       `Missing canonical URL ${expectedCanonical} in ${route.routePath}`
@@ -133,14 +142,14 @@ test('sitemap.xml, robots.txt, manifest, and feed.xml contain valid URLs and upd
     }))
   );
   assert.match(sitemap, /<loc>https:\/\/paguire\.com\/<\/loc>/);
-  assert.match(sitemap, /<loc>https:\/\/paguire\.com\/projects\/modus-ai<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/paguire\.com\/projects\/modus-ai\/<\/loc>/);
   assert.match(
     sitemap,
     /<loc>https:\/\/paguire\.com\/Christopher_R_McGuire-SVP_of_Software_Engineering_UX_UI\.pdf<\/loc>/
   );
   assert.match(
     sitemap,
-    /<loc>https:\/\/paguire\.com\/blog\/posts\/why-fintech-companies-need-dedicated-ux-teams<\/loc>/
+    /<loc>https:\/\/paguire\.com\/blog\/posts\/why-fintech-companies-need-dedicated-ux-teams\/<\/loc>/
   );
 
   const robots = buildRobotsTxt();
@@ -182,4 +191,39 @@ test('all referenced local asset paths in generated HTML exist in public/', () =
   }
 
   assert.deepEqual([...missing], [], `Missing static assets in public/: ${[...missing].join(', ')}`);
+});
+
+test('Ahrefs audit: canonical-safe links, title/description lengths, Organization schema', () => {
+  assert.equal(withTrailingSlash('/resume'), '/resume/');
+  assert.equal(withTrailingSlash('/contact#form'), '/contact/#form');
+  assert.equal(withTrailingSlash('/feed.xml'), '/feed.xml');
+  assert.equal(withTrailingSlash('/'), '/');
+
+  for (const route of getAllStaticRoutes()) {
+    const html = normalizeInternalPageLinks(
+      renderPageDocument({
+        pageId: route.pageId,
+        currentRoute: route.routePath,
+        seo: route.seo,
+        mainHtml: route.render(),
+      })
+    );
+
+    assert.ok(route.seo.title.length <= 60, `Title too long (${route.seo.title.length}) on ${route.routePath}`);
+    assert.ok(
+      route.seo.description.length <= 160,
+      `Meta description too long (${route.seo.description.length}) on ${route.routePath}`
+    );
+
+    // Every internal page link must point at the served (trailing-slash) URL, not a 301.
+    for (const [, href] of html.matchAll(/href="(\/[^"]*)"/g)) {
+      const base = href.split(/[?#]/)[0];
+      if (base === '/' || /\.[a-z0-9]+$/i.test(base) || base.startsWith('/src/')) continue;
+      assert.ok(base.endsWith('/'), `Internal link ${href} redirects (missing trailing slash) on ${route.routePath}`);
+    }
+  }
+
+  const homeHtml = HOME_SEO.jsonLd!.map((s) => JSON.stringify(s)).join('');
+  assert.match(homeHtml, /"@type":"Organization"/);
+  assert.match(homeHtml, /"logo":\{"@type":"ImageObject"/);
 });

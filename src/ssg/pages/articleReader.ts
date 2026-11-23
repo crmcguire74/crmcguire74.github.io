@@ -3,7 +3,45 @@ import { PROFILE } from '../../data/siteData';
 import { icon } from '../icons';
 import { blogPostingSchema, breadcrumbSchema, esc, SITE_URL, type SeoConfig } from '../seo';
 
+/**
+ * Search-result titles/descriptions kept within ~60 / ~155 characters.
+ * The on-page headline and excerpt stay unchanged.
+ */
+const ARTICLE_SEO_OVERRIDES: Record<string, { title?: string; description?: string }> = {
+  'why-fintech-companies-need-dedicated-ux-teams': {
+    title: 'Why FinTech Companies Need Dedicated UX Teams | Paguire',
+  },
+  'designing-application-icons': {
+    title: 'Designing Application Icons: Tips for Success | Paguire',
+  },
+  'hidden-roi-of-uxui-design-in-internal-business-applications': {
+    title: 'The Hidden ROI of UX/UI in Internal Business Apps | Paguire',
+    description:
+      'Internal tools rarely get design attention. The cost shows up as lost productivity, higher training overhead and employees fighting software daily.',
+  },
+  'mastering-uiux-design-in-modern-application-development': {
+    title: 'Mastering UI/UX Design in Modern App Development | Paguire',
+  },
+  'custom-icons-and-user-interface-design-tips': {
+    title: 'Custom Icons & UI Design: Tips and Methods | Paguire',
+  },
+  'user-interface-design-for-web-applications': {
+    title: 'UI Design for Web Applications: Best Practices | Paguire',
+  },
+  'job-titles-software-engineering': {
+    title: 'Software Engineering Job Titles: Pitfalls & Fixes | Paguire',
+  },
+  'mythical-full-stack-developer': {
+    description:
+      'The full-stack unicorn is often a recruiting shortcut that dilutes quality. Strong products come from deep specialists collaborating across clean contracts.',
+  },
+  'frontend-development': {
+    title: 'Frontend Development: More Than a Pretty Website | Paguire',
+  },
+};
+
 export function getArticleSeo(article: FullArticle): SeoConfig {
+  const override = ARTICLE_SEO_OVERRIDES[article.slug] || {};
   const parsed = new Date(article.date);
   const publishedTime = Number.isNaN(parsed.getTime())
     ? '2026-03-06'
@@ -11,8 +49,9 @@ export function getArticleSeo(article: FullArticle): SeoConfig {
 
   return {
     path: `/blog/posts/${article.slug}`,
-    title: `${article.title} | Christopher R McGuire`,
-    description: article.excerpt,
+    title: override.title || `${article.title} | Christopher R McGuire`,
+    description: override.description || article.excerpt,
+    ogTitle: article.title,
     keywords: `${article.categories.join(', ')}, Christopher R McGuire, Paguire`,
     ogType: 'article',
     ogImage: `${SITE_URL}${article.coverImage}`,

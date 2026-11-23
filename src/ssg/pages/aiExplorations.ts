@@ -223,7 +223,7 @@ export const AI_EXPLORATIONS_SEO: SeoConfig = {
   path: '/ai-explorations',
   title: 'AI Explorations & R&D Lab | Christopher R McGuire — Paguire',
   description:
-    'Hands-on generative AI experiments across ElevenLabs voice cloning, GPT Image, Nano Banana, Google Veo, NotebookLM, and shipped vibe-coded apps including Thrive Financial, Modus AI, and Tron Engaged.',
+    'Hands-on generative AI work with ElevenLabs, GPT Image, Google Veo and NotebookLM, plus shipped AI apps like Thrive Financial, Modus AI and Tron Engaged.',
   keywords:
     'AI Explorations, Vibe Coding, ElevenLabs Voice Clone, Google Veo, NotebookLM, GPT Image, Nano Banana, Claude Code, Codex, Christopher R McGuire',
   ogImage: `${SITE_URL}${ASSETS.aiLabsPortrait}`,

@@ -35,7 +35,27 @@ export function toAbsoluteUrl(pathOrUrl: string): string {
     return pathOrUrl;
   }
   const normalized = pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
-  return `${SITE_URL}${normalized}`;
+  return `${SITE_URL}${withTrailingSlash(normalized)}`;
+}
+
+/**
+ * Pages are emitted as `<route>/index.html`, which Netlify serves at `<route>/`
+ * and 301-redirects `<route>` to. Canonicals, sitemap entries and internal links
+ * must therefore use the trailing-slash form. File paths (with an extension),
+ * query strings and fragments are preserved.
+ */
+export function withTrailingSlash(pathname: string): string {
+  const match = pathname.match(/^([^?#]*)(.*)$/);
+  const base = match ? match[1] : pathname;
+  const rest = match ? match[2] : '';
+  if (!base || base.endsWith('/') || /\.[a-z0-9]+$/i.test(base)) return pathname;
+  return `${base}/${rest}`;
+}
+
+const INTERNAL_PAGE_HREF = /href="(\/(?!\/|src\/|assets\/|images\/)[^"]*)"/g;
+
+export function normalizeInternalPageLinks(html: string): string {
+  return html.replace(INTERNAL_PAGE_HREF, (_m, href: string) => `href="${withTrailingSlash(href)}"`);
 }
 
 export function personSchema(): Record<string, unknown> {
@@ -49,7 +69,8 @@ export function personSchema(): Record<string, unknown> {
       '@type': 'Organization',
       name: 'Savant Wealth',
     },
-    url: SITE_URL,
+    '@id': `${SITE_URL}/#person`,
+    url: `${SITE_URL}/`,
     image: {
       '@type': 'ImageObject',
       url: PROFILE_PORTRAIT_IMAGE,
@@ -107,18 +128,52 @@ export function personSchema(): Record<string, unknown> {
   };
 }
 
+/** Person without its own @context, for nesting as `mainEntity`. */
+export function personEntity(): Record<string, unknown> {
+  const { '@context': _ctx, ...entity } = personSchema();
+  return entity;
+}
+
+export function organizationSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'Paguire',
+    alternateName: 'Christopher R McGuire — Paguire',
+    url: `${SITE_URL}/`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/images/paguireLogo.webp`,
+      width: 402,
+      height: 288,
+    },
+    image: PROFILE_PORTRAIT_IMAGE,
+    description:
+      'Engineering leadership, UX/UI design systems and applied AI products by Christopher R McGuire.',
+    founder: { '@id': `${SITE_URL}/#person` },
+    email: PROFILE.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chicago',
+      addressRegion: 'IL',
+      addressCountry: 'US',
+    },
+    sameAs: PROFILE.socials.map((s) => s.href),
+  };
+}
+
 export function websiteSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     description:
       'Portfolio, executive dossier, shipped AI products, and published essays by Christopher R McGuire.',
-    author: {
-      '@type': 'Person',
-      name: PROFILE.name,
-    },
+    author: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
   };
 }
 
@@ -127,7 +182,14 @@ export function professionalServiceSchema(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Christopher R McGuire — Engineering, UX/UI & AI Advisory',
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
+    image: PROFILE_PORTRAIT_IMAGE,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chicago',
+      addressRegion: 'IL',
+      addressCountry: 'US',
+    },
     description:
       'Executive software engineering leadership, UX/UI design systems architecture, and AI-augmented product strategy consulting in Chicago.',
     areaServed: {
@@ -178,12 +240,12 @@ export function blogPostingSchema(article: FullArticle): Record<string, unknown>
     author: {
       '@type': 'Person',
       name: PROFILE.name,
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
     },
     publisher: {
       '@type': 'Person',
       name: PROFILE.name,
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -373,7 +435,7 @@ export function buildFeedXml(): string {
   <channel>
     <title>Christopher R McGuire's Blog</title>
     <description>Essays and insights on UX/UI design, software engineering leadership, fintech systems, and applied AI.</description>
-    <link>${SITE_URL}/blog</link>
+    <link>${SITE_URL}/blog/</link>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
     <lastBuildDate>${new Date('2026-03-06T12:00:00Z').toUTCString()}</lastBuildDate>

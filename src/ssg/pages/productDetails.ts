@@ -98,9 +98,9 @@ export const BLUEPRINT_SPRINTS = [
 
 export const MODUS_AI_SEO: SeoConfig = {
   path: '/projects/modus-ai',
-  title: 'Modus AI — Spatial Interior & Exterior Design App (iOS) | Paguire',
+  title: 'Modus AI: AI Interior & Exterior Design for iOS | Paguire',
   description:
-    'Modus AI is an iOS AI room designer with spatial constraints that transforms interiors, exterior facades, and paint colors while locking your real furniture—zero subscription.',
+    'Modus AI is an iOS AI room designer that restyles interiors, exteriors and paint colors while locking your real furniture in place. No subscription.',
   keywords:
     'Modus AI, AI Interior Design App, iOS Room Designer, Spatial AI, Furniture Preservation, Paint Visualizer, Christopher R McGuire',
   ogImage: `${SITE_URL}/assets/aistudio/Modus_AI_e260817c.webp`,
@@ -154,7 +154,7 @@ export const MODUS_PRIVACY_SEO: SeoConfig = {
 
 export const SNAPCLIPPER_SEO: SeoConfig = {
   path: '/projects/snapclipper',
-  title: 'SnapClipper — Privacy-First AI Web Clipper Chrome Extension | Paguire',
+  title: 'SnapClipper — Privacy-First AI Web Clipper | Paguire',
   description:
     'One-click Chrome extension for capturing web highlights, code snippets, and prompts with local-first AI categorization and Markdown/JSON export.',
   keywords:
@@ -184,7 +184,7 @@ export const SNAPCLIPPER_SEO: SeoConfig = {
 
 export const BLUEPRINT_SEO: SeoConfig = {
   path: '/projects/blueprint',
-  title: '1-Hour Content Creator Blueprint | AI Workflow System — Paguire',
+  title: '1-Hour Content Creator Blueprint | AI Workflow — Paguire',
   description:
     'A strict 4-step, 60-minute AI prompt engineering system for GPT-4, Claude, and Gemini to produce a full week of executive content.',
   keywords:

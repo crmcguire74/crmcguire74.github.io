@@ -12,7 +12,7 @@ export const BIOGRAPHY_SEO: SeoConfig = {
   path: '/biography',
   title: 'Biography | Christopher R McGuire — 1974 to Beyond',
   description:
-    'From Oakville & Torrington Connecticut and Purdue Engineering to Citadel, Mesirow, Savant Wealth WiseOS, parenthood, and Thrive Financial—the life story of Christopher R McGuire.',
+    'From Connecticut and Purdue Engineering to Citadel, Mesirow, Savant Wealth WiseOS and Thrive Financial—the life story of Christopher R McGuire.',
   keywords:
     'Christopher R McGuire Biography, Christopher Patrick, Oakville CT, Torrington Connecticut, Warner Theatre, Purdue University, Citadel, Savant Wealth, WiseOS, Mesirow, Thrive Financial',
   ogType: 'profile',

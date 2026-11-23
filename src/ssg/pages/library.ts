@@ -19,7 +19,7 @@ export const LIBRARY_SEO: SeoConfig = {
   path: '/blog',
   title: 'Library: Books, Playbooks & Essays | Christopher R McGuire',
   description:
-    'Published Amazon AI playbooks and investing guides alongside long-form essays on FinTech UX, design systems, AI product rigor, and software engineering leadership.',
+    'Amazon AI playbooks and investing guides, plus long-form essays on FinTech UX, design systems, AI product rigor and engineering leadership.',
   keywords:
     'Christopher R McGuire Blog, Library, The AI Shortcut, Investing for the Rest of Us, FinTech UX, Design Systems, Software Engineering Essays',
   ogImage: `${SITE_URL}${ASSETS.libraryHeroPortrait}`,

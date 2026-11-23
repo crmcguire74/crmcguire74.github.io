@@ -3,87 +3,87 @@
   <channel>
     <title>Christopher R McGuire's Blog</title>
     <description>Essays and insights on UX/UI design, software engineering leadership, fintech systems, and applied AI.</description>
-    <link>https://paguire.com/blog</link>
+    <link>https://paguire.com/blog/</link>
     <atom:link href="https://paguire.com/feed.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Mar 2026 12:00:00 GMT</lastBuildDate>
     <item>
       <title>Why FinTech Companies Need Dedicated UX Teams (not &#39;a designer when we have time&#39;)</title>
       <description>Fintech UX drives revenue, retention, and regulatory compliance. A 20-year industry perspective on why dedicated UX teams outperform ad hoc design support.</description>
-      <link>https://paguire.com/blog/posts/why-fintech-companies-need-dedicated-ux-teams</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/why-fintech-companies-need-dedicated-ux-teams</guid>
+      <link>https://paguire.com/blog/posts/why-fintech-companies-need-dedicated-ux-teams/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/why-fintech-companies-need-dedicated-ux-teams/</guid>
       <pubDate>Fri, 06 Mar 2026 06:00:00 GMT</pubDate>
       <category>UX</category><category>Fintech</category><category>Design</category><category>Business</category>
     </item>
     <item>
       <title>Building AI Products With UX Rigor</title>
       <description>AI products fail less from model quality and more from weak product framing. This framework keeps intent, UX, and engineering quality aligned from day one.</description>
-      <link>https://paguire.com/blog/posts/building-ai-products-with-ux-rigor</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/building-ai-products-with-ux-rigor</guid>
+      <link>https://paguire.com/blog/posts/building-ai-products-with-ux-rigor/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/building-ai-products-with-ux-rigor/</guid>
       <pubDate>Sat, 28 Feb 2026 06:00:00 GMT</pubDate>
       <category>AI</category><category>UX</category><category>Development</category>
     </item>
     <item>
       <title>Designing Application Icons: Tips and Tricks for Success</title>
       <description>Explore expert tips and practical strategies for designing application icons that stand out across grid systems, metaphors, and production delivery.</description>
-      <link>https://paguire.com/blog/posts/designing-application-icons</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/designing-application-icons</guid>
+      <link>https://paguire.com/blog/posts/designing-application-icons/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/designing-application-icons/</guid>
       <pubDate>Fri, 15 Nov 2024 06:00:00 GMT</pubDate>
       <category>Design</category><category>UX</category>
     </item>
     <item>
       <title>The Hidden ROI of UX/UI Design in Internal Business Applications</title>
       <description>Internal tools rarely get the design attention they deserve. The cost shows up in lost productivity, higher training overhead, and employees fighting software daily.</description>
-      <link>https://paguire.com/blog/posts/hidden-roi-of-uxui-design-in-internal-business-applications</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/hidden-roi-of-uxui-design-in-internal-business-applications</guid>
+      <link>https://paguire.com/blog/posts/hidden-roi-of-uxui-design-in-internal-business-applications/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/hidden-roi-of-uxui-design-in-internal-business-applications/</guid>
       <pubDate>Wed, 13 Nov 2024 06:00:00 GMT</pubDate>
       <category>UX</category><category>Business</category><category>Design</category>
     </item>
     <item>
       <title>Mastering UI/UX Design in Modern Application Development</title>
       <description>Modern application development demands design that is research-driven, systematized, and tested with real users across the full product lifecycle.</description>
-      <link>https://paguire.com/blog/posts/mastering-uiux-design-in-modern-application-development</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/mastering-uiux-design-in-modern-application-development</guid>
+      <link>https://paguire.com/blog/posts/mastering-uiux-design-in-modern-application-development/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/mastering-uiux-design-in-modern-application-development/</guid>
       <pubDate>Wed, 13 Nov 2024 06:00:00 GMT</pubDate>
       <category>UX</category><category>Design</category><category>Development</category>
     </item>
     <item>
       <title>Custom Icons and User Interface Design Tips and Methods</title>
       <description>Elevate your digital product with custom iconography that reinforces brand identity, improves scanability, and maintains stroke harmony at every scale.</description>
-      <link>https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips</guid>
+      <link>https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/custom-icons-and-user-interface-design-tips/</guid>
       <pubDate>Sat, 09 Nov 2024 06:00:00 GMT</pubDate>
       <category>Design</category><category>UX</category>
     </item>
     <item>
       <title>User Interface Design for Web Applications | Best Practices</title>
       <description>Discover essential best practices for web application UI design—combining visual hierarchy, responsive patterns, accessibility, and frontend speed.</description>
-      <link>https://paguire.com/blog/posts/user-interface-design-for-web-applications</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/user-interface-design-for-web-applications</guid>
+      <link>https://paguire.com/blog/posts/user-interface-design-for-web-applications/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/user-interface-design-for-web-applications/</guid>
       <pubDate>Fri, 08 Nov 2024 06:00:00 GMT</pubDate>
       <category>UX</category><category>Design</category><category>Development</category>
     </item>
     <item>
       <title>The Impact of Job Titles in Software Engineering: Pitfalls and Solutions</title>
       <description>Job titles shape careers, compensation benchmarks, and hiring pipelines. When treated as an afterthought, ambiguity compounds across the organization.</description>
-      <link>https://paguire.com/blog/posts/job-titles-software-engineering</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/job-titles-software-engineering</guid>
+      <link>https://paguire.com/blog/posts/job-titles-software-engineering/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/job-titles-software-engineering/</guid>
       <pubDate>Wed, 12 Apr 2023 05:00:00 GMT</pubDate>
       <category>Career</category><category>Business</category>
     </item>
     <item>
       <title>The Mythical &#39;Full Stack&#39; Developer</title>
       <description>The full stack unicorn is often a recruiting shortcut that dilutes quality on both ends. Strong products emerge from deep specialists collaborating across clean contracts.</description>
-      <link>https://paguire.com/blog/posts/mythical-full-stack-developer</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/mythical-full-stack-developer</guid>
+      <link>https://paguire.com/blog/posts/mythical-full-stack-developer/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/mythical-full-stack-developer/</guid>
       <pubDate>Wed, 22 Feb 2023 06:00:00 GMT</pubDate>
       <category>Career</category><category>Development</category>
     </item>
     <item>
       <title>Frontend Development: Not Just About a &#39;Pretty&#39; Website</title>
       <description>Frontend engineering is the software discipline connecting users to your product—governing state, accessibility, performance, and component architecture.</description>
-      <link>https://paguire.com/blog/posts/frontend-development</link>
-      <guid isPermaLink="true">https://paguire.com/blog/posts/frontend-development</guid>
+      <link>https://paguire.com/blog/posts/frontend-development/</link>
+      <guid isPermaLink="true">https://paguire.com/blog/posts/frontend-development/</guid>
       <pubDate>Wed, 28 Dec 2022 06:00:00 GMT</pubDate>
       <category>Development</category><category>UX</category>
     </item>

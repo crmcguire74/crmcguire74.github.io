@@ -27,6 +27,7 @@ import {
   buildRobotsTxt,
   buildSitemapXml,
   buildWebManifest,
+  normalizeInternalPageLinks,
   type SeoConfig,
 } from './seo';
 
@@ -180,12 +181,12 @@ export function generateStaticSite(rootDir: string): { htmlFiles: string[]; publ
   const htmlFiles: string[] = [];
 
   for (const route of routes) {
-    const html = renderPageDocument({
+    const html = normalizeInternalPageLinks(renderPageDocument({
       pageId: route.pageId,
       currentRoute: route.routePath,
       seo: route.seo,
       mainHtml: route.render(),
-    });
+    }));
     const absPath = path.join(rootDir, route.outFile);
     fs.mkdirSync(path.dirname(absPath), { recursive: true });
     fs.writeFileSync(absPath, html, 'utf8');
@@ -193,12 +194,12 @@ export function generateStaticSite(rootDir: string): { htmlFiles: string[]; publ
   }
 
   // Generate 404.html
-  const notFoundHtml = renderPageDocument({
+  const notFoundHtml = normalizeInternalPageLinks(renderPageDocument({
     pageId: 'not-found',
     currentRoute: '/404',
     seo: NOT_FOUND_SEO,
     mainHtml: renderNotFoundPage(),
-  });
+  }));
   fs.writeFileSync(path.join(rootDir, '404.html'), notFoundHtml, 'utf8');
   htmlFiles.push('404.html');
 
