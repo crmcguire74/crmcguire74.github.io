@@ -206,7 +206,7 @@ export function renderHomePage(): string {
     <section class="relative">
       <!-- Mobile & Tablet Portrait-First Hero -->
       <div class="lg:hidden relative overflow-hidden bg-gradient-to-b from-[#040B16] via-[#030914] to-[#030508] border-b border-white/[0.06]">
-        <div class="relative h-[305px] sm:h-[390px] md:h-[455px] overflow-hidden">
+        <div class="relative h-[380px] sm:h-[480px] md:h-[580px] overflow-hidden">
           <div data-parallax="mobile-bg" aria-hidden="true" class="pointer-events-none absolute -top-24 inset-x-0 bottom-0 origin-center will-change-transform">
             <img src="${esc(ASSETS.heroBg)}" alt="" referrerpolicy="no-referrer" class="w-full h-full object-cover object-[72%_28%] md:object-[64%_28%]" />
           </div>
@@ -216,7 +216,7 @@ export function renderHomePage(): string {
               src="${esc(ASSETS.heroCutout)}"
               alt="Christopher R McGuire — SVP of Application Design and Development"
               referrerpolicy="no-referrer"
-              class="absolute -top-4 sm:-top-5 md:-top-7 left-1/2 md:left-auto md:-right-[74px] -translate-x-[55%] sm:-translate-x-[57%] md:translate-x-0 h-[168%] sm:h-[158%] md:h-[172%] w-auto max-w-none object-contain object-top drop-shadow-[0_14px_32px_rgba(0,0,0,0.68)]"
+              class="absolute right-0 top-[-10%] h-[195%] w-auto max-w-none translate-x-[17%] sm:translate-x-[13%] md:translate-x-[10%] drop-shadow-[0_14px_32px_rgba(0,0,0,0.68)]"
             />
           </div>
         </div>
@@ -308,7 +308,16 @@ export function renderHomePage(): string {
         <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#030508]/60 to-transparent"></div>
         <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#030508] to-transparent"></div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-8 min-h-[600px] xl:min-h-[650px] flex flex-row items-center">
+        <div data-parallax="desktop-portrait" class="pointer-events-none absolute inset-y-0 right-[max(0px,calc((100%-1680px)/2))] w-full origin-top will-change-transform">
+          <img
+            src="${esc(ASSETS.heroCutout)}"
+            alt="Christopher R McGuire — SVP of Application Design and Development"
+            referrerpolicy="no-referrer"
+            class="absolute right-0 top-[-7%] h-[180%] xl:top-[-11%] xl:h-[200%] w-auto max-w-none translate-x-[10%] drop-shadow-[0_24px_55px_rgba(0,0,0,0.72)]"
+          />
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-8 min-h-[max(600px,min(calc(100svh-75px),860px))] flex flex-row items-center">
           <div data-parallax="desktop-copy" class="w-[54%] py-20 will-change-transform hero-enter">
             <div class="mb-6">
               <p class="text-base font-medium text-slate-200 tracking-wide">
@@ -344,14 +353,7 @@ export function renderHomePage(): string {
             </div>
           </div>
 
-          <div data-parallax="desktop-portrait" class="flex items-end justify-end pointer-events-none absolute inset-y-0 right-0 xl:right-4 w-[58%] pt-4 origin-bottom will-change-transform">
-            <img
-              src="${esc(ASSETS.heroCutout)}"
-              alt="Christopher R McGuire — SVP of Application Design and Development"
-              referrerpolicy="no-referrer"
-              class="h-full w-auto max-w-none object-contain object-right-bottom drop-shadow-[0_24px_55px_rgba(0,0,0,0.72)]"
-            />
-          </div>
+
         </div>
       </div>
 

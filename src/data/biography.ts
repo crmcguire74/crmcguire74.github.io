@@ -163,8 +163,8 @@ export const BIOGRAPHY_CHAPTERS: BiographyChapter[] = [
     location: 'Chicago Options Markets · Design & Engineering',
     narrative:
       'I moved into senior product and engineering leadership roles at SpiderRock and Akuna Capital, bringing together software architecture, design systems, user experience, and high-performing teams.',
-    image: '/assets/aistudio/Focused_trader_at_dusk_5d7f8584.webp',
-    imageAlt: 'Christopher R McGuire analyzing options order book and trading charts overlooking Chicago at dusk',
+    image: '/assets/aistudio/ChristopherWorkingWithTradingApps.webp',
+    imageAlt: 'Christopher R McGuire analyzing options order book and trading charts at a multi-monitor desk in Chicago',
     mood: 'architectural',
     era: 'chicago-fintech',
     align: 'right',

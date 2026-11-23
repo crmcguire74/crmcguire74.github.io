@@ -84,7 +84,7 @@ test('home, biography, and contact pages include audited schema, narrative updat
   assert.match(bioHtml, /Savant Wealth/);
   assert.match(bioHtml, /bio-highlights-video/);
   assert.match(bioHtml, /tBkEzWZsmx4/);
-  assert.match(bioHtml, /\/assets\/aistudio\/Focused_trader_at_dusk_5d7f8584\.webp/);
+  assert.match(bioHtml, /\/assets\/aistudio\/ChristopherWorkingWithTradingApps\.webp/);
   assert.doesNotMatch(bioHtml, /data-bio-prop="train"/);
   assert.doesNotMatch(bioHtml, /bg-amber-300\/75/);
   assert.doesNotMatch(bioHtml, /id="bio-2019"[\s\S]*data-bio-stroke="1400"/);
