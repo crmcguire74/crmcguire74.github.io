@@ -1,1155 +1,1249 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Christopher McGuire | Fractional CTO & UX Design Consultant, Chicago
-    </title>
-    <meta
-      name="description"
-      content="20+ years leading software engineering and UX/UI design at Citadel, Mesirow, and more. Products: SnapClipper, Modus AI. Based in Chicago."
-    />
-
-    <link
-      type="application/rss+xml"
-      rel="alternate"
-      title="Christopher R McGuire's Blog"
-      href="/feed.xml"
-    />
-
-    <!-- SEO Meta Tags -->
-
-    <meta
-      name="keywords"
-      content="Christopher McGuire, Paguire, SVP Software Engineering, UX/UI Design, Frontend Development, Design Systems, Portfolio, Citadel, Mesirow, SpiderRock, Patrick, Christopher Patrick, Chicago"
-    />
-
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-      default-src 'self'; 
-      script-src 'self' https://unpkg.com; 
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-      font-src 'self' https://fonts.gstatic.com; 
-      img-src 'self' data: https://paguire.com;
-      connect-src 'self';
-    "
-    />
-
-    <!-- Canonical URL -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Christopher R McGuire" />
+    <title>Christopher R McGuire | SVP of Engineering, UX/UI &amp; AI Architecture</title>
+    <meta name="description" content="20+ years leading software engineering, UX/UI design systems, and applied AI at Savant Wealth, Mesirow, Akuna Capital, and Citadel. Based in Chicago." />
+    <meta name="keywords" content="Christopher R McGuire, Christopher McGuire, Paguire, SVP Software Engineering, UX/UI Design, Design Systems, Applied AI, Savant Wealth, Mesirow, Citadel, Akuna Capital, SpiderRock, Chicago, Modus AI, Thrive Financial, SnapClipper" />
     <link rel="canonical" href="https://paguire.com/" />
+    <link rel="alternate" type="application/rss+xml" title="Christopher R McGuire's Blog" href="/feed.xml" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Christopher R McGuire — Paguire" />
     <meta property="og:url" content="https://paguire.com/" />
-    <meta
-      property="og:title"
-      content="Christopher McGuire - SVP Software Engineering & UX/UI Design | Chicago"
-    />
-    <meta
-      property="og:description"
-      content="Portfolio of Christopher McGuire, showcasing 20+ years in software engineering leadership and UX/UI design innovation."
-    />
-    <meta
-      property="og:image"
-      content="https://paguire.com/images/SearchCard.png"
-    />
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://paguire.com/" />
-    <meta
-      property="twitter:title"
-      content="Christopher McGuire - SVP Software Engineering & UX/UI Design"
-    />
-    <meta
-      property="twitter:description"
-      content="Portfolio of Christopher McGuire, showcasing 20+ years in software engineering leadership and UX/UI design innovation."
-    />
-    <meta
-      property="twitter:image"
-      content="https://paguire.com/images/SearchCard.png"
-    />
+    <meta property="og:title" content="Christopher R McGuire | SVP of Engineering, UX/UI &amp; AI Architecture" />
+    <meta property="og:description" content="20+ years bridging UX/UI design, software engineering, and applied AI systems. Explore executive experience, flagship AI products, and published essays." />
+    <meta property="og:image" content="https://paguire.com/assets/aistudio/Christopher_R_McGuire_Portfolio_Hero_69ead63a.webp" />
+    <meta property="og:image:alt" content="Christopher R McGuire | SVP of Engineering, UX/UI &amp; AI Architecture" />
+    
 
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/apple-touch-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/apple-touch-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/apple-touch-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/apple-touch-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/apple-touch-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/apple-touch-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon-180x180.png"
-    />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@crmcguire74" />
+    <meta name="twitter:creator" content="@crmcguire74" />
+    <meta name="twitter:url" content="https://paguire.com/" />
+    <meta name="twitter:title" content="Christopher R McGuire | SVP of Engineering, UX/UI &amp; AI Architecture" />
+    <meta name="twitter:description" content="20+ years bridging UX/UI design, software engineering, and applied AI systems. Explore executive experience, flagship AI products, and published essays." />
+    <meta name="twitter:image" content="https://paguire.com/assets/aistudio/Christopher_R_McGuire_Portfolio_Hero_69ead63a.webp" />
+    <meta name="twitter:image:alt" content="Christopher R McGuire | SVP of Engineering, UX/UI &amp; AI Architecture" />
+
+    <!-- Icons & Web Manifest -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="128x128"
-      href="/favicon-128x128.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="196x196"
-      href="/favicon-196x196.png"
-    />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png" />
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196x196.png" />
+    <link rel="icon" type="image/webp" href="/images/paguireLogo.webp" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon-192x192.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#030508" />
 
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./styles-additional.css" />
-    <link rel="stylesheet" href="./pages-styles.css" />
-    <link rel="stylesheet" href="./dark-mode-fix.css" />
-    <!-- Import fonts -->
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Lucide icons (similar to lucide-react) -->
-    <script src="theme-loader.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Schema.org data -->
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Christopher R McGuire",
-        "jobTitle": "SVP, Head of Applications",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Mesirow"
-        },
-        "url": "https://paguire.com",
-        "image": "https://paguire.com/images/ChristopherRMcGuireHeadshot.png",
-        "description": "SVP Software Engineering and UX/UI Design with 20+ years leading teams at Citadel, Mesirow, SpiderRock, and Akuna Capital.",
-        "alumniOf": [
-          { "@type": "CollegeOrUniversity", "name": "Purdue University" },
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "School of the Art Institute of Chicago"
-          }
-        ],
-        "memberOf": [
-          { "@type": "Organization", "name": "Mesirow" },
-          { "@type": "Organization", "name": "Citadel, LLC" },
-          { "@type": "Organization", "name": "Akuna Capital" },
-          { "@type": "Organization", "name": "SpiderRock Platform" },
-          { "@type": "Organization", "name": "GE Medical" },
-          { "@type": "Organization", "name": "Motorola" }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chicago",
-          "addressRegion": "IL",
-          "addressCountry": "US"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/christopher-r-mcguire/",
-          "https://github.com/crmcguire74",
-          "https://about.me/Christopher.R.McGuire",
-          "https://www.pinterest.com/crmcguire74/"
-        ],
-        "knowsAbout": [
-          "Software Engineering Leadership",
-          "UX/UI Design",
-          "Full-Stack Development",
-          "Fintech",
-          "Frontend Architecture",
-          "Fractional CTO",
-          "Design Systems",
-          "AI Applications",
-          "Product Strategy",
-          "Engineering Team Building"
-        ]
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Christopher McGuire Consulting",
-        "url": "https://paguire.com",
-        "description": "Fractional CTO, software engineering leadership, and UX/UI design consulting services for startups and enterprises.",
-        "areaServed": {
-          "@type": "City",
-          "name": "Chicago"
-        },
-        "provider": {
-          "@type": "Person",
-          "name": "Christopher McGuire"
-        },
-        "serviceType": [
-          "Fractional CTO",
-          "UX/UI Design Consulting",
-          "Software Engineering Leadership",
-          "Design Systems Consulting",
-          "Product Strategy"
-        ]
-      }
-    </script>
-
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-N2JC2XRG");
-    </script>
-    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Christopher R McGuire","alternateName":["Christopher McGuire","Christopher Patrick"],"jobTitle":"SVP of Application Design and Development","worksFor":{"@type":"Organization","name":"Savant Wealth"},"url":"https://paguire.com","image":"https://paguire.com/assets/aistudio/Professional_Executive_Portrait_9d49b2b1.webp","email":"Christopher.R.McGuire@gmail.com","description":"Director of WiseOS Platform and SVP of Application Design & Development with 20+ years leading software engineering, UX/UI design systems, and applied AI platforms at Savant Wealth, Mesirow, Akuna Capital, SpiderRock, and Citadel.","alumniOf":[{"@type":"CollegeOrUniversity","name":"Purdue University"},{"@type":"CollegeOrUniversity","name":"School of the Art Institute of Chicago"}],"memberOf":[{"@type":"Organization","name":"Savant Wealth"},{"@type":"Organization","name":"Mesirow"},{"@type":"Organization","name":"Akuna Capital"},{"@type":"Organization","name":"SpiderRock Platform"},{"@type":"Organization","name":"Citadel, LLC"},{"@type":"Organization","name":"GE Medical"},{"@type":"Organization","name":"Motorola"},{"@type":"Organization","name":"FINOS Foundation"}],"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"sameAs":["https://linkedin.com/in/christopher-r-mcguire/","https://twitter.com/crmcguire74","https://github.com/crmcguire74","https://www.tiktok.com/@crmcguire74","https://www.youtube.com/@crmcguire1974","https://about.me/Christopher.R.McGuire","https://www.pinterest.com/crmcguire74/"],"knowsAbout":["Software Engineering Leadership","UX/UI Design","Design Systems","Frontend Architecture","Full-Stack Development","Applied AI & LLM Systems","FinTech Architecture","Fractional CTO","Product Strategy","Engineering Team Building"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Christopher R McGuire | Paguire","url":"https://paguire.com","description":"Portfolio, executive dossier, shipped AI products, and published essays by Christopher R McGuire.","author":{"@type":"Person","name":"Christopher R McGuire"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Christopher R McGuire — Engineering, UX/UI & AI Advisory","url":"https://paguire.com","description":"Executive software engineering leadership, UX/UI design systems architecture, and AI-augmented product strategy consulting in Chicago.","areaServed":{"@type":"City","name":"Chicago"},"provider":{"@type":"Person","name":"Christopher R McGuire"},"serviceType":["Software Engineering Leadership","UX/UI Design Systems Consulting","Applied AI & LLM Architecture","Fractional CTO","Product Strategy"]}</script>
   </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-N2JC2XRG"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
-    <header id="navbar" class="navbar">
-      <div class="container">
-        <!-- <a href="index.html" class="logo">Christopher R McGuire</a> -->
-        <a href="/" class="logo"
-          ><img src="./images/paguireLogo.png" alt="Paguire Logo" height="50"
-        /></a>
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-          <a href="/" class="nav-link text-gradient">Home</a>
-          <a href="/resume" class="nav-link">Resume</a>
-          <a href="/projects" class="nav-link">Projects</a>
-          <a href="/ai-explorations" class="nav-link whitespace-nowrap"
-            >AI Explorations</a
-          >
-          <a href="/blog" class="nav-link">Library</a>
-          <a href="/contact" class="nav-link">Contact</a>
-        </nav>
+  <body data-page="home" class="bg-[#030508] text-[#F1F5F9] antialiased selection:bg-[#00A6FF]/30 selection:text-white">
+    <div class="min-h-screen flex flex-col bg-[#030508] text-[#F1F5F9]">
+      <header class="sticky top-0 z-50 bg-[#030508]/88 backdrop-blur-xl border-b border-[#38BDF8]/15">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 md:h-[72px] flex items-center justify-between gap-8">
+          <a href="/" aria-label="Christopher R McGuire Home" class="group flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded-lg p-1">
+            <img
+              src="/images/paguireLogo.webp"
+              alt="CRM — Christopher R McGuire"
+              referrerpolicy="no-referrer"
+              class="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.04] [filter:drop-shadow(0_0_1px_rgba(241,245,249,0.9))_drop-shadow(0_0_10px_rgba(0,166,255,0.4))]"
+            />
+            <span class="md:hidden ml-2.5 pl-2.5 border-l border-white/25 text-[10px] font-semibold tracking-[0.14em] uppercase text-slate-100 whitespace-nowrap">
+              Christopher R McGuire
+            </span>
+          </a>
 
-        <!-- Social Icons and Theme Toggle - Desktop -->
-        <div class="desktop-actions">
-          <!-- Theme Toggle -->
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle theme"
-          >
-            <i id="theme-icon" data-lucide="moon"></i>
-          </button>
+          <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-7">
+            <a href="/" aria-current="page" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-[#38BDF8]">
+      <span>Home</span>
+      <span aria-hidden="true" class="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-[#00A6FF] rounded-full shadow-[0_0_10px_#00A6FF]"></span>
+    </a>
+<a href="/biography" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Biography</span>
+      
+    </a>
+<a href="/resume" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Resume</span>
+      
+    </a>
+<a href="/projects" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Projects</span>
+      
+    </a>
+<a href="/ai-explorations" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>AI Labs</span>
+      
+    </a>
+<a href="/blog" class="relative py-2 text-sm font-medium whitespace-nowrap shrink-0 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded text-slate-300 hover:text-white">
+      <span>Library</span>
+      
+    </a>
+          </nav>
 
-          <a
-            href="https://linkedin.com/in/christopher-r-mcguire/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            class="social-icon"
-          >
-            <i data-lucide="linkedin"></i>
-          </a>
-          <a
-            href="https://twitter.com/crmcguire74"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="social-icon"
-          >
-            <i data-lucide="twitter"></i>
-          </a>
-          <a
-            href="https://github.com/crmcguire74"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="social-icon"
-          >
-            <i data-lucide="github"></i>
-          </a>
-          <a
-            href="https://www.tiktok.com/@crmcguire74"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-            class="social-icon"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+          <div class="flex items-center gap-3 shrink-0">
+            <a
+              href="/contact"
+              class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold tracking-wide text-[#030508] bg-[#00A6FF] hover:bg-[#38BDF8] rounded-lg whitespace-nowrap shrink-0 transition-all duration-150 hover:shadow-[0_0_20px_rgba(0,166,255,0.45)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-            </svg>
-          </a>
-          <a
-            href="https://www.youtube.com/@crmcguire1974"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            class="social-icon"
-          >
-            <i data-lucide="youtube"></i>
-          </a>
-          <a
-            href="mailto:Christopher.R.McGuire@gmail.com"
-            aria-label="Email"
-            class="social-icon"
-          >
-            <i data-lucide="mail"></i>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="mobile-actions">
-          <!-- Theme Toggle - Mobile -->
-          <button
-            id="mobile-theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle theme"
-          >
-            <i id="mobile-theme-icon" data-lucide="moon"></i>
-          </button>
-
-          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-            <i id="menu-icon" data-lucide="menu"></i>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="mobile-menu">
-      <nav class="mobile-nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/resume" class="nav-link">Resume</a>
-        <a href="/projects" class="nav-link">Projects</a>
-        <a href="/ai-explorations" class="nav-link whitespace-nowrap"
-          >AI Explorations</a
-        >
-        <a href="/blog" class="nav-link">Library</a>
-        <a href="/contact" class="nav-link">Contact</a>
-      </nav>
-
-      <!-- Social Icons - Mobile -->
-      <div class="mobile-social">
-        <a
-          href="https://linkedin.com/in/christopher-r-mcguire/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="social-icon"
-        >
-          <i data-lucide="linkedin"></i>
-        </a>
-        <a
-          href="https://twitter.com/crmcguire74"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          class="social-icon"
-        >
-          <i data-lucide="twitter"></i>
-        </a>
-        <a
-          href="https://github.com/crmcguire74"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          class="social-icon"
-        >
-          <i data-lucide="github"></i>
-        </a>
-        <a
-          href="https://www.tiktok.com/@crmcguire74"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="TikTok"
-          class="social-icon"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-          </svg>
-        </a>
-        <a
-          href="https://www.youtube.com/@crmcguire1974"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-          class="social-icon"
-        >
-          <i data-lucide="youtube"></i>
-        </a>
-        <a
-          href="mailto:Christopher.R.McGuire@gmail.com"
-          aria-label="Email"
-          class="social-icon"
-        >
-          <i data-lucide="mail"></i>
-        </a>
-      </div>
-    </div>
-
-    <main class="bg-gradient">
-      <!-- Hero Section -->
-      <section class="hero section">
-        <!-- Background Elements -->
-        <div class="hero-bg">
-          <div class="blob blob-1"></div>
-          <div class="blob blob-2"></div>
-          <div class="dot dot-1"></div>
-          <div class="dot dot-2"></div>
-          <div class="dot dot-3"></div>
-        </div>
-
-        <div class="container">
-          <div class="hero-content">
-            <!-- Text Content -->
-            <div class="hero-text">
-              <div>
-                <h4 class="hero-tag">
-                  <span class="tag-content">
-                    <i data-lucide="sparkles" class="icon-sparkle"></i>
-                    20+ Years in Engineering & Design
-                  </span>
-                </h4>
-                <h1 class="hero-title">
-                  Christopher R
-                  <span class="gradient-text">McGuire</span>
-                </h1>
-                <h2>SVP of Application Design and Development</h2>
-                <p class="hero-description">
-                  SVP of Software Engineering, UX/UI Design and Development.
-                  Bridging the gap between users, designers, and developers for
-                  superior application development.
-                </p>
-              </div>
-
-              <div class="hero-buttons">
-                <a href="resume.html" class="btn-primary">
-                  View Resume
-                  <i data-lucide="arrow-right"></i>
-                </a>
-                <a href="/contact" class="btn-secondary"> Let's Connect </a>
-              </div>
-            </div>
-
-            <!-- Profile Image -->
-            <div class="hero-image">
-              <div class="profile-container">
-                <div class="profile-wrapper">
-                  <div class="profile-overlay"></div>
-                  <img
-                    src="./images/ChristopherRMcGuireHeadshot.png"
-                    alt="Christopher R McGuire, SVP Software Engineering and UX Design"
-                    class="profile-img" 
-                    style="object-fit: cover; object-position: center -5px;"
-                  />
-                  <div class="profile-gradient"></div>
-                  <div class="profile-border"></div>
-                </div>
-
-                <!-- Decorative elements -->
-                <div class="profile-blur blur-1"></div>
-                <div class="profile-blur blur-2"></div>
-              </div>
-
-              <!-- Floating Elements -->
-              <div class="floating-card card-1">
-                <div class="card-content">
-                  <div class="card-icon">
-                    <span>UI</span>
-                  </div>
-                  <div class="card-text">
-                    <p>UX/UI Design</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="floating-card card-2">
-                <div class="card-content">
-                  <div class="card-icon">
-                    <span>SE</span>
-                  </div>
-                  <div class="card-text">
-                    <p>Software Engineering</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="section-header">
-          <h4 class="section-tag">About Me</h4>
-          <h2 class="section-title">Bridging Design & Development</h2>
-          <p class="section-description">
-            Christopher McGuire is an accomplished SVP of Software Engineering &
-            UX/UI Design, recognized for pioneering the front-end transformation
-            at Citadel with the creation of the first UX/UI Frontend Design and
-            Development team that set a benchmark for user-centric development
-            with a thoughtful full-stack architecture.
-          </p>
-        </div>
-
-        <div class="skill-grid">
-          <!-- Key Skill 1 -->
-          <div class="skill-card">
-            <div class="skills-icon">
-              <i data-lucide="briefcase"></i>
-            </div>
-            <h3 class="skill-title">Leadership</h3>
-            <p class="skill-description">
-              Building and leading global teams to innovate, architect, and
-              execute multiple real-time applications.
-            </p>
-          </div>
-
-          <!-- Key Skill 2 -->
-          <div class="skill-card">
-            <div class="skills-icon">
-              <i data-lucide="lightbulb"></i>
-            </div>
-            <h3 class="skill-title">Innovation</h3>
-            <p class="skill-description">
-              Pioneering front-end transformation with innovative design systems
-              and architecture.
-            </p>
-          </div>
-
-          <!-- Key Skill 3 -->
-          <div class="skill-card">
-            <div class="skills-icon">
-              <i data-lucide="users"></i>
-            </div>
-            <h3 class="skill-title">User-Centric</h3>
-            <p class="skill-description">
-              Creating intuitive, performance-focused interfaces that prioritize
-              user experience.
-            </p>
-          </div>
-
-          <!-- Key Skill 4 -->
-          <div class="skill-card">
-            <div class="skills-icon">
-              <i data-lucide="award"></i>
-            </div>
-            <h3 class="skill-title">Excellence</h3>
-            <p class="skill-description">
-              Delivering operational excellence by aligning team roadmaps to key
-              business objectives.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="section bg-alt">
-        <div class="section-header">
-          <h4 class="section-tag">Experience</h4>
-          <h2 class="section-title">Where I've Made an Impact</h2>
-          <div class="section-cta" style="margin: 0px; margin-bottom: 2rem">
-            <a href="/resume" class="link-with-icon">
-              View Full Resume
-              <i data-lucide="arrow-right"></i>
+              <span>Let's Connect</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </a>
+
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              aria-expanded="false"
+              aria-controls="mobile-nav-drawer"
+              aria-label="Open navigation menu"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-[#38BDF8]/20 bg-[#090E18] text-slate-200 hover:text-white hover:border-[#00A6FF]/50 transition-colors cursor-pointer"
+            >
+              <span id="mobile-menu-icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span>
+              <span id="mobile-menu-icon-close" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+            </button>
           </div>
-          <p class="section-description">
-            Over 20+ years of professional experience in Software Engineering,
-            UX/UI Design, and leadership roles across various industries.
-          </p>
-        </div>
-
-        <div class="experience-list">
-          <div class="experience-card active">
-            <div class="experience-header">
-              <h3 class="experience-company">Mesirow</h3>
-              <span class="experience-period">2024 - Present</span>
-            </div>
-            <h4 class="experience-position">SVP, Head of Applications</h4>
-            <p class="experience-description">
-              As Senior Vice President, Head of Applications at Mesirow, I
-              spearhead the comprehensive application development strategy for
-              multiple business lines, ensuring the delivery of secure,
-              high-quality software solutions.
-            </p>
-          </div>
-
-          <div class="experience-card">
-            <div class="experience-header">
-              <h3 class="experience-company">Akuna Capital</h3>
-              <span class="experience-period">2021 - 2023</span>
-            </div>
-            <h4 class="experience-position">
-              Head of UX / UI Design and Development
-            </h4>
-            <p class="experience-description">
-              Serving as VP of Engineering, UX/UI Design, and Director of
-              Front-End Development, I started a course of transformation at
-              Akuna Capital. The team initiated the organization of application
-              logs into a single, consolidated dashboard.
-            </p>
-          </div>
-
-          <div class="experience-card">
-            <div class="experience-header">
-              <h3 class="experience-company">SpiderRock Platform</h3>
-              <span class="experience-period">2019 - 2021</span>
-            </div>
-            <h4 class="experience-position">
-              Director of Application Engineering
-            </h4>
-            <p class="experience-description">
-              During my tenure as SpiderRock's Director of Product Design and
-              Engineering, I kicked off a process to modernize our application
-              designs, nurtured a productive development team, and effectively
-              transitioned our work processes amidst a global pandemic.
-            </p>
-          </div>
-
-          <div class="experience-card">
-            <div class="experience-header">
-              <h3 class="experience-company">Citadel, LLC</h3>
-              <span class="experience-period">2005 - 2019</span>
-            </div>
-            <h4 class="experience-position">
-              Director of UX and UI Design and Development
-            </h4>
-            <p class="experience-description">
-              At Citadel, I held several roles, where I notably built and led
-              the largest UX/UI team with frontend engineering focus within the
-              firm. I reduced UI development time by 50% by introducing styled
-              control libraries that promoted consistency across applications.
-            </p>
-          </div>
-        </div>
-
-        <div class="section-cta">
-          <a
-            href="/Christopher_R_McGuire-SVP_of_Software_Engineering_UX_UI.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            class="btn-secondary"
-          >
-            <i data-lucide="download"></i>
-            Download Resume
-          </a>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="section">
-        <div class="section-header">
-          <h4 class="section-tag">Projects</h4>
-          <h2 class="section-title">What I'm Working On</h2>
-          <p class="section-description">
-            My passion for innovation drives me to create impactful solutions at
-            the intersection of technology and user experience.
-          </p>
         </div>
 
         <div
-          class="project-carousel"
-          data-project-carousel
-          data-autoplay-delay="3600"
-          data-transition-ms="1100"
+          id="nav-scroll-progress"
+          style="transform: scaleX(0); transform-origin: 0% 50%;"
+          class="h-[2px] w-full bg-gradient-to-r from-[#00A6FF] via-[#38BDF8] to-[#00A6FF]"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          id="mobile-nav-drawer"
+          class="hidden md:hidden border-t border-[#38BDF8]/15 bg-[#030508]/98 px-5 py-4 space-y-1"
         >
-          <button
-            class="project-carousel-control prev"
-            type="button"
-            aria-label="Previous projects"
-            data-project-prev
+          <a href="/" aria-current="page" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors bg-[#00A6FF]/12 text-[#38BDF8]">Home</a>
+<a href="/biography" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Biography</a>
+<a href="/resume" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Resume</a>
+<a href="/projects" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Projects</a>
+<a href="/ai-explorations" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">AI Labs</a>
+<a href="/blog" class="block w-full text-left px-3 py-3 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:bg-white/[0.04] hover:text-white">Library</a>
+          <a
+            href="/contact"
+            class="w-full mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-[#030508] bg-[#00A6FF] hover:bg-[#38BDF8] transition-colors"
           >
-            <i data-lucide="chevron-left"></i>
-          </button>
-
-          <div class="project-carousel-viewport">
-            <div class="project-track" data-project-track>
-              <article class="project-slide">
-                <a
-                  href="https://iconforge.net"
-                  class="project-card-hit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/35462a52-1849-47be-860b-23a27edc6706.png"
-                        alt="Icon Forge"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">Icon Forge</h3>
-                      <p class="project-description">
-                        Design custom icon packages with precision and ease.
-                        Create, customize, and export professional SVG icon sets
-                        that perfectly match your brand's aesthetic.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-slide">
-                <a
-                  href="https://www.amazon.com/dp/B0DSVRCLKL"
-                  class="project-card-hit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/f2841786-0aaa-442c-95b5-9aeb3699ddc7.png"
-                        alt="Christopher McGuire writing an approachable investment guide"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">Investment Guide</h3>
-                      <p class="project-description">
-                        Investing for the Rest of Us: From Piggy Bank to
-                        Portfolio. A beginner-friendly guide to building wealth
-                        and making your money work harder.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-slide">
-                <a
-                  href="https://fiscalcompass.net/"
-                  class="project-card-hit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/fiscalCompass.png"
-                        alt="Fiscal Compass Financial Calculators"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">
-                        Fiscal Compass Financial Calculators
-                      </h3>
-                      <p class="project-description">
-                        A comprehensive suite of calculators helping users make
-                        informed decisions about loans, investments, and
-                        retirement.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-slide">
-                <a href="/products/modus-ai/modus-ai" class="project-card-hit">
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/products/modus/ModusAI.webp"
-                        alt="Modus AI interior design app"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">Modus AI</h3>
-                      <p class="project-description">
-                        Professional-grade AI interior design with spatial
-                        controls to transform rooms while preserving key
-                        architectural and furniture constraints.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-slide">
-                <a
-                  href="/products/snapclipper/snapclipper"
-                  class="project-card-hit"
-                >
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/SnapClipper.png"
-                        alt="SnapClipper dashboard and logo"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">SnapClipper</h3>
-                      <p class="project-description">
-                        AI-powered web clipping for capturing highlights,
-                        prompts, and references, then organizing and retrieving
-                        them in a clean private dashboard.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-slide">
-                <a
-                  href="https://apps.apple.com/us/app/incidentlog/id6756827780"
-                  class="project-card-hit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/products/thriveLogger/thriveIncidentLogger.webp"
-                        alt="Incident Logger mobile app screens"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">Incident Logger</h3>
-                      <p class="project-description">
-                        A privacy-first iOS incident logging app for capturing
-                        timestamped events, evidence, and export-ready records.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-slide">
-                <a href="/blog" class="project-card-hit">
-                  <div class="project-card">
-                    <div class="project-image">
-                      <img
-                        src="./images/book_real_estate.jpg"
-                        alt="The AI Shortcut Book Series"
-                      />
-                    </div>
-                    <div class="project-content">
-                      <h3 class="project-title">The AI ShortCut Book Series</h3>
-                      <p class="project-description">
-                        A practical collection of AI prompt playbooks for real
-                        estate, small business, and life transitions to save
-                        time and make smarter decisions.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-            </div>
-          </div>
-
-          <button
-            class="project-carousel-control next"
-            type="button"
-            aria-label="Next projects"
-            data-project-next
-          >
-            <i data-lucide="chevron-right"></i>
-          </button>
-
-          <div
-            class="project-carousel-dots"
-            data-project-dots
-            aria-label="Project carousel pagination"
-          ></div>
-        </div>
-
-        <div class="section-cta">
-          <a href="/projects" class="btn-primary">
-            View All Projects
-            <i data-lucide="arrow-right"></i>
+            <span>Let's Connect</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
           </a>
         </div>
-      </section>
+      </header>
 
-      <!-- Blog Section -->
-      <section id="blog" class="section bg-alt">
-        <div class="section-header">
-          <h4 class="section-tag">Insights</h4>
-          <h2 class="section-title">Latest from My Blog</h2>
-          <p class="section-description">
-            Thoughts, ideas, and insights on UX/UI design, software engineering,
-            and industry trends.
-          </p>
-        </div>
-
-        <div class="blog-grid">
-          <div class="blog-card">
-            <div class="blog-image">
-              <img
-                src="./images/6ab4ee6d-009d-4605-847d-2cf10248b46b.jpg"
-                alt="User Interface Design for Web Applications"
-              />
-              <span class="blog-date">Nov 8, 2024</span>
-            </div>
-            <div class="blog-content">
-              <h3 class="blog-title">
-                User Interface Design for Web Applications | Best Practices
-              </h3>
-              <p class="blog-excerpt">
-                Discover essential best practices for User Interface Design for
-                Web Applications to create intuitive, user-friendly experiences
-                that boost engagement and conversion rates.
-              </p>
-              <a
-                href="/blog/posts/user-interface-design-for-web-applications"
-                class="blog-link"
-                >Read Article</a
-              >
-            </div>
+      <main class="flex-1">
+        <div class="relative overflow-x-clip">
+    <!-- Chapter I: Editorial Multi-Plane Hero Stage -->
+    <section class="relative">
+      <!-- Mobile & Tablet Portrait-First Hero -->
+      <div class="lg:hidden relative overflow-hidden bg-gradient-to-b from-[#040B16] via-[#030914] to-[#030508] border-b border-white/[0.06]">
+        <div class="relative h-[305px] sm:h-[390px] md:h-[455px] overflow-hidden">
+          <div data-parallax="mobile-bg" aria-hidden="true" class="pointer-events-none absolute -top-24 inset-x-0 bottom-0 origin-center will-change-transform">
+            <img src="/assets/aistudio/background_hero_188144e2.webp" alt="" referrerpolicy="no-referrer" class="w-full h-full object-cover object-[72%_28%] md:object-[64%_28%]" />
           </div>
-
-          <div class="blog-card">
-            <div class="blog-image">
-              <img
-                src="./blog/images/lockedMetalSafe.jpg"
-                alt="Locked metal door representing trust and security in fintech UX"
-              />
-              <span class="blog-date">Feb 27, 2026</span>
-            </div>
-            <div class="blog-content">
-              <h3 class="blog-title">
-                Why Fintech Companies Need Dedicated UX Teams
-              </h3>
-              <p class="blog-excerpt">
-                Fintech UX directly impacts conversion, trust, and regulatory
-                exposure. A practical perspective on why dedicated UX teams
-                outperform ad hoc design support.
-              </p>
-              <a
-                href="/blog/posts/why-fintech-companies-need-dedicated-ux-teams"
-                class="blog-link"
-                >Read Article</a
-              >
-            </div>
-          </div>
-
-          <div class="blog-card">
-            <div class="blog-image">
-              <img
-                src="./images/5117e834-44d0-4d00-81cf-1808a606e100.png"
-                alt="The Hidden ROI of UX/UI Design in Internal Business Applications"
-              />
-              <span class="blog-date">Nov 13, 2024</span>
-            </div>
-            <div class="blog-content">
-              <h3 class="blog-title">
-                The Hidden ROI of UX/UI Design in Internal Business Applications
-              </h3>
-              <p class="blog-excerpt">
-                Discover how thoughtful design and branding in internal business
-                applications can transform employee experience, boost
-                productivity, and drive organizational success.
-              </p>
-              <a
-                href="/blog/posts/hidden-roi-of-uxui-design-in-internal-business-applications"
-                class="blog-link"
-                >Read Article</a
-              >
-            </div>
+          <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-[#030710]/30 via-transparent to-[#030914]/55"></div>
+          <div data-parallax="mobile-portrait" class="relative z-10 h-full w-full overflow-hidden will-change-transform">
+            <img
+              src="/assets/aistudio/Profile_Photo_ebde6ee9.webp"
+              alt="Christopher R McGuire — SVP of Application Design and Development"
+              referrerpolicy="no-referrer"
+              class="absolute -top-4 sm:-top-5 md:-top-7 left-1/2 md:left-auto md:-right-[74px] -translate-x-[55%] sm:-translate-x-[57%] md:translate-x-0 h-[168%] sm:h-[158%] md:h-[172%] w-auto max-w-none object-contain object-top drop-shadow-[0_14px_32px_rgba(0,0,0,0.68)]"
+            />
           </div>
         </div>
 
-        <div class="section-cta">
-          <a href="/blog" class="link-with-icon">
-            View All Articles
-            <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-      </section>
+        <div data-parallax="mobile-curtain" class="relative z-20 -mt-[142px] sm:-mt-[175px] md:-mt-[185px] will-change-transform">
+          <svg viewBox="0 0 390 155" preserveAspectRatio="none" aria-hidden="true" class="pointer-events-none block w-full h-[142px] sm:h-[175px] md:h-[185px]">
+            <defs>
+              <linearGradient id="mobileWaveFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#041022" stop-opacity="0.97" />
+                <stop offset="35%" stop-color="#030B18" stop-opacity="1" />
+                <stop offset="100%" stop-color="#030712" stop-opacity="1" />
+              </linearGradient>
+              <linearGradient id="ribbonMain" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0088FF" stop-opacity="0.25" />
+                <stop offset="28%" stop-color="#38BDF8" stop-opacity="0.95" />
+                <stop offset="62%" stop-color="#BAE6FD" stop-opacity="1" />
+                <stop offset="100%" stop-color="#00A6FF" stop-opacity="0.5" />
+              </linearGradient>
+              <linearGradient id="ribbonCross" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00A6FF" stop-opacity="0.35" />
+                <stop offset="32%" stop-color="#7DD3FC" stop-opacity="0.95" />
+                <stop offset="70%" stop-color="#00A6FF" stop-opacity="0.7" />
+                <stop offset="100%" stop-color="#00A6FF" stop-opacity="0.1" />
+              </linearGradient>
+              <radialGradient id="waveIntersectionBloom" cx="32%" cy="46%" r="36%">
+                <stop offset="0%" stop-color="#7DD3FC" stop-opacity="0.65" />
+                <stop offset="35%" stop-color="#00A6FF" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#00A6FF" stop-opacity="0" />
+              </radialGradient>
+              <filter id="mobileWaveGlow" x="-15%" y="-45%" width="130%" height="190%">
+                <feGaussianBlur stdDeviation="4.5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path d="M-15,24 C85,22 175,66 276,92 C336,106 372,94 405,76" fill="none" stroke="#00A6FF" stroke-opacity="0.26" stroke-width="24" filter="url(#mobileWaveGlow)" />
+            <path d="M-15,30 C82,22 176,68 278,94 C338,108 372,96 405,78 L405,160 L-15,160 Z" fill="url(#mobileWaveFill)" />
+            <ellipse cx="122" cy="70" rx="130" ry="44" fill="url(#waveIntersectionBloom)" />
+            <path d="M-15,30 C82,22 176,68 278,94 C338,108 372,96 405,78" fill="none" stroke="url(#ribbonMain)" stroke-width="2.4" filter="url(#mobileWaveGlow)" />
+            <path d="M-15,92 C58,76 112,50 185,54 C252,58 326,102 405,94" fill="none" stroke="url(#ribbonCross)" stroke-width="1.9" filter="url(#mobileWaveGlow)" />
+            <path d="M-15,44 C78,42 162,78 272,102 C332,114 374,102 405,86" fill="none" stroke="#7DD3FC" stroke-opacity="0.32" stroke-width="1.1" />
+          </svg>
 
-      <!-- CTA Section -->
-      <section class="section">
-        <div class="cta-container">
-          <h2 class="cta-title">Let's Connect and Collaborate</h2>
-          <p class="cta-description">
-            If you are seeking a driven leader to steer your Engineering, UX/UI
-            Design, or Software Development teams to new heights, let's connect!
-          </p>
-          <a href="/contact" class="btn-primary">
-            Get in Touch
-            <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-      </section>
-    </main>
+          <div class="bg-gradient-to-b from-[#030712] to-[#030508] -mt-[42px] sm:-mt-[54px] md:-mt-[56px] px-5 sm:px-8 pt-1 pb-5 sm:pb-8">
+            <div class="mb-2 sm:mb-3.5">
+              <p class="text-[11px] sm:text-xs font-semibold tracking-[0.13em] uppercase text-slate-100">
+                20+ Years in Engineering &amp; Design
+              </p>
+              <div aria-hidden="true" class="mt-1.5 sm:mt-2 h-[3px] w-9 rounded-full bg-[#00A6FF] shadow-[0_0_12px_rgba(0,166,255,0.75)]"></div>
+            </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <span class="gradient-text logo">Christopher R McGuire</span>
-            <p class="footer-tagline">
-              SVP of Software Engineering, UX/UI Design and Development with 20+
-              years of experience bridging the gap between users, designers, and
-              developers.
+            <p class="font-serif-editorial text-[38px] sm:text-5xl font-semibold tracking-tight leading-[1.0] text-white mb-2 sm:mb-3">
+              Christopher R
+              <span class="block text-[#00A6FF]">McGuire</span>
             </p>
-          </div>
 
-          <div class="footer-nav">
-            <div class="footer-links">
-              <h4>Quick Links</h4>
-              <a href="/">Home</a>
-              <a href="/resume">Resume</a>
-              <a href="/projects">Projects</a>
-              <a href="/ai-explorations" class="whitespace-nowrap"
-                >AI Explorations</a
-              >
-              <a href="/blog">Library</a>
-              <a href="/contact">Contact</a>
+            <p class="text-[15px] sm:text-lg font-semibold text-white mb-1.5 sm:mb-2">SVP of Application Design and Development</p>
+
+            <p class="text-[13.5px] sm:text-[15px] text-slate-300 leading-snug sm:leading-relaxed max-w-md mb-4 sm:mb-6">
+              Technology leader, software engineer, and UX designer building user-centered
+              products that solve real problems and create lasting value.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 mb-4 sm:mb-7 max-w-md">
+              <a href="/resume" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-full bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-xs sm:text-sm font-semibold transition-all duration-150 shadow-[0_0_22px_rgba(0,166,255,0.35)] whitespace-nowrap">
+                <span>View Resume</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="/contact" class="inline-flex items-center justify-center px-4 py-2.5 sm:py-3 rounded-full border border-white/40 bg-[#050C18]/75 hover:border-[#00A6FF]/80 text-white text-xs sm:text-sm font-medium transition-colors whitespace-nowrap">
+                <span>Let's Connect</span>
+              </a>
             </div>
 
-            <div class="footer-connect">
-              <h4>Connect</h4>
-              <a href="mailto:Christopher.R.McGuire@gmail.com"
-                >Christopher.R.McGuire@gmail.com</a
-              >
-              Chicago, IL
+            <div class="grid grid-cols-4 max-w-lg">
+              <div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 border-r border-white/15">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        Software<br />Engineering
+      </span>
+    </div>
+<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 border-r border-white/15">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        UX/UI<br />Design
+      </span>
+    </div>
+<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 border-r border-white/15">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        Product<br />Leadership
+      </span>
+    </div>
+<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        AI<br />Exploration
+      </span>
+    </div>
             </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p class="copyright">
-            © 2025 Christopher R McGuire. All rights reserved.
-          </p>
-          <div class="social-links">
-            <a
-              href="https://linkedin.com/in/christopher-r-mcguire/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i data-lucide="linkedin"></i>
-            </a>
-            <a
-              href="https://twitter.com/crmcguire74"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <i data-lucide="twitter"></i>
-            </a>
-            <a
-              href="https://github.com/crmcguire74"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <i data-lucide="github"></i>
-            </a>
-            <a
-              href="https://www.tiktok.com/@crmcguire74"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-              </svg>
-            </a>
-            <a
-              href="https://www.youtube.com/@crmcguire1974"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <i data-lucide="youtube"></i>
-            </a>
-            <a href="mailto:Christopher.R.McGuire@gmail.com" aria-label="Email">
-              <i data-lucide="mail"></i>
-            </a>
           </div>
         </div>
       </div>
-    </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
-      <i data-lucide="arrow-up"></i>
+      <!-- Desktop Multi-Plane Split Hero -->
+      <div class="hidden lg:block relative overflow-hidden border-b border-white/[0.06]">
+        <div data-parallax="desktop-bg" aria-hidden="true" class="pointer-events-none absolute -top-32 inset-x-0 bottom-0 origin-bottom will-change-transform">
+          <img src="/assets/aistudio/background_hero_188144e2.webp" alt="" referrerpolicy="no-referrer" class="w-full h-full object-cover object-bottom" />
+        </div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#030508]/60 via-[#040914]/25 to-transparent"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#030508]/60 to-transparent"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#030508] to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-8 min-h-[600px] xl:min-h-[650px] flex flex-row items-center">
+          <div data-parallax="desktop-copy" class="w-[54%] py-20 will-change-transform hero-enter">
+            <div class="mb-6">
+              <p class="text-base font-medium text-slate-200 tracking-wide">
+                20+ Years in Engineering &amp; Design
+              </p>
+              <div aria-hidden="true" class="mt-2.5 h-[3px] w-10 rounded-full bg-[#00A6FF] shadow-[0_0_12px_rgba(0,166,255,0.7)]"></div>
+            </div>
+
+            <h1 class="font-serif-editorial text-[72px] font-semibold tracking-tight leading-[1.02] text-white mb-5">
+              Christopher R
+              <span class="block text-[#00A6FF]">McGuire</span>
+            </h1>
+
+            <p class="text-xl font-semibold text-white mb-3">SVP of Application Design and Development</p>
+
+            <p class="text-[17px] text-slate-200 leading-relaxed max-w-lg mb-8">
+              Technology leader, software engineer, and UX designer building user-centered
+              products that solve real problems and create lasting value.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+              <a href="/resume" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-sm font-semibold transition-all duration-150 shadow-[0_0_24px_rgba(0,166,255,0.35)] hover:shadow-[0_0_32px_rgba(0,166,255,0.55)] whitespace-nowrap shrink-0">
+                <span>View Resume</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="/contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/35 bg-[#040914]/55 backdrop-blur-sm hover:border-[#00A6FF]/75 hover:bg-[#081326]/75 text-white text-sm font-medium transition-colors whitespace-nowrap shrink-0">
+                <span>Let's Connect</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-4 max-w-lg pt-2">
+              <div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 border-r border-white/15">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        Software<br />Engineering
+      </span>
+    </div>
+<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 border-r border-white/15">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        UX/UI<br />Design
+      </span>
+    </div>
+<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 border-r border-white/15">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        Product<br />Leadership
+      </span>
+    </div>
+<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+      <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
+        AI<br />Exploration
+      </span>
+    </div>
+            </div>
+          </div>
+
+          <div data-parallax="desktop-portrait" class="flex items-end justify-end pointer-events-none absolute inset-y-0 right-0 xl:right-4 w-[58%] pt-4 origin-bottom will-change-transform">
+            <img
+              src="/assets/aistudio/Profile_Photo_ebde6ee9.webp"
+              alt="Christopher R McGuire — SVP of Application Design and Development"
+              referrerpolicy="no-referrer"
+              class="h-full w-auto max-w-none object-contain object-right-bottom drop-shadow-[0_24px_55px_rgba(0,0,0,0.72)]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-Width 4-Column Impact Metrics Deck -->
+      <div class="relative z-30 max-w-7xl mx-auto px-5 sm:px-8 pt-8 lg:pt-10 pb-14 lg:pb-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div data-reveal style="transition-delay: 0ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full shadow-[0_-18px_45px_rgba(3,5,8,0.85)]">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <div class="font-mono-tabular text-3xl font-semibold text-[#00A6FF] mb-1.5">20+</div>
+          <div class="text-sm font-semibold text-white mb-1">Years in Engineering &amp; UX Leadership</div>
+          <div class="text-xs text-slate-400">Savant Wealth · Mesirow · Akuna · Citadel</div>
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 70ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full shadow-[0_-18px_45px_rgba(3,5,8,0.85)]">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <div class="font-mono-tabular text-3xl font-semibold text-[#00A6FF] mb-1.5">-50%</div>
+          <div class="text-sm font-semibold text-white mb-1">UI Development Time Reduction</div>
+          <div class="text-xs text-slate-400">Styled control libraries at Citadel</div>
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 140ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full shadow-[0_-18px_45px_rgba(3,5,8,0.85)]">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <div class="font-mono-tabular text-3xl font-semibold text-[#00A6FF] mb-1.5">+30%</div>
+          <div class="text-sm font-semibold text-white mb-1">Feature Delivery Acceleration</div>
+          <div class="text-xs text-slate-400">AI-augmented SDLC at Mesirow</div>
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 210ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full shadow-[0_-18px_45px_rgba(3,5,8,0.85)]">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <div class="font-mono-tabular text-3xl font-semibold text-[#00A6FF] mb-1.5">+25%</div>
+          <div class="text-sm font-semibold text-white mb-1">Product Delivery Velocity</div>
+          <div class="text-xs text-slate-400">Design &amp; engineering alignment at Akuna</div>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architectural Ribbon Divider -->
+    <div class="border-y border-[#38BDF8]/12 bg-[#060A12] py-4 overflow-hidden select-none">
+      <div class="animate-marquee flex items-center gap-8 text-xs sm:text-sm font-medium tracking-wide text-slate-400">
+        <span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Savant Wealth · Director of WiseOS Platform</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Mesirow · SVP Head of Applications</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Akuna Capital · Head of UX/UI &amp; Frontend</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>SpiderRock · Director of Application Engineering</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Citadel · Director of UX/UI Design &amp; Development</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Purdue University · B.S. Computer &amp; Electrical Engineering</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Savant Wealth · Director of WiseOS Platform</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Mesirow · SVP Head of Applications</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Akuna Capital · Head of UX/UI &amp; Frontend</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>SpiderRock · Director of Application Engineering</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Citadel · Director of UX/UI Design &amp; Development</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+<span class="inline-flex items-center gap-8 whitespace-nowrap">
+        <span>Purdue University · B.S. Computer &amp; Electrical Engineering</span>
+        <span class="text-[#00A6FF]" aria-hidden="true">/</span>
+      </span>
+      </div>
+    </div>
+
+    <!-- Core Leadership Pillars -->
+    <section class="relative py-20 max-w-7xl mx-auto px-5 sm:px-8">
+      <div data-reveal class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+          <p class="text-sm font-medium text-[#38BDF8] mb-3">Chapter I · Operating Philosophy</p>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            Bridging Design &amp; Engineering
+          </h2>
+          <p class="text-base text-slate-300 leading-relaxed">Accomplished SVP of Software Engineering &amp; UX/UI Design, recognized for pioneering the front-end transformation at Citadel with the creation of the first UX/UI Frontend Design and Development team that set a benchmark for user-centric development with a thoughtful full-stack architecture.</p>
+        </div>
+        <a href="/biography" class="inline-flex items-center gap-2 text-sm font-semibold text-[#38BDF8] hover:text-white transition-colors whitespace-nowrap shrink-0">
+          <span>Read Full Life Biography</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div data-reveal style="transition-delay: 0ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <span class="font-mono-tabular text-xs text-[#00A6FF] block mb-3">01.</span>
+          <h3 class="text-lg font-semibold text-white mb-2">Leadership</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Building and leading global teams to innovate, architect, and execute multiple real-time applications.</p>
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 70ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <span class="font-mono-tabular text-xs text-[#00A6FF] block mb-3">02.</span>
+          <h3 class="text-lg font-semibold text-white mb-2">Innovation</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Pioneering front-end transformation with innovative design systems, full-stack architecture, and applied AI.</p>
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 140ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <span class="font-mono-tabular text-xs text-[#00A6FF] block mb-3">03.</span>
+          <h3 class="text-lg font-semibold text-white mb-2">User-Centric</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Creating intuitive, performance-focused interfaces that prioritize operational clarity and user experience.</p>
+        </div>
+      </div>
+    </div>
+<div data-reveal style="transition-delay: 210ms" class="h-full">
+      <div data-magnetic class="relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 p-6 h-full">
+        <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+        <div class="relative z-10 flex-1 w-full h-full flex flex-col">
+          <span class="font-mono-tabular text-xs text-[#00A6FF] block mb-3">04.</span>
+          <h3 class="text-lg font-semibold text-white mb-2">Excellence</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Delivering operational excellence by aligning engineering roadmaps and team growth to key business objectives.</p>
+        </div>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <div aria-hidden="true" class="relative max-w-7xl mx-auto px-5 sm:px-8 py-4 overflow-hidden select-none">
+      <div class="relative h-px w-full bg-white/[0.06] flex items-center justify-center">
+        <div class="h-[2px] w-full max-w-4xl rounded-full bg-gradient-to-r from-transparent via-[#00A6FF] to-transparent shadow-[0_0_24px_rgba(0,166,255,0.65)]"></div>
+      </div>
+      <div class="mt-2.5 flex justify-center">
+        <span class="font-mono-tabular text-[10px] tracking-[0.22em] uppercase text-[#38BDF8]/65">02 // Career Progression</span>
+      </div>
+    </div>
+
+    <!-- Chapter II: Sticky Scroll-Telling Career Journey -->
+    <div class="bg-[#050810] border-y border-white/[0.06]">
+      <section id="career-story-track" aria-label="Career Journey Story" class="relative py-20 lg:py-28 max-w-7xl mx-auto px-5 sm:px-8 overflow-x-clip">
+        <div aria-hidden="true" class="pointer-events-none absolute -left-28 top-1/4 w-72 h-72 rounded-full bg-[#00A6FF]/[0.06] blur-3xl"></div>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div class="max-w-2xl">
+            <p class="text-sm font-medium text-[#38BDF8] mb-3">Chapter II · Architectural Progression</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
+              Where Craft Meets Institutional Scale
+            </h2>
+          </div>
+          <a href="/resume" class="inline-flex items-center gap-2 text-sm font-semibold text-[#38BDF8] hover:text-white transition-colors whitespace-nowrap shrink-0">
+            <span>View Full Resume Dossier</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div class="lg:col-span-6 space-y-5">
+            <button
+      type="button"
+      data-career-card="0"
+      aria-pressed="true"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#0C1424] border border-[#00A6FF]/55 shadow-[0_0_32px_rgba(0,166,255,0.12)]"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">01. 2026 – Present</span>
+        <span class="text-xs text-slate-400">Wealth Management &amp; Advisor AI Platform</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">Savant Wealth</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">Director of WiseOS Platform</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Transforming a disconnected Wealth Advisor application ecosystem into one comprehensive Next.js and React platform on Azure—layered over AI agents that synthesize transcripts and client data across advisor and client workflows.</p>
     </button>
+<button
+      type="button"
+      data-career-card="1"
+      aria-pressed="false"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">02. 2024 – 2026</span>
+        <span class="text-xs text-slate-400">Wealth Management &amp; Institutional Finance</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">Mesirow</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">SVP, Head of Application Design and Development</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Spearheading end-to-end application development strategy across multiple business lines—architecting scalable solutions, mentoring cross-functional teams, and embedding AI across the SDLC.</p>
+    </button>
+<button
+      type="button"
+      data-career-card="2"
+      aria-pressed="false"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">03. 2021 – 2023</span>
+        <span class="text-xs text-slate-400">Options Market Making &amp; Trading Tech</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">Akuna Capital</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">Head of UX / UI Design and Development</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Serving as VP of Engineering, UX/UI Design, and Director of Front-End Development—unifying fragmented engineering workflows and establishing career paths for technology teams.</p>
+    </button>
+<button
+      type="button"
+      data-career-card="3"
+      aria-pressed="false"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">04. 2019 – 2021</span>
+        <span class="text-xs text-slate-400">Options Analytics &amp; Execution Platform</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">SpiderRock Platform</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">Director of Application Engineering</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Modernized core trading and analytics application suites, instituted a unified design system library, and led the engineering transition into remote-first operations.</p>
+    </button>
+<button
+      type="button"
+      data-career-card="4"
+      aria-pressed="false"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">05. 2005 – 2019</span>
+        <span class="text-xs text-slate-400">Global Hedge Fund &amp; Market Maker</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">Citadel, LLC</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">Director of UX and UI Design and Development</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Built and led the largest UX/UI team with frontend engineering focus within Citadel—setting the firm-wide benchmark for user-centric trading and analytics software.</p>
+    </button>
+<button
+      type="button"
+      data-career-card="5"
+      aria-pressed="false"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">06. 2001 – 2005</span>
+        <span class="text-xs text-slate-400">Healthcare Systems &amp; Medical Imaging</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">GE Medical</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">Lead Tools and CM Engineer</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Designed automated engineering tools and digital document management workflows supporting Radiology Information Systems (RIS) and PACS clinical software.</p>
+    </button>
+<button
+      type="button"
+      data-career-card="6"
+      aria-pressed="false"
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15"
+    >
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <span class="font-mono-tabular text-xs text-[#38BDF8]">07. 1997 – 2001</span>
+        <span class="text-xs text-slate-400">Wireless Telecommunications</span>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-1">Motorola</h3>
+      <p class="text-sm font-medium text-slate-300 mb-3">Lead Quality Assurance Engineer</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Supported the complete software lifecycle for Motorola GSM, GPRS, and UMTS telecommunication platforms across Chicago and Vancouver teams.</p>
+    </button>
+          </div>
 
-    <script src="./script.js"></script>
+          <div class="lg:col-span-6 lg:sticky lg:top-28">
+            <div data-reveal class="relative rounded-2xl bg-[#080D17] blueprint-hairline p-7 sm:p-9 overflow-hidden">
+              <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 w-72 h-72 rounded-full border border-[#00A6FF]/15 flex items-center justify-center">
+                <div class="w-48 h-48 rounded-full border border-dashed border-[#38BDF8]/20"></div>
+              </div>
 
-    <script
-      nowprocket
-      nitro-exclude
-      type="text/javascript"
-      id="sa-dynamic-optimization"
-      data-uuid="f645de7e-27e2-4403-9bae-97a043ddd7d0"
-      src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gImY2NDVkZTdlLTI3ZTItNDQwMy05YmFlLTk3YTA0M2RkZDdkMCI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="
-    ></script>
+              <div class="flex items-center justify-between gap-4 pb-6 mb-6 border-b border-white/[0.08]">
+                <span id="career-detail-code" class="font-mono-tabular text-xs text-slate-400">SAVANT WEALTH // 2026–PRESENT</span>
+                <div class="flex items-center gap-1.5" aria-hidden="true">
+                  <span data-career-dot="0" class="h-1.5 rounded-full transition-all duration-200 w-6 bg-[#00A6FF]"></span>
+<span data-career-dot="1" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+<span data-career-dot="2" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+<span data-career-dot="3" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+<span data-career-dot="4" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+<span data-career-dot="5" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+<span data-career-dot="6" class="h-1.5 rounded-full transition-all duration-200 w-1.5 bg-slate-700"></span>
+                </div>
+              </div>
+
+              <div id="career-detail-body" class="transition-opacity duration-200">
+                <p id="career-detail-era" class="text-xs font-medium text-[#38BDF8] mb-2">Unified Advisor Platform &amp; AI Advisory</p>
+                <div class="flex flex-wrap items-baseline justify-between gap-4 mb-6">
+                  <h3 id="career-detail-company" class="text-2xl sm:text-3xl font-semibold text-white">Savant Wealth</h3>
+                  <div class="text-right">
+                    <div id="career-detail-badge" class="font-mono-tabular text-3xl sm:text-4xl font-semibold text-[#00A6FF]">WiseOS</div>
+                    <div id="career-detail-metric-label" class="text-xs text-slate-400">Unified Advisor &amp; Client Platform</div>
+                  </div>
+                </div>
+                <div id="career-detail-highlights" class="space-y-4">
+                  <div class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0 mt-1" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">Architecting the unified WiseOS platform in Next.js and React on Azure to streamline end-to-end Advisor and Client workflows.</p>
+      </div>
+<div class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0 mt-1" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">Deploying AI agents that analyze transcripts and client data to prepare advisors, coach teams toward high-impact client interactions, and accelerate prospect and firm acquisitions.</p>
+      </div>
+<div class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0 mt-1" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">Rebuilt a custom executive reporting solution as a micro-UI React app synchronized with Monday.com for tailored C-suite visualizations and insights.</p>
+      </div>
+<div class="flex items-start gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0 mt-1" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">Serving on the firm’s AI Advisory Board to guide responsible AI governance, lead strategy, and educate teams on new AI initiatives.</p>
+      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Chapter III: Selected Builds -->
+    <section class="py-24 max-w-7xl mx-auto px-5 sm:px-8">
+      <div data-reveal class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div class="max-w-2xl">
+          <p class="text-sm font-medium text-[#38BDF8] mb-3">Chapter III · Selected Builds</p>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
+            Products Shipped at the Edge of AI &amp; UX
+          </h2>
+        </div>
+        <a href="/projects" class="inline-flex items-center gap-2 text-sm font-semibold text-[#38BDF8] hover:text-white transition-colors whitespace-nowrap shrink-0">
+          <span>View All 10 Projects</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div data-reveal style="transition-delay: 0ms" class="h-full">
+        <a href="https://thrivefinancial.app" target="_blank" rel="noopener noreferrer" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+                      <img src="/assets/aistudio/ThriveFinancial_694601f5.webp" alt="Thrive Financial" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+                    </div>
+              <div class="p-7 pb-5">
+                <p class="text-xs text-[#38BDF8] mb-2">Legal Tech / FinTech AI</p>
+                <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">Thrive Financial</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">Take control of complex financial separation by leveraging AI to parse bank and credit card statements, uncover hidden assets, organize marital property and debts, and model state-aligned settlements.</p>
+              </div>
+            </div>
+            <div class="px-7 pb-7 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+              <span>Gemini 2.5 Flash · React · Node.js</span>
+              <span class="inline-flex items-center gap-1 font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Visit Thrive Financial</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 120ms" class="h-full">
+        <a href="https://apps.apple.com/us/app/incidentlog/id6756827780" target="_blank" rel="noopener noreferrer" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+                      <img src="/assets/aistudio/ThriveIncidentLogger_c0495e50.webp" alt="Thrive Incident Logger" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+                    </div>
+              <div class="p-7 pb-5">
+                <p class="text-xs text-[#38BDF8] mb-2">Mobile App (iOS) / Legal Utility</p>
+                <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">Thrive Incident Logger</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">A privacy-first iOS incident logging app built to capture timestamped events with context, attachments, and export-ready records while preserving an immutable audit trail.</p>
+              </div>
+            </div>
+            <div class="px-7 pb-7 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+              <span>iOS · Privacy · Audit Trail</span>
+              <span class="inline-flex items-center gap-1 font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>View on App Store</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 0ms" class="h-full">
+        <a href="/projects/modus-ai" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+                      <img src="/assets/aistudio/Modus_AI_e260817c.webp" alt="Modus AI" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+                    </div>
+              <div class="p-7 pb-5">
+                <p class="text-xs text-[#38BDF8] mb-2">AI / iOS / Spatial Reasoning</p>
+                <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">Modus AI</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">Professional-grade AI interior design with spatial constraints that transforms rooms while preserving your real furniture, walls, and architectural footprints—with zero subscription.</p>
+              </div>
+            </div>
+            <div class="px-7 pb-7 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+              <span>Gemini · iOS · React Native</span>
+              <span class="inline-flex items-center gap-1 font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Explore Modus AI</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 120ms" class="h-full">
+        <a href="https://wilsmartinilounge.com" target="_blank" rel="noopener noreferrer" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+                      <img src="/assets/aistudio/WilsMartiniLounge_6d752b71.webp" alt="Wil&#39;s Martini Lounge" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+                    </div>
+              <div class="p-7 pb-5">
+                <p class="text-xs text-[#38BDF8] mb-2">Web Design / Motion Graphics &amp; Video</p>
+                <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">Wil&#39;s Martini Lounge</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">A full website design project undertaken for Wil’s Martini Lounge—combining bespoke hospitality UX, atmospheric motion graphics, and integrated video storytelling across menus and private room reservations.</p>
+              </div>
+            </div>
+            <div class="px-7 pb-7 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+              <span>Web Design · Motion Graphics · Video</span>
+              <span class="inline-flex items-center gap-1 font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Visit Wil&#39;s Martini Lounge</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 0ms" class="h-full">
+        <a href="https://tronengaged.netlify.app/" target="_blank" rel="noopener noreferrer" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+                      <img src="/assets/aistudio/TronEngaged_a8a21c6c.webp" alt="Tron Engaged" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+                    </div>
+              <div class="p-7 pb-5">
+                <p class="text-xs text-[#38BDF8] mb-2">WebXR / 3D Interactive Gaming</p>
+                <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">Tron Engaged</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">A web-based (WebXR) 3D game delivering a modernized reimagination of the classic Tron discs and light cycle arenas—playable seamlessly in standard desktop browsers as well as first-person in VR.</p>
+              </div>
+            </div>
+            <div class="px-7 pb-7 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+              <span>WebXR · 3D Gaming · VR</span>
+              <span class="inline-flex items-center gap-1 font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Play Tron Engaged</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 120ms" class="h-full">
+        <a href="/projects/snapclipper" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+                      <img src="/assets/aistudio/SnapClipper_dc1f331f.webp" alt="SnapClipper" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+                    </div>
+              <div class="p-7 pb-5">
+                <p class="text-xs text-[#38BDF8] mb-2">Chrome Extension / Knowledge Capture</p>
+                <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">SnapClipper</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">One-click web clipping with automatic AI categorization. Capture highlights, code snippets, prompts, and quotes without breaking flow—stored privately on your own device.</p>
+              </div>
+            </div>
+            <div class="px-7 pb-7 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+              <span>Chrome Extension · AI Tagging · Local-First</span>
+              <span class="inline-flex items-center gap-1 font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Explore SnapClipper</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <div aria-hidden="true" class="relative max-w-7xl mx-auto px-5 sm:px-8 py-4 overflow-hidden select-none">
+      <div class="relative h-px w-full bg-white/[0.06] flex items-center justify-center">
+        <div class="h-[2px] w-full max-w-4xl rounded-full bg-gradient-to-r from-transparent via-[#00A6FF] to-transparent shadow-[0_0_24px_rgba(0,166,255,0.65)]"></div>
+      </div>
+      <div class="mt-2.5 flex justify-center">
+        <span class="font-mono-tabular text-[10px] tracking-[0.22em] uppercase text-[#38BDF8]/65">04 // Monographs &amp; Essays</span>
+      </div>
+    </div>
+
+    <!-- Chapter IV: Monographs & Library -->
+    <section class="py-20 bg-[#050810] border-y border-white/[0.06]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+          <div data-reveal class="lg:col-span-5">
+            <div data-parallax-window class="overflow-hidden aspect-[4/3] rounded-2xl blueprint-hairline">
+              <img src="/assets/images/christopher_books_collection_1794776076325.webp" alt="The AI Shortcut Book Series &amp; Investing for the Rest of Us" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform" />
+            </div>
+          </div>
+          <div data-reveal style="transition-delay: 80ms" class="lg:col-span-7 space-y-4">
+            <p class="text-sm font-medium text-[#38BDF8]">Chapter IV · Monographs &amp; Library</p>
+            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
+              Published Playbooks &amp; Technical Essays
+            </h2>
+            <p class="text-base text-slate-300 leading-relaxed max-w-2xl">
+              Four Amazon titles covering applied AI workflows for real estate, small business,
+              and personal strategy alongside beginner wealth building—paired with long-form
+              essays on FinTech UX, design systems, and engineering leadership.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-4">
+              <a href="/blog" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-sm font-semibold transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                <span>Open Full Library</span>
+              </a>
+              <a href="/ai-explorations" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/15 hover:border-[#00A6FF]/50 text-white text-sm font-medium transition-colors">
+                <span>Explore AI Labs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <div data-reveal style="transition-delay: 0ms" class="h-full">
+        <a href="/blog/posts/why-fintech-companies-need-dedicated-ux-teams" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-[16/9] w-full bg-[#050810] border-b border-white/[0.06]">
+                <img src="/images/blog-fintech-safe.webp" alt="Locked metal door representing trust and security in FinTech UX" referrerpolicy="no-referrer" class="w-full h-full object-cover object-top will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+              </div>
+              <div class="p-6 pb-4">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-2.5">
+                  <span>March 6, 2026</span>
+                  <span aria-hidden="true">·</span>
+                  <span>12 min read</span>
+                </div>
+                <h3 class="text-lg font-semibold text-white mb-2.5 group-hover:text-[#38BDF8] transition-colors">Why FinTech Companies Need Dedicated UX Teams (not &#39;a designer when we have time&#39;)</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Fintech UX drives revenue, retention, and regulatory compliance. A 20-year industry perspective on why dedicated UX teams outperform ad hoc design support.</p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3.5 border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Read Essay</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 90ms" class="h-full">
+        <a href="/blog/posts/building-ai-products-with-ux-rigor" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-[16/9] w-full bg-[#050810] border-b border-white/[0.06]">
+                <img src="/assets/aistudio/Exploring_AI_in_a_Walnut_Studio_1fb365fd.webp" alt="Christopher R McGuire designing AI workflows across dual displays in a walnut studio" referrerpolicy="no-referrer" class="w-full h-full object-cover object-top will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+              </div>
+              <div class="p-6 pb-4">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-2.5">
+                  <span>February 28, 2026</span>
+                  <span aria-hidden="true">·</span>
+                  <span>7 min read</span>
+                </div>
+                <h3 class="text-lg font-semibold text-white mb-2.5 group-hover:text-[#38BDF8] transition-colors">Building AI Products With UX Rigor</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">AI products fail less from model quality and more from weak product framing. This framework keeps intent, UX, and engineering quality aligned from day one.</p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3.5 border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Read Essay</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+<div data-reveal style="transition-delay: 180ms" class="h-full">
+        <a href="/blog/posts/designing-application-icons" data-magnetic class="group relative flex flex-col overflow-hidden rounded-2xl bg-[#090E18] blueprint-hairline transition-colors duration-200 hover:border-[#00A6FF]/45 cursor-pointer h-full">
+          <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
+          <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
+            <div>
+              <div data-parallax-window class="overflow-hidden aspect-[16/9] w-full bg-[#050810] border-b border-white/[0.06]">
+                <img src="/images/blog-icon-types.webp" alt="Application icon styles from flat to skeuomorphic" referrerpolicy="no-referrer" class="w-full h-full object-cover object-top will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
+              </div>
+              <div class="p-6 pb-4">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-2.5">
+                  <span>November 15, 2024</span>
+                  <span aria-hidden="true">·</span>
+                  <span>10 min read</span>
+                </div>
+                <h3 class="text-lg font-semibold text-white mb-2.5 group-hover:text-[#38BDF8] transition-colors">Designing Application Icons: Tips and Tricks for Success</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Explore expert tips and practical strategies for designing application icons that stand out across grid systems, metaphors, and production delivery.</p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-3.5 border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00A6FF] group-hover:translate-x-1 transition-transform">
+                <span>Read Essay</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter V: Executive Collaboration Finale -->
+    <section class="relative py-24 max-w-5xl mx-auto px-5 sm:px-8 text-center overflow-hidden">
+      <div aria-hidden="true" class="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[260px] rounded-full bg-[#00A6FF]/15 blur-3xl"></div>
+      <div data-reveal class="relative z-10">
+        <p class="text-sm font-medium text-[#38BDF8] mb-3">Chapter V · Collaboration</p>
+        <h2 class="text-3xl sm:text-5xl font-semibold tracking-tight text-white mb-5">
+          Let's Build Something Enduring
+        </h2>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto mb-8">
+          Seeking an experienced executive leader to steer Application Engineering, UX/UI Design
+          Systems, or AI-accelerated transformation? Let's connect.
+        </p>
+        <a href="/contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-sm font-semibold transition-all duration-150 hover:shadow-[0_0_28px_rgba(0,166,255,0.45)]">
+          <span>Start a Conversation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+  </div>
+      </main>
+
+      <footer class="relative overflow-hidden bg-[#030508] text-slate-300 border-t border-white/[0.06]">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#00A6FF]/75 to-transparent"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute left-1/2 -top-28 -translate-x-1/2 w-[820px] h-[240px] rounded-full bg-[#00A6FF]/[0.08] blur-3xl"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 architectural-grid opacity-30 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.85),transparent_85%)]"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-12 sm:pt-14 lg:pt-16 pb-10 lg:pb-12">
+          <!-- Executive CTA Card -->
+          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#08101E]/95 via-[#050A14]/95 to-[#03060C] border border-[#38BDF8]/16 p-5 sm:p-7 lg:p-9 mb-10 sm:mb-12 lg:mb-14 shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
+            <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 w-72 h-72 rounded-full bg-[#00A6FF]/[0.1] blur-3xl"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6 lg:gap-8">
+              <div class="max-w-2xl space-y-2">
+                <p class="text-[11px] sm:text-xs font-medium tracking-[0.14em] uppercase text-[#38BDF8]">
+                  Executive Advisory · Product Architecture · Leadership
+                </p>
+                <h2 class="font-serif-editorial text-xl sm:text-3xl lg:text-[34px] font-semibold tracking-tight text-white leading-snug">
+                  Bridging Users, Design Systems &amp; AI-Accelerated Engineering.
+                </h2>
+              </div>
+
+              <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-3 shrink-0 w-full sm:w-auto">
+                <a
+                  href="/resume"
+                  class="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-5 py-2.5 rounded-lg border border-white/15 bg-[#070D1A]/85 hover:border-[#00A6FF]/55 hover:bg-[#0B1528] text-white text-xs sm:text-sm font-medium transition-colors whitespace-nowrap"
+                >
+                  <span>View Resume</span>
+                </a>
+                <a
+                  href="/contact"
+                  class="inline-flex items-center justify-center gap-2 min-h-[44px] px-4 sm:px-6 py-2.5 rounded-lg bg-[#00A6FF] hover:bg-[#38BDF8] text-[#030508] text-xs sm:text-sm font-semibold transition-all duration-150 shadow-[0_0_24px_rgba(0,166,255,0.28)] hover:shadow-[0_0_32px_rgba(0,166,255,0.5)] whitespace-nowrap"
+                >
+                  <span>Start a Conversation</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Balanced Footer Architecture: Mobile (1+2+1), iPad (full brand -> 2-col links -> full connect), Desktop (4-2-2-4 aligned baseline) -->
+          <div class="grid grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-9 sm:gap-x-8 lg:gap-10 pb-10 lg:pb-12 border-b border-white/[0.08]">
+            <!-- Brand Block -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col justify-between gap-5 pb-8 lg:pb-0 border-b border-white/[0.07] lg:border-b-0">
+              <div class="space-y-3.5">
+                <a href="/" class="group inline-flex items-center gap-3.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] rounded-lg">
+                  <div class="relative p-1.5 rounded-xl bg-[#070D1A] border border-white/[0.08] group-hover:border-[#00A6FF]/45 transition-colors shrink-0">
+                    <img
+                      src="/images/paguireLogo.webp"
+                      alt="CRM — Christopher R McGuire"
+                      referrerpolicy="no-referrer"
+                      class="h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.04] [filter:drop-shadow(0_0_1px_rgba(241,245,249,0.9))_drop-shadow(0_0_10px_rgba(0,166,255,0.38))]"
+                    />
+                  </div>
+                  <div class="min-w-0">
+                    <span class="font-display font-semibold text-white text-base sm:text-lg block leading-tight group-hover:text-[#38BDF8] transition-colors">
+                      Christopher R McGuire
+                    </span>
+                    <span class="text-xs text-slate-400 block mt-0.5">
+                      SVP of Application Design and Development
+                    </span>
+                  </div>
+                </a>
+
+                <p class="text-sm text-slate-400 leading-[1.68] max-w-xl lg:max-w-sm">
+                  20+ years steering front-end architecture, institutional design systems, and applied
+                  AI platforms across Savant Wealth, Mesirow, Akuna Capital, SpiderRock, and Citadel.
+                </p>
+              </div>
+
+              <div class="lg:pt-3 lg:border-t lg:border-white/[0.06] flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-slate-400">
+                <span class="text-slate-200 font-medium">Purdue University</span>
+                <span aria-hidden="true" class="text-[#00A6FF]">·</span>
+                <span>B.S. Computer and Electrical Engineering</span>
+              </div>
+            </div>
+
+            <!-- Featured Links -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Featured</h3>
+              <ul class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-0 lg:flex-1 lg:flex lg:flex-col lg:justify-between text-[13px] sm:text-sm">
+                <li>
+        <a href="https://thrivefinancial.app" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 text-slate-300 hover:text-[#38BDF8] transition-colors">
+          <span>Thrive Financial</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </li>
+<li>
+      <a href="/projects/modus-ai" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Modus AI</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+        <a href="https://wilsmartinilounge.com" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 text-slate-300 hover:text-[#38BDF8] transition-colors">
+          <span>Wils Martini Lounge</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </li>
+<li>
+      <a href="/projects/snapclipper" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>SnapClipper</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/projects/blueprint" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>1-Hour Blueprint</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/blog" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Executive Essays</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+              </ul>
+            </div>
+
+            <!-- Site Navigation -->
+            <div class="col-span-1 lg:col-span-2 flex flex-col">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Navigation</h3>
+              <ul class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-0 lg:flex-1 lg:flex lg:flex-col lg:justify-between text-[13px] sm:text-sm">
+                <li>
+      <a href="/" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Home</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/biography" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Biography</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/resume" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Resume</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/projects" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Projects</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/ai-explorations" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>AI Explorations</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/blog" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Library</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+<li>
+      <a href="/contact" class="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#38BDF8] transition-colors">
+        <span>Contact</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </li>
+              </ul>
+            </div>
+
+            <!-- Direct Contact & Social Grid -->
+            <div class="col-span-2 lg:col-span-4 flex flex-col pt-6 lg:pt-0 border-t border-white/[0.07] lg:border-t-0">
+              <h3 class="text-xs font-semibold tracking-[0.14em] uppercase text-slate-300">Connect</h3>
+              <div class="mt-4 lg:mt-6 space-y-2.5 lg:space-y-1.5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-1.5 text-sm">
+                  <a
+                    href="mailto:Christopher.R.McGuire@gmail.com"
+                    class="group flex items-center justify-between gap-2.5 min-h-[44px] lg:min-h-[36px] px-3.5 py-2 lg:py-1.5 rounded-xl bg-[#070C17] border border-white/[0.08] hover:border-[#00A6FF]/45 text-slate-200 hover:text-white transition-colors"
+                  >
+                    <span class="flex items-center gap-2.5 min-w-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      <span class="text-xs sm:text-[13px] font-medium truncate">Christopher.R.McGuire@gmail.com</span>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] shrink-0 transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </a>
+                  <div class="flex items-center gap-2.5 min-h-[44px] lg:min-h-[36px] px-3.5 py-2 lg:py-1.5 rounded-xl bg-[#050912] border border-white/[0.05] text-xs sm:text-[13px] text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#00A6FF] shrink-0" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Chicago, IL</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2 lg:gap-1.5 text-xs font-medium">
+                  <a href="https://linkedin.com/in/christopher-r-mcguire/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>LinkedIn</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://twitter.com/crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>X / Twitter</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://github.com/crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>GitHub</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://www.tiktok.com/@crmcguire74" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors">
+        <span>TikTok</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+<a href="https://www.youtube.com/@crmcguire1974" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-between min-h-[42px] lg:min-h-[34px] px-3 py-2 lg:py-1.5 rounded-lg bg-[#070B14] border border-white/[0.07] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors col-span-2 sm:col-span-1 lg:col-span-2">
+        <span>YouTube</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-slate-500 group-hover:text-[#38BDF8] transition-colors" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+              <p>© 2026 Christopher R McGuire. All rights reserved.</p>
+              <span aria-hidden="true" class="hidden sm:inline text-slate-700">·</span>
+              <span class="hidden sm:inline text-slate-500">Engineering, UX/UI &amp; AI Leadership</span>
+            </div>
+            <button
+              type="button"
+              id="back-to-top-btn"
+              aria-label="Back to top"
+              class="group inline-flex items-center justify-center gap-2 min-h-[40px] w-full sm:w-auto px-4 py-2 rounded-lg bg-[#080D18] border border-white/[0.08] hover:border-[#00A6FF]/45 text-slate-300 hover:text-[#38BDF8] transition-colors cursor-pointer"
+            >
+              <span>Back to top</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-150 group-hover:-translate-y-0.5" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/client/main.ts"></script>
   </body>
 </html>
