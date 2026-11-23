@@ -50,9 +50,8 @@ export const HOME_SEO: SeoConfig = {
 
 export function renderHomePage(): string {
   const capabilitiesHtml = HERO_CAPABILITIES.map(
-    (cap, idx) => `<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 ${
-      idx < HERO_CAPABILITIES.length - 1 ? 'border-r border-white/15' : ''
-    }">
+    (cap, idx) => `<div class="group flex flex-col items-center text-center px-1 sm:px-3 py-0.5 lg:py-1 ${idx < HERO_CAPABILITIES.length - 1 ? 'border-r border-white/15' : ''
+      }">
       ${icon(cap.icon, 'w-5 h-5 text-[#00A6FF] mb-1.5 lg:mb-2 transition-transform duration-200 group-hover:-translate-y-0.5', 1.75)}
       <span class="text-[10px] sm:text-[11px] font-medium leading-tight text-slate-200">
         ${esc(cap.line1)}<br />${esc(cap.line2)}
@@ -101,10 +100,9 @@ export function renderHomePage(): string {
       type="button"
       data-career-card="${idx}"
       aria-pressed="${isCurrent ? 'true' : 'false'}"
-      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] ${
-        isCurrent
-          ? 'bg-[#0C1424] border border-[#00A6FF]/55 shadow-[0_0_32px_rgba(0,166,255,0.12)]'
-          : 'bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15'
+      class="w-full text-left p-6 rounded-2xl transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A6FF] ${isCurrent
+        ? 'bg-[#0C1424] border border-[#00A6FF]/55 shadow-[0_0_32px_rgba(0,166,255,0.12)]'
+        : 'bg-[#070B14] border border-white/[0.06] opacity-75 hover:opacity-100 hover:border-white/15'
       }"
     >
       <div class="flex items-center justify-between gap-4 mb-2">
@@ -119,9 +117,8 @@ export function renderHomePage(): string {
 
   const initialRole = CAREER_TIMELINE[0];
   const progressDotsHtml = CAREER_TIMELINE.map(
-    (_, i) => `<span data-career-dot="${i}" class="h-1.5 rounded-full transition-all duration-200 ${
-      i === 0 ? 'w-6 bg-[#00A6FF]' : 'w-1.5 bg-slate-700'
-    }"></span>`
+    (_, i) => `<span data-career-dot="${i}" class="h-1.5 rounded-full transition-all duration-200 ${i === 0 ? 'w-6 bg-[#00A6FF]' : 'w-1.5 bg-slate-700'
+      }"></span>`
   ).join('\n');
 
   const initialHighlightsHtml = initialRole.highlights
@@ -143,13 +140,12 @@ export function renderHomePage(): string {
           <div data-magnetic-glow aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200"></div>
           <div class="relative z-10 flex-1 w-full h-full flex flex-col justify-between">
             <div>
-              ${
-                project.image
-                  ? `<div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
+              ${project.image
+          ? `<div data-parallax-window class="overflow-hidden aspect-video w-full bg-[#050810] border-b border-white/[0.06]">
                       <img src="${esc(project.image)}" alt="${esc(project.title)}" referrerpolicy="no-referrer" class="w-full h-full object-cover will-change-transform transition-transform duration-500 group-hover:scale-[1.08]" />
                     </div>`
-                  : ''
-              }
+          : ''
+        }
               <div class="p-7 pb-5">
                 <p class="text-xs text-[#38BDF8] mb-2">${esc(project.category)}</p>
                 <h3 class="text-2xl font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">${esc(project.title)}</h3>
@@ -313,7 +309,7 @@ export function renderHomePage(): string {
             src="${esc(ASSETS.heroCutout)}"
             alt="Christopher R McGuire — SVP of Application Design and Development"
             referrerpolicy="no-referrer"
-            class="absolute right-0 top-[-7%] h-[180%] xl:top-[-11%] xl:h-[200%] w-auto max-w-none translate-x-[10%] drop-shadow-[0_24px_55px_rgba(0,0,0,0.72)]"
+            class="absolute right-0 top-[-7%] h-[180%] xl:top-[-5%] xl:h-[150%] w-auto max-w-none translate-x-[10%] drop-shadow-[0_24px_55px_rgba(0,0,0,0.72)]"
           />
         </div>
 
