@@ -512,7 +512,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ['WebXR', '3D Gaming', 'VR', 'Interactive Web'],
     image: '/assets/aistudio/TronEngaged_a8a21c6c.webp',
-    externalUrl: 'https://tronengaged.netlify.app/',
+    externalUrl: 'https://tronengaged.paguire.com/',
     ctaLabel: 'Play Tron Engaged',
     featured: true,
   },
