@@ -517,6 +517,25 @@ export const PROJECTS: ProjectItem[] = [
     featured: true,
   },
   {
+    id: 'nexora',
+    title: 'Nexora: The Visual Workspace',
+    subtitle: 'Browser-Based Precision Canvas for Diagrams & Floorplans',
+    category: 'Diagramming / Vector Design Tooling',
+    filterGroup: 'Design Tools',
+    description:
+      'A browser-based alternative to desktop diagramming suites. Build engineering architectures, interactive sequence diagrams, process flows, org charts, and scaled floorplans on a single precision vector canvas.',
+    features: [
+      'Nine studios across four modules: Flow, Space, Sequence, and Architect.',
+      'Measured architectural floorplans with auto-detected rooms in US or Metric units.',
+      'Drag-to-connect sequence lifelines, activations, events, and fragments.',
+    ],
+    tags: ['Vector Canvas', 'Diagramming', 'Floorplans', 'React', 'Local-First'],
+    image: '/assets/aistudio/Nexora_VisualWorkspace_8268a7b5.webp',
+    externalUrl: 'https://nexora.paguire.com',
+    ctaLabel: 'Launch Nexora',
+    featured: true,
+  },
+  {
     id: 'snapclipper',
     title: 'SnapClipper',
     subtitle: 'Privacy-First AI Web Clipper Chrome Extension',
@@ -837,6 +856,17 @@ export const VIBE_CODED_APPS: VibeCodedAppItem[] = [
     image: '/assets/aistudio/TronEngaged_a8a21c6c.webp',
     externalUrl: 'https://tronengaged.netlify.app/',
     ctaLabel: 'Launch VR & Web Game',
+  },
+  {
+    id: 'nexora',
+    title: 'Nexora: The Visual Workspace',
+    platform: 'Web App · Vector Canvas · Local-First IndexedDB',
+    description:
+      'Browser-based diagramming studio spanning flowcharts, org charts, user journeys, sequence diagrams, system topologies, ERDs, and scaled architectural floorplans on one precision vector canvas.',
+    highlights: 'Nine studios, five diagram themes, and portable .nexora files saved locally.',
+    image: '/assets/aistudio/Nexora_VisualWorkspace_8268a7b5.webp',
+    externalUrl: 'https://nexora.paguire.com',
+    ctaLabel: 'Launch Nexora',
   },
   {
     id: 'snapclipper',
