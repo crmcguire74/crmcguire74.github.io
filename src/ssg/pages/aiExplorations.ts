@@ -5,7 +5,7 @@ import {
   VIBE_CODED_APPS,
 } from '../../data/siteData';
 import { icon, type IconName } from '../icons';
-import { breadcrumbSchema, esc, SITE_URL, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, type SeoConfig } from '../seo';
 
 export interface WorkbenchPillar {
   id: 'voice' | 'images' | 'video' | 'notebooklm' | 'coding';
@@ -226,7 +226,7 @@ export const AI_EXPLORATIONS_SEO: SeoConfig = {
     'Hands-on generative AI work with ElevenLabs, GPT Image, Google Veo and NotebookLM, plus shipped AI apps like Thrive Financial, Modus AI and Tron Engaged.',
   keywords:
     'AI Explorations, Vibe Coding, ElevenLabs Voice Clone, Google Veo, NotebookLM, GPT Image, Nano Banana, Claude Code, Codex, Christopher R McGuire',
-  ogImage: `${SITE_URL}${ASSETS.aiLabsPortrait}`,
+  ogImage: ogImage('ai-explorations'),
   jsonLd: [
     breadcrumbSchema([
       { name: 'Home', path: '/' },

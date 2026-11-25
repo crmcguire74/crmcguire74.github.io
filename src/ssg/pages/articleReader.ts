@@ -1,7 +1,7 @@
 import type { FullArticle } from '../../data/articles';
 import { PROFILE } from '../../data/siteData';
 import { icon } from '../icons';
-import { blogPostingSchema, breadcrumbSchema, esc, SITE_URL, type SeoConfig } from '../seo';
+import { ogImageFor, blogPostingSchema, breadcrumbSchema, esc, type SeoConfig } from '../seo';
 
 /**
  * Search-result titles/descriptions kept within ~60 / ~155 characters.
@@ -54,7 +54,7 @@ export function getArticleSeo(article: FullArticle): SeoConfig {
     ogTitle: article.title,
     keywords: `${article.categories.join(', ')}, Christopher R McGuire, Paguire`,
     ogType: 'article',
-    ogImage: `${SITE_URL}${article.coverImage}`,
+    ogImage: ogImageFor(article.coverImage),
     publishedTime,
     articleTags: article.categories,
     jsonLd: [

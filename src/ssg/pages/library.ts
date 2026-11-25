@@ -2,7 +2,7 @@ import { ARTICLES } from '../../data/articles';
 import { ASSETS, BOOKS, PROFILE } from '../../data/siteData';
 import { ARTICLES_PER_PAGE, paginateItems, type ArticleCategory } from '../../utils/portfolioLogic';
 import { icon } from '../icons';
-import { breadcrumbSchema, esc, SITE_URL, toAbsoluteUrl, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, toAbsoluteUrl, type SeoConfig } from '../seo';
 
 const CATEGORY_ITEMS: { id: ArticleCategory; label: string }[] = [
   { id: 'All', label: 'All' },
@@ -22,7 +22,7 @@ export const LIBRARY_SEO: SeoConfig = {
     'Amazon AI playbooks and investing guides, plus long-form essays on FinTech UX, design systems, AI product rigor and engineering leadership.',
   keywords:
     'Christopher R McGuire Blog, Library, The AI Shortcut, Investing for the Rest of Us, FinTech UX, Design Systems, Software Engineering Essays',
-  ogImage: `${SITE_URL}${ASSETS.libraryHeroPortrait}`,
+  ogImage: ogImage('library'),
   jsonLd: [
     {
       '@context': 'https://schema.org',

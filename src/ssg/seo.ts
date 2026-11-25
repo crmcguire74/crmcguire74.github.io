@@ -4,7 +4,18 @@ import { PROFILE } from '../data/siteData';
 export const SITE_URL = 'https://paguire.com';
 export const SITE_NAME = 'Christopher R McGuire | Paguire';
 export const PROFILE_PORTRAIT_IMAGE = `${SITE_URL}/assets/aistudio/Professional_Executive_Portrait_9d49b2b1.webp`;
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/aistudio/Christopher_R_McGuire_Portfolio_Hero_69ead63a.webp`;
+
+// 🖼️ Social share cards live in public/og/ and are built by scripts/generate-og-images.sh.
+// They are pre-cropped to 1200x630 (1.91:1) so X, LinkedIn and Facebook never crop faces.
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
+export const ogImage = (name: string): string => `${SITE_URL}/og/${name}.jpg`;
+
+/** Maps a source image path (e.g. an article cover) to its generated share card. */
+export const ogImageFor = (sourcePath: string): string =>
+  ogImage((sourcePath.split('/').pop() ?? '').replace(/\.[^.]+$/, ''));
+
+export const DEFAULT_OG_IMAGE = ogImage('home');
 
 export interface SeoConfig {
   path: string;
@@ -260,7 +271,7 @@ export function renderSeoHeadTags(seo: SeoConfig): string {
   const canonicalUrl = toAbsoluteUrl(seo.path);
   const ogTitle = seo.ogTitle || seo.title;
   const ogDesc = seo.ogDescription || seo.description;
-  const ogImage = toAbsoluteUrl(seo.ogImage || DEFAULT_OG_IMAGE);
+  const ogImageUrl = toAbsoluteUrl(seo.ogImage || DEFAULT_OG_IMAGE);
   const ogType = seo.ogType || 'website';
   const robots = seo.robots || 'index, follow, max-image-preview:large, max-snippet:-1';
   const keywords =
@@ -306,7 +317,11 @@ export function renderSeoHeadTags(seo: SeoConfig): string {
     <meta property="og:url" content="${esc(canonicalUrl)}" />
     <meta property="og:title" content="${esc(ogTitle)}" />
     <meta property="og:description" content="${esc(ogDesc)}" />
-    <meta property="og:image" content="${esc(ogImage)}" />
+    <meta property="og:image" content="${esc(ogImageUrl)}" />
+    <meta property="og:image:secure_url" content="${esc(ogImageUrl)}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="${OG_IMAGE_WIDTH}" />
+    <meta property="og:image:height" content="${OG_IMAGE_HEIGHT}" />
     <meta property="og:image:alt" content="${esc(ogTitle)}" />
     ${articleTagsHtml}
 
@@ -317,7 +332,7 @@ export function renderSeoHeadTags(seo: SeoConfig): string {
     <meta name="twitter:url" content="${esc(canonicalUrl)}" />
     <meta name="twitter:title" content="${esc(ogTitle)}" />
     <meta name="twitter:description" content="${esc(ogDesc)}" />
-    <meta name="twitter:image" content="${esc(ogImage)}" />
+    <meta name="twitter:image" content="${esc(ogImageUrl)}" />
     <meta name="twitter:image:alt" content="${esc(ogTitle)}" />
 
     <!-- Icons & Web Manifest -->

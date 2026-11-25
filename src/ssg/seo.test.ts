@@ -68,6 +68,40 @@ test('every static route renders valid SEO metadata and zero React references', 
   }
 });
 
+// 📐 Reads width/height from a baseline or progressive JPEG's SOF marker.
+const jpegSize = (buf: Buffer): { width: number; height: number } => {
+  let i = 2;
+  while (i < buf.length) {
+    const marker = buf[i + 1];
+    const len = buf.readUInt16BE(i + 2);
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+      return { height: buf.readUInt16BE(i + 5), width: buf.readUInt16BE(i + 7) };
+    }
+    i += 2 + len;
+  }
+  throw new Error('No SOF marker found');
+};
+
+test('every route shares a 1200x630 JPEG card so X/LinkedIn never crop it', () => {
+  for (const route of getAllStaticRoutes()) {
+    const html = renderPageDocument({
+      pageId: route.pageId,
+      currentRoute: route.routePath,
+      seo: route.seo,
+      mainHtml: route.render(),
+    });
+    const url = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1] ?? '';
+    assert.match(url, /^https:\/\/paguire\.com\/og\/[^/]+\.jpg$/, `${route.routePath} og:image`);
+    assert.ok(html.includes(`<meta name="twitter:image" content="${url}"`));
+    assert.match(html, /<meta property="og:image:width" content="1200"/);
+    assert.match(html, /<meta property="og:image:height" content="630"/);
+
+    const file = path.join(ROOT_DIR, 'public', new URL(url).pathname);
+    assert.ok(fs.existsSync(file), `Missing ${file}. Run: bash scripts/generate-og-images.sh`);
+    assert.deepEqual(jpegSize(fs.readFileSync(file)), { width: 1200, height: 630 }, file);
+  }
+});
+
 test('home, biography, and contact pages include audited schema, narrative updates, and form attributes', () => {
   const routes = new Map(getAllStaticRoutes().map((r) => [r.routePath, r]));
 

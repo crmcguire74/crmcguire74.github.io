@@ -1,6 +1,6 @@
 import { ASSETS, MODUS_GALLERY, SNAPCLIPPER_SCREENS } from '../../data/siteData';
 import { icon } from '../icons';
-import { breadcrumbSchema, esc, SITE_URL, toAbsoluteUrl, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, toAbsoluteUrl, type SeoConfig } from '../seo';
 import { PROFILE } from '../../data/siteData';
 
 export const MODUS_MODES = [
@@ -103,7 +103,7 @@ export const MODUS_AI_SEO: SeoConfig = {
     'Modus AI is an iOS AI room designer that restyles interiors, exteriors and paint colors while locking your real furniture in place. No subscription.',
   keywords:
     'Modus AI, AI Interior Design App, iOS Room Designer, Spatial AI, Furniture Preservation, Paint Visualizer, Christopher R McGuire',
-  ogImage: `${SITE_URL}/assets/aistudio/Modus_AI_e260817c.webp`,
+  ogImage: ogImage('modus-ai'),
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -141,7 +141,7 @@ export const MODUS_PRIVACY_SEO: SeoConfig = {
   description:
     'Learn how Modus AI protects user privacy through on-device Gemini Nano pre-processing, zero ad tracking, and full local iOS/iCloud photo control.',
   keywords: 'Modus AI Privacy Policy, Paguire Privacy, On-Device AI Privacy, iOS Interior Design Privacy',
-  ogImage: `${SITE_URL}/assets/aistudio/Modus_AI_e260817c.webp`,
+  ogImage: ogImage('modus-ai'),
   jsonLd: [
     breadcrumbSchema([
       { name: 'Home', path: '/' },
@@ -159,7 +159,7 @@ export const SNAPCLIPPER_SEO: SeoConfig = {
     'One-click Chrome extension for capturing web highlights, code snippets, and prompts with local-first AI categorization and Markdown/JSON export.',
   keywords:
     'SnapClipper, Chrome Extension, AI Web Clipper, Local-First Knowledge Capture, Research Clipper, Christopher R McGuire',
-  ogImage: `${SITE_URL}/assets/aistudio/SnapClipper_dc1f331f.webp`,
+  ogImage: ogImage('snapclipper'),
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -189,7 +189,7 @@ export const BLUEPRINT_SEO: SeoConfig = {
     'A strict 4-step, 60-minute AI prompt engineering system for GPT-4, Claude, and Gemini to produce a full week of executive content.',
   keywords:
     '1-Hour Content Creator Blueprint, AI Prompt System, Content Workflow, Claude, Gemini, GPT-4, Christopher R McGuire',
-  ogImage: `${SITE_URL}${ASSETS.buildingWebApp}`,
+  ogImage: ogImage('blueprint'),
   jsonLd: [
     breadcrumbSchema([
       { name: 'Home', path: '/' },

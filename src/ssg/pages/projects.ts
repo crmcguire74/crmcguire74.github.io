@@ -1,7 +1,7 @@
 import { ASSETS, PROJECTS } from '../../data/siteData';
 import type { ProjectFilter } from '../../utils/portfolioLogic';
 import { icon } from '../icons';
-import { breadcrumbSchema, esc, SITE_URL, toAbsoluteUrl, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, toAbsoluteUrl, type SeoConfig } from '../seo';
 
 const FILTER_ITEMS: { id: ProjectFilter; label: string }[] = [
   { id: 'All', label: 'All' },
@@ -19,7 +19,7 @@ export const PROJECTS_SEO: SeoConfig = {
     'Shipped AI products, iOS apps, Chrome extensions, WebXR games and FinTech tools, including Thrive Financial, Modus AI, SnapClipper and Tron Engaged.',
   keywords:
     'Christopher R McGuire Projects, Thrive Financial, Modus AI, SnapClipper, Tron Engaged, Wils Martini Lounge, Fiscal Compass, Icon Forge, MarkFlow',
-  ogImage: `${SITE_URL}${ASSETS.projectsHeroPortrait}`,
+  ogImage: ogImage('projects'),
   jsonLd: [
     {
       '@context': 'https://schema.org',

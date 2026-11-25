@@ -1,10 +1,11 @@
 import { ASSETS, PROFILE } from '../../data/siteData';
 import { icon } from '../icons';
-import { breadcrumbSchema, esc, personEntity, toAbsoluteUrl, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, personEntity, toAbsoluteUrl, type SeoConfig } from '../seo';
 
 export const CONTACT_SEO: SeoConfig = {
   path: '/contact',
   title: "Contact & Collaboration | Christopher R McGuire — Paguire",
+  ogImage: ogImage('contact'),
   description:
     'Contact Christopher R McGuire for engineering leadership, UX/UI architecture, applied AI transformation, speaking or advisory roles in Chicago.',
   keywords:

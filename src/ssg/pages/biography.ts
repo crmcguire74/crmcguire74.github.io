@@ -6,7 +6,7 @@ import {
 } from '../../data/biography';
 import { ASSETS } from '../../data/siteData';
 import { icon } from '../icons';
-import { breadcrumbSchema, esc, personSchema, SITE_URL, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, personSchema, type SeoConfig } from '../seo';
 
 export const BIOGRAPHY_SEO: SeoConfig = {
   path: '/biography',
@@ -16,7 +16,7 @@ export const BIOGRAPHY_SEO: SeoConfig = {
   keywords:
     'Christopher R McGuire Biography, Christopher Patrick, Oakville CT, Torrington Connecticut, Warner Theatre, Purdue University, Citadel, Savant Wealth, WiseOS, Mesirow, Thrive Financial',
   ogType: 'profile',
-  ogImage: `${SITE_URL}${ASSETS.bioHeroPortrait}`,
+  ogImage: ogImage('biography'),
   jsonLd: [
     personSchema(),
     breadcrumbSchema([

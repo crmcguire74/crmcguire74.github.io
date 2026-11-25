@@ -6,7 +6,7 @@ import {
   SKILLS_MATRIX,
 } from '../../data/siteData';
 import { icon, type IconName } from '../icons';
-import { breadcrumbSchema, esc, personEntity, SITE_URL, type SeoConfig } from '../seo';
+import { ogImage, breadcrumbSchema, esc, personEntity, type SeoConfig } from '../seo';
 
 const RESUME_HIGHLIGHT_PILLARS: {
   icon: IconName;
@@ -28,7 +28,7 @@ export const RESUME_SEO: SeoConfig = {
   keywords:
     'Christopher R McGuire Resume, SVP Software Engineering, UX/UI Director, Savant Wealth, Mesirow, Citadel, Akuna Capital, SpiderRock, Purdue Engineering',
   ogType: 'profile',
-  ogImage: `${SITE_URL}${ASSETS.resumePortrait}`,
+  ogImage: ogImage('resume'),
   jsonLd: [
     {
       '@context': 'https://schema.org',
