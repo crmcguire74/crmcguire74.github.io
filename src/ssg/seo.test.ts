@@ -68,6 +68,26 @@ test('every static route renders valid SEO metadata and zero React references', 
   }
 });
 
+test('every route loads Google Tag Manager in head and body', () => {
+  for (const route of getAllStaticRoutes()) {
+    const html = renderPageDocument({
+      pageId: route.pageId,
+      currentRoute: route.routePath,
+      seo: route.seo,
+      mainHtml: route.render(),
+    });
+    const head = html.slice(html.indexOf('<head>'), html.indexOf('</head>'));
+    assert.match(head, /googletagmanager\.com\/gtm\.js\?id=/, `${route.routePath} GTM head`);
+    assert.match(head, /'dataLayer','GTM-N2JC2XRG'/, `${route.routePath} GTM id`);
+    assert.match(
+      html,
+      /<body[^>]*>\s*<!-- Google Tag Manager \(noscript\) -->\s*<noscript><iframe src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-N2JC2XRG"/,
+      `${route.routePath} GTM noscript`
+    );
+    assert.ok(html.indexOf('<meta charset="UTF-8"') < 1024, 'charset must stay in first 1024 bytes');
+  }
+});
+
 // 📐 Reads width/height from a baseline or progressive JPEG's SOF marker.
 const jpegSize = (buf: Buffer): { width: number; height: number } => {
   let i = 2;

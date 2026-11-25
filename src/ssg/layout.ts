@@ -1,4 +1,5 @@
 import { ASSETS, PROFILE } from '../data/siteData';
+import { renderGtmBody, renderGtmHead } from './analytics';
 import { icon } from './icons';
 import { esc, renderSeoHeadTags, type SeoConfig } from './seo';
 
@@ -111,9 +112,11 @@ export function renderPageDocument(opts: PageLayoutOptions): string {
   return `<!doctype html>
 <html lang="en" dir="ltr" class="dark">
   <head>
+${renderGtmHead()}
 ${renderSeoHeadTags(opts.seo)}
   </head>
   <body data-page="${esc(opts.pageId)}" class="bg-[#030508] text-[#F1F5F9] antialiased selection:bg-[#00A6FF]/30 selection:text-white">
+${renderGtmBody()}
     <div class="min-h-screen flex flex-col bg-[#030508] text-[#F1F5F9]">
       <header class="sticky top-0 z-50 bg-[#030508]/88 backdrop-blur-xl border-b border-[#38BDF8]/15">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 md:h-[72px] flex items-center justify-between gap-8">
